@@ -2914,6 +2914,9 @@ button {
 button[disabled] {
   color: #bbb;
 }
+button::-moz-focus-inner {
+  border: 1px solid #000;
+}
 .button {
   display: inline-block;
   font-size: 19px;
