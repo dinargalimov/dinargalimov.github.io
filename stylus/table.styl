@@ -1,0 +1,463 @@
+@import 'nib'
+@import 'variables.styl'
+
+// ------- список таблица -----------
+.table_list
+	width 100%
+	box-sizing border-box
+	// border 1px solid cseparator
+
+.table_list_header
+	box-sizing border-box
+	text-transform uppercase
+	padding 14px 0 11px 15px
+	background cl4
+	border-bottom 3px solid cl4 - 20%
+
+	clearfix()
+	// margin -1px -1px 0
+
+	.table_list_cell
+		font-size fzn - 5px!important
+		font-weight 600!important
+		color #fff!important
+		text-shadow 1px 1px rgba(0,0,0,0.1)
+		overflow ellipsis
+		line-height 1
+		a
+			color #fff
+			text-decoration none
+			display inline-block
+			max-width 100%
+			overflow ellipsis
+			box-sizing border-box
+			&:hover
+				opacity .8
+
+		[class*="icon-sort"]
+			padding-right 20px
+			&:before
+				float right
+				min-width 0
+				margin 1px -15px 0 4px
+
+		&.name_search
+			top -14px
+			margin-bottom -20px
+			padding-top 14px
+
+			input.input_search
+				width 150px
+				max-width 100%
+				box-sizing border-box
+				margin -9px 0 0
+				&.white
+					height 24px
+					background-color rgba(#fff,0.18)
+					background-image url(../images/icon_search_input_white.svg)
+					background-size 12px auto
+					border none
+					font-size fzn - 3px
+					color #fff
+					font-weight normal
+					box-shadow none
+					&:focus
+						background-size 0
+
+					&::-webkit-input-placeholder
+						color rgba(#fff,0.8)
+					&::-moz-placeholder
+						color rgba(#fff,0.8)
+					&:-ms-input-placeholder
+						color rgba(#fff,0.8)!important
+
+					&::-webkit-search-cancel-button
+						-webkit-appearance none
+					&::-webkit-search-decoration
+						-webkit-appearance none
+					&::-webkit-search-results-button
+						-webkit-appearance none
+					&::-webkit-search-results-decoration
+						-webkit-appearance none
+
+
+.table_list_body
+	width 100%
+
+// строка
+.table_list_row
+	width 100%
+	padding 15px 0 15px 15px
+	box-sizing border-box
+	background cbgsky
+	border-bottom 2px solid #fff
+	transition background linear .05s
+	clearfix()
+
+	&:nth-child(even)
+		// background cbgsky
+	// строка помеченная как новая
+	&.new
+		&:before
+			content ''
+			position absolute
+			width 8px
+			height 8px
+			border-radius 10px
+			background linear-gradient(cl3 + 30%, cl3)
+			left -15px
+			top 50%
+			margin-top -4px
+
+	// строка при наведении
+	&:hover
+		background #fff
+		.table_list_cell.action
+			[class*="icon-"]
+				opacity 1
+
+	// выделенная строка
+	&.row_checked
+		box-shadow 0 0 0 1px cl2
+		background #fff
+		z-index 2
+
+// ячейка
+.table_list_cell
+	float right
+	font-size fzn - 2px
+	padding-right 15px
+	box-sizing border-box
+	line-height 1.3
+	&.last_cell
+		padding-right 0
+
+	a
+		text-decoration none
+
+	.ms-choice
+		font-size fzn - 2px
+
+	.select2, .select2-choice, .select2-chosen
+		max-width 100%
+	.select2-choice
+		overflow ellipsis
+		font-size fzn - 2px
+
+	&.name
+		float none
+		overflow ellipsis
+		.name_title
+			font-weight fwn + 100
+			color clink
+			white-space normal
+
+		.name_desc
+			font-size fzn - 3px
+			color ctextlight
+			overflow ellipsis
+			max-width 100%
+			box-sizing border-box
+			margin-top 3px
+		&.name_link
+			top -15px
+			left -15px
+			margin-bottom -30px
+			padding 15px
+			padding-right 0
+			&:hover
+				cursor pointer
+				.name_title
+					color cl2
+
+	&.default
+		width 110px
+		text-align center
+	&.action
+		width 20px
+		text-align right
+		box-sizing content-box
+		line-height 1
+		[class*="icon-"]
+			opacity .2
+			font-size fzn
+			color ctextlight
+			&:hover
+				color cl2
+
+
+	&.check
+		width auto
+	&.date
+		color ctextlight
+		font-weight 400
+		font-size fzn - 4px
+	&.summ
+		text-align right
+		.income
+			color ctextsuccess
+			&:before
+				content '+ '
+		.expense
+			color ctext
+			&:before
+				content '– '
+			.cur
+				color ctext
+	&.deadline
+		width 85px
+		text-align right
+	&.status
+		width 15%
+		min-width 110px
+	&.performer
+		width 15%
+		min-width 130px
+	&.tarif
+		width 12%
+		min-width 110px
+	&.city
+		width 15%
+		min-width 110px
+	&.group
+		width 15%
+
+	.write_now
+		position absolute
+		right 0px
+		bottom 0px
+		background linear-gradient(left, transparent 0%, #fff 30%)
+
+
+
+.table_list_small
+	.table_list_header
+		padding 10px 10px 8px
+	.table_list_row
+		padding 10px
+	.table_list_cell
+		padding-right 10px
+		&.name
+			.input_search
+				margin-left -10px
+			&.name_link
+				top -10px
+				left -10px
+				margin-bottom -20px
+				padding 10px
+
+
+.table_list_light
+	border none
+	.table_list_header
+		background cbgsky
+		border-bottom-color cseparator
+		margin 0
+		.table_list_cell
+			color ctextlight!important
+			text-shadow none
+			font-weight 400!important
+			a
+				color clinklight!important
+	.table_list_row
+		background none
+		border-bottom 1px solid cseparator
+		&:hover
+			background cbghighlight
+		&.row_checked
+			box-shadow none
+			background cbghighlight
+
+
+.table_list_border
+	border 1px solid cseparator
+
+
+
+.table_list_white
+	border none
+	.table_list_header
+		background none
+		border none
+		margin 0
+		.table_list_cell
+			color ctextlight!important
+			text-shadow none
+			font-weight 400!important
+			a
+				color ctextlight!important
+			&.name_search
+				top -10px
+				left -15px
+				margin-bottom -12px
+				input
+					margin-bottom 2px
+
+	.table_list_row
+		background #fff
+		box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
+		margin-bottom 2px
+		border none
+
+
+
+
+// таблица с группировкой
+.table_list_group
+
+	&.group_open
+		>.table_list_row
+			background none
+			border-bottom-color transparent
+
+		.group_name_link
+			color cl2
+			span
+				border-bottom-color cl2
+			&:before
+				transform rotate(90deg) translateX(2px)
+
+
+	.table_list_cell.name
+
+		.group_name_link
+			max-width calc(100% - 30px)
+			display inline-block
+			span
+				overflow ellipsis
+				max-width calc(100% - 19px)
+				display inline-block
+				vertical-align bottom
+			&:before
+				transition .3s
+		.count
+			color ctextlight
+		.group_name_edit
+			margin-top 0
+
+
+.table_list_group_content
+	padding 5px 10px 15px
+	&.ng-animate
+		transition .3s
+		overflow hidden
+	&.ng-hide-add-active
+		height 0
+		opacity 0
+	&.ng-hide-remove-active
+		height auto
+		opacity 1
+
+.table_row_info
+	padding 30px 0
+	.info_center
+		width 400px
+		margin 0 auto
+		color ctextlight
+		text-align center
+
+// .table_list_more
+// 	padding-left 15px
+
+
+	// список людей с ролями по группам
+.table_list.role_group_list
+	.chief
+		width 30%
+	.action
+		width 55px
+		padding-right 0
+
+
+	// список людей с ролями
+.table_list.role_list
+	.group
+		width 35%
+	.role
+		width 25%
+	.invite
+		width 60%
+		.info_label
+			margin-top -4px
+	.action
+		width 20px
+		box-sizing content-box
+
+
+// список транзакций
+.table_list.transaction_list
+	.date
+		float left
+		width 13%
+		min-width 70px
+		.status
+			font-weight 300
+			padding-top 3px
+
+	.desc
+		width 25%
+		overflow hidden
+		color ctextlight
+	.summ
+		width 20%
+		min-width 125px
+		font-weight normal
+		padding-right 25px
+		.account
+			font-weight 300
+			padding-top 3px
+			font-size fzn - 3px
+			color ctextlight
+
+	.contragent
+		float none
+		overflow hidden
+	.action
+		width 55px
+		@media (min-width:1400px)
+			width 83px
+
+		.icon-stop
+			font-size fzn - 2px
+		.icon-favorites-solid
+			opacity 1
+
+
+
+
+.table_list.clients_list
+	.group
+		width 15%
+	.service
+		width 5%
+		min-width 30px
+		text-align center
+	.action
+		width 5%
+		min-width 30px
+
+
+// список контрагентов
+.table_list.contragents_list
+	.to_pay
+		width 18%
+		font-weight 400
+		text-align right
+	.last_paid
+		width 18%
+		text-align center
+	.paid_period
+		width 18%
+		font-weight 400
+		text-align right
+
+// список транзакций у контрагента
+.table_list.transaction_list_contragent
+	.desc
+		overflow hidden
+		float none
+		width auto
+	.summ
+		float left
+	.date
+		width 15%

@@ -1,0 +1,188 @@
+@import 'nib'
+@import 'variables.styl'
+
+.reg
+	background cbglight
+	position absolute
+	width 100%
+	min-height 100%
+	background url(../images/404_back.png) no-repeat center center, radial-gradient(65% 100%, cbglight 45%, cbglight - 20% 100%)
+	background-size 115% auto, 100% 100%
+
+
+	.wrap
+		width 850px
+		margin 0 auto 30px
+		animation-name zoomIn
+		animation-duration .5s
+		animation-fill-mode both
+		&.login
+			width 420px
+		&.reg_admin
+			width 700px
+
+	.reg_header
+		padding 30px 0
+		.logo
+			display inline-block
+			width 270px
+			height 50px
+			background url(../images/logo.svg) no-repeat 0 0
+			text-indent -10000em
+		.header_links
+			position absolute
+			right 0
+			top 45px
+	.reg_section
+		display table
+		width 100%
+		box-shadow 7px 7px 0 rgba(cl1,0.1)
+		min-height 400px
+	.reg_side
+		background cl1
+		color #fff
+		width 315px
+		padding 30px 30px
+		box-sizing border-box
+		height 100%
+		display table-cell
+		font-size fzn - 1px
+		vertical-align top
+		.title
+			font-weight 400
+			margin 0 0 30px
+			font-size 20px
+		p
+			margin 0 0 10px
+		.copyright
+			position absolute
+			bottom 40px
+			left 30px
+			right 30px
+			font-size fzn - 4px
+			color cl1+50%
+	.reg_article
+		background #fff
+		display table-cell
+		padding 30px 30px
+		box-sizing border-box
+		vertical-align top
+		h1
+			color ctext
+		p
+			margin 15px 0
+			&:first-of-type
+				margin-top 0
+
+	.login
+		// animation-name zoomInUp
+		// animation-duration 1s
+		// animation-fill-mode both
+		.reg_section
+			box-shadow none
+			min-height 0px
+		.reg_header
+			padding 50px 0 20px
+			text-align center
+			.title
+				margin 70px 0 0
+				font-size 24px
+				color ctextlight
+
+		.reg_article
+			display block
+			width 100%
+			padding 44px 50px
+			box-shadow 7px 7px 0 rgba(cl1,0.1)
+			.info
+				margin-left -50px
+				margin-right -50px
+				padding-left 50px
+				padding-right 50px
+			.info_sms
+				margin-top 30px
+				margin-bottom -45px
+				.small_text
+					font-size fzn - 4px
+		.form
+			margin 0
+
+		.login_links
+			padding 20px 0 0
+			text-align center
+			a
+				color ctextlight + 20%
+				font-size fzn - 2px
+				display inline-block
+				margin 0 5px
+				text-decoration none
+				&:hover
+					color cl2
+
+	.share
+		border-top 1px solid cbd + 30%
+		padding 20px 0 0
+		margin 30px 0 0
+		font-size fzn - 2px
+		color ctextlight
+		.soc
+			margin 20px 0 0
+
+
+
+	.not_found_company
+		p
+			color ctext
+
+	.file_upload_list
+		background cbglight
+		margin 0 -30px
+		padding 20px 30px 5px
+		.file_upload_block
+			.file_name
+				display none
+
+	.ogrn_status_success, .ogrn_status_error
+		background-image url(../images/account_widget_status_success.svg)
+		background-repeat no-repeat
+		background-position 10px 7px
+		padding-top 12px
+		padding-bottom 15px
+		padding-left 55px
+
+	.ogrn_status_error
+		background-image url(../images/account_widget_status_error.svg)
+
+
+	.search_company
+		margin 25px -30px 0
+		padding 20px 30px 0
+		background linear-gradient(top, cbglight + 10%, #fff 100px)
+		border-top 1px solid cbglight - 10%
+
+		.search_company_title
+			text-transform uppercase
+			color cl2
+			font-size fzn
+			font-weight 500
+			margin 0 0 20px
+			&:before
+				font-size 22px
+				vertical-align -6px
+				margin-right 5px
+		.search_company_edit_link
+			display inline-block
+			margin 0 0 20px
+			text-decoration none
+			color ctextlight
+			border-bottom 1px dashed ctextlight
+			font-size fzn - 1px
+		.form
+			margin-bottom 30px
+
+
+	.reg_admin
+		h3
+			text-align center
+			font-weight 300
+			margin 0 0 40px

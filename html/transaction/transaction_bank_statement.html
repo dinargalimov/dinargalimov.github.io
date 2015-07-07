@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Выписка</title>
+	<base href="../../"/>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/init.js"></script>
+
+</head>
+<body ng-app="app">
+
+<include data-file="aside.html"></include>
+<include data-file="header.html"></include>
+<include data-file="transaction/transaction.html section.main"></include>
+
+<article class="page page_small">
+
+	<!-- шапка слоя -->
+	<div class="page_header">
+		<a class="page_close icon-close"></a>
+		<a class="page_expand icon-fullsize"></a>
+		<h1>Банковская выписка</h1>
+	</div>
+
+	<!-- контент слоя  -->
+	<div class="page_content ">
+		<form class="form">
+
+			<div class="form_group">
+				<div class="column four property_label">Выписка по счету:</div>
+				<div class="column eight property_value">
+					<select class="select_inline" data-placeholder="выбрать">
+						<option value="t1" selected>Зарплатный счет (***2394)</option>
+						<option value="t2">Кредитный счет (***0389)</option>
+						<option value="t3">Валютный счет (***0950)</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="column four property_label">Период:</div>
+				<div class="column eight property_value">
+					<select class="select_inline" data-placeholder="выбрать">
+						<option value="d1" selected>за текущий день</option>
+						<option value="d2">за текущую неделю</option>
+						<option value="d3">за месяц</option>
+						<option value="d4">за квартал</option>
+						<option value="d5" disabled>произвольный</option>
+					</select>
+
+					<div class="filter_date_value">
+						<input type="text" name="" id="" class="datetimepicker filter_date_input small date_from">
+						<input type="text" name="" id="" class="datetimepicker filter_date_input small date_to">
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group form_horizontal_small">
+				<div class="column four property_label">В формате:</div>
+				<div class="column eight property_value">
+					<div class="switch_group small">
+						<div class="switch_item">
+							<input type="radio" name="12" id="tab1" checked>
+							<label for="tab1">PDF</label>
+						</div>
+						<div class="switch_item">
+							<input type="radio" name="12" id="tab2">
+							<label for="tab2">CSV</label>
+						</div>
+						<div class="switch_item">
+							<input type="radio" name="12" id="tab3">
+							<label for="tab3">1C</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="column four property_label">&nbsp;</div>
+				<div class="column eight property_value">
+					<input type="checkbox" name="a" id="a1" class="input_check">
+					<label for="a1" class="label_check"><i class="icon"></i><span>Выписка с приложениями</span></label>
+				</div>
+			</div>
+			<div class="form_group">
+				<div class="column four property_label">&nbsp;</div>
+				<div class="column eight property_value">
+					<input type="checkbox" name="a2" id="a21" class="input_check">
+					<label for="a21" class="label_check"><i class="icon"></i><span>Отправить выписку на электронную почту</span></label>
+
+					<!-- форма отправки -->
+					<!-- <div class="m_top_15"><input type="email" name="" id="" placeholder="E-mail" class="small" size="30"></div>
+					<div class="m_top_10"><textarea name="" id="" placeholder="Введите текст сообщения" cols="30" class="small js_autosize textarea_middle"></textarea></div> -->
+				</div>
+			</div>
+
+			<div class="form_buttons">
+				<div class="column four property_label">&nbsp;</div>
+				<div class="column eight property_value">
+					<button class="button">Отправить</button>
+					<button class="button_clean">Отменить</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+</article>
+
+</body>
+</html>

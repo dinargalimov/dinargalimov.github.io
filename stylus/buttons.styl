@@ -1,0 +1,398 @@
+
+@import 'variables.styl'
+button
+	background none
+	border none
+	font-family ffn
+	cursor pointer
+	text-align left
+	font-weight fwn
+	&[disabled]
+		color ctextdis
+.button
+	display inline-block
+	font-size fzn + 3px
+	font-family ffn
+	font-weight 500
+	color #fff
+	background cl2
+	background-repeat no-repeat
+	background-position center
+	background-size 0
+	text-align center
+	height 46px
+	line-height 44px
+	border-radius brbut
+	padding 0 30px
+	padding-bottom 3px
+	box-sizing border-box
+	border none
+	text-decoration none
+	vertical-align middle
+	cursor pointer
+	box-shadow inset 0px -2px 0px 0px rgba(#000,0.15), inset 0px -3px 0px 0px rgba(#fff,0.1)
+	text-shadow 0 2px 0 rgba(#000,0.04)
+	transition .2s
+	position relative
+	z-index 1
+	overflow hidden
+	-webkit-appearance none
+	appearance none
+
+	&:hover
+		background-color cl2 + 5%
+		color #fff
+		box-shadow inset 0px -2px 0px 0px rgba(#000,0.2), inset 0px -3px 0px 0px rgba(#fff,0.1), 0 1px 1px rgba(#000,0.2)
+		&:before
+			transform scale3d(1,1,1)
+			opacity 1
+
+	&.second
+		background-color cl3
+		&:hover
+			background-color cl3 + 10%
+		// &:active
+		// 	background-color cl3 - 5%
+
+	&.cancel
+		background-color cerror
+		&:hover
+			background-color cerror + 10%
+		// &:active
+		// 	background-color cerror - 5%
+
+	&.dark
+		background-color cl1
+		&:hover
+			background-color cl1 + 5%
+		// &:active
+		// 	background-color cl1 - 5%
+
+	&.clean
+		background none!important
+		box-shadow none!important
+		text-shadow none!important
+		color ctextlight
+		text-decoration none
+		font-weight 300
+		&:hover
+			color ctext
+		&.disabled, &[disabled]
+			color ctextdis
+			&:hover
+				color ctextdis
+
+	&.light
+		background-color cbgsky
+		border 1px solid cbglight - 15%
+		box-shadow  none
+		color clink
+		text-shadow none!important
+		font-weight 300
+		&:hover
+			background cbgsky + 30%
+		&[class*="icon-"]:before
+			color clinklight
+
+	&.xsmall
+		height 26px
+		line-height 24px
+		font-size fzn - 4px
+		padding-left 10px
+		padding-right 10px
+
+	&.small
+		height 34px
+		line-height 32px
+		font-size fzn - 3px
+		padding-left 15px
+		padding-right 15px
+
+	&.middle
+		height 40px
+		line-height 37px
+		font-size fzn
+		padding-left 22px
+		padding-right 22px
+
+	&.full
+		width 100%
+		text-align center
+		padding 0
+
+
+	&.disabled, &[disabled]
+		background-color #CFD4DB
+		cursor no-drop
+		color #fff
+		&:hover
+			background-color #CFD4DB
+			box-shadow inset 0px -2px 0px 0px rgba(#000,0.2), inset 0px -3px 0px 0px rgba(#fff,0.1)
+		// &:active
+		// 	text-shadow 0 -1px 0 rgba(#000,0.05)
+
+	&+.button
+		margin-left 5px
+	&+.button_clean
+		margin-left 30px
+
+	&[class*='icon-']
+		&:before
+			vertical-align -4px
+			font-size fzn + 6px
+			margin 0 10px 0 -10px
+
+	&.middle[class*='icon-']
+		&:before
+			vertical-align -4px
+			font-size fzn + 2px
+			margin 0 7px 0 -7px
+
+	&.small[class*='icon-']
+		&:before
+			vertical-align -3px
+			font-size fzn - 1px
+			margin 0 5px 0 -5px
+
+	&.xsmall[class*='icon-']
+		&:before
+			vertical-align -2px
+			font-size fzn - 3px
+			margin 0 5px 0 -5px
+
+	&.button_notext
+		padding-left 0!important
+		padding-right 0!important
+		&:before
+			float none
+			margin 0 8px!important
+
+
+	&.loader
+		color transparent
+		text-shadow none
+		background-image url(../images/loading_w.gif)
+		background-position center
+		background-repeat no-repeat
+		background-size auto 40%
+		background-color cl2
+		transition .5s
+		transition-delay .3s
+		&:hover
+			background-color cl2
+			cursor default
+
+		&.second, &.second:hover
+			background-color cl3
+
+		&.dark:hover
+			background-color cl1
+
+		&.cancel, &.cancel:hover
+			background-color cerror
+
+		&:active
+			text-shadow none
+
+
+	&:focus
+		outline none
+
+	// &:active
+	// 	transition .03s
+	// 	background-color cl2 - 5%
+	// 	text-shadow 0 -1px 0 rgba(#000,0.2)
+
+
+.buttons_group
+	display inline-block
+	.button
+		border-radius 0
+		margin 0
+		float left
+		&:after
+			content ''
+			position absolute
+			height 100%
+			top 0
+			right 0
+			width 1px
+			background rgba(#fff,0.2)
+		&:first-of-type
+			border-top-left-radius brbut
+			border-bottom-left-radius brbut
+		&:last-of-type
+			border-top-right-radius brbut
+			border-bottom-right-radius brbut
+			&:after
+				display none
+		&.clean
+			&:first-of-type
+				padding-right 0
+
+.buttons_group_filter
+	.button
+		background cbglight
+		border 1px solid cbglight - 15%
+		box-shadow none
+		margin-left -1px
+		color ctextlight
+		text-shadow none
+		&:hover
+			background cbglight + 20%
+		&:after
+			display none
+		&:first-child
+			margin-left 0
+		&.active
+			background cbglight - 5%
+			box-shadow inset 0 1px 1px rgba(#000,0.1)
+			cursor default
+		.ruble, .dollar, .euro
+			color ctextlight
+		&.active
+			.ruble
+				color #C06433
+			.dollar
+				color cl3 - 10%
+			.euro
+				color cl2
+
+.delete
+	width 18px
+	height 18px
+	display inline-block
+	border-radius 50%
+	z-index 10
+	background url(../images/icon_delete.svg) no-repeat center
+	background-size 18px
+	cursor pointer
+	transition 0s
+	&:hover
+		transform rotate(90deg)
+		transition .3s
+
+.trash
+	min-width 20px
+	height 20px
+	display inline-block
+	text-align center
+	z-index 10
+	cursor pointer
+	transition .2s
+	font-size fzn + 1px
+	color ctexterror!important
+	&:before
+		margin 0
+		width auto
+		color ctexterror
+	&:hover
+		color ctexterror + 20%!important
+		&:before
+			color ctexterror + 20%
+
+a.block_close
+	position absolute
+	right 10px
+	top 10px
+	color ctextlight
+	&:hover
+		color clink
+
+.button_clean
+	color ctextlight
+	text-decoration none
+	font-size fzn
+	&:before
+		margin-right 5px
+	&:hover
+		color clink
+
+	&.small
+		font-size fzn - 2px
+
+	&.disabled, &[disabled]
+		cursor no-drop
+		color ctextdis
+		&:hover
+			color ctextdis
+
+	& + .button_clean
+		margin-left 20px
+	& + .button_clean_dropdown
+		margin-left 10px
+
+
+
+.button_clean_dropdown
+	width 20px
+	height 20px
+	background cbglight
+	display inline-block
+	vertical-align middle
+	color ctextlight
+	text-align center
+	border-radius brbut
+	&:before
+		width auto
+		margin 0
+
+	&:hover
+		color clink
+
+
+.waves-effect
+	position relative
+	cursor pointer
+	display inline-block
+	overflow hidden
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	-webkit-tap-highlight-color transparent
+	vertical-align middle
+	z-index 1
+	will-change opacity, transform
+	.waves-block
+			display block
+	&.waves-light
+		.waves-ripple
+			background-color rgba(#fff, .3)
+	&.clean
+		.waves-ripple
+			background-color rgba(cl4, .2)
+	&.button.disabled, [disabled]
+		.waves-ripple
+			background-color rgba(#fff, .0)
+
+
+.waves-ripple
+	position absolute
+	border-radius 50%
+	width 2px
+	height 2px
+	margin-top -1px
+	margin-left -1px
+	opacity 0
+	background rgba(cl1,0.2)
+	-webkit-transition-property -webkit-transform, opacity
+	-moz-transition-property -moz-transform, opacity
+	-o-transition-property -o-transform, opacity
+	transition-property transform, opacity
+	pointer-events none
+
+.waves-input-wrapper
+	.waves-button-input
+		display block
+		height 100%
+		width 100%
+		background none
+		border none
+		color #fff
+		font-size fzn + 3px
+		cursor pointer
+
+
+
+

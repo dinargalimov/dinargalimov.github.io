@@ -1,0 +1,129 @@
+.contragents_widgets
+	margin-bottom -20px
+	&.choosed
+		.contragents_widget_money
+			transform scale(.9)
+			&:hover
+				transform scale(1)
+	clearfix()
+	.contragents_widget_money
+		padding 0
+		margin 0
+		display block
+		float left
+		cursor pointer
+		transition .2s
+		box-sizing border-box
+		transform scale(1)
+		margin 0 1.5% 20px 0
+		background-size auto 70%
+		background-repeat no-repeat
+		background-position center
+
+		@media (min-width:600px) and (max-width:1170px)
+			width 32.33%
+			&:nth-child(3n)
+				margin-right 0
+			&.soon2
+				display none
+
+		@media (min-width:1170px) and (max-width:1400px)
+			width 23.875%
+			&:nth-child(4n)
+				margin-right 0
+		@media (min-width:1400px) and (max-width:1700px)
+			width 18.8%
+			&:nth-child(5n)
+				margin-right 0
+		@media (min-width:1700px)
+			width 15.46%
+			&:nth-child(6n)
+				margin-right 0
+
+		&:hover
+			transform translateY(-3px)
+			box-shadow 0px 2px 3px 0px rgba(0,0,0,0.12)
+			.desc:after
+				opacity .8
+
+		// активный счет
+		&.active
+			transform scale(1)
+			cursor default
+			&:after, &:before
+				top 100%
+				left 50%
+				border solid transparent
+				content " "
+				height 0
+				width 0
+				position absolute
+				pointer-events none
+
+			&:after
+				border-color rgba(255, 255, 255, 0)
+				border-top-color #fff
+				border-width 10px
+				margin-left -10px
+			&:before
+				border-color rgba(221, 221, 221, 0)
+				border-top-color #ddd
+				border-width 11px
+				margin-left -11px
+
+			&:hover
+				transform none
+			.desc
+				color #fff
+				&:after
+					display none
+				.num, .num:hover
+					color #fff
+
+		// долларовый счет
+		&.paid
+			.desc:after
+				background-color cl3
+			&.active
+				.desc
+					background cl3
+
+		&.payable
+			.desc:after
+				background-color cerror
+			&.active
+				.desc
+					background cerror
+
+		.desc
+			padding 15px
+			margin 0 0 10px
+			overflow hidden
+			font-size fzn - 2px
+			&:after
+				content ''
+				display block
+				width 90px
+				height 4px
+				background cl3
+				position absolute
+				bottom 0
+				left 15px
+				transition .3s
+				opacity .5
+			.name
+				float left
+				font-weight normal
+			.num
+				float right
+				color ctextlight
+
+		.value
+			font-size 26px
+			text-align left
+			padding 0 15px 12px
+			.cur
+				font-weight 300
+			&.small
+				font-size 18px
+				margin-top -7px

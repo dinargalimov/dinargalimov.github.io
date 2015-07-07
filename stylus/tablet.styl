@@ -1,0 +1,21 @@
+aside
+	transform translateX(-95px)
+	z-index 100
+	transition transform ease .3s 0s
+	&:hover
+		transition transform ease .3s .3s
+		transform translateX(0)
+		.aside_tablet_overlay
+			opacity 0
+			visibility hidden
+			transition opacity ease .3s .3s, visibility 0s .6s
+
+	.aside_tablet_overlay
+		visibility visible
+		transition opacity ease .3s 0s, visibility 0s 0s
+
+
+section.main
+	left 45px
+header
+	left 45px

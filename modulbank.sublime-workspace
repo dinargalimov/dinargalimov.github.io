@@ -1,0 +1,3247 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"im",
+				"img2.jpg	w:277 h:175"
+			],
+			[
+				"p",
+				"partner1.png	w:488 h:456"
+			],
+			[
+				"sm",
+				"smi6.png	w:108 h:48"
+			],
+			[
+				"a",
+				"avatar_woman.jpg	w:327 h:328"
+			],
+			[
+				"png",
+				"assistant_photo.png	w:235 h:235"
+			],
+			[
+				"has",
+				"hasClass	.hasClass()"
+			],
+			[
+				"ic",
+				"icon_tvbus5.png	w:75 h:70"
+			],
+			[
+				"iconb",
+				"icon_tvbus3.png	w:90 h:50"
+			],
+			[
+				"s",
+				"slide3.png	w:306 h:288"
+			],
+			[
+				"sl",
+				"slide1.png	w:541 h:228"
+			],
+			[
+				"da",
+				"damir2.png	w:474 h:546"
+			],
+			[
+				"r",
+				"rustem.png	w:490 h:536"
+			],
+			[
+				"d",
+				"dinar.png	w:512 h:546"
+			],
+			[
+				"re",
+				"rustem.png	w:536 h:598"
+			],
+			[
+				"slid",
+				"slide_left.svg"
+			],
+			[
+				"mi",
+				"micsql.png	w:214 h:174"
+			],
+			[
+				"ca",
+				"cat_case.png	w:352 h:100"
+			],
+			[
+				"c",
+				"cat_jcb.png	w:194 h:160"
+			],
+			[
+				"v",
+				"partner_virtuoz.jpg	w:170 h:50"
+			],
+			[
+				"i",
+				"images/"
+			],
+			[
+				"par",
+				"partner_eho.jpg	w:150 h:62"
+			],
+			[
+				"outer",
+				"outerHeight	.outerHeight()"
+			],
+			[
+				"tv",
+				"tv_ren.png	w:78 h:80"
+			],
+			[
+				"tv_r",
+				"tv_russia.png	w:140 h:36"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"zapis",
+				"zapis_form"
+			],
+			[
+				"b",
+				"bd	border"
+			],
+			[
+				"tt",
+				"tt:u	text-transform:uppercase"
+			],
+			[
+				"fo",
+				"fontDefault"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"brd",
+				"bdrz	border-radius"
+			],
+			[
+				"bn",
+				"bd:n	border:none"
+			],
+			[
+				"icon_edi",
+				"icon_edit42"
+			],
+			[
+				"tov",
+				"tov-e	text-overflow: ellipsis;"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"u",
+				"url"
+			],
+			[
+				"genpl",
+				"genplan_map"
+			],
+			[
+				"borde",
+				"border-color"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"to",
+				"top	top"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"bim",
+				"background-image"
+			],
+			[
+				"borc",
+				"border-color"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"bo",
+				"border	@border"
+			],
+			[
+				"f",
+				"for	@for"
+			],
+			[
+				"imp",
+				"important"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"t",
+				"text-align"
+			],
+			[
+				"fa",
+				"fancybox"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"la",
+				"last-child  (pseudo-class)"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"menu_",
+				"menu_down"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"do",
+				"dotted"
+			],
+			[
+				"n",
+				"nowrap"
+			],
+			[
+				"o",
+				"opacity"
+			],
+			[
+				"nor",
+				"no-repeat"
+			],
+			[
+				"box-",
+				"box-shadow:   (property)"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"h",
+				"height	@height"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"jspC",
+				"jspContainer"
+			],
+			[
+				"all_",
+				"all_app_list"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"las",
+				"last-child"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"cont",
+				"contragents"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"webkit-box",
+				"-webkit-box-shadow:   (property)"
+			],
+			[
+				"box-s",
+				"box-sizing:   (property)"
+			],
+			[
+				"ta",
+				"table-cell"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"e",
+				"ellipsis"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"site_",
+				"site_url"
+			],
+			[
+				"bottom",
+				"bottomMiddle"
+			],
+			[
+				"border",
+				"border_dark"
+			],
+			[
+				"webkit-trans",
+				"-webkit-transition:   (property)"
+			],
+			[
+				"border-bo",
+				"border-bottom-width"
+			],
+			[
+				"ac",
+				"active"
+			],
+			[
+				"I",
+				"!important  (value)"
+			],
+			[
+				"icon_ch",
+				"icon_check"
+			],
+			[
+				"yan",
+				"icon_yandex"
+			],
+			[
+				"fac",
+				"icon_facebook"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"menu",
+				"menu_down"
+			],
+			[
+				"menu_down",
+				"menu_down_link"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"tr",
+				"text-decoration"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "stylus/select.styl",
+			"settings":
+			{
+				"buffer_size": 8386,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "stylus/variables.styl",
+			"settings":
+			{
+				"buffer_size": 934,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "stylus/base.styl",
+			"settings":
+			{
+				"buffer_size": 21086,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "stylus/main.styl",
+			"settings":
+			{
+				"buffer_size": 12733,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "stylus/table.styl",
+			"settings":
+			{
+				"buffer_size": 5128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/transaction.styl",
+			"settings":
+			{
+				"buffer_size": 3769,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/messenger.styl",
+			"settings":
+			{
+				"buffer_size": 7306,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/forms.styl",
+			"settings":
+			{
+				"buffer_size": 11799,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "stylus/buttons.styl",
+			"settings":
+			{
+				"buffer_size": 5308,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/transaction/transaction.html",
+			"settings":
+			{
+				"buffer_size": 10248,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/jquery.multiple.select.js",
+			"settings":
+			{
+				"buffer_size": 23084,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/init.js",
+			"settings":
+			{
+				"buffer_size": 2784,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/Dinar/Downloads/jquery.multiple.select.js",
+			"settings":
+			{
+				"buffer_size": 34172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/forms.html",
+			"settings":
+			{
+				"buffer_size": 5175,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/admin/admin_task_list.html",
+			"settings":
+			{
+				"buffer_size": 7406,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/admin/admin_page_task.html",
+			"settings":
+			{
+				"buffer_size": 7145,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 363.0,
+		"selected_items":
+		[
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"editorc",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"d",
+				"Package Control: Disable Package"
+			],
+			[
+				"pad",
+				"Package Control: Disable Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"emm",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"h",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"pac",
+				"Package Control: Disable Package"
+			],
+			[
+				"s h",
+				"Set Syntax: HTML"
+			],
+			[
+				"c",
+				"Tidy CSS"
+			],
+			[
+				"cs",
+				"Tidy CSS"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"syn css",
+				"Set Syntax: CSS"
+			],
+			[
+				"search",
+				"File: Search Files"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"https://sublime.wbond.net/testing/packages.json",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'",
+			"cd ~/Library/Application\\ Support/Sublime\\ Text\\ 3/Packages/",
+			"git clone https://github.com/wbond/sublime_package_control.git \"Package Control\"",
+			"cd Packages",
+			"cd Packages/"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/Work/МодульБанк/html/ModulBank/images/font_icons/date_from.svg",
+		"/Users/Dinar/Downloads/jquery.multiple.select.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/multiple-select.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/messenger/messenger.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/forms.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_client_list.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/admin.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_settings.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/account_widget.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_settings_agents.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_page_task.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/jquery.multiple.select.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_task_list.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/registration.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/style.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/animations.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/buttons.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/forms.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/table.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/waves.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_settings_agents_group.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_settings_agents_invite.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step2_24.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_registration.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step2_2.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_invite_send.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/images/wizard_step_arrow.svg",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/open_account.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/open_account.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step2_3.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/account_rekvisits.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/account_instruction.html",
+		"/Volumes/Work/МодульБанк/git/ModulBank.FrontEnd.InternalPortal/src/app/js/ui/agents/directives/radAgentsListGroup/radAgentsListGroup.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step1_4_загрузка.html",
+		"/Volumes/Work/МодульБанк/git/ModulBank.FrontEnd.InternalPortal/src/app/stylus/table.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/admin.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/admin.css.map",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/style.css",
+		"/Volumes/Work/МодульБанк/git/ModulBank.FrontEnd/_markup/css/admin.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/messenger.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/messenger.css.map",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/messenger/messenger_chat.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/init.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/buttons.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/owl.carousel.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/login_admin.html",
+		"/Volumes/Work/МодульБанк/git/ModulBank.FrontEnd.InternalPortal/src/app/js/ui/account/controllers/signin.controller/signin.controller.html",
+		"/Users/Dinar/Downloads/menu.svg",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/login.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/images/logo.svg",
+		"/Volumes/Work/МодульБанк/html/ModulBank/images/loading.svg",
+		"/Volumes/Work/МодульБанк/git/ModulBank.FrontEnd.InternalPortal/src/app/js/ui/account/directives/personalData.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/header.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/popup_small.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/popup.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/messenger.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/messenger/messenger_popup_error_file.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/animations.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/animate.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/animations.css.map",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/admin/admin_settings_agents_addGroup.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/messenger/messenger_new_chat.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/registration.css.map",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/owl.carousel.js",
+		"/Users/Dinar/Downloads/OwlCarousel2-develop/src/js/owl.navigation.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step3.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step4.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step1_5.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step2_22bi_загрузка.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step2_22bvi.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step2_22bvii.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step2_22biv.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step2.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_step1.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_sms.html",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/stylus/style.styl",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/community.html",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/community_post.html",
+		"/Users/Dinar/Downloads/OwlCarousel2-develop/src/js/owl.carousel.js",
+		"/Users/Dinar/Downloads/OwlCarousel2-develop/src/scss/owl.animate.scss",
+		"/Users/Dinar/Downloads/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/fonts/roboto/roboto-medium.woff",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Installed Packages/BracketHighlighter.sublime-package",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Installed Packages/Emmet.sublime-package",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Installed Packages/PyV8/osx-p3/_PyV8.so",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Installed Packages/PyV8/osx-p3/PyV8.py",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/hayaku-master/dictionaries/hayaku_CSS_dictionary.json",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/include.js",
+		"/Users/Dinar/Downloads/lumX-0.3.32/demo/index.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/images/font_icons/icon_fullsize.svg",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step1_4.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step2_1.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step1_3.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step1_2.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/open_account/open_account_step1_1.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/open_account.css.map",
+		"/Users/Dinar/Downloads/materialize-src/sass/components/_waves.scss",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/buttons.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/base.styl",
+		"/Users/Dinar/Downloads/lumX-0.3.32/modules/ripple/js/ripple_directive.js",
+		"/Users/Dinar/Downloads/lumX-0.3.32/modules/ripple/scss/_ripple.scss",
+		"/Users/Dinar/Downloads/lumX-0.3.32/modules/tooltip/js/tooltip_directive.js",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/js/init.js",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/invest.html",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/index.html",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/contact.html",
+		"/Volumes/Work/Сайты/Вебсайт/UPLIFT/html/blog.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/variables.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/security_lock/security_lock.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/popup_small_textarea.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_city1.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/jquery.textarea_autosize.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/messenger/messenger_chat_first_message.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/html/reg/registration_city2.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/select2-origin.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/stylus/select2.styl",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/main.css",
+		"/Volumes/Work/МодульБанк/html/ModulBank/modulbank.sublime-project",
+		"/Users/Dinar/Downloads/multiple-select-master/jquery.multiple.select.js",
+		"/Users/Dinar/Downloads/multiple-select-master/demos/index.html",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/select2.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/chosen.jquery.js",
+		"/Users/Dinar/Downloads/chosen-1.4.2/coffee/chosen.jquery.coffee",
+		"/Volumes/Work/МодульБанк/html/ModulBank/js/select.js",
+		"/Volumes/Work/МодульБанк/html/ModulBank/css/select.css"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Volumes/Work/МодульБанк/html/ModulBank/html",
+			"/Volumes/Work/МодульБанк/git/ModulBank.FrontEnd.InternalPortal",
+			"/Volumes/Work/МодульБанк/html/ModulBank/stylus",
+			"/Volumes/Work/МодульБанк/html/ModulBank/html/reg",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd",
+			"/Volumes/Work/МодульБанк/html/ModulBank/stylus",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd,*.html",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd,*.js",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd,*.html",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd,-*_markup",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd,-*markup",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd,*.html",
+			"/Volumes/Work/МодульБанк/ModulBank.FrontEnd",
+			"/Volumes/Work/МодульБанк/html/ModulBank,*.html",
+			"/Volumes/Work/МодульБанк/html/ModulBank",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.3.4",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.4.6.3",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.3.4",
+			"/Volumes/Work/CMS/ImageCMS/imagecms_shop_pro 2",
+			"/Volumes/Work/CMS/ShopCMS/3_1_1",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.3.4",
+			"/Volumes/Work/CMS/ShopCMS/3_1_1",
+			"/Volumes/Work/Юниклауд/Верстка 365/Бизнес 365",
+			"/Volumes/Work/Сайты/Вебсайт/MEGA.WEB/svn/MegaWeb",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.3.2",
+			"",
+			"/Volumes/Work/Юниклауд/Верстка/Бизнес 365",
+			"",
+			"/Volumes/Work/Сайты/Вебсайт/Можайское имение/html",
+			"/Volumes/Work/CMS/ImageCMS/imagecms_3.4.7.84",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.1.0",
+			"",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.1.0",
+			"/Volumes/Work/Юниклауд/Верстка/Бизнес 365",
+			"/Volumes/Work/Юниклауд/Каркас",
+			"",
+			"/Volumes/Work/CMS/Diafan/diafan.CMS.5.1.0",
+			"/Volumes/Work/CMS/ImageCMS/imagecms_3.4.7.84"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"date_fr",
+			"fixe",
+			"filter_date_input",
+			"owl-item",
+			"MultipleSelect",
+			"checkbox",
+			"chec",
+			".transaction_content",
+			".side_right_fixed",
+			"side_par",
+			"input_check",
+			"label",
+			"side_rig",
+			"side_",
+			"select_inline",
+			"page_side",
+			"side_parameter",
+			"side_right",
+			"checkb",
+			"input",
+			"action",
+			"widget_filters",
+			"name_title",
+			"group",
+			"list_panel",
+			"side_right_fixed",
+			"type=\"radio\"",
+			"switch_item",
+			"type=\"radio\"",
+			".action",
+			".table_list.role_list .action",
+			"button",
+			"form_buttons",
+			"invite_user",
+			"check",
+			"invite_user",
+			"type=\"radio\"",
+			"type=\"checkbox\"",
+			"table_list_header",
+			"widget_filters",
+			"class=\"check\"><input type=\"radio\"",
+			"<label for=\"2\" class=\"check\"><input type=\"radio\" name=\"2\"  id=\"2\">",
+			"transaction_currency_filter",
+			"switch",
+			"swit",
+			".content",
+			"widget_filters",
+			"content 'a'",
+			"content_",
+			"sear",
+			"new",
+			"content_",
+			"Должно",
+			"table_list_group_content",
+			"table_list_group",
+			"group_name_link",
+			"table_list_group_content",
+			"cbdlightsky",
+			"tooltip",
+			"table_list",
+			".conten",
+			"conten",
+			"owl",
+			"carousel",
+			".trash",
+			"table_list",
+			"notext",
+			"transaction_list",
+			".content",
+			"notif",
+			"load",
+			"tabs_content",
+			"placeholder",
+			"transaction_content",
+			"Имя",
+			"content",
+			"tabs_menu",
+			"table_list",
+			"header_action ",
+			"model.login",
+			"column three property_label",
+			"page_cont",
+			"header_profile_name",
+			"messenger_new_theme",
+			"file_upload_list",
+			"file_upload_item",
+			"page_expand",
+			"rubl",
+			"file_upload_block",
+			".popup_cell",
+			"post_photo",
+			"Navigation.prototype.initialize",
+			"disab",
+			"prepared.owl.carousel",
+			"disab",
+			"disabled",
+			"disable",
+			"disabled",
+			"select_multi",
+			"rubl",
+			"div",
+			">\n",
+			"<div class=\"num\">***2359</div>",
+			"***2359",
+			"class",
+			"\">***",
+			">\n",
+			"2359",
+			"widget_block",
+			"2359",
+			"\">\n",
+			"34",
+			"> ",
+			"Расчетный",
+			"2359",
+			"Расчетный",
+			"widget_block",
+			"2359",
+			"account",
+			"dollar",
+			"euro",
+			"group_name_link",
+			"link_dashed",
+			"a",
+			"div",
+			"messenger_chat",
+			"messenger_chat ",
+			"photo"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Расчетный",
+			"<div class=\"num\">***2359</div>",
+			"\">***",
+			">\n",
+			"2359",
+			"			\n",
+			"2359",
+			">\n",
+			"<div class=\"reg_header\">\n			<a href=\"/\" class=\"logo\">МодульБанк</a>\n			<div class=\"header_links\"><a href=\"#\" class=\"login\">Войти в систему</a></div>\n		</div>\n		<div class=\"reg_section\">\n			<div class=\"reg_side\">\n				<div class=\"title\">Регистрация компании</div>\n				<p>Тариф «Старт»: 0 рублей/в месяц</p>\n				<p>Команда: Ассистент, Бухгалтер, Юрист</p>\n				<div class=\"copyright\">\n					<p>Для получения дополнительной информации позвоните по телефону 8 (800) 333 79 96 с 09:00 до 21:00</p>\n					<p>Банковские услуги представляются ОАО КБ «Региональный Кредит». Лицензия ЦБ РФ №1927 от 07.08.2012 г.</p>\n				</div>\n			</div>\n			<div class=\"reg_article\" ng-controller=\"selectController\">",
+			"cbd",
+			"images/avatar",
+			"avatar",
+			"icon-",
+			".08s",
+			".15s",
+			".08s",
+			".1s",
+			".0001s",
+			".15s",
+			".01s",
+			".1s",
+			".07s",
+			".1s",
+			".07s",
+			".05s",
+			"",
+			"icon-menu-clients",
+			"icon-menu-transaction",
+			"icon-menu-dashboard",
+			"icon-",
+			"<label class=\"button small button_file_upload\">Загрузить\n												<input type=\"file\" name=\"\" id=\"\"></label>",
+			"<label class=\"button small button_file_upload\">Загрузить\n										<input type=\"file\" name=\"\" id=\"\"></label>",
+			"icon",
+			"class",
+			">\n",
+			"phone",
+			"div",
+			"p",
+			"",
+			"E30613",
+			"",
+			"F57A1C",
+			"558D0A",
+			"$r",
+			"large"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "stylus/select.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1054,
+								1054
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 948.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "stylus/variables.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 934,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								821,
+								821
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 322.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "stylus/base.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21086,
+								21086
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 23182.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "stylus/main.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6850,
+								6850
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8302.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "stylus/table.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1155,
+								1155
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 775.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "stylus/transaction.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3181,
+								3181
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "stylus/messenger.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								212
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "stylus/forms.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2564,
+								2564
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "stylus/buttons.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5308,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								587,
+								547
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4765.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 9,
+					"file": "html/transaction/transaction.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10248,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 2356,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										2016,
+										2020
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								5264,
+								5273
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2191.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/jquery.multiple.select.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								23084
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10862.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "js/init.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								790,
+								790
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/Dinar/Downloads/jquery.multiple.select.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								34172
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "html/forms.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1281,
+								1301
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 922.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "html/admin/admin_task_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "html/admin/admin_page_task.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5685,
+								6051
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Dinar.tmTheme",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3130.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.428036101828,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 116.0
+	},
+	"output.find_results":
+	{
+		"height": 327.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"project": "modulbank.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ini",
+				"js/init.js"
+			],
+			[
+				"mul",
+				"js/jquery.multiple.select.js"
+			],
+			[
+				"for",
+				"html/forms.html"
+			],
+			[
+				"adminli",
+				"html/admin/admin_task_list.html"
+			],
+			[
+				"admip",
+				"html/admin/admin_page_task.html"
+			],
+			[
+				"admins",
+				"html/admin/admin_settings_agents.html"
+			],
+			[
+				"admt",
+				"html/admin/admin_task_list.html"
+			],
+			[
+				"adm",
+				"html/admin/admin_client_list.html"
+			],
+			[
+				"acc",
+				"html/open_account/account_widget.html"
+			],
+			[
+				"admis",
+				"html/admin/admin_settings_agents_group.html"
+			],
+			[
+				"adminse",
+				"html/admin/admin_settings_agents.html"
+			],
+			[
+				"wa",
+				"js/waves.js"
+			],
+			[
+				"admin",
+				"stylus/admin.styl"
+			],
+			[
+				"ope",
+				"stylus/open_account.styl"
+			],
+			[
+				"form",
+				"html/forms.html"
+			],
+			[
+				"acco",
+				"html/open_account/account_widget.html"
+			],
+			[
+				"admincl",
+				"html/admin/admin_client_list.html"
+			],
+			[
+				"sty",
+				"stylus/style.styl"
+			],
+			[
+				"mes",
+				"stylus/messenger.styl"
+			],
+			[
+				"me",
+				"html/messenger/messenger.html"
+			],
+			[
+				"ind",
+				"html/index.html"
+			],
+			[
+				"butt",
+				"html/buttons.html"
+			],
+			[
+				"admi",
+				"html/admin/admin_settings.html"
+			],
+			[
+				"login",
+				"html/reg/login_admin.html"
+			],
+			[
+				"adminta",
+				"html/admin/admin_task_list.html"
+			],
+			[
+				"hea",
+				"html/header.html"
+			],
+			[
+				"pop",
+				"html/popup_small.html"
+			],
+			[
+				"ani",
+				"stylus/animations.styl"
+			],
+			[
+				"anim",
+				"stylus/animations.styl"
+			],
+			[
+				"re",
+				"html/reg/registration.html"
+			],
+			[
+				"reg",
+				"stylus/registration.styl"
+			],
+			[
+				"regst",
+				"html/reg/registration_step2.html"
+			],
+			[
+				"admp",
+				"html/admin/admin_page_task.html"
+			],
+			[
+				"tr",
+				"stylus/transaction.styl"
+			],
+			[
+				"admag",
+				"html/admin/admin_settings_agents_group.html"
+			],
+			[
+				"admiad",
+				"html/admin/admin_settings_agents_addGroup.html"
+			],
+			[
+				"in",
+				"js/init.js"
+			],
+			[
+				"ac",
+				"html/open_account/account_widget.html"
+			],
+			[
+				"op",
+				"html/open_account/open_account_step1_4.html"
+			],
+			[
+				"admad",
+				"html/admin/admin_settings_agents_addGroup.html"
+			],
+			[
+				"adminag",
+				"html/admin/admin_settings_agents_invite.html"
+			],
+			[
+				"wav",
+				"js/waves.js"
+			],
+			[
+				"open",
+				"html/open_account/open_account_step1_4.html"
+			],
+			[
+				"adming",
+				"html/admin/admin_settings_agents_group.html"
+			],
+			[
+				"fo",
+				"html/forms.html"
+			],
+			[
+				"adminpag",
+				"html/admin/admin_page_task.html"
+			],
+			[
+				"but",
+				"stylus/buttons.styl"
+			],
+			[
+				"adms",
+				"html/admin/admin_settings.html"
+			],
+			[
+				"var",
+				"stylus/variables.styl"
+			],
+			[
+				"sele",
+				"stylus/select.styl"
+			],
+			[
+				"ad",
+				"html/admin/admin_page_task.html"
+			],
+			[
+				"mess",
+				"html/messenger/messenger_chat.html"
+			],
+			[
+				"bas",
+				"stylus/base.styl"
+			],
+			[
+				"main",
+				"stylus/main.styl"
+			],
+			[
+				"se",
+				"stylus/select.styl"
+			],
+			[
+				"st",
+				"stylus/style.styl"
+			],
+			[
+				"admint",
+				"html/admin/admin_task_list.html"
+			],
+			[
+				"instru",
+				"html/open_account/account_instruction.html"
+			],
+			[
+				"f",
+				"stylus/forms.styl"
+			],
+			[
+				"lo",
+				"login.html"
+			],
+			[
+				"regi",
+				"stylus/registration.styl"
+			],
+			[
+				"s",
+				"css/style.css"
+			],
+			[
+				"buton",
+				"css/buttons.css"
+			],
+			[
+				"them",
+				"Бизнес 365/css/theme_astral.css"
+			],
+			[
+				"themem",
+				"Бизнес 365/css/theme_megafon.css"
+			],
+			[
+				"theme",
+				"Бизнес 365/css/theme_pfr.css"
+			],
+			[
+				"uni",
+				"Бизнес 365/css/uni_form.css"
+			],
+			[
+				"eddo",
+				"Бизнес 365/edit_document.html"
+			],
+			[
+				"styl",
+				"Бизнес 365/css/style_new.css"
+			],
+			[
+				"lisc",
+				"Бизнес 365/list_contact.html"
+			],
+			[
+				"new",
+				"Бизнес 365/news.html"
+			],
+			[
+				"mag",
+				"Бизнес 365/magic_search.html"
+			],
+			[
+				"hel",
+				"Бизнес 365/help.html"
+			],
+			[
+				"th",
+				"Бизнес 365/css/theme_mts.css"
+			],
+			[
+				"set",
+				"Бизнес 365/settings.html"
+			],
+			[
+				"edd",
+				"Бизнес 365/edit_document.html"
+			],
+			[
+				"loginn",
+				"Бизнес 365/login_new_pfr.html"
+			],
+			[
+				"инст",
+				"Бизнес 365/инструкция vipnet.html"
+			],
+			[
+				"ин",
+				"Бизнес 365/popup_плагин_криптографии.html"
+			],
+			[
+				"the",
+				"Бизнес 365/css/theme_pfr.css"
+			],
+			[
+				"doce",
+				"Бизнес 365/edit_document.html"
+			],
+			[
+				"regn",
+				"Бизнес 365/registration_new_megafon.html"
+			],
+			[
+				"unif",
+				"Бизнес 365/css/uni_form.css"
+			],
+			[
+				"log",
+				"Бизнес 365/login_megafon.html"
+			],
+			[
+				"pfr",
+				"Бизнес 365/css/theme_pfr.css"
+			],
+			[
+				"all",
+				"Бизнес 365/all_search.html"
+			],
+			[
+				"fon",
+				"Бизнес 365/css/font-awesome.css"
+			],
+			[
+				"lista",
+				"Бизнес 365/list_task.html"
+			],
+			[
+				"sea",
+				"Бизнес 365/all_search.html"
+			],
+			[
+				"poppa",
+				"Бизнес 365/popup_pay_billing.html"
+			],
+			[
+				"popupmeg",
+				"Бизнес 365/popup_service_megafon.html"
+			],
+			[
+				"popbu",
+				"Бизнес 365/popup_pay_billing.html"
+			],
+			[
+				"edt",
+				"Бизнес 365/edit_task.html"
+			],
+			[
+				"like",
+				"Бизнес 365/like_button.html"
+			],
+			[
+				"popup",
+				"Бизнес 365/popup_bonus.html"
+			],
+			[
+				"edid",
+				"Бизнес 365/edit_document.html"
+			],
+			[
+				"unib",
+				"Бизнес 365/css/uni_button.css"
+			],
+			[
+				"editta",
+				"Бизнес 365/edit_task.html"
+			],
+			[
+				"lisd",
+				"Бизнес 365/list_document.html"
+			],
+			[
+				"listt",
+				"Бизнес 365/list_task.html"
+			],
+			[
+				"editd",
+				"Бизнес 365/edit_document.html"
+			],
+			[
+				"ui",
+				"Бизнес 365/css/jquery-ui-1.8.18.custom.css"
+			],
+			[
+				"popa",
+				"Бизнес 365/popup_action_default.html"
+			],
+			[
+				"ie8",
+				"Бизнес 365/css/ie8.css"
+			],
+			[
+				"lisme",
+				"Бизнес 365/list_task_megafon.html"
+			],
+			[
+				"lis",
+				"Бизнес 365/list_task.html"
+			],
+			[
+				"un",
+				"Бизнес 365/css/uni_form.css"
+			],
+			[
+				"base",
+				"Бизнес 365/css/base.css"
+			],
+			[
+				"dele",
+				"Бизнес 365/delete_account.html"
+			],
+			[
+				"styln",
+				"Бизнес 365/css/style_new.css"
+			],
+			[
+				"popupd",
+				"Бизнес 365/popup_shipp_doc.html"
+			],
+			[
+				"popupay",
+				"Бизнес 365/popup_pay_billing_megafon.html"
+			],
+			[
+				"crea",
+				"Бизнес 365/create_contact.html"
+			],
+			[
+				"inv",
+				"Бизнес 365/invite2.html"
+			],
+			[
+				"awe",
+				"Бизнес 365/css/font-awesome.css"
+			],
+			[
+				"loginne",
+				"Бизнес 365/login_new_megafon.html"
+			],
+			[
+				"creata",
+				"Бизнес 365/create_task.html"
+			],
+			[
+				"thme",
+				"Бизнес 365/css/theme_megafon.css"
+			],
+			[
+				"crec",
+				"Бизнес 365/create_contact.html"
+			],
+			[
+				"listta",
+				"Бизнес 365/list_task.html"
+			],
+			[
+				"settm",
+				"Бизнес 365/settings_megafon.html"
+			],
+			[
+				"eddoc",
+				"Бизнес 365/edit_document.html"
+			],
+			[
+				"smar",
+				"Бизнес 365/css/smart_wizard_vertical.css"
+			],
+			[
+				"edta",
+				"Бизнес 365/edit_task.html"
+			],
+			[
+				"rek",
+				"Бизнес 365/edit_rekvisit.html"
+			],
+			[
+				"eddste",
+				"Бизнес 365/edit_document_step4.html"
+			],
+			[
+				"con",
+				"Бизнес 365/create_contact.html"
+			],
+			[
+				"awes",
+				"Бизнес 365/css/font-awesome.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

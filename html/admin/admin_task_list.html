@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+	<base href="../../"/>
+	<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+	<div class="header_profile">
+		<div class="header_profile_name">
+			<figure class="avatar" style="background-color: rgb(225,90,75)">C</figure>
+				Иванова Саша
+		</div>
+		<div class="header_profile_settigs">
+			<a href="#" class="icon-settings"></a>
+		</div>
+
+		<div class="header_profile_logout">
+			<a href="#" class="icon-logout"></a>
+		</div>
+	</div>
+
+	<div class="profile_progress">
+		Мои закрытые:
+		<strong>250</strong>
+		(<span class="success_text">200</span>/<span class="error_text">50</span>)
+	</div>
+
+	<div class="header_admin_menu">
+		<ul>
+			<li class="active"><a href="#" class="icon-check">Задачи</a></li>
+			<li><a href="#" class="icon-menu-clients">Клиенты</a></li>
+		</ul>
+	</div>
+</header>
+
+<section class="main">
+
+	<div class="side_right_fixed">
+		<div class="widget_block">
+			<div class="widget_filters">
+
+				<div class="side_parameter parameter_inline">
+					<div class="side_parameter_name">Группа:</div>
+					<div class="side_parameter_value">
+						<select class="select_inline" data-placeholder="выбрать">
+							<option value="t1" selected>все группы</option>
+							<option value="t2">Бригада</option>
+							<option value="t3">Аналитики</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="side_sep"></div>
+
+				<div class="side_filter">
+					<ul>
+						<li><input type="checkbox" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Непрочитанные</span></label></li>
+					</ul>
+				</div>
+
+				<div class="side_sep"></div>
+
+				<div class="side_filter">
+					<ul>
+						<li><input type="radio" name="2"  id="2" class="input_check"><label for="2" class="label_check"><i class="icon"></i><span>Нераспределенные (1)</span></label></li>
+						<li><input type="radio" name="2"  id="3" class="input_check"><label for="3" class="label_check"><i class="icon"></i><span>Без исполнителей (15)</span></label></li>
+						<li><input type="radio" name="2"  id="4" class="input_check"><label for="4" class="label_check"><i class="icon"></i><span>Мои открытые (3)</span></label></li>
+						<li><input type="radio" name="2"  id="5" class="input_check"><label for="5" class="label_check"><i class="icon"></i><span>Все открытые (27)</span></label></li>
+					</ul>
+				</div>
+
+				<div class="side_sep"></div>
+
+				<div class="side_filter">
+					<ul>
+						<li><input type="radio" name="3"  id="6" class="input_check"><label for="6" class="label_check"><i class="icon"></i><span>Закрытые клиентом (1)</span></label></li>
+						<li><input type="radio" name="3"  id="7" class="input_check"><label for="7" class="label_check"><i class="icon"></i><span>Завершенные (3)</span></label></li>
+						<li><input type="radio" name="3"  id="8" class="input_check"><label for="8" class="label_check"><i class="icon"></i><span>Все задачи (15)</span></label></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+
+		<div class="notice_block widget_block icon-warning">
+			<p>Поступили новые задачи, требующие вашего внимания. Чтобы просмотреть их, <a>обновите список</a>.<br/>Убедитесь, что у вас установлены соответствующие фильтры.</p>
+		</div>
+
+
+		<!-- таблица -->
+			<div class="table_list table_list_white">
+
+				<!-- шапка таблицы -->
+				<div class="table_list_header">
+					<div class="table_list_cell deadline">
+						Срок
+					</div>
+
+					<div class="table_list_cell performer">
+						Исполнитель
+					</div>
+					<div class="table_list_cell group">
+						Группа
+					</div>
+					<div class="table_list_cell status">
+						Статус
+					</div>
+					<div class="table_list_cell name name_search">
+						<input type="search" class="small input_search second" value="" placeholder="Поиск ...">
+					</div>
+				</div>
+
+				<!-- контент таблицы -->
+				<div class="table_list_body">
+
+
+
+					<!-- строка таблицы -->
+					<div class="table_list_row new">
+						<div class="table_list_cell deadline ">
+							<span class="icon-clock">03:45</span>
+						</div>
+						<div class="table_list_cell performer">
+							<a class="button xsmall">Взять в работу</a>
+						</div>
+						<div class="table_list_cell group">
+							<select class="select_inline" data-placeholder="Выбрать">
+								<option value="" selected>Чемпионы</option>
+								<option value="">Бригада</option>
+								<option value="">Колхозники и колхозницы</option>
+								<option value="">Юристы</option>
+
+							</select>
+						</div>
+						<div class="table_list_cell status">
+							Новая
+						</div>
+
+						<div class="table_list_cell name name_link">
+							<div class="name_title">ООО «Ромашка»</div>
+							<div class="name_desc">Мне срочно необходимо снять помещение внутри Садового срочно необходимо снять помещение внутри Садового</div>
+						</div>
+					</div>
+
+					<!-- строка таблицы -->
+					<div class="table_list_row new">
+						<div class="table_list_cell deadline ">
+							<span class="icon-clock error_text">-02:37</span>
+						</div>
+
+						<div class="table_list_cell performer">
+							<select multiple="multiple" class="select_inline" data-placeholder="Не задан" data-filter="true">
+								<option value="">Азат Халилов</option>
+								<option value="">Алия Арсланова</option>
+								<option value="">Андрей Вариков</option>
+								<option value="">Дамир Амиров</option>
+								<option value="">Денис Маслов</option>
+								<option value="">Динар Галимов</option>
+								<option value="">Нур Ибрагимов</option>
+								<option value="">Роберт Сабирьянов</option>
+							</select>
+						</div>
+						<div class="table_list_cell group">
+							<select class="select_inline" data-placeholder="Выбрать">
+								<option value="" selected>Чемпионы</option>
+								<option value="">Бригада</option>
+								<option value="">Колхозники</option>
+								<option value="">Юристы</option>
+							</select>
+						</div>
+						<div class="table_list_cell status">
+							Новая
+						</div>
+						<div class="table_list_cell name name_link">
+							<div class="name_title">ИП “Сидоров А.Н”</div>
+							<div class="name_desc"><strong>Иванов Саша:</strong> Найдите мне нормального бухгалтера<div class="write_now">
+								<span class="icon-pencil"></span>
+							</div></div>
+
+						</div>
+					</div>
+
+					<!-- строка таблицы -->
+					<div class="table_list_row">
+						<div class="table_list_cell deadline ">
+							<span class="icon-clock error_text">-03:15</span>
+						</div>
+
+						<div class="table_list_cell performer">
+							<select multiple="multiple" class="select_inline" data-placeholder="Не задан" data-filter="true">
+								<option value="">Азат Халилов</option>
+								<option value="">Алия Арсланова</option>
+								<option value="">Андрей Вариков</option>
+								<option value="">Дамир Амиров</option>
+								<option value="">Денис Маслов</option>
+								<option value="">Динар Галимов</option>
+								<option value="">Нур Ибрагимов</option>
+								<option value="">Роберт Сабирьянов</option>
+							</select>
+						</div>
+						<div class="table_list_cell group">
+							<select class="select_inline" data-placeholder="Выбрать">
+								<option value="" selected>Чемпионы</option>
+								<option value="">Бригада</option>
+								<option value="">Колхозники</option>
+								<option value="">Юристы</option>
+							</select>
+						</div>
+						<div class="table_list_cell status">
+							В работе
+						</div>
+						<div class="table_list_cell name name_link">
+							<div class="name_title">СП “Лига”</div>
+							<div class="name_desc">Нужен счет в Замбийских квачах...</div>
+						</div>
+					</div>
+
+					<!-- строка таблицы -->
+					<div class="table_list_row">
+						<div class="table_list_cell deadline ">
+							28 марта
+						</div>
+
+						<div class="table_list_cell performer">
+							<select multiple="multiple" class="select_inline" data-placeholder="Не задан" data-filter="true">
+								<option value="">Азат Халилов</option>
+								<option value="">Алия Арсланова</option>
+								<option value="" selected>Андрей Вариков</option>
+								<option value="">Дамир Амиров</option>
+								<option value="">Денис Маслов</option>
+								<option value="">Динар Галимов</option>
+								<option value="">Нур Ибрагимов</option>
+								<option value="">Роберт Сабирьянов</option>
+							</select>
+						</div>
+						<div class="table_list_cell group">
+							<select class="select_inline" data-placeholder="Выбрать">
+								<option value="" selected>Чемпионы</option>
+								<option value="">Бригада</option>
+								<option value="">Колхозники</option>
+								<option value="">Юристы</option>
+							</select>
+						</div>
+						<div class="table_list_cell status">
+							Ждем клиента
+						</div>
+						<div class="table_list_cell name name_link">
+							<div class="name_title">СП “Лига”</div>
+							<div class="name_desc">Нужен счет в Замбийских квачах...</div>
+						</div>
+					</div>
+
+
+
+					<div class="table_row_info">
+						<div class="info_center">
+							<p>Нет данных, удовлетворящих фильтрам</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- end таблица -->
+	</div>
+</section>
+
+<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="js/jquery.multiple.select.js"></script>
+<script src="js/init.js"></script>
+
+
+</body>
+</html>

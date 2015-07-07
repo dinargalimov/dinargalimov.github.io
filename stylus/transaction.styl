@@ -1,0 +1,334 @@
+@import 'nib'
+@import 'variables.styl'
+
+.section_transaction
+	background #fff
+	position absolute
+	left 0
+	top 0
+	width 100%
+	height 100%
+	overflow-x hidden
+	overflow-y auto
+	-webkit-overflow-scrolling touch
+
+.transaction_accounts
+	background cbglight
+	padding 25px 25px 40px
+	border-bottom 3px solid cseparator
+
+// вабор валюты наверху
+.transaction_currency_filter
+	padding 18px
+	margin 0 0 15px
+	.label_filter
+		margin 0 15px
+	.currency_filter
+		text-decoration none
+		display inline-block
+		font-size fzn + 2px
+		color clink
+		.count
+			display inline-block
+			border-bottom 1px dashed @color
+		&:hover
+			color cl2
+			.count
+				border-bottom-color cl2
+	.currency_filter_disabled
+		color ctextlight
+		.cur
+			color @color
+
+	.input_filter
+		&:checked + .label_filter
+			.currency_filter
+				color clink
+				font-weight normal
+				.count
+					border-bottom 2px solid cl3
+
+	// овердрафт ссылка наверху
+	.overdraft_count
+		float right
+		color ctextlight
+		font-size fzn - 2px
+		margin 3px 0 0
+		a
+			color ctextlight
+			text-decoration none
+			.cur
+				color @color
+			&:hover
+				color cl2
+				.cur
+					color @color
+
+// выбор счета
+
+.transaction_choose_account
+	margin 0 -25px -12px
+	padding 0 25px
+	width auto!important
+
+	&.choosed
+		.account_item
+			transform scale(.9)
+			&:hover
+				transform scale(1)
+
+	// счет в выборе счетов
+	.account_item
+		padding 0
+		margin 0
+		display block
+		min-width 220px
+		cursor pointer
+		transition .2s
+		box-sizing border-box
+		transform scale(1)
+		&:hover
+			transform translateY(-3px)
+			box-shadow 0px 2px 3px 0px rgba(0,0,0,0.12)
+			.desc:after
+				opacity .6
+
+		// активный счет
+		&.active
+			transform scale(1)
+			cursor default
+			&:after, &:before
+				top 100%
+				left 50%
+				border solid transparent
+				content " "
+				height 0
+				width 0
+				position absolute
+				pointer-events none
+
+			&:after
+				border-color rgba(255, 255, 255, 0)
+				border-top-color #fff
+				border-width 10px
+				margin-left -10px
+			&:before
+				border-color rgba(221, 221, 221, 0)
+				border-top-color #ddd
+				border-width 11px
+				margin-left -11px
+			&:hover
+				transform none
+			.desc
+				background desaturate(cruble, 20%)
+				color #fff
+				&:after
+					display none
+				.num, .num:hover
+					color #fff
+
+
+		// долларовый счет
+		&.account_dollar
+			.desc:after
+				background-color cdollar
+			&.active
+				.desc
+					background cdollar
+
+		// евровый счет
+		&.account_euro
+			.desc:after
+				background-color ceuro
+			&.active
+				.desc
+					background ceuro
+
+		.desc
+			padding 15px
+			margin 0 0 10px
+			overflow hidden
+			font-size fzn - 2px
+			&:after
+				content ''
+				display block
+				width 90px
+				height 4px
+				background cruble
+				position absolute
+				bottom 0
+				left 15px
+				transition .3s
+				opacity .5
+			.name
+				float left
+				font-weight normal
+				text-align left
+				overflow ellipsis
+				max-width calc(100% - 75px)
+			.num
+				float right
+				color ctextlight
+				&:hover
+					color cl2
+
+		.value
+			font-size 26px
+			text-align left
+			padding 0 15px 12px
+			max-width calc(100% - 40px)
+			white-space nowrap
+			overflow hidden
+			.cur
+				font-weight 300
+	.add_account
+		background cbglight - 4%
+		.desc:after
+			background-color #fff
+			opacity .8
+		&:after
+			content 'a'
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background rgba(cbglight - 4%,.8)
+			font-family "mb-icon-font"
+			font-size 70px
+			color #fff
+			text-align center
+			line-height 1.4
+		&:hover
+			&:after
+				background-color rgba(cl3 + 40%,0.8)
+	.owl-item
+		padding 3px 0 12px
+		box-sizing border-box
+	.owl-buttons .disabled
+		visibility hidden
+	.owl-controls, .owl-nav
+		position static
+	.owl-prev, .owl-next
+		position absolute
+		top 40px
+		font-family "mb-icon-font"
+		font-size 22px
+		color clinklight
+		transition .3s
+		opacity 0
+
+		&:before
+			border-radius 50%
+			background #fff
+		&:hover
+			color cl2
+	.owl-prev
+		left -30px
+		&:before
+			content 'O'
+	.owl-next
+		right -30px
+		&:before
+			content 'N'
+
+	&.owl-carousel:hover
+		.owl-prev, .owl-next
+			opacity 1
+		.owl-prev
+			left 7px
+		.owl-next
+			right 7px
+
+// контент в транзакциях
+.transaction_content
+	background #fff
+	padding 40px 25px
+	clearfix()
+
+// блок итого в транзакциях
+.transaction_total
+	background cl5 + 85%
+	padding-bottom 10px
+
+	.title
+		font-size fzn + 2px
+		padding 0 0 10px
+		border-bottom none
+	.transaction_total_filter
+		float right
+		font-size fzn - 2px
+		@media (max-width:1090px)
+			float none
+			margin-top 10px
+	.col
+		width auto
+		max-width 350px
+		margin 0
+	.total_poperty, .total_value
+		display inline-block
+		box-sizing border-box
+		white-space nowrap
+	.total_poperty
+		width 200px
+		text-align right
+		padding-right 10px
+		font-size fzn - 2px
+		color ctextlight
+	.money_expense
+		color ctexterror
+		.cur
+			color @color
+
+// просмотр счета
+.account_card
+	padding 30px
+	margin-bottom 40px
+.account_card_money
+	float right
+	text-align right
+	padding-right 60px
+	.cur
+		position absolute
+		top 0
+		right 0
+		font-size 78px
+		font-weight 300
+		&.ruble
+			line-height 1
+	.account_card_money_balance
+		font-size 38px
+		margin 0 0 5px
+	.account_card_money_hold
+		font-size fzn - 2px
+		color ctextlight
+		span
+			color ctext
+.account_card_info
+	overflow hidden
+
+.account_card_actions
+	clear both
+	margin 30px 0 0
+	a
+		margin-right 20px
+
+.account_details_actions
+	float right
+	a
+		color clinklight
+		display inline-block
+		vertical-align middle
+		margin-left 3px
+		&:before
+			font-size fzn + 2px
+		&:hover
+			&:before
+				color cl2
+		&.icon-save
+			&:before
+				font-size fzn
+		&.icon-mail-sent
+			height 20px
+			&:before
+				font-size fzn + 6px

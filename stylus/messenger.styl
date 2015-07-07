@@ -1,0 +1,496 @@
+@import 'variables.styl'
+
+.messenger
+	position fixed
+	bottom 0
+	right 0
+	z-index 20
+	width 320px
+	background #fff
+	box-shadow 0px 6px 10px 0px rgba(37,33,18,0.23)
+
+	&.hide
+		display block!important
+		animation pageHide .5s ease both
+
+	&.open
+		animation pageOpen .5s ease both
+
+	&.ng-hide-add
+		opacity 1
+	&.ng-hide-add-active
+		opacity 0
+		transform translateX(150px)
+
+	&.ng-hide-remove
+		opacity 0
+		transform translateX(150px)
+	&.ng-hide-remove-active
+		opacity 1
+		transform translateX(0px)
+
+
+	.fullsize
+		.messenger_theme_list
+			// max-height calc(100vh - 65px - 42px)
+			height calc(100vh - 40px - 42px)
+
+		.messenger_chat
+			// max-height calc(100vh - 65px - 42px - 66px)
+			height calc(100vh - 40px - 42px - 60px)
+
+		.messenger_new_theme
+			height calc(100vh - 40px - 42px)
+			.add_text
+				textarea
+					min-height 240px
+
+
+		.icon-arrow-up
+			&:before
+				transform rotate(180deg)
+			&:hover
+				transform translateY(3px)
+				&:before
+					transform rotate(180deg)
+
+
+.messenger_header
+	height 40px
+	background cl2
+	border-bottom 3px solid cl4
+
+.messenger_header_action
+	float right
+	padding 0 10px 0 0
+	a[class*='icon-']
+		height 40px
+		width 30px
+		float right
+		text-align center
+		line-height 40px
+		color #fff
+	a[class*='icon-arrow-up']
+		transition .2s
+		&:hover
+			transform translateY(-3px)
+
+
+.messenger_header_title
+	padding 10px 0 0 10px
+	font-size fzn
+	font-weight normal
+	display inline-block
+	a
+		color #fff
+		&:hover
+			opacity 0.9
+
+
+.messenger_main
+	width 100%
+	min-height 250px
+
+
+// список всех тем
+.messenger_theme_list
+	// max-height 360px
+	height 360px
+	overflow auto
+	transition .3s
+	-webkit-overflow-scrolling touch
+.messenger_theme_item
+	margin -1px 0 0
+	clearfix()
+	font-size fzn - 2px
+	&:after
+		content ''
+		display block
+		height 1px
+		background cbd + 50%
+		margin -1px 10px 0 20px
+		z-index 0
+	&.new
+		.message
+			color ctext
+		&:before
+			content ''
+			width 7px
+			height 7px
+			border-radius 50%
+			background cl3
+			position absolute
+			left 7px
+			top 45%
+			z-index 20
+	a
+		position relative
+		z-index 10
+		text-decoration none
+		display block
+		padding 13px 10px 13px 20px
+		line-height 14px
+		overflow hidden
+		&:hover
+			background cbghighlight
+	.photo
+		float left
+		width 50px
+		height 50px
+		font-size 25px
+
+	.desc
+		display block
+		margin 0 0 0 60px
+	.date
+		float right
+		font-size fzn - 4px
+		color ctextlight
+	.name
+		font-weight 500
+		display inline-block
+		margin 0 0 3px
+		color ctext
+		overflow ellipsis
+		max-width 82%
+		font-size fzn - 3px
+	.message
+		font-size fzn - 4px
+		color ctextlight
+		max-height 30px
+		overflow hidden
+		display block
+
+	&.theme_closed
+		.desc
+			opacity 0.4
+		.photo
+			img
+				opacity 0.4
+			&:after
+				content ''
+				width 30px
+				height 30px
+				position absolute
+				top 50%
+				left 50%
+				margin -15px 0 0 -15px
+				background #fff url(../images/icon_check.svg) no-repeat center
+				border-radius 30px
+
+
+// оформление чата
+.messenger_chat
+	padding 5px 15px
+	overflow auto
+	height 300px
+	box-sizing border-box
+	transition .3s
+	-webkit-overflow-scrolling touch
+	.item
+		margin 0 0 10px
+		font-size fzn - 3px
+
+		&.right
+			.date
+				left 0
+			.desc
+				margin-left 45px
+				margin-right 0
+			.message
+				color ctext
+				background cl4 + 85%
+				font-weight 300
+				margin-right 0
+				word-wrap break-word
+				a
+					color clink
+					&:hover
+						color cl2
+
+	.date
+		position absolute
+		top 50%
+		right 0
+		color ctextlight
+		font-size fzn - 4px
+
+	.photo
+		display inline-block
+		vertical-align middle
+		z-index 10
+		width 40px
+		height 40px
+		margin 0 3px 0 10px
+		font-size 20px
+		border 3px solid #fff
+
+	.name
+		display inline-block
+		vertical-align 0px
+		font-weight 400
+		color ctext
+		overflow ellipsis
+		max-width 70%
+		overflow ellipssis
+	.message
+		z-index 0
+		// background cl1 + 30%
+		background cbgsuccess
+		// color #fff
+		// font-weight normal
+		border-radius 10px
+		padding 20px 12px 12px
+		margin -15px 45px 0 0
+		word-wrap break-word
+		a
+			// color #fff
+			&:hover
+				// opacity 0.9
+		[class*='icon-']
+			&:before
+				min-width 0
+
+	.message_file_attachments
+		margin 12px 0 0
+		li
+			padding 3px 0
+
+	.info_message
+		margin 20px 0
+		text-align center
+		font-size fzn - 4px
+		color ctextlight
+	.thumbs
+		padding 5px 0 0
+		text-align center
+		.thumbs_up, .thumbs_down
+			display inline-block
+			font-size 28px
+			margin 0 3px
+			&:before
+				margin 0
+		.thumbs_down
+			vertical-align -5px
+			color ctextlight
+		a.thumbs_down:hover
+			color cerror
+		.thumbs_up
+			color cl3
+		a.thumbs_up:hover
+			color cl3 - 10%
+
+// инфо сообщение после первого сообщения
+.first_message_add
+	margin 20px 0
+	padding 35px 15px 0
+	text-align center
+	background url(../images/chat_smile.svg) no-repeat center 0
+	font-size fzn - 4px
+	color ctextlight
+
+// разделитель в чате
+.messenger_sep_title
+	margin 20px -15px 30px
+	border-bottom 1px solid cbd
+	text-align center
+	font-size fzn - 4px
+	color ctextlight
+	>span
+		position relative
+		display inline-block
+		line-height 18px
+		padding 0 10px
+		border-radius 30px
+		background #fff
+		border 1px solid cbd
+		transform translateY(50%)
+
+
+// блок добавления комментария
+.add_message
+	z-index 100
+	padding 10px 15px 10px
+	background #fff
+	box-sizing border-box
+	clearfix()
+	.add_text,.add_buttons
+		float left
+	.add_text
+		width 84%
+		textarea
+			width 100%
+			font-size fzn - 2px
+			padding-right 40px
+			overflow auto
+			-webkit-overflow-scrolling touch
+		.button_file_upload
+			color ctextlight
+			position absolute
+			right 12px
+			top 0
+			width 30px
+			height 42px
+			text-align center
+			line-height 42px
+			&:hover
+				color ctext
+	.add_buttons
+		width 15%
+		margin-left 1%
+
+
+
+	.add_message_tabs
+		margin-bottom -1px
+		z-index 10
+		a
+			font-size fzn - 2px
+			color ctextlight
+			padding 10px 40px
+			background #f1f1f1
+			display inline-block
+			text-decoration none
+			vertical-align 0
+			&:hover
+				background #f4f4f4
+			&.active
+				background #fff
+				border 1px solid cbd
+				border-top-width 2px
+				border-bottom-color #fff
+				z-index 10
+				&.color1
+					border-top-color cl3
+				&.color2
+					border-top-color cl2
+
+	// новое сообщение в админке
+	.add_message_textarea
+		margin 0 0 10px
+		textarea
+			width 100%
+			height 75px
+			font-size fzn - 2px
+			box-shadow none
+			&:focus
+				border-color cbd
+
+	// кнопки в админке
+	.add_message_buttons
+		.add_message_send
+			float right
+		.file_attach
+			font-size fzn - 2px
+			padding 10px 0 0
+		.button_file_upload
+			color ctextlight
+			&:hover
+				color ctext
+
+
+	// загруженнные файлы
+	.file_upload_list
+		clear both
+		max-height 100px
+		overflow auto
+		padding-top 10px
+		-webkit-overflow-scrolling touch
+
+
+
+// открытие новой темы
+.messenger_new_theme
+	color ctextlight
+	box-shadow none
+
+	.add_text, .add_buttons
+		float none
+	.add_text
+		width 100%
+		margin-top 20px
+
+		textarea
+			width 100%
+			min-height 120px
+			font-size fzn - 2px
+
+	.add_buttons
+		width 100%
+		margin 10px 0 0
+
+.chat_new_theme_info
+	text-align center
+	font-weight normal
+	font-size fzn - 4px
+	padding 95px 15px 15px
+	background url(../images/new_theme_back.svg) no-repeat center 32px
+	background-size 40px auto
+	color ctextlight
+
+.messenger_theme_empty
+	background url(../images/icon_chats.svg) no-repeat center 50px, url(../images/icon_chats_arrow.svg) no-repeat 60px 15px
+	padding  135px 45px 0
+	text-align center
+	font-size fzn - 3px
+	color ctextlight
+	.title
+		font-size fzn - 1px
+		color clinklight
+		margin 0 0 20px
+		font-weight 400
+
+
+// ---------- чат в слое --------------
+
+.page_messenger_main
+	position absolute
+	top 0
+	left 0
+	right 0
+	bottom 0
+	overflow auto
+	-webkit-overflow-scrolling touch
+	.messenger_chat
+		padding 10px 30px 20px
+		overflow auto
+		height auto
+		box-sizing border-box
+		transition none
+		-webkit-overflow-scrolling touch
+
+		.item
+			font-size fzn - 2px
+			margin-bottom 15px
+		.message
+			margin-right 100px
+		.item.right
+			.desc
+				margin-left 100px
+
+	.messenger_sep_title
+		margin 30px 0 40px
+		>span
+			border none
+			padding 0 15px
+			max-width 80%
+
+			a
+				color ctextlight
+				text-decoration none
+				font-weight fwn + 200
+				&:hover
+					color cl2
+					text-decoration underline
+		.sep_date
+			display inline-block
+			margin-right 10px
+			text-transform capitalize
+
+
+	.add_message
+		padding 10px 30px
+		position absolute
+		bottom 0
+		left 0
+		right 0

@@ -1,0 +1,745 @@
+@import 'variables.styl'
+
+::-webkit-input-placeholder
+	color ctextholder
+::-moz-placeholder
+	color ctextholder
+:-ms-input-placeholder
+	color ctextholder!important
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="time"],
+input[type="date"],
+textarea
+	height 40px
+	border 1px solid cbd
+	border-radius brform
+	display inline-block
+	background-color #fff
+	font-family ffn
+	font-size fzn - 1px
+	font-weight 300
+	padding 0 15px
+	color ctext
+	box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
+	box-sizing border-box
+	vertical-align middle
+	-webkit-appearance textfield
+	transition .2s
+
+	&:focus
+		border-color cl2
+		box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0)
+
+
+	&[disabled], &.disabled
+		color ctextdis
+		background #f5f5f5
+	&.error
+		border-color cerror
+		// animation error-border-flash .7s both
+		&::-webkit-input-placeholder
+			// color ctexterror
+		&::-moz-placeholder
+			// color ctexterror
+		&:-ms-input-placeholder
+			// color ctexterror!important
+		&:focus
+			border-color cl2
+
+
+
+	&.valid, &.success
+		border-color csucces
+	&.small
+		height 34px
+		padding 0 10px
+		font-size fzn - 2px
+	&.big
+		height 46px
+		padding 0 10px
+		font-size fzn + 2px
+
+	&.second
+		border-color transparent
+		box-shadow 0 1px 1px rgba(0,0,0,0.12)
+		&:focus
+			box-shadow 0 1px 1px rgba(cl1,0.3)
+
+	&:-webkit-autofill
+		transition 0s
+		box-shadow 0 0 0 1000px white inset
+
+
+
+
+
+
+textarea
+	padding 9px 15px 8px
+	resize none
+	min-height 40px
+	&.small
+		padding 6px 10px
+		min-height  34px
+	&.js_autosize
+		transition none
+		overflow-x hidden
+		max-height 126px
+	&.textarea_middle
+		min-height 65px
+		max-height 146px
+	&.textarea_big
+		min-height 125px
+		max-height 209px
+
+
+input[type='search'].input_search
+	border-radius 30px
+	background-image url(../images/icon_search_input.svg)
+	background-repeat no-repeat
+	background-position 10px center
+	background-size 16px auto
+	padding-left 26px
+	transition .2s
+	&:focus
+		background-position -5px center
+		background-size 0px
+		padding-left 10px
+
+.input_search_focus
+	background-image url(../images/icon_search_input.svg)
+	background-repeat no-repeat
+	background-position 100% center
+	background-size 0px
+	padding-right 26px
+	transition .2s
+	&:focus
+		background-position calc(100% - 10px) center
+		background-size 16px auto
+
+
+// -------  оформление чекбоксов --------
+
+// радио
+label.label_check
+	display inline-block
+input[type='radio'], input[type='checkbox']
+	display none
+	&:focus
+		background cbghighlight
+
+	& + label.label_check
+		cursor pointer
+
+		&:hover
+			color clink
+
+		.icon
+			width 14px
+			height 14px
+			box-shadow inset 0 0 0 1px cbd - 10%, inset 0 1px 1px 0 rgba(#000,0.1)
+			background #fff
+			border-radius 50%
+			display inline-block
+			appearance none
+			vertical-align -1px
+			position relative
+			cursor pointer
+
+			&:active
+				background #fafafa
+				box-shadow inset 0 0 0 1px cbd - 10%, inset 0 0 2px 0 rgba(#000,0.4)
+			& + span
+				margin-left 7px
+	&:checked
+		+ label.label_check
+			color clink
+			.icon
+				box-shadow inset 0 0 0 5px cl2
+	&:disabled
+		+ label.label_check
+			cursor no-drop
+			color ctextdis
+
+			.icon
+				background #f5f5f5
+				cursor default
+// чекбокс
+input[type='checkbox']
+	& + label.label_check
+		.icon
+			border-radius 2px
+			&:after
+				font-family "mb-icon-font"
+				text-transform none!important
+				font-style normal
+				content '&'
+				position absolute
+				display inline-block
+				top 5px
+				left 5px
+				color transparent
+				font-size 0
+				text-align center
+				line-height 1
+				text-shadow 0 1px 0 rgba(#000,0.1)
+				transition .1s
+	&:checked
+		& + label.label_check
+			.icon
+				box-shadow inset 0 0 10px 10px cl2
+
+				&:after
+					top 1px
+					left 1px
+					color #fff
+					font-size 12px
+
+// --------------------
+
+// фильтры на чекбоксах
+.label_filter
+	display inline-block
+	cursor pointer
+input[type='radio'], input[type='checkbox']
+	&:checked + .label_filter
+		color cl2
+
+
+label.check
+	color ctextlight
+	transition .2s
+	font-size fzn - 2px
+
+	&:hover
+		color ctext
+
+
+
+input.search_right
+	background url(../images/search.svg) no-repeat calc(100% - 15px) center
+	padding-right 40px
+input.search_left
+	background url(../images/search.svg) no-repeat 15px center
+	padding-left 40px
+
+// -------------- стилизация select --------------
+.form_select
+	height 40px
+	border-radius brform
+	background url(../images/select_arrow.svg) no-repeat calc(100% - 15px) center
+	width auto
+	display inline-block
+	overflow hidden
+	border 1px solid cbd
+	select
+		background transparent
+		appearance none
+		height 40px
+		width 120%
+		width calc(100% + 20px)
+		border none
+		border-radius 0
+		font-family ffn
+		font-size fzn
+		font-weight 300
+		padding 0 40px 0 15px
+		cursor pointer
+		margin 0
+		&:focus
+			color cl2
+		option
+			color cl1
+
+// строка формы
+.form_group, .form_group_list
+	clearfix()
+	margin-bottom 15px
+	.property_label
+		color ctextlight
+		padding-bottom 3px
+		&.col, &.column, &.columns
+			text-align right
+			padding-bottom 0
+.form_group_list
+	margin-bottom 10px
+
+.form_page_important_area
+	background cbgsky
+	border-top 1px solid cbdlightsky
+	border-bottom 1px solid cbdlightsky
+	padding 15px 30px 0
+	margin-left -30px
+	margin-right -30px
+	margin-bottom 15px
+
+
+
+.form_horizontal
+	.property_label
+		padding-top 10px
+.form_horizontal_small
+	.property_label
+		padding-top 5px
+
+
+.legend
+	border-bottom 1px solid cbdlight
+	text-transform uppercase
+	font-weight 500
+	margin 0 0 30px
+	span
+		display inline-block
+		padding 0 0 6px
+		border-bottom 1px solid cl2
+		margin-bottom -1px
+
+// блок кнопок в конце формы
+.form_buttons
+	margin 30px 0 0
+	.links
+		display inline-block
+		margin 0 0 0 12px
+		font-size fzn - 1px
+		a
+			display inline-block
+			margin 0 0 0 15px
+			color ctextlight
+			text-decoration none
+			&:hover
+				color ctext
+
+	&+[class*="info_"], &+[class*="captcha"]
+		margin-top 15px
+
+
+
+// -------------- поле с добавление иконки/текста перед полем --------------
+.input_group
+	display table
+	vertical-align middle
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"]
+		display table-cell
+		width 100%
+	.ms-parent, .drop-input
+		display table
+		width 100%
+		table-layout fixed
+
+
+.input_group_addon
+	display table-cell
+	width 45px
+	height 40px
+	min-width 40px
+	line-height 38px
+	border 1px solid cbd
+	border-right none
+	border-radius brform
+	background #fafafa
+	font-family ffn
+	font-size fzn - 4px
+	font-weight 300
+	text-align center
+	padding 0 7px
+	color ctextholder
+	box-sizing border-box
+	vertical-align middle
+	text-align center
+	white-space nowrap
+	&[class*='icon-']
+		font-size fzn
+		&:before
+			min-width 0!important
+			margin 0
+			width auto
+	&.addon_code
+		font-size fzn
+
+
+
+
+
+// -------------- поле с заголовком --------------
+.input_group_title
+	display inline-block
+	vertical-align bottom
+	padding-top 18px
+	.input_title
+		position absolute
+		top 0px
+		left 0
+		font-size fzn - 4px
+		display inline-block
+		color ctextlight
+		transition .2s
+
+	input
+		display block
+		// &:focus ~ .input_title
+		// 	color cl2
+		// &.error ~ .input_title
+		// 	color ctextlight
+
+
+// переключатели
+.switch_group
+	display inline-block
+	clearfix()
+	.switch_item
+		float left
+		input[type="radio"]
+			&:checked ~ label
+				background saturate(cbglight - 5%, 50%)
+				// background linear-gradient(saturate(cbglight - 5%, 50%), saturate(cbglight - 2%, 50%))
+				box-shadow inset 0 1px 0 rgba(#000,0.1)
+				border-color cbglight - 20%
+				cursor default
+				color ctext
+				z-index 10
+		label
+			display inline-block
+			height 40px
+			line-height 38px
+			background cbgsky
+			// background linear-gradient(cbgsky, cbgsky - 3%)
+			border 1px solid cbglight - 15%
+			margin-left -1px
+			color ctextlight
+			padding 0 10px
+			font-size fzn - 2px
+			cursor pointer
+
+
+		&:first-child
+			label
+				margin-left 0
+
+		&:first-child
+			label
+				border-top-left-radius brbut
+				border-bottom-left-radius brbut
+		&:last-child
+			label
+				border-top-right-radius brbut
+				border-bottom-right-radius brbut
+
+	&.switch_tabs
+		.switch_item
+			input[type='radio']
+				display none
+				&:checked ~ label
+					&:after, &:before
+						top 100%
+						left 50%
+						border solid transparent
+						content " "
+						height 0
+						width 0
+						position absolute
+						pointer-events none
+						margin-top -1px
+					&:after
+						border-color rgba(255, 255, 0, 0)
+						border-top-color saturate(cbglight - 5%, 50%)
+						border-width 6px
+						margin-left -6px
+					&:before
+						border-color rgba(0, 255, 0, 0)
+						border-top-color cbglight - 20%
+						border-width 7px
+						margin-left -7px
+			label
+				padding 0 15px
+	&.small
+		.switch_item
+			label
+				height 32px
+				line-height 32px
+
+
+
+//-------------- кнопка загрузки файла --------------
+
+.button_file_upload
+	position relative
+	display inline-block
+	overflow hidden
+	input[type='file']
+		position absolute
+		top 0
+		right 0
+		margin 0
+		opacity 0
+		// filter: alpha(opacity=0);
+		// -ms-filter "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+		// -moz-transform translate(-300px, 0) scale(4)
+		direction ltr
+		cursor pointer
+		font-size 150px
+		line-height 150px
+		height 150px
+	&:active
+		transform none
+
+
+
+// -------------- каптча ------------------
+.captcha
+	.captcha_left
+		float left
+		width 110px
+		margin 0 20px 0 0
+		input
+			width 100%
+		a
+			font-size fzn - 3px
+			color ctextlight
+			display block
+			margin 5px 0 0
+	img
+		width 100px!important
+
+
+
+
+
+// ---------- загрузка файлов ------------------
+
+.file_upload_list
+	clearfix()
+
+.file_upload_block
+	width 170px
+	height 135px
+	margin-bottom 14px
+	border-radius 6px
+	border 1px dashed #ADBAC5
+	display inline-block
+	float left
+	vertical-align middle
+	padding 10px 10px 0
+	box-sizing border-box
+	text-align center
+	&:nth-child(4n-3)
+		margin-left 0
+
+
+	&.error
+		border-color cerror
+		.file_title
+			color ctexterror
+
+	.uploaded
+		display table
+		table-layout fixed
+		width 100%
+		height 100%
+		width calc(100% + 23px)
+		height calc(100% + 13px)
+		margin -11px
+		border-radius 6px
+		border 1px solid #fff
+		background #fff
+		box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
+		padding 10px 10px 0
+		box-sizing border-box
+		.file_center
+			display table-cell
+			vertical-align middle
+			width 100%
+
+		.file_title
+			color ctext
+			margin-top 5px
+			word-wrap break-word
+
+
+	.icon-info
+		position absolute
+		right 8px
+		top 8px
+		z-index 10
+	.file_icon
+		margin-bottom 7px
+	.file_delete
+		width 20px
+		height 20px
+		position absolute
+		right -8px
+		top -8px
+		border-radius 50%
+		z-index 10
+		background #fff url(../images/icon_delete.svg) no-repeat center
+		cursor pointer
+		transition .2s
+		&:hover
+			transform rotate(90deg)
+	.file_name
+		color ctextlight
+		font-size fzn - 4px
+		overflow ellipsis
+		max-width 100%
+	.file_title
+		color ctextlight
+		font-size fzn - 4px
+		line-height 120%
+		max-height 44px
+		overflow hidden
+	.file_button
+		position absolute
+		bottom 15px
+		left 0
+		right 0
+
+	.total-progress-box
+		position absolute
+		top 10px
+		left 0
+		right 0
+
+	.total-progress
+		display inline-block
+		border-radius 50px
+		width 44px
+		height 44px
+		&:before
+			content ''
+			width 34px
+			height 34px
+			position absolute
+			top 5px
+			left 5px
+			border-radius 50%
+			background cbglight
+	.total-progress-value
+		position absolute
+		font-size fzn - 3px
+		left 6px
+		top 6px
+		height 30px
+		right 6px
+		line-height 30px
+		text-align center
+
+	step = 1
+	loops = 100 / step
+	increment = 360 / loops
+	half = loops / 2
+
+	for $i in (1..loops)
+		.progress-{step*$i}
+			if $i < half
+				nextdeg = 90deg + (increment*$i)
+				background-image linear-gradient(90deg, cbglight 50%, transparent 50%, transparent), linear-gradient(nextdeg, cl2 50%, cbglight 50%, cbglight)
+			else
+				nextdeg = -90deg + ( increment * ( $i - half ) )
+				background-image linear-gradient(nextdeg, cl2 50%, transparent 50%, transparent), linear-gradient(270deg, cl2 50%, cbglight 50%, cbglight)
+
+
+
+.file_upload_list
+	.file_upload_item
+		padding 6px 0
+		font-size fzn - 2px
+		overflow hidden
+		&:last-child
+			border-bottom none
+		.file_upload_item_info
+			position relative
+			display block
+			margin -6px 0
+			padding 6px 0
+
+		.file_icon
+			display inline-block
+			width 14px
+			height 18px
+			background-size 14px auto
+			margin 0 4px 0 0
+			vertical-align middle
+		.file_error_text
+			position absolute
+			right 25px
+			top 8px
+
+		&.error
+			.file_name
+				max-width calc(100% - 16px - 20px - 130px)
+				color ctexterror
+		.file_name
+			text-decoration none
+			color ctext
+			max-width calc(100% - 16px - 20px)
+			overflow ellipsis
+			display inline-block
+			vertical-align middle
+		a.file_name:hover
+			text-decoration underline
+			color cl2
+		.file_delete
+			position absolute
+			right 0
+			top 6px
+			opacity 0
+			&.show
+				opacity 1
+		&:hover
+			.file_delete
+				opacity 1
+
+		.total-progress-box
+			height 20px
+			margin-right 25px
+		.total-progress-value
+			color ctextlight
+			font-size fzn - 4px
+			text-align center
+		.total-progress
+			position absolute
+			bottom 0
+			left 0
+			height 3px
+			background cl3
+			border-radius 2px
+
+	// файлы в строку
+	&.inline
+		.file_upload_item
+			display inline-block
+			margin 0 4px 4px 0
+			background cbglight
+			border-radius 2px
+			padding 6px 30px 6px 10px
+			min-width 100px
+
+			.file_upload_item_info
+				padding 6px 30px 6px 10px
+				margin -6px -30px -6px -10px
+			.file_name
+				max-width 200px
+			.file_delete
+				right 6px
+			.file_error_text
+				position relative
+				top auto
+				right auto
+				float right
+				font-size fzn - 2px
+				margin-left 10px
+
+.form_sep
+	display block
+	height 1px
+	width 20%
+	margin 20px auto
+	background cbdlight

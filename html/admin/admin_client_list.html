@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Список клиентов</title>
+	<base href="../../"/>
+	<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+	<div class="header_profile">
+		<div class="header_profile_name">
+			<a href="#" class="">
+				<figure class="avatar" style="background-color: rgb(225,90,75)">C</figure>
+				Иванова Саша
+			</a>
+		</div>
+		<div class="header_profile_settigs">
+			<a href="#" class="icon-settings"></a>
+		</div>
+
+		<div class="header_profile_logout">
+			<a href="#" class="icon-logout"></a>
+		</div>
+	</div>
+
+	<div class="profile_progress">
+		Мои закрытые:
+		<strong>250</strong>
+		(<span class="success_text">200</span>/<span class="error_text">50</span>)
+	</div>
+
+	<div class="header_admin_menu">
+		<ul>
+			<li><a href="#" class="icon-check">Задачи</a></li>
+			<li class="active"><a href="#" class="icon-menu-clients">Клиенты</a></li>
+		</ul>
+	</div>
+</header>
+
+<section class="main">
+	<div class="side_right_fixed">
+		<div class="widget_block">
+			<div class="widget_filters">
+				<ul>
+					<li><input type="checkbox" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i> Без закрепленной группы (2)</label></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div class="content">
+
+		<div class="table_list table_list_white clients_list">
+
+			<!-- шапка таблицы -->
+			<div class="table_list_header">
+				<div class="table_list_cell action">
+					&nbsp;
+				</div>
+				<div class="table_list_cell group">
+					Группа
+				</div>
+				<div class="table_list_cell service">
+					ВЭД
+				</div>
+				<div class="table_list_cell service">
+					ЮР
+				</div>
+				<div class="table_list_cell service">
+					БУХ
+				</div>
+				<div class="table_list_cell tarif">
+					Тариф
+				</div>
+				<div class="table_list_cell city">
+					Город
+				</div>
+				<div class="table_list_cell name">
+					<input type="search" class="small input_search second" value="" placeholder="Поиск ...">
+				</div>
+			</div>
+
+			<!-- тело таблицы -->
+			<div class="table_list_body">
+
+				<!-- строка -->
+				<div class="table_list_row">
+					<div class="table_list_cell action">
+						<a href="" class="icon-chat"></a>
+					</div>
+					<div class="table_list_cell group">
+						<select class="select_multi select_inline" data-placeholder="Выбрать">
+							<option value="" selected>Чемпионы</option>
+							<option value="">Бригада</option>
+							<option value="">Колхозники</option>
+							<option value="">Юристы</option>
+						</select>
+					</div>
+
+					<div class="table_list_cell service">
+						+
+					</div>
+					<div class="table_list_cell service">
+						&nbsp;
+					</div>
+					<div class="table_list_cell service">
+						&nbsp;
+					</div>
+					<div class="table_list_cell tarif">
+						<span class="ov_ell">Старт</span>
+					</div>
+					<div class="table_list_cell city">
+						<span class="ov_ell">Москва</span>
+					</div>
+					<div class="table_list_cell name">
+						<div class="name_title">ООО «Ромашка»</div>
+					</div>
+				</div>
+
+				<!-- строка -->
+				<div class="table_list_row">
+					<div class="table_list_cell action">
+						<a href="" class="icon-chat"></a>
+					</div>
+
+					<div class="table_list_cell group">
+						<select class="select_multi select_inline" data-placeholder="Выбрать">
+							<option value="" selected>Чемпионы</option>
+							<option value="">Бригада</option>
+							<option value="">Колхозники</option>
+							<option value="">Юристы</option>
+						</select>
+					</div>
+
+					<div class="table_list_cell service">
+						&nbsp;
+					</div>
+					<div class="table_list_cell service">
+						+
+					</div>
+					<div class="table_list_cell service">
+						&nbsp;
+					</div>
+					<div class="table_list_cell tarif">
+						<span class="ov_ell">Империал</span>
+					</div>
+					<div class="table_list_cell city">
+						<span class="ov_ell">Уфа</span>
+					</div>
+					<div class="table_list_cell name">
+						<div class="name_title">ИП Сидоров А.Н.</div>
+					</div>
+				</div>
+
+				<!-- строка -->
+				<div class="table_list_row">
+					<div class="table_list_cell action">
+						<a href="" class="icon-chat"></a>
+					</div>
+
+					<div class="table_list_cell group">
+						<select class="select_multi select_inline" data-placeholder="Выбрать">
+							<option value="" selected>Чемпионы</option>
+							<option value="">Бригада</option>
+							<option value="">Колхозники</option>
+							<option value="">Юристы</option>
+						</select>
+					</div>
+
+					<div class="table_list_cell service">
+						&nbsp;
+					</div>
+					<div class="table_list_cell service">
+						+
+					</div>
+					<div class="table_list_cell service">
+						+
+					</div>
+					<div class="table_list_cell tarif">
+						<span class="ov_ell">Люкс</span>
+					</div>
+					<div class="table_list_cell city">
+						<span class="ov_ell">Новосибирск</span>
+					</div>
+					<div class="table_list_cell name">
+						<div class="name_title">Пенсионный фонд Российской Федерации</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="js/jquery.multiple.select.js"></script>
+<script src="js/init.js"></script>
+
+
+</body>
+</html>

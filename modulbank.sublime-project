@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"settings": {
+        "sublime-view-in-browser": {
+            "basePath": "/Volumes/Work/МодульБанк/html/ModulBank",
+            "baseUrl": "http://macbook-pro-dinar.local:5757"
+        }
+    }
+}

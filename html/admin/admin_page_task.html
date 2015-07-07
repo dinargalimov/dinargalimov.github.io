@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Чат админа</title>
+	<base href="../../"/>
+
+	<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<include data-file="admin/admin_task_list.html header"></include>
+<include data-file="admin/admin_task_list.html section"></include>
+
+<article class="page side_right">
+
+	<!-- шапка слоя -->
+	<div class="page_header">
+		<a class="page_close icon-close"></a>
+		<a class="page_expand icon-fullsize"></a>
+		<h1>В работе</h1>
+		<div class="header_button">
+			<a class="button small second icon-check">Закрыть задачу</a>
+			<a href="" class="button small icon-clock">Ждем ответа</a>
+			<!-- <a href="" class="button small">Вернуть в работу</a> -->
+		</div>
+	</div>
+
+
+	<!-- контент слоя  -->
+	<div class="page_content">
+
+		<div class="page_messenger_main">
+
+			<div class="messenger_chat ">
+
+				<div class="item">
+					<div class="date">Вчера, 17:54</div>
+					<div class="desc">
+						<figure class="avatar photo" style="background-color: #AB38D3">И</figure>
+						<div class="name">Сидоров Иван</div>
+						<div class="message">
+							<p>Мне СРОЧНО необходимо снять офисное помещение внутри Садового кольца. Общая площадь - не менее 200 кв.м. Наличие парковочных мест для 5 машин обязательно.</p>
+							<ul class="message_file_attachments">
+								<li>
+									<a href="" class="file icon-file">Перечень рабочих мест</a>
+								</li>
+								<li>
+									<a href="" class="file icon-file">Требования к окружению</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="item right">
+					<div class="date">15:35</div>
+					<div class="desc">
+						<figure class="photo avatar"><img src="../images_out/photo1.jpg" height="50" width="50" alt=""></figure>
+						<div class="name">Иванова Саша</div>
+						<div class="message">
+							<p>Добрый день, у нас есть отличный эксперт по вопросам аренды помещений. Переадресую ваш вопрос к нему. Он вам ответит в течение 3-х часов.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="messenger_sep_title">
+					<span>
+						<span class="sep_date">вчера 10:55</span>
+						<span class="sep_text">задачу возобновил(а): <a>Василькова Ксения</a></span>
+					</span>
+				</div>
+
+				<div class="item right">
+					<div class="date">15:35</div>
+					<div class="desc">
+						<figure class="avatar photo" style="background-color: rgb(174,225,75)">К</figure>
+						<div class="name">Василькова Ксения</div>
+						<div class="message">
+							<p>Прилагаю таблицу с 5 вариантами офисных помещений, расценками на арендную плату и контактами владельцев.</p>
+							<ul class="message_file_attachments">
+								<li>
+									<a href="" class="file icon-file">Список офисов</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="item" id="bottom">
+					<div class="write_now"><span class="icon-pencil"></span></div>
+				</div>
+
+			</div>
+
+			<div class="add_message">
+				<div class="add_message_tabs">
+					<a href="" class="color1 active">Ответить клиенту</a>
+					<a href="" class="color2">Написать агентам</a>
+				</div>
+				<div class="add_message_textarea">
+					<textarea name="" id="" placeholder="Добавить ответ"></textarea>
+					<textarea name="" id="" placeholder="Добавить заметку" class="hidden"></textarea>
+				</div>
+				<div class="add_message_buttons">
+					<div class="add_message_send buttons_group">
+						<a class="button second middle">Ответить</a>
+						<a class="button second middle icon-down-big button_notext drop-target" data-position="bottom right"></a>
+						<div class="drop-content" >
+							<ul class="drop-menu">
+								<li><a class="link_disabled">Ответить и закрыть задачу</a></li>
+								<li><a>Ответить и ожидать ответа клиента</a></li>
+							</ul>
+			            </div>
+
+
+					</div>
+					<div class="file_attach">
+						<label for="file" class="button_file_upload icon-attach">Прикрепить файл <input type="file" name="file" id=""></label>
+					</div>
+				</div>
+
+				<!-- загруженные файлы -->
+				<!-- <div class="file_upload_list inline">
+					<div class="file_upload_item">
+						<a class="file_delete delete show"></a>
+						<div class="total-progress-box">
+							<div class="total-progress" style="width:35%"></div>
+							<div class="total-progress-value">35%</div>
+						</div>
+					</div>
+
+					<div class="file_upload_item error">
+						<span class="file_upload_item_info">
+							<a class="file_delete trash icon-trash-bin"></a>
+							<div class="file_icon pdf"></div>
+							<a class="file_error_text">Заблокировано</a>
+							<a class="file_name">adfadsfad.pdf</a>
+						</span>
+					</div>
+					<div class="file_upload_item">
+						<a class="file_delete trash icon-trash-bin"></a>
+						<div class="file_icon jpg"></div>
+						<a class="file_name">adfadsfadasdfasdfasdfasdfaqrgq.pdf</a>
+					</div>
+				</div> -->
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- сайдабар слоя -->
+	<div class="page_side">
+
+		<div class="task_side_time error_text"><span class="icon-clock">03:52</span></div>
+		<div class="task_side_client side_block">
+			<figure class="avatar"><img src="../images/avatar_man.jpg" alt="Сидоров Сидр"></figure>
+			<div class="status"><span class="info_label_success">Online</span></div>
+			<!-- <div class="status"><span class="info_label_error">Offline</span></div> -->
+			<div class="desc">
+				<div class="name">Сидоров Михаил</div>
+				<div class="company">Общество с ограниченной ответственностью "Пермские колбасы"</div>
+			</div>
+		</div>
+
+		<div class="side_sep"></div>
+
+		<div class="side_parameter">
+			<div class="side_parameter_name">Исполнитель</div>
+			<div class="side_parameter_value">
+				<select class="select_inline select_full " data-placeholder="Выбрать" data-filter="true">
+					<option value="1" selected>Азат Халилов</option>
+					<option value="2">Алия Арсланова</option>
+					<option value="3">Андрей Вариков</option>
+					<option value="4">Дамир Амиров</option>
+					<option value="5">Денис Маслов</option>
+					<option value="6">Динар Галимов Радиковичфывафываasdfa</option>
+					<option value="7">Нур Ибрагимов</option>
+					<option value="8">Роберт Сабирьянов</option>
+				</select>
+			</div>
+		</div>
+		<div class="side_parameter">
+			<div class="side_parameter_name">Группа обслуживания:</div>
+			<div class="side_parameter_value">
+				<select class="select_inline select_full" data-placeholder="Выбрать" data-filter="true">
+					<option value="11" selected>Азат Халилов</option>
+					<option value="12">Алия Арсланова</option>
+					<option value="13">Андрей Вариков</option>
+					<option value="14">Дамир Амиров</option>
+					<option value="15">Денис Маслов</option>
+					<option value="16">Динар Галимов</option>
+					<option value="17">Нур Ибрагимов</option>
+					<option value="18">Роберт Сабирьянов</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="side_sep"></div>
+
+		<div class="side_block">
+			<div class="side_block_title">Пользователь</div>
+			<p class="ov_ell icon-mail"><a href="mailto:info@romashka.net">info@romashka.net</a></p>
+			<p class="ov_ell icon-phone">+7 (095) 420-09-80</p>
+		</div>
+
+		<div class="side_sep"></div>
+
+		<div class="side_block">
+			<div class="side_block_title">Пользователь</div>
+			<p><span class="light_text">ОГРНИП:</span> 123456789012345</p>
+			<p><span class="light_text">Город:</span> Москва</p>
+			<p><span class="light_text">В системе с:</span> 25.03.2015</p>
+			<p><span class="light_text">Пользователей:</span> 3</p>
+			<p><span class="light_text">Тарифный план:</span> СТАРТ</p>
+		</div>
+		<div class="side_block">
+			<p><span class="light_text">Всего обсуждений:</span> <a href="">15</a></p>
+			<p><span class="light_text">Открытых:</span> <a href="">3</a></p>
+		</div>
+
+	</div>
+
+</article>
+
+<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="js/jquery.multiple.select.js"></script>
+<script src="js/include.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- <link rel="stylesheet" href="../css/multiple-select.css"> -->
+
+	<script src="http://yastatic.net/jquery/1.11.0/jquery.js"></script>
+
+	<script src="../js/jquery.multiple.select.js"></script>
+	<script src="../js/init.js"></script>
+
+</head>
+<body ng-app="app">
+<aside>
+</aside>
+<header ng-controller="DropdownCtrl">
+</header>
+
+<section class="main">
+
+	<div class="form_group">
+		<!-- <input type="radio" name="1" checked id="">
+		Первый
+		<input type="radio" name="1" id="">
+		Второй
+
+		<label for="a3" class="check"><input type="checkbox" name="1" checked id="3">
+			Первый</label>
+		<label for="4" class="check"><input type="checkbox" name="1" id="4">
+			Второй</label>
+		<label for="5" class="check"><input type="checkbox" name="1" id="5">
+			Второй</label> -->
+
+		<input type="checkbox" name="name" id="b1">
+		<label for="b1" class="label_check m_right_20"><i class="icon"></i><span>Текст к чекбоксу</span></label>
+
+		<input type="radio" name="name" id="b2">
+		<label for="b2" class="label_check m_right_20"><i class="icon"></i><span>Текст к радио кнопке</span></label>
+
+		<input type="radio" name="name" id="b3">
+		<label for="b3" class="label_check m_right_20"><i class="icon"></i><span>Текст к радио кнопке</span></label>
+
+		<input type="radio" name="name" id="b4" disabled>
+		<label for="b4" class="label_check m_right_20"><i class="icon"></i><span>Чекбокс дизайбл</span></label>
+
+	</div>
+	<div class="form_group" style="">
+
+		<select multiple="multiple" class="select_multi m_right_20" data-placeholder="Мультиселект" style="max-width: 200px;">
+			<option value="">Азат</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов Радикович</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+			<option value="">Азат Халилов</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+		</select>
+
+
+		<select class="m_right_20" data-placeholder="Селект с поиском"  data-filter="true">
+			<option value="">Азат</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов Радикович</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+			<option value="">Азат Халилов</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+		</select>
+
+		<select class="select_inline m_right_20" data-placeholder="Селект строчный">
+			<option value="">Азат</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов Радикович</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+			<option value="">Азат Халилов</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+		</select>
+
+		<select class="select_inline select_multi m_right_20" data-placeholder="Мультиселект строчный" data-filter="true">
+			<option value="">Азат</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов Радикович</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+			<option value="">Азат Халилов</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+		</select>
+
+		<select class="select_inline select_multi select_multi_column m_right_20" data-placeholder="Мультиселект строчный" data-filter="true">
+			<option value="">Азат</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов Радикович</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+			<option value="">Азат Халилов</option>
+			<option value="">Алия Арсланова</option>
+			<option value="">Андрей Вариков</option>
+			<option value="">Дамир Амиров</option>
+			<option value="">Денис Маслов</option>
+			<option value="">Динар Галимов</option>
+			<option value="">Нур Ибрагимов</option>
+			<option value="">Роберт Сабирьянов</option>
+		</select>
+
+
+	</div>
+
+	<div class="form_group">
+		<input type="text" name="" id="" placeholder="Фамилия" class="error">
+		<input type="search" name="" id="" placeholder="Поиск" class="input_search">
+	</div>
+
+	<div class="form_group">
+		<input type="radio" name="n1" id="n1">
+		<label for="n1" class="label_filter">Фильтр 1</label>
+
+		<input type="radio" name="n1" id="n2">
+		<label for="n2" class="label_filter">Фильтр 2</label>
+	</div>
+	<div class="form_group">
+		<input type="text" name="" id="" class="error" placeholder="тест">
+		<textarea name="" id="" ></textarea>
+		<button class="button middle">Отправить</button>
+		<a class="button middle">Отправить</a>
+	</div>
+
+	<div class="form_group">
+
+		<div class="input_group">
+			<div class="input_group_addon">ИНН:</div>
+			<input type="tel" name="phone" placeholder="Телефон *" id="phone" class="" rad-tooltip="asdfasdf"  data-trigger="focus" data-placement="right">
+		</div>
+
+		<div class="input_group">
+			<div class="input_group_addon addon_code" >+7</div>
+			<input type="tel" name="phone" placeholder="Телефон *" id="phone" class="" rad-tooltip="asdfasdf"  data-trigger="focus" data-placement="right">
+		</div>
+		<div class="input_group">
+			<div class="input_group_addon icon-mail" ></div>
+			<input type="tel" name="phone" placeholder="Телефон *" id="phone" class="" rad-tooltip="asdfasdf"  data-trigger="focus" data-placement="right">
+		</div>
+	</div>
+
+</section>
+
+</body>
+</html>
