@@ -9582,6 +9582,7 @@ article.page.open + .page.open + .page.open {
   -o-transition: none;
   -ms-transition: none;
   transition: none;
+  -ms-flex-shrink: 1500;
   -webkit-flex-shrink: 1500;
   flex-shrink: 1500;
   -webkit-overflow-scrolling: touch;
