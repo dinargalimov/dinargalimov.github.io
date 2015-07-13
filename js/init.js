@@ -10,8 +10,7 @@ var arrayOfJS = [
 	'bootstrap.tooltip',
 	'equalize',
 	'nv.d3',
-	'stream_layers',
-	'modernizr'
+	'stream_layers'
 ];
 
 loadJs();
