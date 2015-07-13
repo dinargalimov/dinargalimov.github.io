@@ -9585,6 +9585,13 @@ article.page.open + .page.open + .page.open {
   -ms-flex-shrink: 1500;
   -webkit-flex-shrink: 1500;
   flex-shrink: 1500;
+  -webkit-box-flex: 1500;
+  -moz-box-flex: 1500;
+  -o-box-flex: 1500;
+  box-flex: 1500;
+  -webkit-flex: 1 1500 auto;
+  -ms-flex: 1 1500 auto;
+  flex: 1 1500 auto;
   -webkit-overflow-scrolling: touch;
 }
 .page_messenger_main .messenger_chat .item {
