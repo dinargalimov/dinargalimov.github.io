@@ -2,15 +2,37 @@
 	<div class="header_search">
 		<input type="search" value="" placeholder="Поиск">
 	</div>
-	<div class="header_add" dropdown is-open="status.isopen">
-		<a href="#" class="add" dropdown-toggle ng-disabled="disabled"></a>
-		<ul class="dropdown_menu" role="menu">
-	        <li><a href="#" class="open_schet">Открыть счет</a></li>
-	        <li><a href="#">Another action</a></li>
-	        <li><a href="#">Something else here</a></li>
-	        <li class="divider"></li>
-	        <li><a href="#">Separated link</a></li>
-	      </ul>
+	<div class="header_add">
+		<a href="#" class="add drop-target" data-position="bottom center"></a>
+		<div class="drop-content">
+			<div class="header_add_drop drop-content-inner">
+				<div class="col">
+					<h3>Платежи</h3>
+					<ul class="drop-menu">
+						<li><a>Перевод между счетами</a></li>
+						<li><a>Платеж контрагенту</a></li>
+						<li><a>Платеж физическому лицу</a></li>
+						<li><a>Оплата страховых взносов</a></li>
+						<li><a>Налоги или бюджетный платеж</a></li>
+						<li><a>Таможенный платеж</a></li>
+						<li><a>Валютный перевод</a></li>
+				    </ul>
+			    </div>
+			    <div class="col">
+					<h3>Услуги</h3>
+					<ul class="drop-menu">
+						<li><a>Овердрафт</a></li>
+						<li><a>Депозиты</a></li>
+						<li><a>Эквайринг</a></li>
+						<li><a>Доп. расчетный счет</a></li>
+						<li><a>Подключить бухгалтера</a></li>
+						<li><a>Подключить юриста</a></li>
+				    </ul>
+			     </div>
+			     <div class="clear"></div>
+		     </div>
+		</div>
+
 	</div>
 	<div class="header_chat">
 		<label>4</label>

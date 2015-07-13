@@ -13,10 +13,10 @@
 	cursor pointer
 	border 4px solid rgba(255, 255, 255, 0)
 	background-clip padding-box
-	background-color rgba(cl1, 0.2)
+	background-color rgba(cl1, 0.1)
 	// box-shadow inset -1px -1px 0px rgba(0, 0, 0, 0.03), inset 1px 1px 0px rgba(0, 0, 0, 0.03)
 	&:hover
-		background-color rgba(cl1, 0.5)
+		background-color rgba(cl1, 0.4)
 		cursor pointer
 
 
@@ -60,7 +60,7 @@ a
 		span
 			display inline-block
 			line-height 1.2
-			border-bottom 1px dashed clink
+			border-bottom 1px dashed @color
 		&:hover
 			color cl2
 			span
@@ -906,7 +906,7 @@ strong
 	overflow auto
 	height 100%
 	width 100%
-	// background rgba(cl1,0.34)
+	background rgba(cl1,0.34)
 	// background rgba(cbgsky,.8)
 	// background #fff
 	z-index 2000
@@ -943,6 +943,10 @@ strong
 	&.small
 		width 560px
 
+	&.clean
+		background transparent!important
+		box-shadow none!important
+
 	.popup_close
 		position absolute
 		right 15px
@@ -971,7 +975,7 @@ strong
 
 article.page
 	.popup_overlay
-		background rgba(cbgsky,.9)
+		background rgba(#fff,.8)
 	.popup_layer
 		box-shadow 0 15px 100px rgba(#000,0.2)
 
@@ -1291,11 +1295,11 @@ for $i in (1..10)
 
 	.notifyjs-textNotification-error
 		.inner
-			background rgba(cerror,.9)!important
+			background rgba(cerror - 10%,.9)!important
 
 	.notifyjs-textNotification-success
 		.inner
-			background rgba(cl3,.9)!important
+			background rgba(cl3 - 10%,.9)!important
 
 	.notifyjs-textNotification-info
 		.inner
@@ -1306,19 +1310,22 @@ for $i in (1..10)
 .tabs
 	margin 0 -30px
 
+
 	&.tabs_horizontal
 		.tabs_menu
-			border-bottom 1px solid cbdlightsky
+			// border-bottom 1px solid cbdlightsky
+			box-shadow inset 0 -2px 0 -1px cbdlightsky
 			padding 0 30px
+			white-space nowrap
 			clearfix()
 			li
 				background-color cbgsky
-				float left
+				display inline-block
 				margin-right 3px
-				margin-bottom -1px
+				// margin-bottom -1px
 				border-top 2px solid transparent
 				border-bottom 1px solid transparent
-				height 42px
+				// height 42px
 				box-sizing border-box
 				background-clip content-box
 				&:hover
@@ -1326,10 +1333,11 @@ for $i in (1..10)
 						color ctext
 				a
 					display block
-					padding 0 25px
-					line-height 38px
+					padding 10px 25px
+					// line-height 38px
 					color ctextlight
 					text-decoration none
+					text-align center
 				&.active
 					background #fff
 					border-top 2px solid cl3
@@ -1339,6 +1347,16 @@ for $i in (1..10)
 					a
 						color ctext
 						cursor default
+			&.tabs_scroll
+				padding 0
+				.owl-stage-outer
+					padding 0 30px
+				.owl-prev, .owl-next
+					top 13px
+					&:before
+						font-size 16px
+						border-radius 50%
+						box-shadow 0 0 0 5px #fff
 		.tabs_content
 			padding 30px
 
@@ -1468,6 +1486,123 @@ for $i in (1..10)
 
 // drop
 
+
+
+.drop-content
+	display none
+.drop-element, .drop-element:after, .drop-element:before, .drop-element *, .drop-element *:after, .drop-element *:before
+	box-sizing border-box
+
+.drop-element
+	position absolute
+	display none
+	z-index 1000
+
+	&.drop-open
+		display block
+
+	&.drop-open-transitionend
+		display block
+		.drop-content
+			transform perspective(600px) rotateX(-90deg)
+			transition opacity .3s, transform 1.5s
+			opacity 0
+
+	&.drop-after-open.drop-open-transitionend
+		.drop-content
+			transform perspective(600px) rotateX(0deg)
+			transition opacity .3s, transform .3s
+			opacity 1
+
+
+	&.drop-theme-basic
+		max-width 100%
+		max-height 100%
+
+	.drop-content
+		display block
+		background #fff
+		background-clip padding-box
+		padding 0
+		box-shadow 0px 2px 6px rgba(0,0,0,0.1)
+		border 1px solid rgba(0,0,0,0.1)
+		transform-origin top
+		margin-left -1px
+		padding-right 20px
+		margin-top 5px
+		will-change transform
+
+	.drop-content-inner
+		width calc(100% + 20px)
+		max-height 280px
+		overflow auto
+		box-sizing border-box
+	.inner_padding_15
+		padding 15px
+	.inner_padding_30
+		padding 30px
+
+	.drop-menu
+		margin 0
+		max-width 280px
+
+		&.max_w_500
+			max-width 500px
+		&.max_w_600
+			max-width 600px
+		li
+			display block
+			cursor pointer
+			box-sizing border-box
+			font-size fzn - 2px
+			// padding-right 15px
+			border-bottom 1px solid cbdlight + 40%
+			// &:after
+			// 	display block
+			// 	content ''
+			// 	height 1px
+			// 	margin 0
+			// 	background cbdlight + 40%
+			&:last-child
+				border-bottom none
+			a, button
+				color ctext
+				text-decoration none
+				display block
+				padding 9px 15px 9px 15px
+				font-size fzn - 2px
+				// width calc(100% + 15px)
+				transition .05s
+				&:hover
+					color clink
+					background cbghighlight
+				&.link_disabled
+					background none
+				&[disabled]
+					cursor no-drop
+					color ctextdis
+			&.active
+				a, button
+					color cl2
+	.drop-title
+		font-size fzn - 4px
+		font-weight 500
+		color ctextlight
+		font-style italic
+		margin 15px 15px 10px
+	.drop-sep
+		display block
+		height 1px
+		margin 30px -15px
+		background cbdlight
+	.small_text
+		max-width 270px
+
+	&.drop-target-attached-top
+		margin-top -10px
+		.drop-content
+			transform-origin bottom
+
 .drop-input
 	height 40px
 	border 1px solid cbd
@@ -1499,84 +1634,6 @@ for $i in (1..10)
 	&.drop-enabled
 		border-color cl2
 
-.drop-content
-	display none
-.drop-element, .drop-element:after, .drop-element:before, .drop-element *, .drop-element *:after, .drop-element *:before
-	box-sizing border-box
-.drop-element
-	position absolute
-	display none
-	z-index 1000
-	margin-top 5px
-	&.drop-open
-		display block
-
-	&.drop-theme-basic
-		max-width 100%
-		max-height 100%
-	.drop-content
-		display block
-		background #fff
-		background-clip padding-box
-		padding 15px
-		box-shadow 0px 1px 3px rgba(0,0,0,0.1)
-		border 1px solid rgba(0,0,0,0.1)
-		animation dropShow .1s
-		transform-origin top
-		margin-left -1px
-		max-height 350px
-		overflow auto
-	.drop-menu
-		margin -15px
-		max-width 350px
-		&.max_w_600
-			max-width 600px
-		li
-			display block
-			cursor pointer
-			box-sizing border-box
-			font-size fzn - 2px
-			&:after
-				display block
-				content ''
-				height 1px
-				margin 0 15px
-				background cbdlight
-			&:last-child
-				&:after
-					display none
-			a, button
-				color clink
-				text-decoration none
-				display block
-				padding 9px 25px 9px 15px
-				font-size fzn - 2px
-				&:hover
-					// color cl2
-					background cbghighlight
-				&.link_disabled
-					background none
-				&[disabled]
-					cursor no-drop
-					color ctextdis
-	.drop-title
-		font-size fzn - 4px
-		font-weight 500
-		margin-bottom 25px
-		color ctextlight
-		font-style italic
-	.drop-sep
-		display block
-		height 1px
-		margin 30px -15px
-		background cbdlight
-	.small_text
-		max-width 270px
-
-	&.drop-target-attached-top
-		margin-top -10px
-		.drop-content
-			transform-origin bottom
 
 
 // показать еще

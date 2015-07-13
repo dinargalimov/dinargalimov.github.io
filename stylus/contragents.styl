@@ -19,7 +19,11 @@
 		background-size auto 70%
 		background-repeat no-repeat
 		background-position center
-
+		&[class*="soon"]
+			pointer-events none
+			cursor default
+			&:hover
+				transform none
 		@media (min-width:600px) and (max-width:1170px)
 			width 32.33%
 			&:nth-child(3n)

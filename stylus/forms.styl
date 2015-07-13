@@ -39,6 +39,13 @@ textarea
 	&[disabled], &.disabled
 		color ctextdis
 		background #f5f5f5
+		&::-webkit-input-placeholder
+			color ctextdis
+		&::-moz-placeholder
+			color ctextdis
+		&:-ms-input-placeholder
+			color ctextdis!important
+
 	&.error
 		border-color cerror
 		// animation error-border-flash .7s both
@@ -116,12 +123,18 @@ input[type='search'].input_search
 	background-repeat no-repeat
 	background-position 100% center
 	background-size 0px
-	padding-right 26px
+	padding-right 40px
 	transition .2s
 	&:focus
 		background-position calc(100% - 10px) center
 		background-size 16px auto
 
+.input_loading
+	background-image url(../images/loading_ring.gif)!important
+	background-position calc(100% - 10px) center
+	background-repeat no-repeat
+	padding-right 40px!important
+	background-size 18px!important
 
 // -------  оформление чекбоксов --------
 
@@ -129,7 +142,7 @@ input[type='search'].input_search
 label.label_check
 	display inline-block
 input[type='radio'], input[type='checkbox']
-	display none
+	display none!important
 	&:focus
 		background cbghighlight
 
@@ -266,6 +279,8 @@ input.search_left
 		&.col, &.column, &.columns
 			text-align right
 			padding-bottom 0
+	.small_text
+		padding-top 5px
 .form_group_list
 	margin-bottom 10px
 
@@ -474,6 +489,21 @@ input.search_left
 	position relative
 	display inline-block
 	overflow hidden
+	font-size fzn - 4px
+	color clink
+
+	&.button
+		color #fff
+
+	&[class*="icon-"]:before
+		font-size fzn
+		color clinklight
+		vertical-align -2px
+	&:hover
+		color cl2
+		&:before
+			color cl2
+
 	input[type='file']
 		position absolute
 		top 0
@@ -737,9 +767,56 @@ input.search_left
 				font-size fzn - 2px
 				margin-left 10px
 
+
+// разделитель в форме
 .form_sep
 	display block
 	height 1px
 	width 20%
 	margin 20px auto
-	background cbdlight
+	background cbd
+
+
+// фильтр по дате
+input.datetimepicker
+	padding-left 30px!important
+	background url(../images/icon_date.svg) no-repeat 8px center
+
+.filter_date_value
+	padding 15px 0 0
+	max-width 250px
+	clearfix()
+	input.date_from, input.date_to
+		font-size fzn - 4px
+
+input.date_from, input.date_to
+	width 48%
+	float left
+input.date_from
+	background url(../images/icon_date_from.svg) no-repeat 8px center
+input.date_to
+	background url(../images/icon_date_to.svg) no-repeat 8px center
+	float right
+
+// textarea с загрузкой
+.textarea_with_attach
+	border 1px solid cbd
+	border-radius brform
+	display inline-block
+	background-color #fff
+	font-family ffn
+	font-size fzn - 1px
+	font-weight 300
+	padding 0
+	color ctext
+	box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
+	box-sizing border-box
+	vertical-align middle
+	transition .2s
+	textarea
+		border none
+		box-shadow none
+		background none
+
+	.button_file_upload
+		margin 5px 0 7px 12px

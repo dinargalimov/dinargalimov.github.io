@@ -37,6 +37,8 @@
 				border-bottom-color cl2
 	.currency_filter_disabled
 		color ctextlight
+		.count
+			border-color @color
 		.cur
 			color @color
 
@@ -205,40 +207,7 @@
 	.owl-item
 		padding 3px 0 12px
 		box-sizing border-box
-	.owl-buttons .disabled
-		visibility hidden
-	.owl-controls, .owl-nav
-		position static
-	.owl-prev, .owl-next
-		position absolute
-		top 40px
-		font-family "mb-icon-font"
-		font-size 22px
-		color clinklight
-		transition .3s
-		opacity 0
 
-		&:before
-			border-radius 50%
-			background #fff
-		&:hover
-			color cl2
-	.owl-prev
-		left -30px
-		&:before
-			content 'O'
-	.owl-next
-		right -30px
-		&:before
-			content 'N'
-
-	&.owl-carousel:hover
-		.owl-prev, .owl-next
-			opacity 1
-		.owl-prev
-			left 7px
-		.owl-next
-			right 7px
 
 // контент в транзакциях
 .transaction_content
@@ -332,3 +301,61 @@
 			height 20px
 			&:before
 				font-size fzn + 6px
+
+
+// описание транзакции
+.transaction_view_info
+	margin 0 0 40px
+	.transaction_view_info_money
+		font-size 40px
+		float left
+		margin-right 30px
+	.transaction_view_info_account
+		font-size fzn + 2px
+		padding 2px 0 0
+		.light_text
+			font-size fzn
+
+.transaction_view_contragent
+	padding 30px
+	.name
+		font-weight normal
+		margin-bottom 20px
+	.transaction_view_contragent_appointment
+		margin 30px -30px -30px
+		padding 20px 30px
+		border-top 1px solid cbdlightsky
+		background #fff
+		color ctextlight
+		font-style italic
+	.transaction_status_stamp
+		top calc(100% + 20px)
+		right 0
+
+// печать статуса
+.transaction_status_stamp
+	position absolute
+	right 20px
+	top 40px
+	display inline-block
+	padding 8px 20px
+	border 4px solid cl2 + 40%
+	color cl2 + 30%
+	font-weight bold
+	text-transform uppercase
+	font-size fzn - 1px
+	transform rotateZ(-8deg)
+	text-align center
+	&.success
+		border-color cl3 + 30%
+		color cl3 + 20%
+	&.error
+		border-color cerror + 30%
+		color cerror + 20%
+	&.warning
+		border-color ctextwarning + 30%
+		color ctextwarning + 20%
+	.date
+		display block
+		font-size fzn - 5px
+		font-weight 500

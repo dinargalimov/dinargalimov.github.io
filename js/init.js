@@ -8,7 +8,9 @@ var arrayOfJS = [
 	'tether',
 	'drop',
 	'bootstrap.tooltip',
-	'equalize'
+	'equalize',
+	'nv.d3',
+	'stream_layers'
 ];
 
 loadJs();
@@ -81,8 +83,8 @@ function init(){
 
 
 	// высота чата в слое
-	var messenger_chat_height = $('.page_messenger_main').innerHeight() - $('.add_message').outerHeight();
-	$('.page_messenger_main .messenger_chat').css('height', messenger_chat_height);
+	// var messenger_chat_height = $('.page_messenger_main').innerHeight() - $('.add_message').outerHeight();
+	// $('.page_messenger_main .messenger_chat').css('height', messenger_chat_height);
 
 	// высота чата в слое
 	var messenger_chat_height_client = $('.fullsize .add_message').outerHeight();
@@ -122,7 +124,8 @@ function init(){
 		timepicker: false,
 		lang:'ru',
 		closeOnDateSelect: true,
-		formatDate: 'd.m.Y'
+		format: 'd.m.Y',
+		validateOnBlur: false
 	});
 
     Array.prototype.forEach.call(document.querySelectorAll('.drop-target'), function(target){
@@ -141,5 +144,53 @@ function init(){
 
 	$('.equalize_height').equalize('innerHeight');
 
+
+	$('.tabs_scroll ul').owlCarousel({
+	    margin: 0,
+	    nav: true,
+	    dots: false,
+	    margin: 0,
+	    rewindNav:false,
+	    navText: '',
+	    autoWidth:true
+	});
+
+
+	d3.json("http://nvd3.org/examples/linePlusBarData.json",function(error,data) {
+  nv.addGraph(function() {
+      var chart = nv.models.linePlusBarChart()
+            .margin({top: 30, right: 60, bottom: 50, left: 70})
+            //We can set x data accessor to use index. Reason? So the bars all appear evenly spaced.
+            .x(function(d,i) { return i })
+            .y(function(d,i) {return d[1] })
+            ;
+
+      chart.xAxis.tickFormat(function(d) {
+        var dx = data[0].values[d] && data[0].values[d][0] || 0;
+        return d3.time.format('%x')(new Date(dx))
+      });
+
+      chart.y1Axis
+          .tickFormat(d3.format(',f'));
+
+      chart.y2Axis
+          .tickFormat(function(d) { return '$' + d3.format(',f')(d) });
+
+      chart.bars.forceY([0]);
+
+      d3.select('#chart svg')
+        .datum(data)
+        .transition()
+        .duration(0)
+        .call(chart);
+
+      nv.utils.windowResize(chart.update);
+
+      return chart;
+  });
+
+});
+
 }
+
 

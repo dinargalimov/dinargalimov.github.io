@@ -14,13 +14,14 @@
 		opacity 1
 		visibility visible
 	}
+
 	99% {
 		visibility visible
 	}
 	100% {
 		opacity 0
 		visibility hidden
-		transform translateX(200px)
+		transform translateX(200px) scale(.97)
 	}
 
 }
@@ -43,6 +44,7 @@
 	}
 	100% {
 		width 100%
+		max-width 2000px
 	}
 }
 @keyframes pageNorsize {
@@ -74,14 +76,26 @@
 	}
 }
 
+// @keyframes dropShow {
+// 	0% {
+// 		opacity 0
+// 		transform scale(.6)
+// 	}
+// 	100% {
+// 		opacity 1
+// 		transform scale(1)
+// 	}
+// }
 @keyframes dropShow {
 	0% {
+		visibility visible
 		opacity 0
-		transform scale(.6)
+		transform perspective(600px) rotateX(-90deg)
 	}
 	100% {
+		visibility visible
 		opacity 1
-		transform scale(1)
+		transform perspective(600px) rotateX(0deg)
 	}
 }
 @keyframes dropHide {
@@ -109,10 +123,10 @@
 
 @keyframes popupOverlayOpen {
 	0% {
-		background rgba(cl1,0)
+		opacity 0
 	}
 	100% {
-		background rgba(cl1,.35)
+		opacity 1
 	}
 }
 

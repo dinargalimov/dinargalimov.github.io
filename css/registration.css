@@ -155,7 +155,7 @@
   text-decoration: none;
 }
 .reg .login .login_links a:hover {
-  color: #00aeef;
+  color: #00a8e7;
 }
 .reg .share {
   border-top: 1px solid #dee0e3;
@@ -202,7 +202,7 @@
 }
 .reg .search_company .search_company_title {
   text-transform: uppercase;
-  color: #00aeef;
+  color: #00a8e7;
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 20px;

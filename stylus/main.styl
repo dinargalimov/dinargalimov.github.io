@@ -145,12 +145,58 @@ header
 		&:hover
 			background-color cl2+10%
 
-	&.open
-		a
+
+		&.drop-enabled
 			&:before, &:after
-				transform rotate(-45deg)
+				transform rotate(45deg)
 			&:after
-				transform rotate(-45deg)
+				transform rotate(45deg)
+
+.header_add_drop.drop-content-inner
+	padding 25px 35px
+	max-height 100vh
+	overflow visible
+	&:after, &:before
+		bottom 100%
+		left 50%
+		border solid transparent
+		content " "
+		height 0
+		width 0
+		position absolute
+		pointer-events none
+	&:after
+		border-color rgba(255, 255, 255, 0)
+		border-bottom-color #fff
+		border-width 8px
+		margin-left -8px
+	&:before
+		border-color rgba(0, 0, 0, 0)
+		border-bottom-color rgba(0,0,0,0.2)
+		border-width 9px
+		margin-left -9px
+
+
+	h3
+		font-size fzn - 4px
+		font-weight 500
+		text-transform uppercase
+		margin 0 0 15px
+	.col
+		width auto
+		& ~ .col
+			margin-left 60px
+	li
+		a
+			padding-left 0
+			padding-right 0
+			color clink
+			&:hover
+				background none
+				color cl2
+
+
+
 
 .header_chat
 	position absolute
@@ -163,7 +209,7 @@ header
 		width 49px
 		background cl3 url(../images/icon_chat.svg)no-repeat center
 		&:hover
-			background-color cl3+10%
+			background-color cl3 + 3%
 	label
 		padding 0 4px
 		box-sizing border-box
@@ -220,13 +266,14 @@ header
 		font-size 13px
 		padding 0 15px
 		font-weight 400
-		overflow ellipsis
 		max-width 250px
 		line-height 39px
 		color clinklight
 		a
 			width auto
 			font-size fzn - 3px
+			overflow ellipsis
+			max-width 100%
 			&:before
 				font-size 16px
 				vertical-align -3px
@@ -355,6 +402,7 @@ article.page
 	opacity 1
 	box-sizing border-box
 	transition width .4s ease, max-width .4s ease
+	will-change width, max-width
 
 	&.hide
 		animation pageHide .5s ease both
@@ -362,12 +410,13 @@ article.page
 		animation pageOpen .5s ease both
 
 	&.fullsize
-		// top 40px
 		width 100%!important
 		max-width 2000px
+
+
 	&.normalsize
-		// top 40px
 		width 66%
+
 
 	&.side_right
 		.page_header
@@ -449,7 +498,7 @@ article.page
 		background #fff
 		box-shadow -4px 0 5px rgba(49,68,93,0.08)
 		text-align center
-		transition .4s
+		transition .3s
 		&:before
 			width auto
 			margin 0
@@ -494,8 +543,14 @@ article.page
 	right 0
 	overflow-x hidden
 	overflow-y auto
-	padding 30px
+	padding 30px 30px 0
 	-webkit-overflow-scrolling touch
+	&:after
+		content ' '
+		display block
+		height 30px
+		width 100%
+		bottom 0
 
 // сайдбар слоя
 .page_side
@@ -506,12 +561,13 @@ article.page
 	width 270px
 	bottom 0
 	background cbglight + 60%
-	border-left 2px solid cseparator
+	background-clip border-box
 	overflow-x hidden
 	overflow-y auto
 	padding 20px
 	box-sizing border-box
 	font-size fzn - 2px
+	box-shadow inset 4px 0 0 -2px cseparator
 	-webkit-overflow-scrolling touch
 	&.page_side_wide
 		width 340px
@@ -566,22 +622,7 @@ article.page
 		.side_parameter_value
 			display inline-block
 
-// фильтр по дате
-.filter_date_value
-	padding 15px 0 0
-	max-width 250px
-	clearfix()
-	input.filter_date_input
-		padding-left 30px
-	input.date_from, input.date_to
-		width 48%
-		float left
-		font-size fzn - 4px
-	input.date_from
-		background url(../images/icon_date_from.svg) no-repeat 8px center
-	input.date_to
-		background url(../images/icon_date_to.svg) no-repeat 8px center
-		float right
+
 
 .side_sep
 	height 1px
@@ -1137,60 +1178,14 @@ article.page
 			margin 0 5px
 
 
-// описание транзакции
-.transaction_view_info
-	margin 0 0 40px
-	.transaction_view_info_money
-		font-size 40px
-		float left
-		margin-right 30px
-	.transaction_view_info_account
-		font-size fzn + 2px
-		padding 2px 0 0
-		.light_text
-			font-size fzn
 
-.transaction_view_contragent
-	padding 30px
-	.name
-		font-weight normal
-		margin-bottom 20px
-	.transaction_view_contragent_appointment
-		margin 30px -30px -30px
-		padding 20px 30px
-		border-top 1px solid cbdlightsky
-		background #fff
-		color ctextlight
-		font-style italic
-	.transaction_status_stamp
-		top calc(100% + 20px)
-		right 0
-
-.transaction_status_stamp
-	position absolute
-	right 20px
-	top 40px
-	display inline-block
-	padding 12px 20px
-	border 4px solid cl2 + 40%
-	color cl2 + 30%
-	font-weight bold
-	text-transform uppercase
-	font-size fzn - 1px
-	transform rotateZ(-8deg)
-	&.success
-		border-color cl3 + 30%
-		color cl3 + 20%
-	&.error
-		border-color cerror + 30%
-		color cerror + 20%
-	&.warning
-		border-color ctextwarning + 30%
-		color ctextwarning + 20%
 
 
 // список своих счетов в выпадушке
 .drop_account_list
+	li
+		a
+			clearfix()
 	.account_value
 		float right
 		font-weight 400
@@ -1201,10 +1196,12 @@ article.page
 		display inline-block
 		overflow ellipsis
 		max-width 330px
+		float left
 	.account_num
 		color ctextlight
-		font-weight fzn - 5px
+		font-size fzn - 5px
 		display block
+		clear both
 
 // список счетов контрагентов в выпадушке
 .drop_bank_account
@@ -1214,3 +1211,114 @@ article.page
 	.bank_account_num
 		color ctextlight
 		font-weight fzn - 5px
+
+
+// автозаполенение реквизитов
+.payment_autocompelete_details
+	margin-bottom 50px
+
+	&:after, &:before
+		left -32px
+		top 30px
+		border solid transparent
+		content " "
+		height 0
+		width 0
+		position absolute
+		pointer-events none
+	&:after
+		border-color rgba(255, 255, 255, 0)
+		border-left-color #fff
+		border-top-color #fff
+		border-width 9px
+	&:before
+		border-color rgba(0, 0, 0, 0)
+		border-left-color cbdlightsky
+		border-top-color cbdlightsky
+		border-width 11px
+		margin-top -2px
+
+
+
+	.title
+		padding 12px 0 35px 50px
+		background url(../images/icon_eva.svg) no-repeat 0 0
+		font-size fzn
+		color ctextlight
+	.autocompelete_details_textarea
+		font-size fzn - 2px
+		min-height 220px
+		max-height 350px
+	.form_buttons
+		margin-top 10px
+
+	.file_upload_block
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		.uploaded
+			border-radius 0
+		.file_delete
+			right 10px
+			top 10px
+		.file_icon
+			width 60px
+			height 81px
+			background-size 100%
+			margin-bottom 15px
+		.file_name
+			font-size fzn - 2px
+
+// список избранных платежей
+.payment_favorites_list
+	.title
+		font-size fzn - 4px
+		font-weight 500
+		text-transform uppercase
+		margin 0 0 10px
+		color ctextlight
+	.item
+		position relative
+		display block
+		margin 0 -10px 2px
+		padding 10px 10px 10px 30px
+		&:before
+			position absolute
+			top 11px
+			left 10px
+		&:hover
+			color clink
+			background #fff
+
+
+// новый платеж, выбор типа платежа
+.payment_new_type_popup
+	width 360px
+	padding 0
+	a
+		display block
+		height 65px
+		line-height 62px
+		background cl2
+		color #fff
+		font-weight normal
+		padding 0 0 0 24px
+		margin 0 0 3px
+		&:before
+			font-size 24px
+			width 35px
+			vertical-align -5px
+		&:hover
+			background cl2 + 5%
+			font-size fzn + 1px
+		&:first-child
+			border-top-right-radius brbut
+			border-top-left-radius brbut
+		&:last-child
+			border-bottom-right-radius brbut
+			border-bottom-left-radius brbut
+		&.icon-building
+			&:before
+				font-size 22px

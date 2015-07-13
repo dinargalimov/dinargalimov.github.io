@@ -10,7 +10,7 @@ button
 	&[disabled]
 		color ctextdis
 	&::-moz-focus-inner
-		border #000
+		border 0
 .button
 	display inline-block
 	font-size fzn + 3px
@@ -52,7 +52,7 @@ button
 	&.second
 		background-color cl3
 		&:hover
-			background-color cl3 + 10%
+			background-color cl3 + 3%
 		// &:active
 		// 	background-color cl3 - 5%
 
@@ -140,20 +140,20 @@ button
 
 	&[class*='icon-']
 		&:before
-			vertical-align -4px
-			font-size fzn + 6px
+			vertical-align -2px
+			font-size fzn + 2px
 			margin 0 10px 0 -10px
 
 	&.middle[class*='icon-']
 		&:before
-			vertical-align -4px
-			font-size fzn + 2px
+			vertical-align -2px
+			font-size fzn - 1px
 			margin 0 7px 0 -7px
 
 	&.small[class*='icon-']
 		&:before
-			vertical-align -3px
-			font-size fzn - 1px
+			vertical-align -2px
+			font-size fzn - 3px
 			margin 0 5px 0 -5px
 
 	&.xsmall[class*='icon-']
@@ -204,6 +204,11 @@ button
 	// 	transition .03s
 	// 	background-color cl2 - 5%
 	// 	text-shadow 0 -1px 0 rgba(#000,0.2)
+
+	&.noclick
+		box-shadow none
+		cursor default
+		pointer-events none
 
 
 .buttons_group

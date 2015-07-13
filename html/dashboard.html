@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard</title>
+	<base href="../"/>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/nv.d3.css">
+
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+	<script src="js/init.js"></script>
+
+</head>
+<body>
+
+<include data-file="aside.html"></include>
+<include data-file="header.html"></include>
+
+<section class="main">
+	<div class="side_right_fixed">
+		<include data-file="open_account/account_widget.html .account_balance_widget"></include>
+		<include data-file="timeline/timeline.html .timeline_widget:first-child"></include>
+	</div>
+	<div class="content">
+		<div class="widget_block">
+
+			<div id="chart" class='with-3d-shadow with-transitions' style="height:400px">
+			    <svg></svg>
+			</div>
+
+			<script>
+
+
+
+			</script>
+		</div>
+	</div>
+</section>
+
+
+
+</body>
+</html>

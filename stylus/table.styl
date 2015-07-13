@@ -5,41 +5,40 @@
 .table_list
 	width 100%
 	box-sizing border-box
-	// border 1px solid cseparator
 
 .table_list_header
 	box-sizing border-box
 	text-transform uppercase
-	padding 14px 0 11px 15px
-	background cl4
-	border-bottom 3px solid cl4 - 20%
+	padding 14px 0 10px 15px
+	background #D7F0FA
+	border-bottom 2px solid #B0DAED
 
 	clearfix()
 	// margin -1px -1px 0
 
 	.table_list_cell
-		font-size fzn - 5px!important
-		font-weight 600!important
-		color #fff!important
-		text-shadow 1px 1px rgba(0,0,0,0.1)
+		font-size fzn - 6px!important
+		font-weight 500!important
+		color clinklight!important
+		// text-shadow 1px 1px rgba(0,0,0,0.1)
 		overflow ellipsis
-		line-height 1
 		a
-			color #fff
+			color clinklight!important
 			text-decoration none
 			display inline-block
 			max-width 100%
 			overflow ellipsis
 			box-sizing border-box
 			&:hover
-				opacity .8
+				color clink!important
 
 		[class*="icon-sort"]
 			padding-right 20px
 			&:before
 				float right
 				min-width 0
-				margin 1px -15px 0 4px
+				margin 2px -15px 0 4px
+				font-size fzn - 8px
 
 		&.name_search
 			top -14px
@@ -48,12 +47,15 @@
 
 			input.input_search
 				width 150px
+				min-width 150px
 				max-width 100%
 				box-sizing border-box
-				margin -9px 0 0
+				margin -8px 0 0
+				&:focus
+					width 70%
 				&.white
-					height 24px
-					background-color rgba(#fff,0.18)
+					height 28px
+					background-color rgba(clink,0.13)
 					background-image url(../images/icon_search_input_white.svg)
 					background-size 12px auto
 					border none
@@ -63,6 +65,9 @@
 					box-shadow none
 					&:focus
 						background-size 0
+						background-color #fff
+						color ctext
+
 
 					&::-webkit-input-placeholder
 						color rgba(#fff,0.8)
@@ -90,8 +95,8 @@
 	padding 15px 0 15px 15px
 	box-sizing border-box
 	background cbgsky
-	border-bottom 2px solid #fff
-	transition background linear .05s
+	border-bottom 1px dotted cbdlightsky
+	transition background linear .02s
 	clearfix()
 
 	&:nth-child(even)
@@ -256,14 +261,14 @@
 		.table_list_cell
 			color ctextlight!important
 			text-shadow none
-			font-weight 400!important
+			font-weight 500!important
 			a
 				color clinklight!important
 	.table_list_row
 		background none
 		border-bottom 1px solid cseparator
 		&:hover
-			background cbghighlight
+			// background cbghighlight
 		&.row_checked
 			box-shadow none
 			background cbghighlight
