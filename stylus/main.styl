@@ -362,11 +362,16 @@ section.main
 	.side_right_fixed
 		padding-top 30px
 
+.flex_row
+	display flex
+
+
 .content
-	margin-right 310px
+	// margin-right 310px
 	box-sizing border-box
-	&.side_right_small
-		margin-right 260px
+	// &.side_right_small
+	// 	margin-right 260px
+	flex 1 300 auto
 
 	.content_notice
 		padding 100px 0
@@ -376,13 +381,15 @@ section.main
 			text-align center
 			color ctextlight
 
-.side_right_fixed
+.side
 	width 270px
-	position absolute
-	right 0
-	top 0
-	padding 25px 25px 25px 0
-	&.side_right_small
+	// position absolute
+	// right 0
+	// top 0
+	padding 25px 0
+	flex 1 1 auto
+	margin-left 40px
+	&.side_small
 		width 220px
 
 

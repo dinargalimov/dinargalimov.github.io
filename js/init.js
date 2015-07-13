@@ -142,7 +142,7 @@ function init(){
 		trigger: 'click'
 	});
 
-	$('.equalize_height').equalize('innerHeight');
+	// $('.equalize_height').equalize('innerHeight');
 
 
 	$('.tabs_scroll ul').owlCarousel({
