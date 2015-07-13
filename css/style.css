@@ -9256,8 +9256,13 @@ article.page.open + .page.open + .page.open {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
-  -webkit-flex-shrink: 1500;
-  flex-shrink: 1500;
+  -webkit-box-flex: 1500;
+  -moz-box-flex: 1500;
+  -o-box-flex: 1500;
+  box-flex: 1500;
+  -webkit-flex: 1 1500 auto;
+  -ms-flex: 1 1500 auto;
+  flex: 1 1500 auto;
 }
 .messenger_chat .item {
   margin: 0 0 10px;
@@ -9582,9 +9587,6 @@ article.page.open + .page.open + .page.open {
   -o-transition: none;
   -ms-transition: none;
   transition: none;
-  -ms-flex-shrink: 1500;
-  -webkit-flex-shrink: 1500;
-  flex-shrink: 1500;
   -webkit-box-flex: 1500;
   -moz-box-flex: 1500;
   -o-box-flex: 1500;
