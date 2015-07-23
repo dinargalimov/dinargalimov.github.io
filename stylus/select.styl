@@ -54,19 +54,16 @@
 		color ctexterror
 
 	&.open
-		& + .ms-drop
-			// animation dropShow .1s
-			// transform-origin top
-			// animation-timing-function cubic-bezier(0.1, 0.8, 0.9, 1.0)
+		& ~ .ms-drop
 			transform perspective(600px) rotateX(0deg)
 			transition opacity .3s, transform .3s
 			opacity 1
-		& + .ms-drop.bottom
-			transform-origin bottom
+
 
 
 .ms-drop
 	display block!important
+	display none
 	position absolute
 	z-index 1000
 	background #fff
@@ -83,8 +80,15 @@
 	transition opacity .3s, transform 1.5s
 	opacity 0
 
+	// &[style*="block"]
+	// 	transform perspective(600px) rotateX(0deg)
+	// 	transition opacity .3s, transform .3s
+	// 	opacity 1
+
 	&.bottom
 		bottom 100%
+		transform-origin bottom
+
 	&.right
 		right 0
 	ul

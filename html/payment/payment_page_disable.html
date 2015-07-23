@@ -32,7 +32,19 @@
 
 	<!-- контент слоя  -->
 	<div class="page_content">
-		<form class="form">
+
+		<div class="notices">
+			<div class="notice_block widget_block warning icon-smile-bubble-wow">
+				<a class="close icon-close"></a>
+				<p>Платеж заблокирован. Вы действительно хотите редактировать платеж?</p>
+				<p>
+					<a class="button small">Редактировать</a>
+					<a class="button_clean small">Отменить</a>
+				</p>
+			</div>
+		</div>
+
+		<form class="form disable_block">
 			<div class="form_group">
 				<select class="w100" data-placeholder="Тип платежа">
 					<option value="111" selected>Перевод между своими счетами</option>
@@ -80,20 +92,13 @@
 				<div class="col half">
 					<div class="input_group w100">
 						<div class="input_group_addon">ИНН</div>
-						<input type="text" name="" placeholder="ИНН получателя" id="" class="input_loading">
+						<input type="text" name="" placeholder="ИНН получателя" id="" class="">
 					</div>
 				</div>
 				<div class="col half">
 					<div class="input_group w100">
 						<div class="input_group_addon">КПП</div>
-						<input type="text" name="" placeholder="КПП получателя" id="" class="drop-target">
-						<div class="drop-content">
-							<div class="drop-content-inner">
-								<div class="loading">
-									<div></div>
-								</div>
-							</div>
-						</div>
+						<input type="text" name="" placeholder="КПП получателя" id="" class="">
 					</div>
 				</div>
 			</div>

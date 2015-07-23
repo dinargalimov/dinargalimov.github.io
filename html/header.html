@@ -1,12 +1,97 @@
 <header ng-controller="DropdownCtrl">
 	<div class="header_search">
-		<input type="search" value="" placeholder="Поиск">
+
+		<input type="search" value="" placeholder="Найти платеж, контакт, задачу" class="drop-target">
+
+		<!-- крутилка -->
+		<!-- <div class="drop-content">
+			<div class="drop-content-inner drop-search">
+				<div class="loading"><div></div></div>
+			</div>
+		</div> -->
+
+		<!-- ничего не найдено -->
+		<!-- <div class="drop-content">
+			<div class="drop-content-inner drop-search">
+				<div class="no_found icon-smile-bubble-angry">К сожалению ничего не найдено</div>
+			</div>
+		</div> -->
+
+		<!-- результаты поиска -->
+		<div class="drop-content">
+			<div class="drop-content-inner drop-search">
+				<div class="drop_search_list">
+					<div class="group">
+						<div class="group_name">Платежи</div>
+						<ul class="drop-menu group_list">
+							<li><a>
+								<span class="value"><span class="money_income">2 000 <span class="cur dollar"><span>$</span></span></span></span>
+								<span class="name">ООО <span class="c_primary">Ромашк</span>а одуванчик зверобой Ромашка одуванчик зверобой</span>
+								<span class="desc">17.07.2015<br/>За доставку товара. НДС не учитывается.</span>
+							</a></li>
+							<li><a>
+								<span class="value">
+									<span class="money_expense">1 500 300 <span class="cur ruble"><span>р.</span></span></span>
+									<span class="actions"><span class="icon-reload"></span></span>
+								</span>
+								<span class="name">ООО <span class="c_primary">Ромашк</span>а</span>
+								<span class="desc">17.07.2015<br/>За доставку товара. НДС не учитывается. За доставку товара. НДС не учитывается.</span>
+							</a></li>
+							<li><a>
+								<span class="value">
+									<span class="money_expense">1 500 300 <span class="cur ruble"><span>р.</span></span></span>
+									<span class="actions"><span class="icon-reload"></span></span>
+								</span>
+								<span class="name">ООО <span class="c_primary">Ромашк</span>а</span>
+								<span class="desc">17.07.2015<br/>За доставку товара.</span>
+							</a></li>
+							<li class="show_more"><a>Показать еще (50)</a></li>
+						</ul>
+
+					</div>
+
+					<div class="group">
+						<div class="group_name">Счета</div>
+						<ul class="drop-menu group_list">
+							<li><a>
+								<span class="name"><span class="c_primary">Зарплат</span>ный</span>
+								<span class="desc">40101234560000000000</span>
+							</a></li>
+						</ul>
+					</div>
+
+					<div class="group">
+						<div class="group_name">Контакты</div>
+						<ul class="drop-menu group_list">
+							<li><a>ООО Ромашка</a></li>
+							<li><a>ООО Башкирский <span class="c_primary">ромашк</span>овый завод</a></li>
+						</ul>
+					</div>
+
+					<div class="group">
+						<div class="group_name">Задачи</div>
+						<ul class="drop-menu group_list">
+							<li><a>
+								<span class="name">… различать счета ООО “<span class="c_primary">Ромашк</span>а” и ООО “Гарант” asdfasdf asdfadsasdfasdf asdfasdfasdfa</span>
+								<span class="desc">13.07.2015</span>
+							</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="name">Поиск</div>
 	</div>
+
+
+
 	<div class="header_add">
 		<a href="#" class="add drop-target" data-position="bottom center"></a>
 		<div class="drop-content">
 			<div class="header_add_drop drop-content-inner">
-				<div class="col">
+
+				<div class="col hidden">
 					<h3>Платежи</h3>
 					<ul class="drop-menu">
 						<li><a>Перевод между счетами</a></li>
@@ -18,7 +103,7 @@
 						<li><a>Валютный перевод</a></li>
 				    </ul>
 			    </div>
-			    <div class="col">
+			    <div class="col hidden">
 					<h3>Услуги</h3>
 					<ul class="drop-menu">
 						<li><a>Овердрафт</a></li>
@@ -29,7 +114,20 @@
 						<li><a>Подключить юриста</a></li>
 				    </ul>
 			     </div>
-			     <div class="clear"></div>
+
+			     <div class="col quick_add ">
+					<ul class="drop-menu">
+						<li><a>Новый платеж</a></li>
+						<li><a>Перевод между счетами</a></li>
+						<li><a>Написать ассистенту</a></li>
+						<li><a>Выставить счет</a></li>
+						<li><a>Загрузить документы</a></li>
+				    </ul>
+			    </div>
+
+			    <div class="more"><a class="icon-more-small">Показать еще</a></div>
+			    <div class="more hidden"><a class="icon-more-small">Свернуть</a></div>
+
 		     </div>
 		</div>
 
@@ -43,11 +141,13 @@
 		<div class="header_profile_name">
 			<a href="#" class="icon-profile drop-target">ООО «Черный рынок»</a>
 			<div class="drop-content">
-				<ul class="drop-menu">
-					<li><a>ООО «Башкирский мясоконсервный комбинат»</a></li>
-					<li><a>ИП Иванов Сидр Васильевич</a></li>
-					<li><a class="icon-plus c_linklight">Подключить компанию</a></li>
-				</ul>
+				<div class="drop-content-inner">
+					<ul class="drop-menu">
+						<li><a>ООО «Башкирский мясоконсервный комбинат»</a></li>
+						<li><a>ИП Иванов Сидр Васильевич</a></li>
+						<li><a class="icon-plus c_linklight">Подключить компанию</a></li>
+					</ul>
+				</div>
             </div>
 		</div>
 		<div class="header_profile_settigs">

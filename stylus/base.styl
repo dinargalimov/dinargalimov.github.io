@@ -77,6 +77,8 @@ a
 		transition all .3s
 		&:before
 			transition transform .3s
+			margin 0
+			min-width 0
 		&:hover
 			&:before
 				transform rotate(90deg)
@@ -174,7 +176,7 @@ strong
 .ov_ell
 	overflow ellipsis
 	max-width 100%
-	display inline-block
+	display block
 .ov_h
 	overflow hidden
 
@@ -271,11 +273,10 @@ strong
 	&:before
 		content '+ '
 .money_expense
-	color ctext
+	color ctexterror
 	&:before
 		content '– '
-	.cur
-		color ctext
+
 
 
 .equalize_height
@@ -389,6 +390,8 @@ strong
 	color ctextlight
 .error_text
 	color ctexterror
+.warning_text
+	color ctextwarning
 .success_text
 	color cl3 - 30%
 
@@ -411,8 +414,9 @@ strong
 		display inline-block
 		background url(../images/loading.gif) no-repeat 0 0
 		background-size 24px 24px
-		padding 0 0 0 45px
-		height 32px
+		padding 0
+		height 24px
+		width 24px
 		line-height 31px
 		color ctextlight
 	&.text_bot
@@ -423,6 +427,21 @@ strong
 .loading_block
 	transition .4s
 	position relative
+	&[data-loading-text]
+		&:after
+			background-position center calc(50% - 12px)
+	&:before
+		content ' 'attr(data-loading-text)' '
+		position absolute
+		top 50%
+		left 50%
+		z-index 11
+		transform translate(-50%, 10px)
+		text-transform uppercase
+		font-size fzn - 5px
+		font-weight 500
+		color ctextlight
+		text-shadow 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff
 
 	&:after
 		transition .5s background-color
@@ -438,7 +457,6 @@ strong
 		background-position center
 		background-size 24px 24px
 		z-index 10
-		-webkit-filter blur(0px)
 
 .loading_block_clean
 	overflow hidden!important
@@ -450,6 +468,22 @@ strong
 	& *
 		opacity 0
 
+
+.disable_block
+	transition .4s
+	position relative
+	> *
+		opacity .4
+
+	&:after
+		transition .5s background-color
+		content ''
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		z-index 10
 
 
 
@@ -1199,7 +1233,7 @@ for $i in (1..10)
 	vertical-align -2px
 	margin-right 5px
 
-.icon-info
+a.icon-info
 	cursor pointer
 	opacity 0.7
 	&:hover
@@ -1324,13 +1358,11 @@ for $i in (1..10)
 			white-space nowrap
 			clearfix()
 			li
-				background-color cbgsky
+				background-color cbgsky + 10%
 				display inline-block
 				margin-right 3px
-				// margin-bottom -1px
 				border-top 2px solid transparent
 				border-bottom 1px solid transparent
-				// height 42px
 				box-sizing border-box
 				background-clip content-box
 				&:hover
@@ -1339,7 +1371,6 @@ for $i in (1..10)
 				a
 					display block
 					padding 10px 25px
-					// line-height 38px
 					color ctextlight
 					text-decoration none
 					text-align center
@@ -1422,6 +1453,22 @@ for $i in (1..10)
 			max-height 100%
 			-webkit-overflow-scrolling touch
 
+	&.tabs_widget
+		margin 0 0 20px
+		.tabs_menu
+			padding 0
+			box-shadow none
+			li.active
+				box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
+				border-left none
+				border-right none
+		.tabs_content
+			background #fff
+			box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
+			padding 20px
+			box-sizing border-box
+
+
 
 
 
@@ -1468,6 +1515,9 @@ for $i in (1..10)
 		font-weight normal
 		line-height 150px
 		text-decoration underline
+		&:hover
+			color #fff
+
 
 	.avatar_delete
 		position absolute
@@ -1542,10 +1592,14 @@ for $i in (1..10)
 		max-height 280px
 		overflow auto
 		box-sizing border-box
+		.loading
+			width 150px
 	.inner_padding_15
 		padding 15px
 	.inner_padding_30
 		padding 30px
+
+
 
 	.drop-menu
 		margin 0
@@ -1560,16 +1614,15 @@ for $i in (1..10)
 			cursor pointer
 			box-sizing border-box
 			font-size fzn - 2px
-			// padding-right 15px
 			border-bottom 1px solid cbdlight + 40%
-			// &:after
-			// 	display block
-			// 	content ''
-			// 	height 1px
-			// 	margin 0
-			// 	background cbdlight + 40%
+
 			&:last-child
 				border-bottom none
+
+			&.submenu
+				a
+					padding-left 25px
+
 			a, button
 				color ctext
 				text-decoration none
@@ -1589,12 +1642,16 @@ for $i in (1..10)
 			&.active
 				a, button
 					color cl2
+			&.highlight
+				a
+					background cbghighlight
+
 	.drop-title
 		font-size fzn - 4px
 		font-weight 500
 		color ctextlight
 		font-style italic
-		margin 15px 15px 10px
+		margin 15px 15px 4px
 	.drop-sep
 		display block
 		height 1px
@@ -1607,6 +1664,16 @@ for $i in (1..10)
 		margin-top -10px
 		.drop-content
 			transform-origin bottom
+
+	.drop-date-choose
+		padding 0 15px 15px
+
+	.dashboard-period-choose
+		.drop-menu
+			max-width 100%
+			li:last-child
+				border-bottom 1px solid cbdlight + 40%
+
 
 .drop-input
 	height 40px
@@ -1633,11 +1700,24 @@ for $i in (1..10)
 		display block
 		overflow ellipsis
 		max-width 100%
+	&.small
+		height 34px
+		padding-left 10px
+		line-height 32px
+		font-size fzn - 2px
 
 	&:hover
 		color ctext
+
+
 	&.drop-enabled
 		border-color cl2
+
+	&.second
+		border-color transparent
+		box-shadow 0 1px 1px rgba(0,0,0,0.12)
+		&:focus
+			box-shadow 0 1px 1px rgba(cl1,0.3)
 
 
 
@@ -1677,6 +1757,22 @@ for $i in (1..10)
 @media (max-width:1400px)
 	.hide_1400a
 		display none
+@media (max-width:1500px)
+	.hide_1500a
+		display none
+@media (max-width:1600px)
+	.hide_1600a
+		display none
+@media (max-width:1700px)
+	.hide_1700a
+		display none
+@media (max-width:1800px)
+	.hide_1800a
+		display none
+@media (max-width:1900px)
+	.hide_1900a
+		display none
+
 
 @media (min-width:900px)
 	.hide_900b
@@ -1696,3 +1792,24 @@ for $i in (1..10)
 @media (min-width:1400px)
 	.hide_1400b
 		display none
+@media (min-width:1500px)
+	.hide_1500b
+		display none
+@media (min-width:1600px)
+	.hide_1600b
+		display none
+@media (min-width:1700px)
+	.hide_1700b
+		display none
+@media (min-width:1800px)
+	.hide_1800b
+		display none
+@media (min-width:1900px)
+	.hide_1900b
+		display none
+
+
+
+// скрытие блоков
+.block_hide
+	animation blockHide 3s ease both

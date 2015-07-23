@@ -59,7 +59,21 @@ function init(){
 
 
 
-    $(".select_multi").multipleSelect({
+
+    $("select,.select_inline").filter(function(){
+    	return !$(this).hasClass('select_multi');
+    }).multipleSelect({
+    	selectAll: false,
+    	noMatchesFound: 'Ничего не найдено',
+    	single: true,
+    	isOpen: false,
+        keepOpen: false,
+        textTemplate: function(el){
+    		return el.html();
+    	}
+    });
+
+     $(".select_multi").multipleSelect({
     	selectAll: false,
     	selectAllText: 'Выбрать все',
     	allSelected: 'Выбраны все',
@@ -69,17 +83,8 @@ function init(){
     		return el.html();
     	}
     });
-     $("select,.select_inline").multipleSelect({
-    	selectAll: false,
-    	noMatchesFound: 'Ничего не найдено',
-    	single: true,
-    	isOpen: false,
-        keepOpen: false,
-        textTemplate: function(el){
-    		return el.html();
-    	}
 
-    });
+
 
 
 	// высота чата в слое
@@ -156,7 +161,7 @@ function init(){
 	});
 
 
-	d3.json("http://nvd3.org/examples/linePlusBarData.json",function(error,data) {
+d3.json("http://nvd3.org/examples/linePlusBarData.json",function(error,data) {
   nv.addGraph(function() {
       var chart = nv.models.linePlusBarChart()
             .margin({top: 30, right: 60, bottom: 50, left: 70})

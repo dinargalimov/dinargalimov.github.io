@@ -118,7 +118,7 @@ input[type='search'].input_search
 		background-size 0px
 		padding-left 10px
 
-.input_search_focus
+input.input_search_focus
 	background-image url(../images/icon_search_input.svg)
 	background-repeat no-repeat
 	background-position 100% center
@@ -129,7 +129,7 @@ input[type='search'].input_search
 		background-position calc(100% - 10px) center
 		background-size 16px auto
 
-.input_loading
+input.input_loading
 	background-image url(../images/loading_ring.gif)!important
 	background-position calc(100% - 10px) center
 	background-repeat no-repeat
@@ -412,29 +412,6 @@ input.search_left
 	clearfix()
 	.switch_item
 		float left
-		input[type="radio"]
-			&:checked ~ label
-				background saturate(cbglight - 5%, 50%)
-				// background linear-gradient(saturate(cbglight - 5%, 50%), saturate(cbglight - 2%, 50%))
-				box-shadow inset 0 1px 0 rgba(#000,0.1)
-				border-color cbglight - 20%
-				cursor default
-				color ctext
-				z-index 10
-		label
-			display inline-block
-			height 40px
-			line-height 38px
-			background cbgsky
-			// background linear-gradient(cbgsky, cbgsky - 3%)
-			border 1px solid cbglight - 15%
-			margin-left -1px
-			color ctextlight
-			padding 0 10px
-			font-size fzn - 2px
-			cursor pointer
-
-
 		&:first-child
 			label
 				margin-left 0
@@ -447,6 +424,38 @@ input.search_left
 			label
 				border-top-right-radius brbut
 				border-bottom-right-radius brbut
+
+	input[type="radio"]
+		&:checked ~ label
+			background saturate(cbglight - 2%, 30%)
+			background #fff
+			// box-shadow inset 0 1px 0 rgba(0,0,50,0.15)
+			border-color cbglight - 25%
+			border-color cl2
+			box-shadow inset 0 0 0 1px cl2
+			font-weight 400
+			cursor default
+			color cl2
+			// color #fff
+			z-index 10
+	label
+		float left
+		display block
+		height 40px
+		line-height 38px
+		background cbgsky
+		// background linear-gradient(cbgsky, cbgsky - 3%)
+		border 1px solid cbglight - 15%
+		margin-left -1px
+		color ctextlight
+		padding 0 10px
+		font-size fzn - 2px
+		cursor pointer
+		z-index 1
+		position relative
+
+
+
 
 	&.switch_tabs
 		.switch_item
@@ -465,21 +474,21 @@ input.search_left
 						margin-top -1px
 					&:after
 						border-color rgba(255, 255, 0, 0)
-						border-top-color saturate(cbglight - 5%, 50%)
-						border-width 6px
-						margin-left -6px
+						border-top-color #fff
+						border-width 4px
+						margin-left -4px
 					&:before
 						border-color rgba(0, 255, 0, 0)
-						border-top-color cbglight - 20%
+						border-top-color cl2
 						border-width 7px
 						margin-left -7px
 			label
 				padding 0 15px
 	&.small
-		.switch_item
-			label
-				height 32px
-				line-height 32px
+
+		label
+			height 32px
+			line-height 32px
 
 
 
@@ -785,7 +794,7 @@ input.datetimepicker
 .filter_date_value
 	padding 15px 0 0
 	max-width 250px
-	clearfix()
+	overflow hidden
 	input.date_from, input.date_to
 		font-size fzn - 4px
 

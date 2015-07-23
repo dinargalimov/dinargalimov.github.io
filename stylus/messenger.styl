@@ -5,7 +5,9 @@
 	bottom 0
 	right 0
 	z-index 20
-	width 320px
+	min-width 320px
+	max-width 400px
+	width 28%
 	background #fff
 	box-shadow 0px 6px 10px 0px rgba(37,33,18,0.23)
 
@@ -36,10 +38,13 @@
 
 
 		.messenger_new_theme
-			overflow auto
 			.add_text
 				textarea
 					min-height 240px
+					max-height 240px
+			.file_upload_list
+				max-height calc(100vh - 40px - 42px - 455px)
+				min-height 100px
 
 
 		.icon-arrow-up
@@ -61,11 +66,12 @@
 	padding 0 10px 0 0
 	a[class*='icon-']
 		height 40px
-		width 30px
+		width 25px
 		float right
 		text-align center
 		line-height 40px
 		color #fff
+
 	a[class*='icon-arrow-up']
 		transition .2s
 		&:hover
@@ -396,7 +402,9 @@
 		clear both
 		max-height 100px
 		overflow auto
-		padding-top 10px
+		margin-top 10px
+		margin-right -10px
+		padding-right 10px
 		-webkit-overflow-scrolling touch
 
 
@@ -405,6 +413,8 @@
 .messenger_new_theme
 	color ctextlight
 	box-shadow none
+	max-height calc(100vh - 40px - 42px)
+	overflow auto
 
 	.add_text, .add_buttons
 		float none

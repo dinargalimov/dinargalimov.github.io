@@ -91,28 +91,52 @@ header
 		width 25px
 		background url(../images/icon_search.svg) no-repeat 0 center
 		z-index -1
-		opacity .8
 		transition .2s
 	&:hover
 		&:before
 			opacity 1
 
+	.name
+		color cl1
+		position absolute
+		left 45px
+		top 10px
+		z-index 0
+
 	input
+		position relative
 		height 100%
 		border none
-		width 48px
+		width 67px
 		cursor pointer
 		transition width ease-in-out .2s
-		padding-left 45px
+		margin-left 25px
+		padding-left 15px
 		padding-right 0
 		background transparent
 		opacity 0
+		box-sizing content-box
+		z-index 10
+		&::-webkit-input-placeholder
+			color ctext
+		&::-moz-placeholder
+			color ctext
+		&:-ms-input-placeholder
+			color ctext!important
 		&:hover
-			width 55px
+			width 75px
 		&:focus
 			width 250px
 			transition width ease-in-out .2s
 			opacity 1
+			&::-webkit-input-placeholder
+				color ctextholder
+			&::-moz-placeholder
+				color ctextholder
+			&:-ms-input-placeholder
+				color ctextholder!important
+			& ~ .name
+				opacity 0
 
 
 // быстрое добавление в шапке
@@ -186,6 +210,8 @@ header
 		width auto
 		& ~ .col
 			margin-left 60px
+	.quick_add
+		margin -10px -10px 0!important
 	li
 		a
 			padding-left 0
@@ -194,6 +220,19 @@ header
 			&:hover
 				background none
 				color cl2
+
+	.more
+		clear both
+		padding 15px 0 0
+		margin 0 0 -5px 0
+		text-align right
+		a
+			text-decoration none
+			color ctextlight
+			font-size fzn - 3px
+			&:hover
+				color cl2
+
 
 
 
@@ -345,7 +384,7 @@ section.main
 	z-index 10
 	padding 25px
 	overflow-x hidden
-	overflow-y auto
+	overflow-y scroll
 	-webkit-overflow-scrolling touch
 
 	&.section_areas
@@ -356,9 +395,10 @@ section.main
 	background cbglight
 	padding 25px 25px 30px
 	border-bottom 3px solid cseparator
+
 .section_content
 	background #fff
-	padding 30px 25px
+	padding 25px
 	.side_right_fixed
 		padding-top 30px
 
@@ -367,10 +407,7 @@ section.main
 
 
 .content
-	// margin-right 310px
 	box-sizing border-box
-	// &.side_right_small
-	// 	margin-right 260px
 	flex 1 300 auto
 
 	.content_notice
@@ -382,23 +419,34 @@ section.main
 			color ctextlight
 
 .side
-	width 270px
-	// position absolute
-	// right 0
-	// top 0
-	padding 25px 0
-	flex 1 1 auto
-	margin-left 40px
+	min-width 270px
+	max-width 380px
+	width 26%
+	flex 0 1 auto
+	margin-left 20px
+
+
 	&.side_small
-		width 220px
+		min-width 220px
+		max-width 350px
+		width 23%
+
+	&.side_border
+		padding-left 25px
+		margin-left 25px
+		margin-top -25px
+		padding-top 25px
+		border-left 1px solid cbdlight
+
 
 
 
 article.page
 	position fixed
 	// overflow hidden
-	z-index 10
+	z-index 50
 	right 0
+	left auto!important
 	bottom 0
 	top 40px
 	width 66%
@@ -406,20 +454,26 @@ article.page
 	max-width 1000px
 	background #fff
 	box-shadow -4px 0 25px rgba(49,68,93,0.23)
-	opacity 1
+
 	box-sizing border-box
-	transition width .4s ease, max-width .4s ease
+	transition width .4s ease, max-width .4s ease, transform .5s ease, opacity .5s ease
 	will-change width, max-width
 
+	opacity 0
+	transform translateX(200px)
+
 	&.hide
-		animation pageHide .5s ease both
+		// animation pageHide .5s ease both
+		opacity 0
+		transform translateX(200px)
 	&.open
-		animation pageOpen .5s ease both
+		// animation pageOpen .5s ease backwards
+		opacity 1
+		transform translateX(0px)
 
 	&.fullsize
 		width 100%!important
 		max-width 2000px
-
 
 	&.normalsize
 		width 66%
@@ -441,12 +495,23 @@ article.page
 		min-width 740px
 		width 45%
 
-	&.open + .page.open
+	&.open ~ .page.open
 		transform translateX(-25px)
-		z-index 9
-		& + .page.open
-			transform translateX(-50px)
-			z-index 8
+		z-index 49
+		points-event none
+		& ~ .page.open
+			transform translateX(-45px)
+			z-index 48
+			& ~ .page.open
+				transform translateX(-60px)
+				z-index 47
+
+	&.hide ~ .page.open
+		z-index 49
+		& ~ .page.open
+			z-index 48
+			& ~ .page.open
+				z-index 47
 
 
 // шапка слоя
@@ -461,6 +526,9 @@ article.page
 		border-bottom none
 		& + .page_content
 			padding-top 10px
+	&.header_forward
+		z-index 2100
+		background transparent
 	h1
 		display inline-block
 		margin 0 30px 0 0
@@ -675,14 +743,12 @@ article.page
 		margin 0 0 15px
 		padding 0 0 15px
 		border-bottom 2px solid cseparator
+		font-weight normal
 
 		.buttons_group_filter
-			margin -3px 0 0
+			margin -6px 0 0
 			float right
-			.button
-				padding 0 10px
-				height 28px
-				line-height 26px
+
 		.title_filter
 			float right
 			.ms-choice
@@ -695,18 +761,59 @@ article.page
 	box-shadow 0px 4px 8px 0px rgba(0,0,0,0.07)
 	margin-bottom 20px
 
+// уведомления
+.notices
+	margin-bottom 25px
 .notice_block
-	background cbginfo
 	font-size fzn - 2px
 	padding 15px
-	&.icon-warning
+	margin 0 0 7px
+	border-left 3px solid cl2
+	padding-right 25px
+	&:before
+		color cl2
+	.close
+		position absolute
+		right 10px
+		top 10px
+		color ctextlight + 60%
+		font-size 12px
+		&:before
+			min-width 0
+			margin 0
+		&:hover
+			color ctext
+
+
+	&.warning
+		background cbginfo + 30%
+		border-left 3px solid ctextwarning
+		&:before
+			color ctextwarning
+	&.danger
+		background cbgerror + 30%
+		border-left 3px solid cerror
+		&:before
+			color ctexterror
+	&.success
+		background cbgsuccess + 20%
+		border-left-color cl3
+		&:before
+			color ctextsuccess
+
+	&[class*="icon-"]
 		padding-left 50px
 		&:before
 			position absolute
-			left 20px
-			top 17px
-			color ctextwarning
+			left 15px
+			top 12px
+			font-size 24px
 
+
+	p
+		margin 0 0 10px
+		&:last-child
+			margin-bottom 0
 
 
 
@@ -789,29 +896,33 @@ article.page
 // виджет остатка на счетах
 .account_balance_widget
 
-	.balance_value
-		font-size fzn + 10px
-		margin 0 0 12px
-	.balance_available, .balance_reserved
-		margin 0 0 12px
-		.light_text
-			font-size fzn - 2px
-			margin 0 0 1px
-	.balance_available_value
+	.icon-info
+		position absolute
+		right 15px
+		top 70px
+		z-index 10
+	.item
 		font-size fzn + 2px
-
-	.title_second
-		padding 0 0 5px
-		margin 20px 0 15px
-		border-bottom 2px solid cseparator
-	.balance_income, .balance_expense
-		margin 0 0 10px
+		margin 0 0 15px
 		.light_text
-			display inline-block
-			width 70px
 			font-size fzn - 2px
-	.balance_income_value, .balance_expense_value
-		display inline-block
+			margin 0 0 4px
+
+	.balance
+		.value
+			font-size fzn + 12px
+			text-decoration none
+			color ctext
+
+	.account_balance_widget_empty
+		text-align center
+		padding 20px 0
+		p
+			font-style italic
+			font-size fzn - 2px
+			color ctextlight
+			margin 0 0 15px
+
 
 
 // ------------- Блокировка активности ----------------
@@ -972,9 +1083,9 @@ article.page
 
 .timeline
 	font-size fzn - 3px
-	max-height 70vh
+	max-height 60vh
 	overflow auto
-	margin -20px
+	margin -15px -20px -20px
 	padding 20px
 	-webkit-overflow-scrolling touch
 	.timeline_block
@@ -989,7 +1100,7 @@ article.page
 	// блок важно
 	.timeline_important
 		background cbginfo
-		margin -17px -20px 30px
+		margin -20px -20px 30px
 		padding 20px
 		.timeline_line_block
 			margin-bottom 0
@@ -1199,7 +1310,7 @@ article.page
 		font-size fzn
 		color ctext
 	.account_name
-		padding 2px 40px 0 0
+		padding 2px 20px 0 0
 		display inline-block
 		overflow ellipsis
 		max-width 330px
@@ -1329,3 +1440,135 @@ article.page
 		&.icon-building
 			&:before
 				font-size 22px
+
+// дашборд
+.dashboard
+	.content
+		h1
+			span
+				display block
+				float left
+				margin-right 30px
+				margin-bottom 20px
+.dashboard_content_filter
+	display inline-block
+	.drop-target
+		margin-right 5px
+
+.cashflow_widget
+	display flex
+	flex-wrap nowrap
+	justify-content space-around
+	.name
+		font-size fzn - 3px
+		color ctextlight
+		padding 0 0 10px
+	.value
+		font-size fzn
+		white-space nowrap
+
+		@media (min-width:1100px)
+			font-size fzn + 2px
+		@media (min-width:1200px)
+			font-size fzn + 3px
+		@media (min-width:1300px)
+			font-size fzn + 5px
+		@media (min-width:1400px)
+			font-size fzn + 7px
+		@media (min-width:1600px)
+			font-size fzn + 10px
+
+.dashboard_transaction
+	.tabs_content
+		.table_list
+			margin -10px -20px -20px
+			width auto
+			.table_list_header
+				background #fff
+
+
+// поиск в выпадушке
+.drop-search
+	max-width 600px
+	min-width 400px
+
+	.no_found
+		padding 15px
+		color ctextlight
+		text-align center
+		font-size fzn - 2px
+		&:before
+			font-size 30px
+			display block
+			text-align center
+			margin 0 0 10px
+	.drop_search_list
+		white-space nowrap
+		.group
+			border-bottom 1px solid cbd
+
+		.group_name
+			width 100px
+			display inline-block
+			vertical-align top
+			padding 15px
+			text-transform uppercase
+			font-size fzn - 5px
+			font-weight normal
+			color ctextlight
+			letter-spacing 1px
+			box-sizing border-box
+		.group_list
+			display inline-block
+			vertical-align top
+			width calc(100% - 100px)
+			max-width calc(100% - 100px)
+			margin-left -4px
+
+			li
+				clearfix()
+				a
+					overflow ellipsis
+					max-width 480px
+			.show_more
+				padding-top 0
+				a
+					color clink
+					font-size fzn - 3px
+
+			.value
+				float right
+				font-weight 400
+				font-size fzn
+				color ctext
+				text-align right
+				& ~ .name
+					padding 2px 20px 2px 0
+					display inline-block
+					max-width 300px
+					float left
+				& ~ .desc
+					max-width 300px
+			.name
+				display block
+				overflow ellipsis
+
+			.desc
+				color ctextlight
+				font-size fzn - 4px
+				display block
+				clear left
+				overflow ellipsis
+			.actions
+				display block
+				margin 5px 0 0
+				font-size fzn - 2px
+				span
+					opacity 0.5
+					color ctextlight
+					&:hover
+						color cl2
+			li:hover
+				.actions
+					span
+						opacity 1

@@ -17,23 +17,475 @@
 <include data-file="aside.html"></include>
 <include data-file="header.html"></include>
 
-<section class="main">
-	<div class="side_right_fixed">
-		<include data-file="open_account/account_widget.html .account_balance_widget"></include>
-		<include data-file="timeline/timeline.html .timeline_widget:first-child"></include>
-	</div>
-	<div class="content">
-		<div class="widget_block">
+<section class="main dashboard">
+	<div class="flex_row">
 
-			<div id="chart" class='with-3d-shadow with-transitions' style="height:400px">
-			    <svg></svg>
+		<div class="content">
+
+			<!-- уведомления -->
+			<div class="notices">
+
+
+				<div class="notice_block widget_block icon-smile-bubble">
+					<a class="close icon-close"></a>
+					<p>Поступили новые задачи, требующие вашего внимания. Чтобы просмотреть их, <a>обновите список</a>.<br/>Убедитесь, что у вас установлены соответствующие фильтры.</p>
+				</div>
+
+				<!-- <div class="notice_block widget_block warning icon-smile-bubble-wow">
+					<a class="close icon-close"></a>
+					<p>Поступили новые задачи, требующие вашего внимания.</p>
+				</div> -->
+
+				<!-- <div class="notice_block widget_block success icon-smile-bubble-happy">
+					<a class="close icon-close"></a>
+					<p>Поступили новые задачи, требующие вашего внимания. Чтобы просмотреть их, <a>обновите список</a>.<br/>Убедитесь, что у вас установлены соответствующие фильтры.</p>
+				</div> -->
+
+				<!-- <div class="notice_block widget_block danger icon-smile-bubble-angry">
+					<a class="close icon-close"></a>
+					<p>Поступили новые задачи, требующие вашего внимания. Чтобы просмотреть их, <a>обновите список</a>.<br/>Убедитесь, что у вас установлены соответствующие фильтры.</p>
+				</div> -->
+
 			</div>
 
-			<script>
+			<h1>
+				<span>Денежный поток</span>
+
+				<div class="dashboard_content_filter">
+					<a class="drop-target icon-date drop-input second small">с 15 апреля по 15 мая 2015 года</a>
+					<div class="drop-content">
+						<div class="drop-content-inner dashboard-period-choose">
+							<ul class="drop-menu">
+								<li><a>Последние 30 дней</a></li>
+								<li><a>Текущая неделя</a></li>
+								<li><a>Текущий месяц</a></li>
+								<li><a>Текущий квартал</a></li>
+								<li><a>Весь год</a></li>
+							</ul>
+							<div class="drop-date-choose">
+								<div class="filter_date_value">
+									<input type="text" name="" id="" class="datetimepicker filter_date_input small date_from">
+									<input type="text" name="" id="" class="datetimepicker filter_date_input small date_to">
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="drop-target drop-input second small">на всех счетах в рублях</a>
+					<div class="drop-content">
+						<div class="drop-content-inner">
+							<ul class="drop-menu max_w_500 drop_account_list">
+								<li>
+									<a>
+										<strong>Счета в рублях</strong>
+									</a>
+								</li>
+								<li class="submenu">
+									<a>
+										<span class="account_value">203 597,25 <span class="cur ruble"><span>р.</span></span></span>
+										<span class="account_name">Расчетный счет</span>
+										<span class="account_num">40101234560000000000</span>
+									</a>
+								</li>
+
+								<li class="submenu">
+									<a>
+										<span class="account_value">203 597,25 <span class="cur ruble"><span>р.</span></span></span>
+										<span class="account_name">Заначка на черный день</span>
+										<span class="account_num">40101234560000000000</span>
+									</a>
+								</li>
+
+								<li>
+									<a>
+										<strong>Счета в долларах США</strong>
+									</a>
+								</li>
+
+								<li class="submenu">
+									<a>
+										<span class="account_value">23 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<span class="account_name">Расчетный счет липовый</span>
+										<span class="account_num">40101234560000000000</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</h1>
+
+			<!-- виджет графика -->
+			<div class="widget_block">
+				<div id="chart" class='with-3d-shadow with-transitions' style="height:300px">
+				    <svg></svg>
+				</div>
+			</div>
+
+			<!-- виджет средств -->
+			<div class="widget_block cashflow_widget">
+				<div class="item">
+					<div class="name">Остаток на н/п</div>
+					<div class="value">5 471 208,00 <span class="ruble"><span>р.</span></span></div>
+				</div>
+				<div class="item">
+					<div class="name">Пришло</div>
+					<div class="value money_income">5 120 040,00 <span class="ruble"><span>р.</span></span></div>
+				</div>
+				<div class="item">
+					<div class="name">Ушло</div>
+					<div class="value money_expense">19 480,00 <span class="ruble"><span>р.</span></span></div>
+				</div>
+				<div class="item">
+					<div class="name">Остаток на н/п</div>
+					<div class="value">5 570 479,00 <span class="ruble"><span>р.</span></span></div>
+				</div>
+			</div>
+
+			<!-- список операций -->
+			<div class="tabs tabs_horizontal tabs_widget dashboard_transaction">
+				<div class="tabs_menu">
+					<ul>
+						<li class="active"><a>Операции</a></li>
+						<li><a>Выписка</a></li>
+						<li><a class="icon-favorites-solid">Избранные</a></li>
+					</ul>
+				</div>
+				<div class="tabs_content">
+
+						<!-- таблица -->
+						<div class="table_list table_list_light transaction_list">
+
+							<!-- шапка таблицы -->
+							<div class="table_list_header">
+								<div class="table_list_cell action">&nbsp;</div>
+								<div class="table_list_cell desc">Назначение платежа</div>
+								<div class="table_list_cell summ"><a class="icon-sort-up">Сумма</a></div>
+								<div class="table_list_cell date"><a class="icon-sort-down">Дата</a></div>
+								<div class="table_list_cell contragent"><a>Контрагент</a></div>
+
+							</div>
 
 
+							<div class="table_list_body">
 
-			</script>
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+										<a class="icon-reload"></a>
+										<a class="icon-favorites"></a>
+									</div>
+									<div class="table_list_cell desc">Доход от продажи товара</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">125 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<div class="account">Валютный счет</div>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+										<div class="status c_success">Исполнено</div>
+									</div>
+									<div class="table_list_cell contragent"><a>ООО «Рога и Копыта»</a></div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+
+										<a class="icon-reload"></a>
+										<a class="icon-favorites"></a>
+
+									</div>
+									<div class="table_list_cell desc">Перевод прибыли от предпринимательской деятельности. Без НДС</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">42 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<div class="account">Текущий счет</div>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+										<div class="status c_error">Отклонен банком</div>
+									</div>
+									<div class="table_list_cell contragent"><a>ОАО «Башкирский Нефтегазовый холдинг»</a></div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+
+										<a class="icon-reload"></a>
+										<a class="icon-favorites"></a>
+
+									</div>
+									<div class="table_list_cell desc">Доход от продажи товара</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">35 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<div class="account">Зарплатный счет</div>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+										<div class="status">Черновик</div>
+									</div>
+									<div class="table_list_cell contragent"><a>ООО «Рога и Копыта»</a></div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+
+										<a class="icon-reload"></a>
+										<a class="icon-favorites"></a>
+
+									</div>
+									<div class="table_list_cell desc">Перевод прибыли от предпринимательской деятельности. Без НДС</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">105 000,00 <span class="cur dollar"><span>$</span></span></span>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+										<div class="status">На подписи</div>
+									</div>
+									<div class="table_list_cell contragent"><a>ОАО «Башкирский Нефтегазовый холдинг»</a></div>
+								</div>
+
+								<!-- <div class="table_row_info">
+									<div class="info_center">
+										<p>Отображены все операции, соответствующие установленным фильтрам.</p>
+									</div>
+								</div> -->
+
+							</div>
+						</div>
+				</div>
+			</div>
+
+			<!-- выписка -->
+			<div class="tabs tabs_horizontal tabs_widget dashboard_transaction">
+				<div class="tabs_menu">
+					<ul>
+						<li><a>Операции</a></li>
+						<li class="active"><a>Выписка</a></li>
+						<li><a class="icon-favorites-solid">Избранные</a></li>
+					</ul>
+				</div>
+				<div class="tabs_content">
+
+						<!-- таблица -->
+						<div class="table_list table_list_light statement_list">
+
+							<!-- шапка таблицы -->
+							<div class="table_list_header">
+								<div class="table_list_cell summ"><a>Остаток</a></div>
+								<div class="table_list_cell summ"><a>Ушло</a></div>
+								<div class="table_list_cell summ"><a>Пришло</a></div>
+							</div>
+
+
+							<div class="table_list_body">
+
+								<div class="table_list_row row_title">
+									<div class="table_list_cell">Сегодня</div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row">
+
+									<div class="table_list_cell summ">
+										125 000,00 <span class="cur ruble"><span>р.</span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">5 000,00 <span class="cur ruble"><span>р.</span></span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">15 000,00 <span class="cur ruble"><span>р.</span></span></span>
+									</div>
+
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row">
+
+									<div class="table_list_cell summ">
+										40,00 <span class="cur dollar"><span>$</span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">0,00 <span class="cur dollar"><span>$</span></span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">40,00 <span class="cur dollar"><span>$</span></span></span>
+									</div>
+
+								</div>
+
+								<div class="table_list_row row_title">
+									<div class="table_list_cell">Позавчера</div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row">
+
+									<div class="table_list_cell summ">
+										125 000,00 <span class="cur ruble"><span>р.</span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">5 000,00 <span class="cur ruble"><span>р.</span></span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">15 000,00 <span class="cur ruble"><span>р.</span></span></span>
+									</div>
+
+								</div>
+
+								<div class="table_list_row row_title">
+									<div class="table_list_cell">21.07.2015</div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row">
+
+									<div class="table_list_cell summ">
+										125 000,00 <span class="cur ruble"><span>р.</span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">5 000,00 <span class="cur ruble"><span>р.</span></span></span>
+									</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">15 000,00 <span class="cur ruble"><span>р.</span></span></span>
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+				</div>
+			</div>
+
+
+			<!-- избранные -->
+			<div class="tabs tabs_horizontal tabs_widget dashboard_transaction">
+				<div class="tabs_menu">
+					<ul>
+						<li><a>Операции</a></li>
+						<li><a>Выписка</a></li>
+						<li class="active"><a class="icon-favorites-solid">Избранные</a></li>
+					</ul>
+				</div>
+				<div class="tabs_content">
+
+						<!-- таблица -->
+						<div class="table_list table_list_light transaction_list">
+
+							<!-- шапка таблицы -->
+							<div class="table_list_header">
+								<div class="table_list_cell action">&nbsp;</div>
+								<div class="table_list_cell desc">Назначение платежа</div>
+								<div class="table_list_cell summ"><a class="icon-sort-up">Сумма</a></div>
+								<div class="table_list_cell date"><a class="icon-sort-down">Дата</a></div>
+								<div class="table_list_cell contragent"><a>Контрагент</a></div>
+
+							</div>
+
+
+							<div class="table_list_body">
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+										<a class="icon-reload"></a>
+										<a class="icon-favorites-solid"></a>
+									</div>
+									<div class="table_list_cell desc">Доход от продажи товара</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">125 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<div class="account">Валютный счет</div>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+									</div>
+									<div class="table_list_cell contragent"><a>ООО «Рога и Копыта»</a></div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+
+										<a class="icon-reload"></a>
+										<a class="icon-favorites-solid"></a>
+
+									</div>
+									<div class="table_list_cell desc">Перевод прибыли от предпринимательской деятельности. Без НДС</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">42 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<div class="account">Текущий счет</div>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+									</div>
+									<div class="table_list_cell contragent"><a>ОАО «Башкирский Нефтегазовый холдинг»</a></div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+
+										<a class="icon-reload"></a>
+										<a class="icon-favorites-solid"></a>
+
+									</div>
+									<div class="table_list_cell desc">Доход от продажи товара</div>
+									<div class="table_list_cell summ">
+										<span class="money_expense">35 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<div class="account">Зарплатный счет</div>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+									</div>
+									<div class="table_list_cell contragent"><a>ООО «Рога и Копыта»</a></div>
+								</div>
+
+								<!-- строка -->
+								<div class="table_list_row row_link">
+
+									<div class="table_list_cell action">
+
+										<a class="icon-reload"></a>
+										<a class="icon-favorites-solid"></a>
+
+									</div>
+									<div class="table_list_cell desc">Перевод прибыли от предпринимательской деятельности. Без НДС</div>
+									<div class="table_list_cell summ">
+										<span class="money_income">105 000,00 <span class="cur dollar"><span>$</span></span></span>
+									</div>
+									<div class="table_list_cell date">
+										17.03
+									</div>
+									<div class="table_list_cell contragent"><a>ОАО «Башкирский Нефтегазовый холдинг»</a></div>
+								</div>
+
+								<!-- <div class="table_row_info">
+									<div class="info_center">
+										<p>Отображены все операции, соответствующие установленным фильтрам.</p>
+									</div>
+								</div> -->
+
+							</div>
+						</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="side">
+			<include data-file="open_account/account_widget.html .account_balance_widget:first-child"></include>
+			<include data-file="timeline/timeline.html .timeline_widget:first-child"></include>
 		</div>
 	</div>
 </section>

@@ -9,7 +9,8 @@
 .table_list_header
 	box-sizing border-box
 	text-transform uppercase
-	padding 14px 0 10px 15px
+	// padding 14px 0 10px 15px
+	padding 0 0 0 15px
 	background #D7F0FA
 	border-bottom 2px solid #B0DAED
 
@@ -20,8 +21,9 @@
 		font-size fzn - 6px!important
 		font-weight 500!important
 		color clinklight!important
-		// text-shadow 1px 1px rgba(0,0,0,0.1)
 		overflow ellipsis
+		padding-top 14px
+		padding-bottom 11px
 		a
 			color clinklight!important
 			text-decoration none
@@ -41,16 +43,14 @@
 				font-size fzn - 8px
 
 		&.name_search
-			top -14px
-			margin-bottom -20px
-			padding-top 14px
 
 			input.input_search
 				width 150px
 				min-width 150px
 				max-width 100%
 				box-sizing border-box
-				margin -8px 0 0
+				margin -7px 0 -5px
+				vertical-align top
 				&:focus
 					width 70%
 				&.white
@@ -92,7 +92,8 @@
 // строка
 .table_list_row
 	width 100%
-	padding 15px 0 15px 15px
+	// padding 15px 0 15px 15px
+	padding 0 0 0 15px
 	box-sizing border-box
 	background cbgsky
 	border-bottom 1px dotted cbdlightsky
@@ -126,12 +127,25 @@
 		box-shadow 0 0 0 1px cl2
 		background #fff
 		z-index 2
+	&.row_link
+		cursor pointer
+
+	&.row_title
+		background cbghighlight!important
+		border-bottom none!important
+		font-weight normal
+		.table_list_cell
+			float none
+			padding-top 8px
+			padding-bottom 8px
+
 
 // ячейка
 .table_list_cell
 	float right
 	font-size fzn - 2px
-	padding-right 15px
+	// padding-right 15px
+	padding 15px 15px 15px 0
 	box-sizing border-box
 	line-height 1.3
 	&.last_cell
@@ -164,12 +178,13 @@
 			max-width 100%
 			box-sizing border-box
 			margin-top 3px
+
 		&.name_link
-			top -15px
-			left -15px
-			margin-bottom -30px
-			padding 15px
-			padding-right 0
+			// top -15px
+			// left -15px
+			// margin-bottom -30px
+			// padding 15px
+			// padding-right 0
 			&:hover
 				cursor pointer
 				.name_title
@@ -199,16 +214,10 @@
 		font-size fzn - 4px
 	&.summ
 		text-align right
-		.income
-			color ctextsuccess
-			&:before
-				content '+ '
-		.expense
-			color ctext
-			&:before
-				content '– '
-			.cur
-				color ctext
+		.money_income, .money_expense
+			display inline-block
+			overflow ellipsis
+			max-width 100%
 	&.deadline
 		width 85px
 		text-align right
@@ -226,6 +235,10 @@
 		min-width 110px
 	&.group
 		width 15%
+	&.contact
+		width 15%
+		min-width 100px
+		max-width 180px
 
 	.write_now
 		position absolute
@@ -237,11 +250,13 @@
 
 .table_list_small
 	.table_list_header
-		padding 10px 10px 8px
+		padding-left 10px
+		.table_list_cell
+			padding 10px 10px 7px 0
 	.table_list_row
-		padding 10px
+		padding-left 10px
 	.table_list_cell
-		padding-right 10px
+		padding 10px 10px 10px 0
 		&.name
 			.input_search
 				margin-left -10px
@@ -268,7 +283,7 @@
 		background none
 		border-bottom 1px solid cseparator
 		&:hover
-			// background cbghighlight
+			background cbgsky + 40%
 		&.row_checked
 			box-shadow none
 			background cbghighlight
@@ -292,11 +307,9 @@
 			a
 				color ctextlight!important
 			&.name_search
-				top -10px
-				left -15px
-				margin-bottom -12px
+				margin-left -15px
 				input
-					margin-bottom 2px
+					margin -13px 0 -3px
 
 	.table_list_row
 		background #fff
@@ -446,14 +459,17 @@
 .table_list.contragents_list
 	.to_pay
 		width 18%
+		max-width 170px
 		font-weight 400
 		text-align right
 	.last_paid
 		width 18%
 		text-align center
+		max-width 170px
 	.paid_period
 		width 18%
 		font-weight 400
+		max-width 170px
 		text-align right
 
 // список транзакций у контрагента
@@ -466,3 +482,9 @@
 		float left
 	.date
 		width 15%
+
+// банковская выписка
+.statement_list
+	.summ
+		width 33%
+		font-weight normal
