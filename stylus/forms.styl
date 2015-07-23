@@ -81,9 +81,8 @@ textarea
 		transition 0s
 		box-shadow 0 0 0 1000px white inset
 
-
-
-
+input[type="search"]::-webkit-search-decoration
+	-webkit-appearance none
 
 
 textarea
@@ -123,11 +122,11 @@ input.input_search_focus
 	background-repeat no-repeat
 	background-position 100% center
 	background-size 0px
-	padding-right 40px
 	transition .2s
 	&:focus
 		background-position calc(100% - 10px) center
 		background-size 16px auto
+		padding-right 40px
 
 input.input_loading
 	background-image url(../images/loading_ring.gif)!important

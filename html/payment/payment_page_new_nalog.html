@@ -18,7 +18,7 @@
 <include data-file="header.html"></include>
 <include data-file="transaction/transaction.html section.main"></include>
 
-<article class="page side_right_wide">
+<article class="page side_right_wide open">
 
 	<!-- шапка слоя -->
 	<div class="page_header clean">
@@ -79,33 +79,35 @@
 					<div class="input_group_addon">Банк</div>
 					<input type="text" name="" placeholder="БИК или наименование банка получателя" id="" class="drop-target input_search_focus">
 					<div class="drop-content">
-						<div class="drop-title">Счета получателя</div>
-						<ul class="drop-menu max_w_500 drop_bank_account">
-							<li>
-								<a>
-									<span class="bank_name">044452368 ОТДЕЛЕНИЕ N8644 СБЕРБАНКА РОССИИ</span>
-									<span class="bank_account_num">Счет 12345678901234567890</span>
-								</a>
-							</li>
-							<li>
-								<a>
-									<span class="bank_name">049875622 СПБ ФИЛИАЛ ЗАО "БАНК РУССКИЙ СТАНДАРТ" </span>
-									<span class="bank_account_num">Счет 12345678901234567890</span>
-								</a>
-							</li>
-							<li>
-								<a>
-									<span class="bank_name">044586355 ЮЖНЫЙ ФИЛИАЛ ЗАО "РАЙФФАЙЗЕНБАНК"</span>
-									<span class="bank_account_num">Счет 12345678901234567890</span>
-								</a>
-							</li>
-						</ul>
-						<div class="drop-title m_top_30">Найденные в справочнике</div>
-						<ul class="drop-menu max_w_500">
-							<li> <a>044452368 ОТДЕЛЕНИЕ N8644 СБЕРБАНКА РОССИИ </a> </li>
-							<li> <a> 049875622 СПБ ФИЛИАЛ ЗАО "БАНК РУССКИЙ СТАНДАРТ"</a> </li>
-							<li> <a> 044586355 ЮЖНЫЙ ФИЛИАЛ ЗАО "РАЙФФАЙЗЕНБАНК"</a> </li>
-						</ul>
+						<div class="drop-content-inner">
+							<div class="drop-title">Счета получателя</div>
+							<ul class="drop-menu max_w_500 drop_bank_account">
+								<li>
+									<a>
+										<span class="bank_name">044452368 ОТДЕЛЕНИЕ N8644 СБЕРБАНКА РОССИИ</span>
+										<span class="bank_account_num">Счет 12345678901234567890</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<span class="bank_name">049875622 СПБ ФИЛИАЛ ЗАО "БАНК РУССКИЙ СТАНДАРТ" </span>
+										<span class="bank_account_num">Счет 12345678901234567890</span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<span class="bank_name">044586355 ЮЖНЫЙ ФИЛИАЛ ЗАО "РАЙФФАЙЗЕНБАНК"</span>
+										<span class="bank_account_num">Счет 12345678901234567890</span>
+									</a>
+								</li>
+							</ul>
+							<div class="drop-title m_top_30">Найденные в справочнике</div>
+							<ul class="drop-menu max_w_500">
+								<li> <a>044452368 ОТДЕЛЕНИЕ N8644 СБЕРБАНКА РОССИИ </a> </li>
+								<li> <a> 049875622 СПБ ФИЛИАЛ ЗАО "БАНК РУССКИЙ СТАНДАРТ"</a> </li>
+								<li> <a> 044586355 ЮЖНЫЙ ФИЛИАЛ ЗАО "РАЙФФАЙЗЕНБАНК"</a> </li>
+							</ul>
+						</div>
 		            </div>
 				</div>
 			</div>
@@ -266,7 +268,9 @@
 					<div class="input_group_addon">УИН</div>
 					<input type="text" name="" placeholder="Уникальный идентификатор платежа" id="" class="drop-target">
 					<div class="drop-content">
-						<div class="small_text fs_i">Проверьте данные, такого названия банка или номера БИК нет в нашем справочнике.</div>
+						<div class="drop-content-inner inner_padding_15">
+							<div class="small_text fs_i">Проверьте данные, такого названия банка или номера БИК нет в нашем справочнике.</div>
+						</div>
 		            </div>
 				</div>
 			</div>

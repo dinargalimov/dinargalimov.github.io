@@ -3885,6 +3885,9 @@ textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
   box-shadow: 0 0 0 1000px #fff inset;
 }
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 textarea {
   padding: 9px 15px 8px;
   resize: none;
@@ -3941,7 +3944,6 @@ input.input_search_focus {
   -webkit-background-size: 0px;
   -moz-background-size: 0px;
   background-size: 0px;
-  padding-right: 40px;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
@@ -3953,6 +3955,7 @@ input.input_search_focus:focus {
   -webkit-background-size: 16px auto;
   -moz-background-size: 16px auto;
   background-size: 16px auto;
+  padding-right: 40px;
 }
 input.input_loading {
   background-image: url("../images/loading_ring.gif") !important;
@@ -6667,11 +6670,11 @@ input.date_to {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     visibility: hidden;
-    -webkit-transform: translateX(200px) scale(0.97);
-    -moz-transform: translateX(200px) scale(0.97);
-    -o-transform: translateX(200px) scale(0.97);
-    -ms-transform: translateX(200px) scale(0.97);
-    transform: translateX(200px) scale(0.97);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
   }
 }
 @-webkit-keyframes pageHide {
@@ -6689,11 +6692,11 @@ input.date_to {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     visibility: hidden;
-    -webkit-transform: translateX(200px) scale(0.97);
-    -moz-transform: translateX(200px) scale(0.97);
-    -o-transform: translateX(200px) scale(0.97);
-    -ms-transform: translateX(200px) scale(0.97);
-    transform: translateX(200px) scale(0.97);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
   }
 }
 @-o-keyframes pageHide {
@@ -6711,11 +6714,11 @@ input.date_to {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     visibility: hidden;
-    -webkit-transform: translateX(200px) scale(0.97);
-    -moz-transform: translateX(200px) scale(0.97);
-    -o-transform: translateX(200px) scale(0.97);
-    -ms-transform: translateX(200px) scale(0.97);
-    transform: translateX(200px) scale(0.97);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
   }
 }
 @keyframes pageHide {
@@ -6733,11 +6736,11 @@ input.date_to {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     visibility: hidden;
-    -webkit-transform: translateX(200px) scale(0.97);
-    -moz-transform: translateX(200px) scale(0.97);
-    -o-transform: translateX(200px) scale(0.97);
-    -ms-transform: translateX(200px) scale(0.97);
-    transform: translateX(200px) scale(0.97);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
   }
 }
 @-moz-keyframes pageOpen {
@@ -8040,7 +8043,12 @@ article.page.open ~ .page.open {
   -ms-transform: translateX(-25px);
   transform: translateX(-25px);
   z-index: 49;
-  points-event: none;
+  pointer-events: none;
+}
+article.page.open ~ .page.open .page_expand {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 article.page.open ~ .page.open ~ .page.open {
   -webkit-transform: translateX(-45px);
@@ -8051,11 +8059,11 @@ article.page.open ~ .page.open ~ .page.open {
   z-index: 48;
 }
 article.page.open ~ .page.open ~ .page.open ~ .page.open {
-  -webkit-transform: translateX(-60px);
-  -moz-transform: translateX(-60px);
-  -o-transform: translateX(-60px);
-  -ms-transform: translateX(-60px);
-  transform: translateX(-60px);
+  -webkit-transform: translateX(-65px);
+  -moz-transform: translateX(-65px);
+  -o-transform: translateX(-65px);
+  -ms-transform: translateX(-65px);
+  transform: translateX(-65px);
   z-index: 47;
 }
 article.page.hide ~ .page.open {

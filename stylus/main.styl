@@ -498,12 +498,14 @@ article.page
 	&.open ~ .page.open
 		transform translateX(-25px)
 		z-index 49
-		points-event none
+		pointer-events none
+		.page_expand
+			opacity 0
 		& ~ .page.open
 			transform translateX(-45px)
 			z-index 48
 			& ~ .page.open
-				transform translateX(-60px)
+				transform translateX(-65px)
 				z-index 47
 
 	&.hide ~ .page.open
