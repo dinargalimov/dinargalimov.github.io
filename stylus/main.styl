@@ -110,7 +110,7 @@ header
 		width 67px
 		cursor pointer
 		transition width ease-in-out .2s
-		margin-left 25px
+		margin-left 30px
 		padding-left 15px
 		padding-right 0
 		background transparent
@@ -125,6 +125,7 @@ header
 			color ctext!important
 		&:hover
 			width 75px
+
 		&:focus
 			width 250px
 			transition width ease-in-out .2s
@@ -137,6 +138,11 @@ header
 				color ctextholder!important
 			& ~ .name
 				opacity 0
+		// &:valid
+		// 	opacity 1
+		// 	width 250px
+		// 	& ~ .name
+		// 		opacity 0
 
 
 // быстрое добавление в шапке
@@ -444,7 +450,7 @@ section.main
 article.page
 	position fixed
 	// overflow hidden
-	z-index 50
+	z-index 1050
 	right 0
 	left auto!important
 	bottom 0
@@ -492,29 +498,34 @@ article.page
 			right 340px
 
 	&.page_small
-		min-width 740px
-		width 45%
+		// min-width 740px
+		// width 45%
+		.page_content
+			padding-right 24%
 
 	&.open ~ .page.open
-		transform translateX(-25px)
-		z-index 49
-		pointer-events none
+		transform translateX(-12px)
+		z-index 1049
 		.page_expand
 			opacity 0
 		& ~ .page.open
-			transform translateX(-45px)
-			z-index 48
+			transform translateX(-24px)
+			z-index 1048
 			& ~ .page.open
-				transform translateX(-65px)
-				z-index 47
+				transform translateX(-36px)
+				z-index 1047
+				& ~ .page.open
+					transform translateX(-48px)
+					z-index 1046
 
 	&.hide ~ .page.open
-		z-index 49
+		z-index 1049
 		& ~ .page.open
-			z-index 48
+			z-index 1048
 			& ~ .page.open
-				z-index 47
-
+				z-index 1047
+				& ~ .page.open
+					z-index 1046
 
 // шапка слоя
 .page_header

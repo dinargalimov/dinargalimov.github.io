@@ -7,26 +7,12 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/registration.css">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
-  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
-  	<script src="js/select.js"></script>
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/init.js"></script>
 
 </head>
-<body ng-app="myapp">
+<body>
 
-<script>
-	var module = angular.module('myapp', ['ui.select', 'ngSanitize']);
-	module.controller('selectController',function($scope){
-		$scope.cities=[
-			{name:'Москва'},
-			{name:'Уфа'},
-			{name:'Казань'},
-			{name:'Нижний Новгород'},
-			{name:'Оренбург'},
-			{name:'Омск'},
-		];
-	});
-</script>
 
 
 <div class="reg">
@@ -83,12 +69,20 @@
 							</div>
 
 							<div class="form_group">
-								<ui-select ng-model="person.selected" class="column full" search-enabled="false">
-									<ui-select-match placeholder="Город обслуживания">{{$select.selected.name}}</ui-select-match>
-									<ui-select-choices repeat="city in cities">
-										<div ng-bind-html="city.name"></div>
-									</ui-select-choices>
-								</ui-select>
+								<select class="w100" data-placeholder="Выбрать город обслуживания">
+									<option value="">Уфа</option>
+									<option value="">Москва</option>
+									<option value="">Уфа</option>
+									<option value="">Москва</option>
+									<option value="">Уфа</option>
+									<option value="">Москва</option>
+									<option value="">Уфа</option>
+									<option value="">Москва</option>
+									<option value="">Уфа</option>
+									<option value="">Москва</option>
+									<option value="">Уфа</option>
+									<option value="">Москва</option>
+								</select>
 							</div>
 
 						</div>
@@ -106,47 +100,6 @@
 	</div>
 </div>
 
-<div class="popup_overlay" >
-	<div class="popup_table">
-		<div class="popup_cell">
-			<div class="popup_layer">
-				<a href="" class="popup_close icon-close"></a>
-				<h1>Заголовок</h1>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-				<p>Сменив роль, вы потеряется административные полномочия. Восстановить роль для вас впоследствии сможет только другой администратор.</p>
-
-
-				<div class="form_buttons">
-					<a class="button second">Подтвердить</a>
-				</div>
-			</div>
-			<div class="popup_backdrop"></div>
-		</div>
-	</div>
-</div>
-
-<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/jquery.validate.js"></script>
-<script src="js/bootstrap.tooltip.js"></script>
-<script src="js/jquery-validate.bootstrap-tooltip.js"></script>
-<script src="js/init.js"></script>
 
 </body>
 </html>

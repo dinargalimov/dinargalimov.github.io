@@ -1,3 +1,5 @@
+@charset "utf-8";
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,cyrillic");
 @import url("https://fontastic.s3.amazonaws.com/iSooys8TZ8vPkLZDaZHNw8/icons.css");
 @font-face {
   font-family: 'Roboto';
@@ -101,7 +103,7 @@
 html,
 body {
   font-size: 16px;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-weight: 300;
   color: #454e59;
   min-height: 100%;
@@ -607,19 +609,15 @@ a img {
 }
 .loading div {
   display: inline-block;
-  background: url("../images/loading.gif") no-repeat 0 0;
+  background: url("../images/loading.gif") no-repeat center 0;
   -webkit-background-size: 24px 24px;
   -moz-background-size: 24px 24px;
   background-size: 24px 24px;
-  padding: 0;
-  height: 24px;
-  width: 24px;
-  line-height: 31px;
+  padding: 35px 0 0;
+  min-height: 24px;
+  min-width: 24px;
+  max-width: 300px;
   color: #828a96;
-}
-.loading.text_bot div {
-  background-position: center 0;
-  padding: 45px 0 0;
 }
 .loading_block {
   -webkit-transition: 0.4s;
@@ -890,7 +888,7 @@ a img {
 }
 .tooltip {
   position: absolute;
-  z-index: 1070;
+  z-index: 1100;
   display: block;
   visibility: visible;
   font-weight: normal;
@@ -1053,7 +1051,7 @@ a img {
 .tooltip-inner {
   padding: 6px 8px 6px;
   color: #828a96;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-weight: 300;
   font-size: 12px;
   text-decoration: none;
@@ -1366,11 +1364,6 @@ a img {
   width: 100%;
   background: rgba(45,70,104,0.34);
   z-index: 2000;
-  -webkit-animation: popupOverlayOpen 0.5s linear both;
-  -moz-animation: popupOverlayOpen 0.5s linear both;
-  -o-animation: popupOverlayOpen 0.5s linear both;
-  -ms-animation: popupOverlayOpen 0.5s linear both;
-  animation: popupOverlayOpen 0.5s linear both;
   -webkit-overflow-scrolling: touch;
 }
 .popup_table {
@@ -2280,8 +2273,9 @@ a.icon-info:hover {
 .drop-element .drop-content-inner .loading {
   width: 150px;
 }
-.drop-element .inner_padding_15 {
+.drop-element .inner_pad {
   padding: 15px;
+  margin-right: -20px;
 }
 .drop-element .inner_padding_30 {
   padding: 30px;
@@ -2391,7 +2385,7 @@ a.icon-info:hover {
   background-repeat: no-repeat;
   background-position: calc(100% - 15px) center;
   cursor: pointer;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-size: 15px;
   font-weight: 300;
   padding: 0 40px 0 15px;
@@ -2429,6 +2423,10 @@ a.icon-info:hover {
 }
 .drop-input.drop-enabled {
   border-color: #00a8e7;
+}
+.drop-input.drop-disabled {
+  color: #bbb;
+  background: #f5f5f5;
 }
 .drop-input.second {
   border-color: transparent;
@@ -3172,7 +3170,7 @@ a.icon-info:hover {
 button {
   background: none;
   border: none;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   cursor: pointer;
   text-align: left;
   font-weight: 300;
@@ -3186,7 +3184,7 @@ button::-moz-focus-inner {
 .button {
   display: inline-block;
   font-size: 19px;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-weight: 500;
   color: #fff;
   background: #00a8e7;
@@ -3681,7 +3679,7 @@ textarea {
   border-radius: 0px;
   display: inline-block;
   background-color: #fff;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-size: 15px;
   font-weight: 300;
   padding: 0 15px;
@@ -4114,7 +4112,7 @@ input.search_left {
   border: none;
   -webkit-border-radius: 0;
   border-radius: 0;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-size: 16px;
   font-weight: 300;
   padding: 0 40px 0 15px;
@@ -4241,7 +4239,7 @@ input.search_left {
   -webkit-border-radius: 0px;
   border-radius: 0px;
   background: #fafafa;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-size: 12px;
   font-weight: 300;
   text-align: center;
@@ -5435,7 +5433,7 @@ input.date_to {
   border-radius: 0px;
   display: inline-block;
   background-color: #fff;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-size: 15px;
   font-weight: 300;
   padding: 0;
@@ -5474,7 +5472,7 @@ input.date_to {
   border: 1px solid #d0d3d7;
   -webkit-border-radius: 0px;
   border-radius: 0px;
-  font-family: 'Roboto', Arial;
+  font-family: 'Open Sans', Arial;
   font-size: 15px;
   font-weight: 300;
   padding: 0 45px 0 15px;
@@ -5542,12 +5540,13 @@ input.date_to {
   opacity: 1;
   -ms-filter: none;
   filter: none;
+  visibility: visible;
 }
 .ms-drop {
   display: block !important;
   display: none;
   position: absolute;
-  z-index: 1000;
+  z-index: 1200;
   background: #fff;
   -webkit-box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
@@ -5570,11 +5569,12 @@ input.date_to {
   -o-transform: perspective(600px) rotateX(-90deg);
   -ms-transform: perspective(600px) rotateX(-90deg);
   transform: perspective(600px) rotateX(-90deg);
-  -webkit-transition: opacity 0.3s, -webkit-transform 1.5s;
-  -moz-transition: opacity 0.3s, -moz-transform 1.5s;
-  -o-transition: opacity 0.3s, -o-transform 1.5s;
-  -ms-transition: opacity 0.3s, -ms-transform 1.5s;
-  transition: opacity 0.3s, transform 1.5s;
+  -webkit-transition: opacity 0.3s, -webkit-transform 1.5s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 1.5s, visibility 0s 0.3s;
+  -o-transition: opacity 0.3s, -o-transform 1.5s, visibility 0s 0.3s;
+  -ms-transition: opacity 0.3s, -ms-transform 1.5s, visibility 0s 0.3s;
+  transition: opacity 0.3s, transform 1.5s, visibility 0s 0.3s;
+  visibility: hidden;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -7546,7 +7546,7 @@ header {
   -o-transition: width ease-in-out 0.2s;
   -ms-transition: width ease-in-out 0.2s;
   transition: width ease-in-out 0.2s;
-  margin-left: 25px;
+  margin-left: 30px;
   padding-left: 15px;
   padding-right: 0;
   background: transparent;
@@ -7964,7 +7964,7 @@ section.main.section_areas {
 }
 article.page {
   position: fixed;
-  z-index: 50;
+  z-index: 1050;
   right: 0;
   left: auto !important;
   bottom: 0;
@@ -8032,18 +8032,16 @@ article.page.side_right_wide .page_header {
 article.page.side_right_wide .page_content {
   right: 340px;
 }
-article.page.page_small {
-  min-width: 740px;
-  width: 45%;
+article.page.page_small .page_content {
+  padding-right: 24%;
 }
 article.page.open ~ .page.open {
-  -webkit-transform: translateX(-25px);
-  -moz-transform: translateX(-25px);
-  -o-transform: translateX(-25px);
-  -ms-transform: translateX(-25px);
-  transform: translateX(-25px);
-  z-index: 49;
-  pointer-events: none;
+  -webkit-transform: translateX(-12px);
+  -moz-transform: translateX(-12px);
+  -o-transform: translateX(-12px);
+  -ms-transform: translateX(-12px);
+  transform: translateX(-12px);
+  z-index: 1049;
 }
 article.page.open ~ .page.open .page_expand {
   opacity: 0;
@@ -8051,29 +8049,40 @@ article.page.open ~ .page.open .page_expand {
   filter: alpha(opacity=0);
 }
 article.page.open ~ .page.open ~ .page.open {
-  -webkit-transform: translateX(-45px);
-  -moz-transform: translateX(-45px);
-  -o-transform: translateX(-45px);
-  -ms-transform: translateX(-45px);
-  transform: translateX(-45px);
-  z-index: 48;
+  -webkit-transform: translateX(-24px);
+  -moz-transform: translateX(-24px);
+  -o-transform: translateX(-24px);
+  -ms-transform: translateX(-24px);
+  transform: translateX(-24px);
+  z-index: 1048;
 }
 article.page.open ~ .page.open ~ .page.open ~ .page.open {
-  -webkit-transform: translateX(-65px);
-  -moz-transform: translateX(-65px);
-  -o-transform: translateX(-65px);
-  -ms-transform: translateX(-65px);
-  transform: translateX(-65px);
-  z-index: 47;
+  -webkit-transform: translateX(-36px);
+  -moz-transform: translateX(-36px);
+  -o-transform: translateX(-36px);
+  -ms-transform: translateX(-36px);
+  transform: translateX(-36px);
+  z-index: 1047;
+}
+article.page.open ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
+  -webkit-transform: translateX(-48px);
+  -moz-transform: translateX(-48px);
+  -o-transform: translateX(-48px);
+  -ms-transform: translateX(-48px);
+  transform: translateX(-48px);
+  z-index: 1046;
 }
 article.page.hide ~ .page.open {
-  z-index: 49;
+  z-index: 1049;
 }
 article.page.hide ~ .page.open ~ .page.open {
-  z-index: 48;
+  z-index: 1048;
 }
 article.page.hide ~ .page.open ~ .page.open ~ .page.open {
-  z-index: 47;
+  z-index: 1047;
+}
+article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
+  z-index: 1046;
 }
 .page_header {
   height: 80px;
@@ -9517,7 +9526,7 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 20;
+  z-index: 1500;
   min-width: 320px;
   max-width: 400px;
   width: 28%;
