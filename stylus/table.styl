@@ -31,6 +31,7 @@
 			max-width 100%
 			overflow ellipsis
 			box-sizing border-box
+			transition color .2s
 			&:hover
 				color clink!important
 
@@ -426,6 +427,8 @@
 			padding-top 3px
 			font-size fzn - 3px
 			color ctextlight
+			overflow ellipsis
+			max-width 100%
 
 	.contragent
 		float none
@@ -460,17 +463,23 @@
 	.to_pay
 		width 18%
 		max-width 170px
+		min-width 110px
 		font-weight 400
 		text-align right
+		overflow ellipsis
+		max-width 100%
 	.last_paid
-		width 18%
-		text-align center
+		width 19%
+		text-align right
 		max-width 170px
 	.paid_period
 		width 18%
 		font-weight 400
 		max-width 170px
+		min-width 110px
 		text-align right
+		overflow ellipsis
+		max-width 100%
 
 // список транзакций у контрагента
 .table_list.transaction_list_contragent

@@ -2198,7 +2198,7 @@ a.icon-info:hover {
 .drop-element {
   position: absolute;
   display: none;
-  z-index: 1000;
+  z-index: 1200;
 }
 .drop-element.drop-open {
   display: block;
@@ -2268,6 +2268,9 @@ a.icon-info:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.drop-element .drop-content-inner div {
+  position: static;
+}
 .drop-element .drop-content-inner .loading {
   width: 150px;
 }
@@ -2277,6 +2280,18 @@ a.icon-info:hover {
 }
 .drop-element .inner_padding_30 {
   padding: 30px;
+}
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .drop-element .drop-content {
+    padding-right: 0;
+  }
+  .drop-element .drop-content-inner {
+    width: 100%;
+    overflow: overlay;
+  }
+  .drop-element .inner_pad {
+    margin-right: 0;
+  }
 }
 .drop-element .drop-menu {
   margin: 0;
@@ -2616,6 +2631,11 @@ a.icon-info:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .table_list_header .table_list_cell a:hover {
   color: #006aa1 !important;
@@ -3100,6 +3120,11 @@ a.icon-info:hover {
   padding-top: 3px;
   font-size: 13px;
   color: #828a96;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .table_list.transaction_list .contragent {
   float: none;
@@ -3136,19 +3161,31 @@ a.icon-info:hover {
 .table_list.contragents_list .to_pay {
   width: 18%;
   max-width: 170px;
+  min-width: 110px;
   font-weight: 400;
   text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .table_list.contragents_list .last_paid {
-  width: 18%;
-  text-align: center;
+  width: 19%;
+  text-align: right;
   max-width: 170px;
 }
 .table_list.contragents_list .paid_period {
   width: 18%;
   font-weight: 400;
   max-width: 170px;
+  min-width: 110px;
   text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .table_list.transaction_list_contragent .desc {
   overflow: hidden;
@@ -4384,10 +4421,10 @@ input.search_left {
   color: #6690b0;
   vertical-align: -2px;
 }
-.button_file_upload:hover {
+.button_file_upload:not(.button):hover {
   color: #00a8e7;
 }
-.button_file_upload:hover:before {
+.button_file_upload:not(.button):hover:before {
   color: #00a8e7;
 }
 .button_file_upload input[type='file'] {
@@ -6635,6 +6672,7 @@ aside {
   background: #2d4668;
   color: #fff;
   overflow: auto;
+  overflow: overlay;
   -webkit-overflow-scrolling: touch;
 }
 aside .aside_tablet_overlay {
@@ -6841,6 +6879,15 @@ header {
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.drop.header_add_submenu {
+  top: 40px !important;
+  left: 50% !important;
+  -webkit-transform: translateX(calc(-50% - 23px)) !important;
+  -moz-transform: translateX(calc(-50% - 23px)) !important;
+  -o-transform: translateX(calc(-50% - 23px)) !important;
+  -ms-transform: translateX(calc(-50% - 23px)) !important;
+  transform: translateX(calc(-50% - 23px)) !important;
 }
 .header_add_drop.drop-content-inner {
   padding: 25px 35px;
@@ -7081,6 +7128,7 @@ section.main {
   padding: 25px;
   overflow-x: hidden;
   overflow-y: scroll;
+  overflow-y: overlay;
   -webkit-overflow-scrolling: touch;
 }
 section.main.section_areas {
@@ -7183,6 +7231,15 @@ article.page {
   -o-transform: translateX(200px);
   -ms-transform: translateX(200px);
   transform: translateX(200px);
+}
+@media (max-width: 945px) {
+  article.page {
+    max-width: calc(100% - 45px);
+    min-width: calc(100% - 45px);
+    left: 45px !important;
+    right: auto !important;
+    position: absolute;
+  }
 }
 article.page.hide {
   opacity: 0;
@@ -7653,7 +7710,7 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
   font-size: 15px;
 }
 .account_widget p {
-  margin: 0 0 10px;
+  margin: 10px 0;
   color: #828a96;
 }
 .account_widget [class*='info'] {
@@ -8454,7 +8511,7 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
   width: 100px;
   display: inline-block;
   vertical-align: top;
-  padding: 15px;
+  padding: 12px 15px 0;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: normal;
@@ -8547,6 +8604,43 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
   opacity: 1;
   -ms-filter: none;
   filter: none;
+}
+.tooltip_graph {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3000;
+  display: inline-block;
+  background: #2d4668;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 10px 7px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+}
+.tooltip_graph .date {
+  font-weight: normal;
+  font-size: 13px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+.tooltip_graph .money {
+  overflow: hidden;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.tooltip_graph .money .money_expense {
+  color: #fd4d62;
+}
+.tooltip_graph .money .money_income {
+  color: #99dc40;
+}
+.tooltip_graph .money .name {
+  display: inline-block;
+  margin-right: 15px;
+}
+.tooltip_graph .money .value {
+  float: right;
+  font-weight: normal;
 }
 .messenger {
   position: fixed;
@@ -8651,13 +8745,12 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
 }
 .messenger_header_action {
   float: right;
-  padding: 0 10px 0 0;
+  padding: 0 5px 0 0;
 }
 .messenger_header_action a[class*='icon-'] {
   height: 40px;
   width: 25px;
   float: right;
-  text-align: center;
   line-height: 40px;
   color: #fff;
 }
@@ -9117,7 +9210,7 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
   text-align: center;
   font-weight: normal;
   font-size: 12px;
-  padding: 70px 15px 15px;
+  padding: 85px 15px 15px;
   background: url("../images/new_theme_back.svg") no-repeat center 12px;
   -webkit-background-size: 40px auto;
   -moz-background-size: 40px auto;

@@ -1539,7 +1539,6 @@ a.icon-info
 // drop
 
 
-
 .drop-content
 	display none
 .drop-element, .drop-element:after, .drop-element:before, .drop-element *, .drop-element *:after, .drop-element *:before
@@ -1548,7 +1547,7 @@ a.icon-info
 .drop-element
 	position absolute
 	display none
-	z-index 1000
+	z-index 1200
 
 	&.drop-open
 		display block
@@ -1589,6 +1588,8 @@ a.icon-info
 		max-height 280px
 		overflow auto
 		box-sizing border-box
+		div
+			position static
 		.loading
 			width 150px
 	.inner_pad
@@ -1597,6 +1598,14 @@ a.icon-info
 	.inner_padding_30
 		padding 30px
 
+	@media (-webkit-min-device-pixel-ratio:0)
+		.drop-content
+			padding-right 0
+		.drop-content-inner
+			width 100%
+			overflow overlay
+		.inner_pad
+			margin-right 0
 
 
 	.drop-menu
