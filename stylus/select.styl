@@ -55,8 +55,8 @@
 
 	&.open
 		& ~ .ms-drop
-			// transform perspective(600px) rotateX(0deg)
-			// transition opacity .3s, transform .3s
+			transform perspective(600px) rotateX(0deg)
+			transition opacity .3s, transform .3s
 			opacity 1
 			visibility visible
 
@@ -76,10 +76,10 @@
 	box-sizing border-box
 	padding-right 20px
 	max-width 350px
-	margin-right -1000px
+	// margin-right -1000px
 	transform-origin top
-	// transform perspective(600px) rotateX(-90deg)
-	// transition opacity .3s, transform 1.5s, visibility 0s .3s
+	transform perspective(600px) rotateX(-90deg)
+	transition opacity .3s, transform 1.5s, visibility 0s .3s
 	visibility hidden
 	opacity 0
 
