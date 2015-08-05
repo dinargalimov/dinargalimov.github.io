@@ -7288,7 +7288,6 @@ section.main.section_areas {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  overflow: hidden;
 }
 .content {
   -webkit-box-sizing: border-box;
