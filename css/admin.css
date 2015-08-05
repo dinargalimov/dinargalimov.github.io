@@ -6537,16 +6537,6 @@ input.date_to {
   color: #d0021b;
 }
 .ms-choice.open ~ .ms-drop {
-  -webkit-transform: perspective(600px) rotateX(0deg);
-  -moz-transform: perspective(600px) rotateX(0deg);
-  -o-transform: perspective(600px) rotateX(0deg);
-  -ms-transform: perspective(600px) rotateX(0deg);
-  transform: perspective(600px) rotateX(0deg);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-  -o-transition: opacity 0.3s, -o-transform 0.3s;
-  -ms-transition: opacity 0.3s, -ms-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -6575,16 +6565,6 @@ input.date_to {
   -o-transform-origin: top;
   -ms-transform-origin: top;
   transform-origin: top;
-  -webkit-transform: perspective(600px) rotateX(-90deg);
-  -moz-transform: perspective(600px) rotateX(-90deg);
-  -o-transform: perspective(600px) rotateX(-90deg);
-  -ms-transform: perspective(600px) rotateX(-90deg);
-  transform: perspective(600px) rotateX(-90deg);
-  -webkit-transition: opacity 0.3s, -webkit-transform 1.5s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s, -moz-transform 1.5s, visibility 0s 0.3s;
-  -o-transition: opacity 0.3s, -o-transform 1.5s, visibility 0s 0.3s;
-  -ms-transition: opacity 0.3s, -ms-transform 1.5s, visibility 0s 0.3s;
-  transition: opacity 0.3s, transform 1.5s, visibility 0s 0.3s;
   visibility: hidden;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
