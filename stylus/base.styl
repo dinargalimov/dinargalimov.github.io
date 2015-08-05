@@ -102,13 +102,13 @@ p
 ul
 	list-style none
 	&.circ
-		margin 0 0 20px
+		margin 0 0 15px
 		li
 			background url(../images/ul_circ.svg) no-repeat 0 7px
 			margin 0 0 10px 7px
 			padding-left 20px
 	&.point
-		margin 0 0 20px
+		margin 0 0 15px
 		li
 			margin 0 0 10px 7px
 			padding-left 15px
@@ -139,8 +139,6 @@ h3
 	margin 0 0 20px
 	font-weight 400
 
-strong
-	font-weight 500
 
 
 .hidden
@@ -219,6 +217,8 @@ strong
 	font-size fzn - 4px!important
 .f_small
 	font-size fzn - 2px!important
+.f_middle
+	font-size fzn - 1px!important
 .f_normal
 	font-size fzn!important
 .f_big
@@ -310,6 +310,7 @@ strong
 	background-color cbgsuccess
 	border-color cbgsuccess - 20%
 	color ctext
+
 
 .info_sms
 	font-size fzn - 2px
@@ -587,14 +588,15 @@ strong
 	visibility visible
 	font-weight normal
 	opacity 0
-	background #fff
-	border-radius 2px
-	border 1px solid cbd
-	box-shadow 0px 2px 5px 0px rgba(0,0,0,0.11)
+	background rgba(cl1,0.85)
+	border-radius 3px
+	// border 1px solid cbd
+	// box-shadow 0px 2px 5px 0px rgba(0,0,0,0.11)
+	color #fff
 	margin-right -1000px
 	margin-bottom -1000px
 
-	&:after, &:before
+	&:after
 		border solid transparent
 		content " "
 		height 0
@@ -604,22 +606,22 @@ strong
 	&:after
 		border-color rgba(255, 255, 255, 0)
 		border-width 6px
-	&:before
-		border-color rgba(208, 211, 215, 0)
-		border-width 7px
+	// &:before
+	// 	border-color rgba(208, 211, 215, 0)
+	// 	border-width 7px
 
 	&.error
-		border-color cerror
-		.tooltip-inner
-			color ctexterror
-		&.top:before
-			border-top-color cerror
-		&.bottom:before
-			border-bottom-color cerror
-		&.right:before
-			border-right-color cerror
-		&.left:before
-			border-left-color cerror
+		background rgba(cerror - 10%, 0.85)
+		// .tooltip-inner
+		// 	color ctexterror
+		&.top:after
+			border-top-color rgba(cerror - 10%, 0.85)
+		&.bottom:after
+			border-bottom-color rgba(cerror - 10%, 0.85)
+		&.right:after
+			border-right-color rgba(cerror - 10%, 0.85)
+		&.left:after
+			border-left-color rgba(cerror - 10%, 0.85)
 
 	&.in
 		opacity 1
@@ -632,7 +634,7 @@ strong
 			top 100%
 			left 50%
 		&:after
-			border-top-color #fff
+			border-top-color rgba(cl1,0.85)
 			margin-left -6px
 		&:before
 			border-top-color #D0D3D7
@@ -644,7 +646,7 @@ strong
 			right 100%
 			top 50%
 		&:after
-			border-right-color #fff
+			border-right-color rgba(cl1,0.85)
 			margin-top -6px
 		&:before
 			border-right-color #D0D3D7
@@ -656,7 +658,7 @@ strong
 			bottom 100%
 			left 50%
 		&:after
-			border-bottom-color #fff
+			border-bottom-color rgba(cl1,0.85)
 			margin-left -6px
 		&:before
 			border-bottom-color #D0D3D7
@@ -667,54 +669,24 @@ strong
 			left 100%
 			top 50%
 		&:after
-			border-left-color #fff
+			border-left-color rgba(cl1,0.85)
 			margin-top -6px
 		&:before
 			border-left-color #D0D3D7
 			margin-top -7px
 
-	&.top-left
-		.tooltip-arrow
-			bottom 0
-			right 5px
-			margin-bottom -5px
-			border-width 5px 5px 0
-			border-top-color cl1
-	&.top-right
-		.tooltip-arrow
-			bottom 0
-			left 5px
-			margin-bottom -5px
-			border-width 5px 5px 0
-			border-top-color cl1
-	&.bottom-left
-		.tooltip-arrow
-			top 0
-			right 5px
-			margin-top -5px
-			border-width 0 5px 5px
-			border-bottom-color cl1
-	&.bottom-right
-		.tooltip-arrow
-			top 0
-			left 5px
-			margin-top -5px
-			border-width 0 5px 5px
-			border-bottom-color cl1
 
 .tooltip-inner
-	padding 6px 8px 6px
+	padding 6px 10px 6px
 	color ctextlight
-	// color #fff
+	color #fff
 	font-family ffn
-	font-weight 300
+	font-weight 400
 	font-size fzn - 4px
 	text-decoration none
 	box-sizing border-box
 	width auto
-	// min-width 150px
-	max-width 250px
-	// min-height 40px
+	max-width 300px
 	line-height 1.3
 
 
@@ -787,46 +759,60 @@ strong
 		width 48.5%
 
 .offset-by-one.column,
-.offset-by-one.columns
+.offset-by-one.columns,
+.offset-by-one.col
 	margin-left 8.66666666667%
 .offset-by-two.column,
-.offset-by-two.columns
+.offset-by-two.columns,
+.offset-by-two.col
 	margin-left 17.3333333333%
 .offset-by-three.column,
-.offset-by-three.columns
+.offset-by-three.columns,
+.offset-by-three.col
 	margin-left 26%
 .offset-by-four.column,
-.offset-by-four.columns
+.offset-by-four.columns,
+.offset-by-four.col
 	margin-left 34.6666666667%
 .offset-by-five.column,
-.offset-by-five.columns
+.offset-by-five.columns,
+.offset-by-five.col
 	margin-left 43.3333333333%
 .offset-by-six.column,
-.offset-by-six.columns
+.offset-by-six.columns,
+.offset-by-six.col
 	margin-left 52%
 .offset-by-seven.column,
-.offset-by-seven.columns
+.offset-by-seven.columns,
+.offset-by-seven.col
 	margin-left 60.6666666667%
 .offset-by-eight.column,
-.offset-by-eight.columns
+.offset-by-eight.columns,
+.offset-by-eight.col
 	margin-left 69.3333333333%
 .offset-by-nine.column,
-.offset-by-nine.columns
+.offset-by-nine.columns,
+.offset-by-nine.col
 	margin-left 78.0%
 .offset-by-ten.column,
-.offset-by-ten.columns
+.offset-by-ten.columns,
+.offset-by-ten.col
 	margin-left 86.6666666667%
 .offset-by-eleven.column,
-.offset-by-eleven.columns
+.offset-by-eleven.columns,
+.offset-by-eleven.col
 	margin-left 95.3333333333%
 .offset-by-one-third.column,
-.offset-by-one-third.columns
+.offset-by-one-third.columns,
+.offset-by-one-third.col
 	margin-left 34.6666666667%
 .offset-by-two-thirds.column,
-.offset-by-two-thirds.columns
+.offset-by-two-thirds.columns,
+.offset-by-two-thirds.col
 	margin-left 69.3333333333%
 .offset-by-one-half.column,
-.offset-by-one-half.columns
+.offset-by-one-half.columns,
+.offset-by-one-half.col
 	margin-left 52%
 
 
@@ -1042,6 +1028,7 @@ article.page
 	cursor no-drop
 	.avatar_edit, .avatar_delete
 		display none
+
 	img
 		opacity .8
 
@@ -1305,14 +1292,22 @@ a.icon-info
 		font-family Arial!important
 	.printable
 		display block
-	aside, header, section, article
+	aside, header, section, article, .notifyjs-corner, .drop, .tooltip
 		display none
 	.account_details_actions
 		display none
 
+	.legend
+		border-bottom none
+		text-transform none
+		font-size 24px
+		span
+			border-bottom none
+
 
 // ------------- нотификации ------------------
 .notifyjs-corner
+	z-index 1800
 	.inner
 		padding 10px
 		color #fff
@@ -1348,13 +1343,13 @@ a.icon-info
 
 
 	&.tabs_horizontal
-		.tabs_menu
+		&>.tabs_menu
 			// border-bottom 1px solid cbdlightsky
 			box-shadow inset 0 -2px 0 -1px cbdlightsky
 			padding 0 30px
 			white-space nowrap
 			clearfix()
-			li
+			& > ul li
 				background-color cbgsky + 10%
 				display inline-block
 				margin-right 3px
@@ -1365,7 +1360,7 @@ a.icon-info
 				&:hover
 					a
 						color ctext
-				a
+				&> a
 					display block
 					padding 10px 25px
 					color ctextlight
@@ -1390,35 +1385,54 @@ a.icon-info
 						font-size 16px
 						border-radius 50%
 						box-shadow 0 0 0 5px #fff
-		.tabs_content
+		&> .tabs_content
 			padding 30px
 
 
 
 	&.tabs_vertical
-		padding 0 0 0 30px
-		height 100%
-		.tabs_menu
+		padding 0
+		position absolute
+		top 0
+		bottom 0
+		right 0
+		left 0
+		margin 0
+		& > .tabs_menu
+			min-height 100%
 			width 200px
 			float left
-			li
+			background cbgsky
+			box-shadow inset -4px 0 0 -2px cseparator
+			padding 30px 0 0
+			box-sizing border-box
+			font-size fzn - 1px
+
+			& > ul li
 				margin-bottom 1px
 				position relative
 
-				a
+				&.title
+					padding 0 5px 10px 25px
+					font-size fzn - 6px
+					font-weight bold
+					text-transform uppercase
+					&~ .title
+						padding-top 25px
+
+				& > a
 					display block
-					padding 12px 15px 13px
+					padding 12px 5px 13px 25px
 					color ctext
 					line-height 110%
 					text-decoration none
-					background cbglight
+					// background cbglight
 					transition none
 					&:hover
-						background cbglight - 2%
+						background rgba(cseparator,.3)
 				&.active
 					a
-						background cl3
-						color #fff
+						background cseparator
 						font-weight normal
 						&:after
 							left 100%
@@ -1429,33 +1443,27 @@ a.icon-info
 							width 0
 							position absolute
 							pointer-events none
-							border-color rgba(cl3, 0)
-							border-left-color cl3
-							border-width 21px
+							border-color rgba(cseparator, 0)
+							border-left-color cseparator
+							border-width 20px
 							border-left-width 8px
-				&:first-child
-					a
-						border-top-left-radius brbut
-						border-top-right-radius brbut
-				&:last-child
-					a
-						border-bottom-left-radius brbut
-						border-bottom-right-radius brbut
 
-		.tabs_content
-			margin 0 0 0 240px
-			padding 0 30px 0 0
+
+		& > .tabs_content
+			margin 0 0 0 200px
+			padding 30px
 			overflow auto
 			height 100%
 			max-height 100%
+			box-sizing border-box
 			-webkit-overflow-scrolling touch
 
 	&.tabs_widget
 		margin 0 0 20px
-		.tabs_menu
+		&>.tabs_menu
 			padding 0
 			box-shadow none
-			li.active
+			&>ul>li.active
 				box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
 				border-left none
 				border-right none
@@ -1494,6 +1502,7 @@ a.icon-info
 		.avatar_edit
 			opacity 1
 			transform scale(1)
+			color #fff
 		.avatar_delete
 			opacity 1
 	.avatar_edit
@@ -1513,7 +1522,7 @@ a.icon-info
 		line-height 150px
 		text-decoration underline
 		&:hover
-			color #fff
+			color #fff!important
 
 
 	.avatar_delete
@@ -1657,6 +1666,7 @@ a.icon-info
 		font-size fzn - 4px
 		font-weight 500
 		color ctextlight
+		color cl2
 		font-style italic
 		margin 15px 15px 4px
 	.drop-sep
@@ -1674,10 +1684,18 @@ a.icon-info
 
 	.drop-date-choose
 		padding 0 15px 15px
+		.filter_date_value
+			max-width none
+		.filter_date_input
+			width 105px
+		input.date_to
+			float none
+			margin-left 4px
 
 	.dashboard-period-choose
+		max-height 300px
 		.drop-menu
-			max-width 100%
+			max-width 400px
 			li:last-child
 				border-bottom 1px solid cbdlight + 40%
 
@@ -1823,3 +1841,20 @@ a.icon-info
 // скрытие блоков
 .block_hide
 	animation blockHide 3s ease both
+
+
+// если нету контента
+.empty_block
+	width 100%
+	height 80%
+	min-height 150px
+	max-height 70vw
+	display flex
+	justify-content center
+	align-items center
+	&>div
+		max-width 400px
+		text-align center
+		color ctextlight
+	p
+		margin 0 0 15px

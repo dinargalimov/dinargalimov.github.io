@@ -126,7 +126,7 @@ function init(){
 	});
 
 	$('.datetimepicker').datetimepicker({
-		timepicker: false,
+		timepicker: true,
 		lang:'ru',
 		closeOnDateSelect: true,
 		format: 'd.m.Y',

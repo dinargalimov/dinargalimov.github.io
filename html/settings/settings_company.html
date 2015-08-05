@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Настройки</title>
+	<base href="../../"/>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
+	<script src="js/init.js"></script>
+
+
+</head>
+<body>
+
+<include data-file="aside.html"></include>
+<include data-file="header.html"></include>
+
+<article class="page open">
+	<div class="page_header">
+		<a class="page_close icon-close"></a>
+		<a class="page_expand icon-fullsize"></a>
+		<h1>Настройки</h1>
+
+	</div>
+	<div class="page_content">
+		<div class="tabs tabs_vertical">
+			<div class="tabs_menu">
+				<ul>
+					<li class="title">Мои настройки</li>
+					<li><a href="">Мой профиль</a></li>
+					<li><a href="">Уведомления</a></li>
+					<li><a href="">Электронная подпись</a></li>
+					<li class="title">Настройки компании</li>
+					<li class="active"><a href="">Профиль компании</a></li>
+					<li><a href="">Представители</a></li>
+					<li><a href="">Тарифы и услуги</a></li>
+				</ul>
+			</div>
+			<div class="tabs_content">
+				<div class="info">
+					<p>Ниже приведены данные по вашей текущей компании. Сменить компанию можно в выпадающем списке - при этом произойдет смена вашей текущей компании и обновиться вся информация на экране. Вы также можете <a>подключить</a> новую компанию. </p>
+				</div>
+				<div class="form_group form_horizontal">
+					<div class="property_label col three a_right">Наименование:</div>
+					<div class="property_value col nine">
+						<select class="ws_n" data-placeholder="Выбрать компанию">
+							<option value="aa" selected>Общество с ограниченной ответственностью “Уфаоргсинтезнефтепереработка”</option>
+							<option value="vb">Общество с ограниченной ответственностью “Башкирнефтеродукт”</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_group ">
+					<div class="property_label col three a_right">ОГРН:</div>
+					<div class="property_value col nine">1234567890</div>
+				</div>
+				<div class="form_group ">
+					<div class="property_label col three a_right">ИНН:</div>
+					<div class="property_value col nine">1234567890</div>
+				</div>
+				<div class="form_group ">
+					<div class="property_label col three a_right">КПП:</div>
+					<div class="property_value col nine">1234567890</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</article>
+
+
+</body>
+</html>

@@ -186,7 +186,7 @@ header
 .drop.header_add_submenu
 	top 40px!important
 	left 50%!important
-	transform translateX(calc(-50% - 23px))!important
+	transform translateX(-50%) translateX(-23px)!important
 
 .header_add_drop.drop-content-inner
 	padding 25px 35px
@@ -546,9 +546,11 @@ article.page
 	padding 23px 30px 0
 	box-sizing border-box
 	z-index 100
-	border-bottom 1px solid cbdlight
+	// border-bottom 1px solid cbdlight
+	box-shadow 0 2px 11px -7px #000
 	&.clean
 		border-bottom none
+		box-shadow none
 		& + .page_content
 			padding-top 10px
 	&.header_forward
@@ -660,11 +662,11 @@ article.page
 	right 0
 	width 270px
 	bottom 0
-	background cbglight + 60%
+	background cbgsky
 	background-clip border-box
 	overflow-x hidden
 	overflow-y auto
-	padding 20px
+	padding 30px 20px
 	box-sizing border-box
 	font-size fzn - 2px
 	box-shadow inset 4px 0 0 -2px cseparator
@@ -678,11 +680,12 @@ article.page
 
 .side_title
 	text-transform uppercase
-	font-weight 500
+	font-weight 400
 	text-transform uppercase
 	color ctextlight
 	margin 0 0 25px
-	font-size fzn - 2px
+	font-size fzn - 3px
+	letter-spacing .5px
 
 .side_block
 	margin 20px 0
@@ -738,7 +741,6 @@ article.page
 	li
 		margin 0
 	.label_check
-		color ctextlight
 		padding 6px 0
 		display block
 	.label_filter
@@ -776,6 +778,7 @@ article.page
 
 		.title_filter
 			float right
+			font-weight fwn
 			.ms-choice
 				font-size fzn - 2px
 
@@ -784,6 +787,11 @@ article.page
 	padding 20px
 	border 1px solid cbdlightsky
 	box-shadow 0px 4px 8px 0px rgba(0,0,0,0.07)
+	margin-bottom 20px
+
+.border_block
+	padding 20px
+	border 2px solid cseparator
 	margin-bottom 20px
 
 // уведомления
@@ -1011,7 +1019,7 @@ article.page
 .task_side_time
 	text-align center
 	font-size 24px
-	margin 10px 0 30px
+	margin 0 0 30px
 	[class*="icon-"]
 		&:before
 			font-size 30px
@@ -1114,7 +1122,7 @@ article.page
 	padding 20px
 	-webkit-overflow-scrolling touch
 	.timeline_block
-		margin 30px 0 0
+		margin 0 0 30px
 
 	.timeline_clean
 		text-align center
@@ -1125,7 +1133,7 @@ article.page
 	// блок важно
 	.timeline_important
 		background cbginfo
-		margin -20px -20px 30px
+		margin -10px -20px 30px
 		padding 20px
 		.timeline_line_block
 			margin-bottom 0
@@ -1135,6 +1143,9 @@ article.page
 		.line_block_title
 			.icon
 				box-shadow 0 0 0 2px cbginfo, 0 0 0 4px clinklight
+
+	.timeline_more
+		padding 0
 
 	// заголовок
 	.line_block_title
@@ -1468,13 +1479,11 @@ article.page
 
 // дашборд
 .dashboard
-	.content
-		h1
-			span
-				display block
-				float left
-				margin-right 30px
-				margin-bottom 20px
+	.dashboard_title
+		display block
+		float left
+		margin-right 30px
+		margin-bottom 20px
 .dashboard_content_filter
 	display inline-block
 	.drop-target
@@ -1599,16 +1608,24 @@ article.page
 						opacity 1
 
 
+// Настройки
+
+.personal_settings
+	max-width 600px
+	.avatar
+		margin-bottom 20px
+
+
+
 // подсказки к графику
 .tooltip_graph
 	position absolute
 	pointer-events none
 	z-index 3000
 	display inline-block
-	background cl1
-	border 1px solid rgba(0,0,0,0.1)
+	background rgba(cl1,0.9)
 	padding 10px 10px 7px
-	border-radius 3px
+	border-radius 2px
 	color #fff
 	.date
 		font-weight normal
@@ -1630,3 +1647,312 @@ article.page
 		.value
 			float right
 			font-weight normal
+
+
+
+
+
+// Графики
+#chart
+	circle
+		stroke-width 2px
+		fill #fff
+		&.debet
+			stroke cl2
+			transform translateY(-5px)
+			&.debet_select
+				fill cl2
+		&.credit
+			stroke cerror
+			transform translateY(-5px)
+			&.credit_select
+				fill cerror
+
+	path
+		&.credit
+			stroke cerror
+			stroke-width 2px
+			fill none
+			transform translateY(-5px)
+		&.debet
+			stroke cl2
+			stroke-width 2px
+			fill none
+			transform translateY(-5px)
+	rect
+		&.bar
+			fill saturate(cbglight - 5%, 10%)
+			transform translateY(-5px)
+		&.bar_select
+			fill saturate(cbglight - 10%, 20%)
+
+	.graph_disabled
+		opacity 0
+	.legend_disabled
+		fill-opacity 0
+
+	.legend
+		circle
+			stroke-width 1px
+		.debet
+			fill cl2
+			circle
+				fill cl2
+				stroke cl2
+		.credit
+			fill cerror
+			circle
+				fill cerror
+				stroke cerror
+		.bar
+			fill ctextlight
+			circle
+				fill saturate(cbglight - 5%, 10%)
+				stroke saturate(cbglight - 5%, 10%)
+		text
+			font-size 11px
+			text-transform none
+
+	.legend circle,
+	.legend text
+		cursor pointer
+
+	.axis
+		path,line
+			fill none
+			stroke #E4E8EA
+			shape-rendering crispEdges
+		path
+			// stroke-width 2px
+		// &.y, &.y2
+		// 	path, line
+		// 		stroke #EAF1F5
+		text
+			font-size 10px
+			font-weight 600
+			fill ctextlight + 30%
+
+	.overlayGraph
+		fill none
+		pointer-events all
+	.svg-container
+		position relative
+		width 100%
+		vertical-align top
+		overflow hidden
+	.svg-content-responsive
+		display inline-block
+
+
+// сертификат
+.certificate_block
+	width 550px
+	margin 0 auto
+	height 330px
+	background url(../images/cert.jpg) no-repeat 0 0
+	background-size 100% 100%
+	box-sizing border-box
+	padding 70px 30px 30px 40px
+	font-size fzn - 1px
+	.title
+		text-align center
+		font-size fzn + 4px
+		font-weight 600
+		margin-bottom 30px
+		font-style italic
+		text-transform uppercase
+	.property_label
+		text-align right
+
+
+// настройки тарифы
+.tarif_info
+	padding-bottom 20px
+	border-bottom 1px solid cbdlight
+	overflow hidden
+	.price
+		float right
+		text-align right
+		line-height 1.1
+		p
+			font-weight normal
+			font-size fzn
+		a
+			font-size fzn - 4px
+	.status
+		color ctextsuccess
+		font-weight normal
+
+.tarif_serv_row
+	padding-top 15px
+	padding-bottom 15px
+	border-top 1px solid cbdlight
+	overflow hidden
+	.name
+		float left
+		width 50%
+		.title
+			font-weight normal
+			margin-bottom 5px
+		.desc
+			font-size fzn - 4px
+			color ctextlight
+	.value
+		float right
+		width 50%
+		text-align right
+		.title
+			font-size fzn - 4px
+			color ctextlight
+			margin-bottom 5px
+		.price
+			color cl2
+			font-weight normal
+
+.tarif_balance
+	border-top 2px solid cl3
+	margin-top 10px
+	padding 20px 0
+	.title
+		font-weight normal
+		margin 0 0 20px
+	.balance_list
+		display flex
+
+		.list
+			flex 0 1 80%
+			padding-right 15px
+			box-sizing border-box
+			.item
+				margin-bottom 10px
+				.name
+					font-size fzn - 4px
+					color ctextlight
+				.price
+					float right
+					font-weight normal
+
+		.total
+			flex 0 0 auto
+			font-weight normal
+			float right
+			text-align right
+			padding 20px 0 0 20px
+			background url(../images/summ.svg) no-repeat 0 center
+			box-sizing border-box
+			min-height 42px
+
+.tarif_dop_serv
+	font-size fzn - 4px
+	margin-left 20px
+	&.dop_serv_connect
+		background cbgsuccess
+		border-color cl3
+	.title
+		font-size fzn + 2px
+		font-weight normal
+		margin 0 0 8px
+	.more
+		display block
+		margin 0 0 8px
+		text-decoration none
+	.desc
+		color ctextlight
+		margin-bottom 12px
+	.add
+		float right
+		padding-top 5px
+		.connect
+			color ctextsuccess
+			font-weight 600
+			&:before
+				margin-right 0
+		.button
+			margin-top -5px
+	.price
+		font-weight 600
+		color ctextlight
+		padding-top 5px
+.banner_other_tarif
+	background-image url(../images/banner_other_tarif.png)
+	background-repeat no-repeat
+	background-position right 0
+	background-size auto 100%
+	.title
+		font-weight normal
+		margin 0 0 12px
+	.desc
+		font-size fzn - 4px
+		margin 0 0 15px
+
+.tarif_noactiv
+	overflow hidden
+	.price
+		float right
+		font-size 32px
+		font-weight normal
+		text-align right
+		padding 10px 0
+		div
+			margin 0
+			line-height 0
+		a
+			font-size fzn - 4px
+			text-decoration none
+	.tarif_noactiv_info
+		clear both
+		background #fff
+		margin 0 -20px -20px
+		padding 20px
+		border-top 1px solid cseparator
+		overflow hidden
+		.item
+			margin 0 0 15px
+			.title
+				font-weight normal
+				margin-bottom 5px
+			p
+				font-size fzn - 4px
+				color ctextlight
+
+
+// курсы валют
+.currencies_table
+	.item_currency
+		margin 0 0 20px
+		padding 20px
+		background #FFF
+		.currency_name
+			font-weight 600
+			margin 0 0 12px
+			padding 0 0 0 30px
+			line-height 24px
+			background-position 0 0
+			background-size 24px
+			background-repeat no-repeat
+			&.dollar
+				background-image url(../images/dollar_color.svg)
+			&.euro
+				background-image url(../images/euro_color.svg)
+		.item_cost
+			margin 0 0 6px
+		.cost_name
+			display inline-block
+			width 100px
+			color ctextlight
+		.cost_value
+			display inline-block
+			font-weight normal
+			&:after
+				font-size 7px
+				display inline-block
+				margin-left 3px
+				vertical-align 3px
+			&.up
+				color ctextsuccess
+				&:after
+					content '▲'
+			&.down
+				color ctexterror
+				&:after
+					content '▼'

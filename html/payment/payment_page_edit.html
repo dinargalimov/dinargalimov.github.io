@@ -18,14 +18,14 @@
 <include data-file="header.html"></include>
 <include data-file="transaction/transaction.html section.main"></include>
 
-<article class="page side_right_wide open">
+<article class="page open page_small">
 
 	<!-- шапка слоя -->
 	<div class="page_header clean">
 		<a class="page_close icon-close"></a>
 		<a class="page_expand icon-fullsize"></a>
 		<h1>
-			Новый платеж
+			Платеж №23230423
 		</h1>
 
 	</div>
@@ -48,7 +48,7 @@
 			<div class="form_sep"></div>
 
 			<div class="form_group">
-				<input type="search" name="" id="" class="w100 drop-target input_search_focus" placeholder="Получатель">
+				<input type="text" name="" id="" class="w100 drop-target input_search_focus" placeholder="Получатель">
 				<div class="drop-content">
 					<div class="drop-content-inner">
 						<ul class="drop-menu max_w_400">
@@ -164,8 +164,6 @@
 		            </div>
 				</div>
 			</div>
-
-			<div class="info">Реквизиты контрагента будут обновлены после сохранения платежного поручения.</div>
 
 			<div class="form_sep"></div>
 
@@ -311,107 +309,7 @@
 		</form>
 	</div>
 
-	<!-- сайдбар -->
-	<div class="page_side page_side_wide">
 
-		<!-- автозаполнение реквизитов -->
-		<div class="payment_autocompelete_details">
-			<div class="title">Автозаполнение реквизитов</div>
-			<div class="form_group">
-				<div class="textarea_with_attach">
-					<textarea name="" id="" class="w100 js_autosize autocompelete_details_textarea" placeholder="Скопируйте в текстовое поле
-или загрузите в виде файла реквизиты получателя или платежного поручения."></textarea>
-					<label for="file" class="button_file_upload icon-attach"><input type="file" name="" id="file">Загрузить фото платежки</label>
-				</div>
-			</div>
-			<div class="form_buttons">
-				<button class="button middle w100">Заполнить реквизиты</button>
-			</div>
-		</div>
-
-		<!-- проверка реквизитов -->
-		<!-- <div class="payment_autocompelete_details">
-			<div class="title">Автозаполнение реквизитов</div>
-			<div class="form_group">
-				<div class="textarea_with_attach">
-					<textarea name="" id="" class="w100 js_autosize autocompelete_details_textarea" placeholder="Скопируйте в текстовое поле
-или загрузите в виде файла реквизиты получателя или платежного поручения." disabled>ИП Ибрагимов Нур Фанурович
-ИНН: 020504154524
-Наименование Банка: МОСКОВСКИЙ ФИЛИАЛ ОАО КБ «Региональный кредит» МОСКОВСКИЙ ФИЛИАЛ ОАО
-</textarea>
-					<label for="file" class="button_file_upload icon-attach"><input type="file" name="" id="file">Загрузить фото платежки</label>
-				</div>
-			</div>
-			<div class="form_buttons">
-				<button class="button middle w100 loader">Распознование реквизитов</button>
-			</div>
-		</div> -->
-
-		<!-- реквизиты заполнены -->
-		<!-- <div class="payment_autocompelete_details">
-			<div class="title">Автозаполнение реквизитов</div>
-			<div class="form_group">
-				<div class="textarea_with_attach">
-					<textarea name="" id="" class="w100 js_autosize autocompelete_details_textarea" placeholder="Скопируйте в текстовое поле
-или загрузите в виде файла реквизиты получателя или платежного поручения." >ИП Ибрагимов Нур Фанурович
-ИНН: 020504154524
-Наименование Банка: МОСКОВСКИЙ ФИЛИАЛ ОАО КБ «Региональный кредит» МОСКОВСКИЙ ФИЛИАЛ ОАО
-</textarea>
-					<label for="file" class="button_file_upload icon-attach"><input type="file" name="" id="file">Загрузить фото платежки</label>
-				</div>
-			</div>
-			<div class="form_buttons">
-				<button class="button middle w100 second icon-check noclick">Реквизиты заполнены</button>
-			</div>
-		</div> -->
-
-		<!-- загрузка файлов -->
-		<!-- <div class="payment_autocompelete_details">
-			<div class="title">Автозаполнение реквизитов</div>
-			<div class="form_group">
-				<div class="textarea_with_attach">
-					<textarea name="" id="" class="w100 js_autosize autocompelete_details_textarea" placeholder="Скопируйте в текстовое поле
-или загрузите в виде файла реквизиты получателя или платежного поручения." ></textarea>
-					<label for="file" class="button_file_upload icon-attach"><input type="file" name="" id="file">Загрузить фото платежки</label>
-				</div>
-
-				<div class="file_upload_block">
-					<div class="uploaded">
-						<a class="file_delete"></a>
-						<div class="file_center">
-							<div class="file_icon pdf"></div>
-							<div class="file_name">Фото отсканированных реквизитов.pdf</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="form_buttons">
-				<button class="button middle w100 second icon-check noclick">Реквизиты заполнены</button>
-			</div>
-		</div> -->
-
-		<!-- избранные платежи -->
-		<div class="payment_favorites_list">
-			<div class="title">Избранные платежи</div>
-			<a class="item icon-favorites-solid">
-				<span class="d_b">ОАО СБЕРБАНК РОССИИ</span>
-				<span class="light_text d_ib fw_n">20 000 <span class="cur ruble"><span>р.</span></span></span>
-				<span class="light_text d_ib">от 10.07.2015</span>
-			</a>
-			<a class="item icon-favorites-solid">
-				<span class="d_b">УФК по Калужской области (ОПФР по Калужской области)</span>
-				<span class="light_text d_ib fw_n">20 000 <span class="cur dollar"><span>$</span></span></span>
-				<span class="light_text d_ib">от 10.07.2015</span>
-			</a>
-			<a class="item icon-favorites-solid">
-				<span class="d_b">ОАО СБЕРБАНК РОССИИ</span>
-				<span class="light_text d_ib fw_n">20 000 <span class="cur ruble"><span>р.</span></span></span>
-				<span class="light_text d_ib">от 10.07.2015</span>
-			</a>
-
-		</div>
-	</div>
 
 </article>
 

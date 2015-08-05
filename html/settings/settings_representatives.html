@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Настройки</title>
+	<base href="../../"/>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
+	<script src="js/init.js"></script>
+
+
+</head>
+<body>
+
+<include data-file="aside.html"></include>
+<include data-file="header.html"></include>
+
+<article class="page open">
+	<div class="page_header">
+		<a class="page_close icon-close"></a>
+		<a class="page_expand icon-fullsize"></a>
+		<h1>Настройки</h1>
+
+	</div>
+	<div class="page_content">
+		<div class="tabs tabs_vertical">
+			<div class="tabs_menu">
+				<ul>
+					<li class="title">Мои настройки</li>
+					<li><a href="">Мой профиль</a></li>
+					<li><a href="">Уведомления</a></li>
+					<li><a href="">Электронная подпись</a></li>
+					<li class="title">Настройки компании</li>
+					<li><a href="">Профиль компании</a></li>
+					<li class="active"><a href="">Представители</a></li>
+					<li><a href="">Тарифы и услуги</a></li>
+				</ul>
+			</div>
+			<div class="tabs_content">
+				<div class="m_bot_30">
+					<a class="button small icon-user-full-add">Пригласить представителя</a>
+				</div>
+
+
+				<!-- таблица -->
+				<div class="table_list table_list_small representatives_list">
+
+					<!-- шапка таблицы -->
+					<div class="table_list_header">
+						<div class="table_list_cell action">&nbsp;</div>
+						<div class="table_list_cell sign">Подпись</div>
+						<div class="table_list_cell post">Должность</div>
+						<div class="table_list_cell name">Имя</div>
+					</div>
+					<div class="table_list_body">
+
+						<!-- строка -->
+						<div class="table_list_row">
+							<div class="table_list_cell action"><a href="" class="trash icon-trash-bin notext"></a></div>
+							<div class="table_list_cell sign"><input type="checkbox" name="" id="s1" checked><label for="s1" class="label_check"><i class="icon"></i></label></div>
+							<div class="table_list_cell post">
+								<p>Директор</p>
+							</div>
+							<div class="table_list_cell name">
+								<div class="name_title me">Крикунов Владислав (Я)</div>
+									<div class="name_desc">
+										<p>Телефон: +7-965-120 01 02</p>
+										<p>E-mail: <a href="mailto:user@user.com">user@user.com</a></p>
+									</div>
+							</div>
+						</div>
+
+						<!-- строка -->
+						<div class="table_list_row">
+							<div class="table_list_cell action"><a href="" class="trash icon-trash-bin notext"></a></div>
+							<div class="table_list_cell sign"><a class="button xsmall light">Запросить</a></div>
+							<div class="table_list_cell post">
+								<p>Заместитель начальника</p>
+							</div>
+							<div class="table_list_cell name">
+								<div class="name_title">Александр Пропоркин</div>
+									<div class="name_desc">
+										<p>Телефон: +7-965-120 01 02</p>
+									</div>
+							</div>
+						</div>
+
+						<!-- строка -->
+						<div class="table_list_row">
+							<div class="table_list_cell action"><a href="" class="trash icon-trash-bin notext"></a></div>
+							<div class="table_list_cell invite">
+								<span class="info_label">Отправлено приглашение. <a href="#">Отправить еще раз</a></span>
+							</div>
+							<div class="table_list_cell name">
+								<div class="name_title">Александр Пропоркин</div>
+									<div class="name_desc">
+										<p>Телефон: +7-965-120 01 02</p>
+									</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+</article>
+
+
+</body>
+</html>
