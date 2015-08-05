@@ -5889,6 +5889,7 @@ input.date_to {
 }
 .ms-parent.select_pos_right .ms-drop {
   right: 0;
+  margin-right: 0;
 }
 .ms-parent.select_full {
   width: 100%;
