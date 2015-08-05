@@ -1,7 +1,5 @@
 var root = document.getElementsByTagName('script')[0].parentElement;
 var arrayOfJS = [
-	'jquery',
-	'jquery.easing',
 	'include',
 	'jquery.datetimepicker',
 	'jquery.textarea_autosize',
@@ -12,8 +10,7 @@ var arrayOfJS = [
 	'bootstrap.tooltip',
 	'equalize',
 	'nv.d3',
-	'stream_layers',
-	'jqueryFileTree'
+	'stream_layers'
 ];
 
 loadJs();
@@ -164,9 +161,7 @@ function init(){
 	});
 
 
-	$('#fileTreeDemo').fileTree({ root: '../', script: 'js/jqueryFileTree.php' }, function(file) {
-					alert(file);
-				});
+
 
 
 d3.json("http://nvd3.org/examples/linePlusBarData.json",function(error,data) {
