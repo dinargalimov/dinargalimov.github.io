@@ -1,5 +1,6 @@
 var root = document.getElementsByTagName('script')[0].parentElement;
 var arrayOfJS = [
+	'jquery',
 	'jquery.easing',
 	'include',
 	'jquery.datetimepicker',
