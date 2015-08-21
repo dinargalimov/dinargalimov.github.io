@@ -141,6 +141,133 @@
 	}
 }
 
+@keyframes noticeOut {
+  0 {
+    transform: perspective(1500px);
+  }
+
+  20% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+
+  }
+
+  100% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+@keyframes noticeIn {
+  from {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+    max-height: 0;
+  }
+
+  20% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  55% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+
+  }
+
+  70% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 0deg);
+    opacity: 1;
+     max-height: 300px;
+  }
+
+  85% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, -5deg);
+
+  }
+
+  100% {
+    transform: perspective(1500px);
+  }
+}
+
+@keyframes noticeIn2 {
+  0% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+    max-height: 300px;
+  }
+
+  40% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+
+  }
+
+  60% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, 0deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(1500px) rotate3d(1, 0, 0, -5deg);
+
+  }
+
+  100% {
+    transform: perspective(1500px);
+  }
+}
+
+
+
+
+.notice_anim
+	max-height 0
+	transition 1s
+	overflow hidden
+	.notice_block
+		visibility hidden
+
+	&.notice_out
+		animation-fill-mode both
+		animation-duration 1s
+		animation-name noticeOut
+		backface-visibility visible !important
+		// transition 1s
+		// transition-delay .3s
+		max-height 300px
+		.notice_block
+			visibility visible
+
+
+	&.notice_in
+		animation-fill-mode both
+		// animation-delay .2s
+		animation-duration 1s
+		animation-name noticeIn
+		backface-visibility visible !important
+		// transition .7s
+		max-height 300px
+		.notice_block
+			visibility visible
+
+
+	&:nth-child(1)
+		animation-duration 1s
+		animation-name noticeIn2
+
+
 
 
 // ангруляр анимация

@@ -18,7 +18,7 @@
 <include data-file="header.html"></include>
 <include data-file="contragents/contragents.html section.main"></include>
 
-<article class="page">
+<article class="page open">
 
 	<!-- шапка слоя -->
 	<div class="page_header">
@@ -41,7 +41,11 @@
 				<div class="col eight">
 					<input type="text" name="" id="" class="w100" placeholder="Краткое наименование" value="ООО “Ромашка“">
 				</div>
-				<div class="col four"><div class="small_text m_top_10">сокращено автоматически</div></div>
+				<div class="col four"><div class="small_text m_top_5">сокращено автоматически</div></div>
+			</div>
+			<div class="form_group">
+				<input type="checkbox" name="" id="a1">
+				<label for="a1" class="label_check check"><i class="icon"></i><span>Иностранный контрагент</span></label>
 			</div>
 			<div class="form_group row">
 				<div class="col four">
@@ -102,9 +106,31 @@
 				</div>
 			</div>
 
-			<div class="form_group">
-				<input type="text" name="" id="" class="w100" placeholder="Адрес" value="Москва, ул. Карла Маркса, д.21">
+			<div class="form_group ">
+				<div class="col four">
+					<div class="input_group_title w100">
+						<select class="w100" disabled>
+							<option value="" selected>Российская Федерация</option>
+							<option value="">Украина</option>
+							<option value="">Казахстан</option>
+						</select>
+						<div class="input_title">Страна</div>
+					</div>
+				</div>
+				<div class="col four">
+					<div class="input_group_title w100">
+						<input type="text" name="" placeholder="" id="" class="w100" value="Москва" >
+						<div class="input_title">Город</div>
+					</div>
+				</div>
+				<div class="col four">
+					<div class="input_group_title w100">
+						<input type="text" name="" placeholder="" id="" class="w100" value="ул. Карла Маркса, д.21">
+						<div class="input_title">Адрес</div>
+					</div>
+				</div>
 			</div>
+
 			<div class="form_group ">
 				<div class="col four">
 					<div class="input_group column twelve">

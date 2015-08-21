@@ -118,8 +118,7 @@
 				border-top-color #ddd
 				border-width 11px
 				margin-left -11px
-			&:hover
-				transform translateY(-3px)
+
 			.desc
 				background cruble
 				color #fff
@@ -170,6 +169,7 @@
 			.num
 				float right
 				color ctextlight
+				transition none
 				&:hover
 					color cl2
 
@@ -316,23 +316,32 @@
 .transaction_view_info_account
 	font-size fzn + 2px
 	padding 2px 0 0
-	.light_text
-		font-size fzn
+
 
 
 .transaction_view_exchange
+	.col
+		width auto
+		width 45%
+		float left
+		&:first-child
+			margin-right 5%
+			padding-right 5%
 	.transaction_view_info_account
-		margin-bottom 15px
+		margin-bottom 10px
+		font-size fzn - 2px
 	.transaction_view_info_money
-		font-size 30px
+		font-size 32px
+		margin-right 0
+
 	.from_account, .to_account
 		overflow visible
 		&:after
 			content '→'
 			position absolute
-			right -65px
+			right -15px
 			top 0px
-			font-size 40px
+			font-size 30px
 			color ctextlight + 30%
 	.to_account
 		&:after
@@ -342,16 +351,18 @@
 
 
 .transaction_view_contragent
-	padding 30px
-	min-height 40px
+	padding 25px 30px
+	min-height 45px
 	.name
 		font-weight normal
+		font-size fzn + 2px
 		margin-bottom 20px
 		.transaction_status_stamp
-			top calc(100% + 20px)
+			top 100%
+			// top 0
 			right 0
 	.transaction_view_contragent_appointment
-		margin 30px -30px -30px
+		margin 30px -30px -25px
 		padding 20px 30px
 		border-top 1px solid cbdlightsky
 		background #fff
@@ -365,23 +376,24 @@
 	right 20px
 	top 20px
 	display inline-block
-	padding 8px 20px
-	border 4px solid cl2 + 40%
-	color cl2 + 30%
+	padding 6px 15px
+	border 4px solid cl2
+	color cl2
 	font-weight bold
 	text-transform uppercase
-	font-size fzn - 1px
+	font-size fzn - 2px
 	transform rotateZ(-8deg)
 	text-align center
+	opacity .66
 	&.success
-		border-color cl3 + 10%
-		color cl3 + 10%
+		border-color cl3
+		color cl3
 	&.error
-		border-color cerror + 30%
-		color cerror + 20%
+		border-color cerror
+		color cerror
 	&.warning
-		border-color ctextwarning + 30%
-		color ctextwarning + 20%
+		border-color ctextwarning
+		color ctextwarning
 	.date
 		display block
 		font-size fzn - 5px

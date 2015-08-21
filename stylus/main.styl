@@ -48,7 +48,7 @@ aside
 .aside_logo
 	display block
 	height 40px
-	background cl1 + 5% url(../images/logo_full_w.svg) no-repeat center center
+	background cl1 + 5% url(../images/logo_w.svg) no-repeat center center
 	text-indent -10000em
 
 header
@@ -57,8 +57,21 @@ header
 	right 0
 	left 140px
 	height 40px
-	// background #DEE9F0
 	background saturate(cbglight - 5%, 10%)
+	z-index 900
+	transition box-shadow .5s
+	&.shadow
+		box-shadow 0 12px 20px -8px rgba(cl1,0.13)
+		transition box-shadow 1s
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	header
+		&.shadow
+			box-shadow 0 15px 25px -8px rgba(cl1,0.13)
+
+	_::-webkit-full-page-media, _:future, :root  .page_header
+		&.shadow
+			box-shadow 0 12px 20px -8px rgba(cl1,0.13)
 
 
 // поиск в шапке
@@ -111,8 +124,8 @@ header
 		width 67px
 		cursor pointer
 		transition width ease-in-out .2s
-		margin-left 30px
-		padding-left 15px
+		margin-left 25px
+		padding-left 20px
 		padding-right 0
 		background transparent
 		opacity 0
@@ -290,7 +303,7 @@ header
 	.header_profile_name
 		height 100%
 		float left
-		border-right 1px solid #CCD7E6
+		// border-right 1px solid #CCD7E6
 		a
 			text-decoration none
 			display block
@@ -368,6 +381,11 @@ header
 			&:before
 				font-size 17px
 
+		&.title_submenu
+			&:hover
+				background none
+				cursor default
+
 	// подменю слева
 	.submenu
 		li
@@ -394,10 +412,10 @@ section.main
 	right 0
 	bottom 0
 	z-index 10
-	padding 25px
+	padding 25px 15px 25px 25px
 	overflow-x hidden
 	overflow-y scroll
-	overflow-y overlay
+	// overflow-y overlay
 	-webkit-overflow-scrolling touch
 
 	&.section_areas
@@ -406,12 +424,12 @@ section.main
 
 .section_top_area
 	background cbglight
-	padding 25px 25px 30px
+	padding 25px 15px 25px 25px
 	border-bottom 3px solid cseparator
 
 .section_content
 	background #fff
-	padding 25px
+	padding 25px 15px 25px 25px
 	.side_right_fixed
 		padding-top 30px
 
@@ -430,6 +448,8 @@ section.main
 			margin 0 auto
 			text-align center
 			color ctextlight
+
+
 
 .side
 	min-width 270px
@@ -466,7 +486,7 @@ article.page
 	min-width 900px
 	max-width 1000px
 	background #fff
-	box-shadow -4px 0 25px rgba(49,68,93,0.23)
+	box-shadow -4px 10px 30px rgba(cl1,0.25)
 	box-sizing border-box
 	transition width .4s ease, max-width .4s ease, transform .5s ease, opacity .5s ease
 	will-change width, max-width
@@ -546,16 +566,23 @@ article.page
 	padding 23px 30px 0
 	box-sizing border-box
 	z-index 100
-	// border-bottom 1px solid cbdlight
-	box-shadow 0 2px 11px -7px #000
+	box-shadow 0 6px 5px -7px rgba(cl1,0.3)
+	transition box-shadow .2s
+
 	&.clean
 		border-bottom none
 		box-shadow none
 		& + .page_content
 			padding-top 10px
+
 	&.header_forward
 		z-index 2100
 		background transparent
+
+	&.shadow
+		box-shadow 0 6px 17px -7px rgba(cl1,0.2)
+		transition box-shadow .5s
+
 	h1
 		display inline-block
 		margin 0 30px 0 0
@@ -636,6 +663,19 @@ article.page
 		display inline-block
 		vertical-align 4px
 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	.page_header
+		box-shadow 0 6px 7px -7px rgba(cl1,0.3)
+		&.shadow
+			box-shadow 0 8px 20px -7px rgba(cl1,0.2)
+
+	_::-webkit-full-page-media, _:future, :root  .page_header
+		box-shadow 0 6px 5px -7px rgba(cl1,0.3)
+		&.shadow
+			box-shadow 0 6px 17px -7px rgba(cl1,0.2)
+
+
+
 // контент слоя
 .page_content
 	position absolute
@@ -680,12 +720,11 @@ article.page
 
 .side_title
 	text-transform uppercase
-	font-weight 400
+	font-weight 600
 	text-transform uppercase
 	color ctextlight
 	margin 0 0 25px
-	font-size fzn - 3px
-	letter-spacing .5px
+	font-size fzn - 2px
 
 .side_block
 	margin 20px 0
@@ -761,7 +800,7 @@ article.page
 // виджет
 .widget_block
 	background #fff
-	box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
+	box-shadow 0px 2px 4px -2px rgba(0,0,0,0.3)
 	padding 20px
 	box-sizing border-box
 	margin-bottom 20px
@@ -786,7 +825,7 @@ article.page
 	background cbgsky
 	padding 20px
 	border 1px solid cbdlightsky
-	box-shadow 0px 4px 8px 0px rgba(0,0,0,0.07)
+	box-shadow 0px 9px 6px -5px rgba(0,0,0,0.05)
 	margin-bottom 20px
 
 .border_block
@@ -795,8 +834,7 @@ article.page
 	margin-bottom 20px
 
 // уведомления
-.notices
-	margin-bottom 25px
+
 .notice_block
 	font-size fzn - 2px
 	padding 15px
@@ -847,6 +885,9 @@ article.page
 		margin 0 0 10px
 		&:last-child
 			margin-bottom 0
+
+.notice_sep
+	height 25px
 
 
 
@@ -943,7 +984,7 @@ article.page
 
 	.balance
 		.value
-			font-size fzn + 12px
+			font-size 30px
 			text-decoration none
 			color ctext
 
@@ -1096,11 +1137,20 @@ article.page
 			right 50px
 
 // ------------------- панель с действиями над списком -------------------
-.list_panel
+.title_panel
 	padding 0 0 25px
 	clearfix()
-	.list_panel_actions
+
+	h1
+		display inline-block
+		margin-bottom 0
+	.title_buttons
+		vertical-align 4px
+		display inline-block
+		margin-left 35px
+	.title_actions
 		float right
+		margin-top 7px
 		.action_item
 			margin-left 20px
 			display inline-block
@@ -1116,7 +1166,7 @@ article.page
 
 .timeline
 	font-size fzn - 3px
-	max-height 60vh
+	max-height 70vh
 	overflow auto
 	margin -15px -20px -20px
 	padding 20px
@@ -1164,6 +1214,7 @@ article.page
 	.line_block_item
 		padding 0 0 20px 28px
 		line-height 1.4
+		word-break break-all
 		&:before
 			content ''
 			width 1px
@@ -1265,9 +1316,11 @@ article.page
 		text-transform uppercase
 
 	.company_item_info
-		font-size fzn - 4px
+		font-size fzn - 3px
 		.form_group
-			margin-bottom 3px
+			margin-bottom 5px
+		.property_label
+			text-align right
 
 // блоки слоя
 
@@ -1323,13 +1376,24 @@ article.page
 			text-align center
 			margin 0
 			color ctextlight
+
 .contragent_money
+	overflow hidden
+	float right
+	margin 5px 0 0
 	.item
 		display inline-block
-		margin 0 20px 0 0
+		margin 0 0 0 20px
+		&:first-child
+			margin-left 0
+		.values
+			display inline-block
+			vertical-align top
+			margin 0 0 4px
 		.value
 			font-size fzn + 2px
 			margin 0 5px
+			display block
 
 
 
@@ -1350,6 +1414,7 @@ article.page
 		display inline-block
 		overflow ellipsis
 		max-width 330px
+		min-width 142px
 		float left
 	.account_num
 		color ctextlight
@@ -1490,9 +1555,26 @@ article.page
 		margin-right 5px
 
 .cashflow_widget
-	display flex
-	flex-wrap nowrap
-	justify-content space-around
+	margin-bottom 30px
+	&.light_block
+		.list
+			margin 20px -20px -20px
+			padding 20px
+			background #fff
+			border-top 1px solid cseparator
+			justify-content space-between
+	.list
+		display flex
+		flex-wrap nowrap
+		justify-content space-around
+	.cashflow_widget_title
+		strong
+			font-weight 400
+	.cashflow_filter
+		padding 2px 0 0
+		float right
+		font-size fzn - 2px
+		color ctextlight
 	.name
 		font-size fzn - 3px
 		color ctextlight
@@ -1515,13 +1597,13 @@ article.page
 .dashboard_transaction
 	.tabs_content
 		.table_list
-			margin -10px -20px -20px
+			margin -10px -20px -21px
 			width auto
 			.table_list_header
 				background #fff
 
 
-// поиск в выпадушке
+// поиск в выпадушке MagicSearch
 .drop-search
 	max-width 600px
 	min-width 400px
@@ -1779,6 +1861,9 @@ article.page
 			font-size fzn
 		a
 			font-size fzn - 4px
+		.small_text
+			font-size fzn - 4px
+			padding 3px 0 0
 	.status
 		color ctextsuccess
 		font-weight normal
@@ -1889,13 +1974,17 @@ article.page
 	overflow hidden
 	.price
 		float right
-		font-size 32px
+		font-size 27px
 		font-weight normal
 		text-align right
 		padding 10px 0
+
 		div
 			margin 0
 			line-height 0
+		.price_free
+			font-size 20px
+
 		a
 			font-size fzn - 4px
 			text-decoration none
@@ -1956,3 +2045,18 @@ article.page
 				color ctexterror
 				&:after
 					content '▼'
+
+
+// список кодов валют в дропе
+.drop_code_currency_list
+	.drop-title
+		font-style normal
+	.code
+		display inline-block
+		vertical-align top
+		color ctextlight
+		width 60px
+	.value
+		display inline-block
+		vertical-align top
+		max-width calc(100% - 65px)

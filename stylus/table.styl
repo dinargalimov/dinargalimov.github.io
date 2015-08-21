@@ -46,8 +46,8 @@
 		&.name_search
 
 			input.input_search
-				width 150px
-				min-width 150px
+				width 144px
+				min-width 144px
 				max-width 100%
 				box-sizing border-box
 				margin -7px 0 -5px
@@ -115,6 +115,17 @@
 			left -15px
 			top 50%
 			margin-top -4px
+	&.new
+		&:before
+			content ''
+			position absolute
+			width 8px
+			height 8px
+			border-radius 10px
+			background linear-gradient(cl3 + 30%, cl3)
+			left -15px
+			top 50%
+			margin-top -4px
 
 	// строка при наведении
 	&:hover
@@ -132,8 +143,10 @@
 		cursor pointer
 
 	&.row_title
-		background cbghighlight!important
+		background cbgsky!important
 		border-bottom none!important
+		border-top 1px solid cbdlightsky
+		margin-top -1px
 		font-weight normal
 		.table_list_cell
 			float none
@@ -190,6 +203,14 @@
 				cursor pointer
 				.name_title
 					color cl2
+
+		&.icon-warning
+			padding-right 30px
+			&:before
+				color ctextwarning
+				position absolute
+				right 5px
+				top 17px
 
 	&.default
 		width 110px
@@ -282,7 +303,7 @@
 				color clinklight!important
 	.table_list_row
 		background none
-		border-bottom 1px solid cseparator
+		// border-bottom 1px dotted cbdlightsky
 		&:hover
 			background cbgsky + 40%
 		&.row_checked
@@ -317,6 +338,11 @@
 		box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
 		margin-bottom 2px
 		border none
+		transition background .2s
+		&.row_link:hover
+			background cbgsky + 30%
+			.name, .name_title
+				color cl2
 
 
 
@@ -374,6 +400,7 @@
 		margin 0 auto
 		color ctextlight
 		text-align center
+		font-size fzn - 2px
 
 // .table_list_more
 // 	padding-left 15px
@@ -385,7 +412,6 @@
 		width 30%
 	.action
 		width 55px
-		padding-right 0
 
 
 	// список людей с ролями
@@ -515,3 +541,43 @@
 	.invite
 		text-align left
 		width 48%
+
+// список новостей в админке для дашборда
+.news_dashboard_list
+	.name
+		font-weight normal
+		color clink
+	.status
+		width 16%
+	.people
+		width 20%
+		min-width 170px
+	.read
+		width 15%
+		min-width 100px
+	.date_send
+		font-size fzn - 3px
+		width 15%
+		min-width 120px
+
+// список новостей в админке для дашборда
+.news_email_list
+	.name
+		font-weight normal
+		color clink
+	.status
+		width 18%
+		min-width 155px
+	.people
+		width 18%
+		min-width 170px
+	.read
+		width 10%
+		min-width 100px
+	.send
+		width 10%
+		min-width 90px
+	.date_send
+		font-size fzn - 3px
+		width 13%
+		min-width 120px

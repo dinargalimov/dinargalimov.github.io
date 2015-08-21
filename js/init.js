@@ -60,7 +60,7 @@ function init(){
 
 
 
-    $("select,.select_inline").filter(function(){
+    $("select, .select, .select_inline").filter(function(){
     	return !$(this).hasClass('select_multi');
     }).multipleSelect({
     	selectAll: false,
@@ -161,7 +161,29 @@ function init(){
 	});
 
 
+	$('section.main').scroll(function() {
+	    var scroll = $('section.main').scrollTop();
+	    if (scroll >= 30) {
+	        $("header").addClass("shadow");
+	    }
+	    else {
+	    	$("header").removeClass("shadow");
+	    }
+	});
+
+	$('.page_content').scroll(function() {
+	    var scroll = $('.page_content').scrollTop();
+	    if (scroll >= 30) {
+	        $(".page_header").addClass("shadow");
+	    }
+	    else {
+	    	$(".page_header").removeClass("shadow");
+	    }
+	});
+
+
 
 }
+
 
 

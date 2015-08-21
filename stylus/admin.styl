@@ -13,17 +13,24 @@
 @import 'registration.styl'
 
 header
+	background desaturate(cl1,30%) + 5%
 	left 0
+	color #fff
 section.main
 	left 0
 
-.header_profile_name
-	.avatar
-		width 30px
-		height 30px
-		font-size @width*0.5
-		margin-top -2px
-		margin-right 5px
+.header_profile
+	.header_profile_name
+		color #fff
+		.avatar
+			width 30px
+			height 30px
+			font-size @width*0.5
+			margin-top -2px
+			margin-right 5px
+	.header_profile_settigs a,
+	.header_profile_logout a
+		color #fff
 
 .profile_progress
 	float right
@@ -33,6 +40,11 @@ section.main
 	font-size fzn - 1px
 	position absolute
 	left 50%
+	color #fff
+	.success_text
+		color cl3 + 30%
+	.error_text
+		color ctexterror + 40%
 
 .header_admin_menu
 	display inline-block
@@ -42,8 +54,9 @@ section.main
 		float left
 		height 100%
 		position relative
+		margin-right 1px
 		a
-			color clink
+			color #fff
 			display block
 			height 100%
 			height 40px
@@ -52,33 +65,57 @@ section.main
 			transition none
 
 			&:hover
-				color cl2
+				background desaturate(cl1,30%) + 15%
 			&:before
 				transition none
 		&.active
-			background cl3
-			text-shadow 0 2px 0 rgba(#000,0.04)
-			&:after
-				top 100%
-				left 50%
-				border solid transparent
-				content " "
-				height 0
-				width 0
-				position absolute
-				pointer-events none
-				border-color rgba(136, 183, 213, 0)
-				border-top-color cl3
-				border-width 7px
-				border-top-width 5px
-				margin-left -7px
+
+			// &:after
+			// 	top 100%
+			// 	left 50%
+			// 	border solid transparent
+			// 	content " "
+			// 	height 0
+			// 	width 0
+			// 	position absolute
+			// 	pointer-events none
+			// 	border-color rgba(136, 183, 213, 0)
+			// 	border-top-color cl3
+			// 	border-width 7px
+			// 	border-top-width 5px
+			// 	margin-left -7px
 			a
-				color #fff
+				background desaturate(cl1,30%) + 15%
 				font-weight normal
 				text-decoration none
 
 
 
+.add_news_dashboard, .add_news_email
+	.col.f_left
+		width 50%
+	.col.f_right
+		width 45%
+		box-sizing border-box
 
+	.who_send
+		input[type='number']
+			width 50px
+			text-align center
+			padding-right 2px
+			margin-top -5px
+	.test_send
+		margin-top 80px
+		.title
+			font-size fzn - 2px
+			margin 0 0 10px
+			color ctextlight
+.add_news_dashboard
+	.who_send
+		height 173px
 
-
+.add_news_email
+	textarea
+		min-height 175px
+	.test_send
+		margin-top 20px

@@ -31,21 +31,32 @@
 	<div class="page_content ">
 		<form class="form">
 
-			<div class="form_group">
-				<div class="column four property_label">Выписка по счету:</div>
-				<div class="column eight property_value">
-					<select class="select_inline" data-placeholder="выбрать">
-						<option value="t1" selected>Зарплатный счет (***2394)</option>
-						<option value="t2">Кредитный счет (***0389)</option>
-						<option value="t3">Валютный счет (***0950)</option>
-					</select>
+			<div class="form_group form_horizontal">
+				<div class="column three property_label">Выписка по счету:</div>
+				<div class="column nine property_value">
+					<div class="select drop_account_list" data-placeholder="выбрать">
+						<div value="t1" selected>
+
+							<span class="account_value">203 597,25 <span class="cur ruble"><span>р.</span></span></span>
+							<span class="account_name">Расчетный счет</span>
+
+							<span class="account_num">40101234560000000000</span>
+						</div>
+						<div value="t2">
+
+							<span class="account_value">203 597,25 <span class="cur ruble"><span>р.</span></span></span>
+							<span class="account_name">Расчетный счет</span>
+
+							<span class="account_num">40101234560000000000</span>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="form_group">
-				<div class="column four property_label">Период:</div>
-				<div class="column eight property_value">
-					<select class="select_inline" data-placeholder="выбрать">
+			<div class="form_group form_horizontal m_bot_25">
+				<div class="column three property_label">Период:</div>
+				<div class="column nine property_value">
+					<select class="select" data-placeholder="выбрать">
 						<option value="d1" selected>за текущий день</option>
 						<option value="d2">за текущую неделю</option>
 						<option value="d3">за месяц</option>
@@ -54,15 +65,15 @@
 					</select>
 
 					<div class="filter_date_value">
-						<input type="text" name="" id="" class="datetimepicker filter_date_input small date_from">
-						<input type="text" name="" id="" class="datetimepicker filter_date_input small date_to">
+						<input type="text" name="" id="" class="datetimepicker filter_date_input date_from">
+						<input type="text" name="" id="" class="datetimepicker filter_date_input date_to">
 					</div>
 				</div>
 			</div>
 
 			<div class="form_group form_horizontal_small">
-				<div class="column four property_label">В формате:</div>
-				<div class="column eight property_value">
+				<div class="column three property_label">В формате:</div>
+				<div class="column nine property_value">
 					<div class="switch_group small">
 						<div class="switch_item">
 							<input type="radio" name="12" id="tab1" checked>
@@ -81,27 +92,29 @@
 			</div>
 
 			<div class="form_group">
-				<div class="column four property_label">&nbsp;</div>
-				<div class="column eight property_value">
+				<div class="column three property_label">&nbsp;</div>
+				<div class="column nine property_value">
 					<input type="checkbox" name="a" id="a1" class="input_check">
 					<label for="a1" class="label_check"><i class="icon"></i><span>Выписка с приложениями</span></label>
 				</div>
 			</div>
 			<div class="form_group">
-				<div class="column four property_label">&nbsp;</div>
-				<div class="column eight property_value">
+				<div class="column three property_label">&nbsp;</div>
+				<div class="column nine property_value">
 					<input type="checkbox" name="a2" id="a21" class="input_check">
 					<label for="a21" class="label_check"><i class="icon"></i><span>Отправить выписку на электронную почту</span></label>
 
 					<!-- форма отправки -->
-					<!-- <div class="m_top_15"><input type="email" name="" id="" placeholder="E-mail" class="small" size="30"></div>
-					<div class="m_top_10"><textarea name="" id="" placeholder="Введите текст сообщения" cols="30" class="small js_autosize textarea_middle"></textarea></div> -->
+					<div class="w80">
+						<div class="m_top_15"><input type="email" name="" id="" placeholder="E-mail" class="small w100"></div>
+						<div class="m_top_10"><textarea name="" id="" placeholder="Введите текст сообщения" cols="30" class="small js_autosize textarea_middle w100"></textarea></div>
+					</div>
 				</div>
 			</div>
 
 			<div class="form_buttons">
-				<div class="column four property_label">&nbsp;</div>
-				<div class="column eight property_value">
+				<div class="column three property_label">&nbsp;</div>
+				<div class="column nine property_value">
 					<button class="button">Отправить</button>
 					<button class="button_clean">Отменить</button>
 				</div>

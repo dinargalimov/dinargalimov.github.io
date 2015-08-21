@@ -35,7 +35,6 @@ button
 	box-shadow inset 0px -2px 0px 0px rgba(#000,0.15), inset 0px -3px 0px 0px rgba(#fff,0.1)
 	text-shadow 0 2px 0 rgba(#000,0.04)
 	transition .2s
-	position relative
 	z-index 1
 	overflow hidden
 	-webkit-appearance none
@@ -48,6 +47,9 @@ button
 		&:before
 			transform scale3d(1,1,1)
 			opacity 1
+	&:active
+		opacity .9
+		transition 0s
 
 	&.second
 		background-color cl3
@@ -217,6 +219,7 @@ button
 		border-radius 0
 		margin 0
 		float left
+		border-right 1px solid rgba(#fff,0.2)
 		&:after
 			content ''
 			position absolute
@@ -231,6 +234,7 @@ button
 		&:last-of-type
 			border-top-right-radius brbut
 			border-bottom-right-radius brbut
+			border-right none
 			&:after
 				display none
 		&.clean

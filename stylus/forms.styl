@@ -14,6 +14,7 @@ input[type="email"],
 input[type="tel"],
 input[type="time"],
 input[type="date"],
+input[type="number"],
 textarea
 	height 40px
 	border 1px solid cbd
@@ -62,6 +63,10 @@ textarea
 
 	&.valid, &.success
 		border-color csucces
+	&.xsmall
+		height 26px
+		padding 0 6px
+		font-size fzn - 2px
 	&.small
 		height 34px
 		padding 0 10px
@@ -103,6 +108,18 @@ textarea
 		min-height 125px
 		max-height 209px
 
+.editor-disable
+	color ctextdis
+	padding 9px 15px 8px
+	background #f5f5f5
+	font-family ffn
+	font-size fzn - 1px
+	font-weight fwn
+	height 200px
+	overflow auto
+	border 1px solid cbd
+	border-radius brform
+
 
 input[type='search'].input_search
 	border-radius 30px
@@ -110,7 +127,7 @@ input[type='search'].input_search
 	background-repeat no-repeat
 	background-position 10px center
 	background-size 16px auto
-	padding-left 26px
+	padding-left 30px
 	transition .2s
 	&:focus
 		background-position -5px center
@@ -139,6 +156,7 @@ input.input_loading
 
 label.label_check
 	display inline-block
+	min-width 14px
 
 input[type='radio'], input[type='checkbox']
 	display none!important
@@ -163,15 +181,19 @@ input[type='radio'], input[type='checkbox']
 			position relative
 			cursor pointer
 			transition box-shadow .1s
+			margin-right -14px
 			&.big
 				width 18px
 				height 18px
+				margin-right -18px
+				& + span
+					margin-left 25px
 
 			&:active
 				background #fafafa
 				box-shadow inset 0 0 0 1px cbd - 10%, inset 0 0 2px 0 rgba(#000,0.4)
 			& + span
-				margin-left 10px
+				margin-left 21px
 				display inline-block
 				vertical-align top
 	&:checked
@@ -193,7 +215,7 @@ input[type='radio'], input[type='checkbox']
 		&:checked
 			+ label.label_check
 				.icon
-					box-shadow inset 0 0 10px 10px ctextdis
+					box-shadow inset 0 0 0 5px ctextdis
 					&:after
 						color #fff
 
@@ -321,6 +343,7 @@ input.search_left
 		padding-top 5px
 
 
+// заголовки
 .legend
 	border-bottom 2px solid cbdlight
 	text-transform uppercase
@@ -331,6 +354,18 @@ input.search_left
 		padding 0 0 6px
 		border-bottom 2px solid cl2
 		margin-bottom -2px
+.legend_small
+	border-bottom 1px solid cbdlight
+	font-weight normal
+	margin-bottom 30px
+	font-size fzn - 2px
+	color ctextlight
+	height 10px
+	span
+		display inline-block
+		padding 0 10px 0 0
+		background #fff
+		height 20px
 
 // блок кнопок в конце формы
 .form_buttons
@@ -714,7 +749,7 @@ input.search_left
 
 .file_upload_list
 	.file_upload_item
-		padding 6px 0
+		padding 0 0 12px
 		font-size fzn - 2px
 		overflow hidden
 		&:last-child
@@ -743,7 +778,7 @@ input.search_left
 				color ctexterror
 		.file_name
 			text-decoration none
-			color ctext
+			color clink
 			max-width calc(100% - 16px - 20px)
 			overflow ellipsis
 			display inline-block
@@ -810,6 +845,12 @@ input.search_left
 	width 20%
 	margin 20px auto
 	background cbd
+.form_sep_full
+	display block
+	height 1px
+	width 100%
+	margin 20px auto
+	background cbdlight
 
 
 // фильтр по дате

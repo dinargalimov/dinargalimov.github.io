@@ -18,7 +18,7 @@
 <include data-file="header.html"></include>
 <include data-file="transaction/transaction.html section.main"></include>
 
-<article class="page page_small open">
+<article class="page open">
 
 	<!-- шапка слоя -->
 	<div class="page_header">
@@ -35,74 +35,65 @@
 	<!-- контент слоя  -->
 	<div class="page_content">
 
+		<div class="w80">
 
-				<div class="transaction_view_info">
-					<div class="transaction_view_info_money">
-						11 000,00 <span class="cur ruble"><span>р.</span></span>
-					</div>
-					<div class="transaction_view_info_account">
-						<div class="light_text">со счета:</div>
-						Расчетный счет (***012345)
-					</div>
+			<div class="transaction_view_info">
+				<div class="transaction_view_info_money">
+					11 000,00 <span class="cur ruble"><span>р.</span></span>
+				</div>
+				<div class="transaction_view_info_account">
+					<div class="light_text">со счета:</div>
+					Расчетный счет (***012345)
+				</div>
+			</div>
+
+			<!-- <div class="info info_error">
+				Были внесены изменения в реквизиты получателя. Для обновления информации в платежном поручении переведите документ в редактирование.
+			</div> -->
+
+			<div class="light_block transaction_view_contragent">
+
+
+
+				<div class="name">
+					ООО «Цветочная лавка Ромашка»
+					<span class="m_client" title="Клиент Modulbank"></span>
+
+					<div class="transaction_status_stamp">В обработке <span class="date">18.06.2015</span></div>
+					<!-- <div class="transaction_status_stamp success">Исполнен <span class="date">18.06.2015</span></div> -->
+					<!-- <div class="transaction_status_stamp error">Отклонен банком <span class="date">18.06.2015</span></div> -->
+					<!-- <div class="transaction_status_stamp warning">Отложен <span class="date">18.06.2015</span></div> -->
+				</div>
+				<div class="form_group_list">
+					<div class="column one property_label a_left">ИНН:</div>
+					<div class="column nine property_value">22341497819132</div>
+				</div>
+				<div class="form_group_list">
+					<div class="column one property_label a_left">КПП:</div>
+					<div class="column nine property_value">22341497819132</div>
+				</div>
+				<div class="form_group_list">
+					<div class="column one property_label a_left">Счет:</div>
+					<div class="column nine property_value">40802810970010000395</div>
+				</div>
+				<div class="form_group_list">
+					<div class="column one property_label a_left">Банк:</div>
+					<div class="column nine property_value">Альфа-банк</div>
+				</div>
+				<div class="form_group_list">
+					<div class="column one property_label a_left">БИК:</div>
+					<div class="column nine property_value">121983712</div>
 				</div>
 
-				<div class="info info_error">
-					Были внесены изменения в реквизиты получателя. Для обновления информации в платежном поручении переведите документ в редактирование.
+				<div class="transaction_view_contragent_appointment">
+					<p>Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11000-00</p>
 				</div>
+			</div>
+			<div class="form_buttons">
+				<button class="button middle second icon-sign">Подписать документы</button>
+			</div>
 
-				<div class="light_block transaction_view_contragent">
-
-
-
-					<div class="name">
-						ООО «Цветочная лавка Ромашка»
-						<span class="m_client" title="Клиент Modulbank"></span>
-
-						<div class="transaction_status_stamp">В обработке <span class="date">18.06.2015</span></div>
-						<!-- <div class="transaction_status_stamp success">Исполнен <span class="date">18.06.2015</span></div> -->
-						<!-- <div class="transaction_status_stamp error">Отклонен банком <span class="date">18.06.2015</span></div> -->
-						<!-- <div class="transaction_status_stamp warning">Отложен <span class="date">18.06.2015</span></div> -->
-					</div>
-					<div class="form_group_list">
-						<div class="column one property_label a_left">ИНН:</div>
-						<div class="column nine property_value">22341497819132</div>
-					</div>
-					<div class="form_group_list">
-						<div class="column one property_label a_left">КПП:</div>
-						<div class="column nine property_value">22341497819132</div>
-					</div>
-					<div class="form_group_list">
-						<div class="column one property_label a_left">Счет:</div>
-						<div class="column nine property_value">40802810970010000395</div>
-					</div>
-					<div class="form_group_list">
-						<div class="column one property_label a_left">Банк:</div>
-						<div class="column nine property_value">Альфа-банк</div>
-					</div>
-					<div class="form_group_list">
-						<div class="column one property_label a_left">БИК:</div>
-						<div class="column nine property_value">121983712</div>
-					</div>
-
-					<div class="transaction_view_contragent_appointment">
-						<p>Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11000-00</p>
-					</div>
-				</div>
-				<div class="form_buttons">
-					<div class="f_right m_top_10">
-						<a class="button_clean">Редактировать</a>
-						<a class="button_clean_dropdown icon-down-small drop-target" data-position="bottom right"></a>
-						<div class="drop-content" >
-							<ul class="drop-menu">
-								<li><button>Удалить</button></li>
-							</ul>
-			            </div>
-					</div>
-
-					<button class="button middle second icon-sign">Подписать</button>
-					<button class="button_clean icon-clock">Отложить</button>
-
-				</div>
+		</div>
 
 
 	</div>
