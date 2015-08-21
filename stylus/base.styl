@@ -240,6 +240,8 @@ h3
 
 
 
+
+
 // денежный поток
 .cur
 	display inline-block
@@ -247,23 +249,26 @@ h3
 	// color cruble
 	position relative
 	line-height 1
+	font-family 'Ruble'
 	span
-		// width 0
-		// color transparent
-		// display inline-block
-		// user-select none
+		width 0
+		color transparent
+		display inline-block
+		user-select none
 
 	&:after
 		// content 'Ҍ'
 		// display inline-block
 		// transform scale( 1, -1)
 		// vertical-align -1px
-		content: '–';
-		position: absolute;
-		bottom: 0%;
-		left: 0;
-		line-height .92
-		font-size smaller
+
+		// content: '–';
+		// position: absolute;
+		// bottom: 0%;
+		// left: 0;
+		// line-height .92
+		// font-size smaller
+		content 'Р'
 
 
 .dollar

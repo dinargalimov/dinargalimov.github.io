@@ -1,5 +1,29 @@
 @import url("https://fontastic.s3.amazonaws.com/iSooys8TZ8vPkLZDaZHNw8/icons.css");
 @font-face {
+  font-family: 'Ruble';
+  src: url("../fonts/modul-ruble-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ruble';
+  src: url("../fonts/modul-ruble-Light.woff") format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ruble';
+  src: url("../fonts/modul-ruble-Medium.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ruble';
+  src: url("../fonts/modul-ruble-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Roboto';
   src: local('Roboto Regular'), local('Roboto-Regular'), url("../fonts/roboto/roboto-regular.woff") format('woff');
   font-weight: normal;
@@ -412,14 +436,19 @@ a img {
 .ruble {
   position: relative;
   line-height: 1;
+  font-family: 'Ruble';
+}
+.ruble span {
+  width: 0;
+  color: transparent;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .ruble:after {
-  content: '–';
-  position: absolute;
-  bottom: 0%;
-  left: 0;
-  line-height: 0.92;
-  font-size: smaller;
+  content: 'Р';
 }
 .money_income {
   color: #679e1d;
