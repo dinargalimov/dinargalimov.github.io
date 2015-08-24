@@ -441,22 +441,8 @@ a img {
 .cur {
   display: inline-block;
 }
-.ruble {
-  position: relative;
-  line-height: 1;
-}
 .ruble span {
-  width: 0;
-  color: transparent;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.ruble:after {
   font-family: 'Ruble';
-  content: 'Р';
 }
 .money_income {
   color: #679e1d;
