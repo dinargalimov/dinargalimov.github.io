@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/ruble/PTRouble-Light.woff") format('woff');
+  src: url("../fonts/ruble/RUBSN.otf") format('opentype');
   font-weight: 300;
   font-style: normal;
 }
@@ -453,8 +453,8 @@ a img {
   user-select: none;
 }
 .ruble:after {
-  font-family: 'Open Sans';
-  content: '₽';
+  font-family: 'Ruble';
+  content: 'Р';
 }
 .money_income {
   color: #679e1d;
