@@ -1,25 +1,25 @@
 @import url("https://fontastic.s3.amazonaws.com/iSooys8TZ8vPkLZDaZHNw8/icons.css");
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/modul-ruble-Regular.woff") format('woff');
+  src: url("../fonts/ruble/ALSRuble-Regular.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/modul-ruble-Light.woff") format('woff');
+  src: url("../fonts/ruble/ALSRuble-Light.woff") format('woff');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/modul-ruble-Medium.woff") format('woff');
+  src: url("../fonts/ruble/ALSRuble-Medium.woff") format('woff');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/modul-ruble-Bold.woff") format('woff');
+  src: url("../fonts/ruble/ALSRuble-Bold.woff") format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -448,7 +448,7 @@ a img {
   user-select: none;
 }
 .ruble:after {
-  content: 'Р';
+  content: 'a';
 }
 .money_income {
   color: #679e1d;
