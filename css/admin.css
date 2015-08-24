@@ -436,7 +436,6 @@ a img {
 .ruble {
   position: relative;
   line-height: 1;
-  font-family: 'Ruble';
 }
 .ruble span {
   width: 0;
@@ -448,6 +447,7 @@ a img {
   user-select: none;
 }
 .ruble:after {
+  font-family: 'Ruble';
   content: 'Р';
 }
 .money_income {
