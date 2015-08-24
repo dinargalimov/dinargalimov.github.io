@@ -3,13 +3,13 @@
 @import url("https://fontastic.s3.amazonaws.com/iSooys8TZ8vPkLZDaZHNw8/icons.css");
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/ruble/ALSRuble-Regular.woff") format('woff');
+  src: url("../fonts/ruble/PTRouble-Regular.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ruble';
-  src: url("../fonts/ruble/PTRouble-Regular.woff") format('woff');
+  src: url("../fonts/ruble/PTRouble-Light.woff") format('woff');
   font-weight: 300;
   font-style: normal;
 }
