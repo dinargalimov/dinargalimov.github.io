@@ -450,7 +450,7 @@ a img {
   user-select: none;
 }
 .ruble:after {
-  content: 'a';
+  content: 'Р';
 }
 .money_income {
   color: #679e1d;
