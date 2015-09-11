@@ -1,5 +1,6 @@
 var root = document.getElementsByTagName('script')[0].parentElement;
 var arrayOfJS = [
+	'rad-select',
 	'include',
 	'jquery.datetimepicker',
 	'jquery.textarea_autosize',
@@ -9,7 +10,6 @@ var arrayOfJS = [
 	'drop',
 	'bootstrap.tooltip',
 	'equalize',
-	'nv.d3',
 	'stream_layers'
 ];
 

@@ -34,7 +34,7 @@
 					<li><a href="">Уведомления</a></li>
 					<li><a href="">Электронная подпись</a></li>
 					<li class="title">Настройки компании</li>
-					<li class="active"><a href="">Профиль компании</a></li>
+					<li class="active"><a href="">Реквизиты компании</a></li>
 					<li><a href="">Представители</a></li>
 					<li><a href="">Тарифы и услуги</a></li>
 				</ul>
@@ -43,14 +43,28 @@
 				<div class="info">
 					<p>Ниже приведены данные по вашей текущей компании. Сменить компанию можно в выпадающем списке - при этом произойдет смена вашей текущей компании и обновиться вся информация на экране. Вы также можете <a>подключить</a> новую компанию. </p>
 				</div>
+				<!-- <div class="account_details_actions">
+					<a href="#" class="icon-print"></a>
+					<a href="#" class="icon-save"></a>
+					<a href="#" class="icon-mail-sent"></a>
+				</div> -->
 				<div class="form_group form_horizontal">
 					<div class="property_label col three a_right">Наименование:</div>
 					<div class="property_value col nine">
-						<select class="ws_n" data-placeholder="Выбрать компанию">
-							<option value="aa" selected>Общество с ограниченной ответственностью “Уфаоргсинтезнефтепереработка”</option>
-							<option value="vb">Общество с ограниченной ответственностью “Башкирнефтеродукт”</option>
-						</select>
+						<div class="jsRadSelect2 drop_account_list" data-rd-search="false" data-rd-placeholder="Выберите компанию">
+							<span class="jsRadSelect2Options" selected>
+								Общество с ограниченной ответственностью “Уфаоргсинтезнефтепереработка”
+							</span>
+							<span class="jsRadSelect2Options">
+								Общество с ограниченной ответственностью “Башкирнефтеродукт”
+							</span>
+						</div>
+
 					</div>
+				</div>
+				<div class="form_group">
+					<div class="property_label col three a_right">Наименование:</div>
+					<div class="property_value col nine">Башкиргаз</div>
 				</div>
 				<div class="form_group ">
 					<div class="property_label col three a_right">ОГРН:</div>
@@ -64,6 +78,51 @@
 					<div class="property_label col three a_right">КПП:</div>
 					<div class="property_value col nine">1234567890</div>
 				</div>
+
+				<div class="form_group form_horizontal">
+					<div class="property_label col three a_right">р/с №:</div>
+					<div class="property_value col nine">
+						<div class="jsRadSelect2 drop_account_list" data-rd-search="false" data-rd-placeholder="Выберите счет">
+							<span class="jsRadSelect2Options" selected>
+								<span class="account_value">203 597,25 <span class="cur ruble"><span>р.</span></span></span>
+								<span class="account_name">Расчетный счет</span>
+								<span class="account_num">40101234560000000000</span>
+							</span>
+							<span class="jsRadSelect2Options">
+								<span class="account_value">23 000,00 <span class="cur dollar"><span>$</span></span></span>
+								<span class="account_name">Расчетный счет липовый</span>
+								<span class="account_num">40101234560000000000</span>
+							</span>
+							<span class="jsRadSelect2SelectedItem">
+								40101234560000000000
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="form_group ">
+					<div class="property_label col three a_right">Банк:</div>
+					<div class="property_value col nine">Открытое акционерное общество Коммерческий Банк "Региональный кредит"</div>
+				</div>
+				<div class="form_group ">
+					<div class="property_label col three a_right">БИК:</div>
+					<div class="property_value col nine">044583001</div>
+				</div>
+				<div class="form_group ">
+					<div class="property_label col three a_right">К/с №:</div>
+					<div class="property_value col nine">30101810800000000751 в Отделении по Костромской области Главного управления Центрального банка Российской Федерации по Центральному федеральному округу</div>
+				</div>
+
+
+				<div class="form_buttons">
+					<div class="property_label col three a_right">&nbsp;</div>
+					<div class="property_value col nine">
+						<a class="button light small icon-print">Напечатать</a>
+						<a class="button light small icon-save">Скачать</a>
+						<a class="button light small icon-mail-sent">Отправить</a>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</div>

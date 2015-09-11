@@ -47,6 +47,8 @@ textarea
 		&:-ms-input-placeholder
 			color ctextdis!important
 
+
+	// валидация
 	&.error
 		border-color cerror
 		// animation error-border-flash .7s both
@@ -56,13 +58,13 @@ textarea
 			// color ctexterror
 		&:-ms-input-placeholder
 			// color ctexterror!important
-		&:focus
-			border-color cl2
-
-
+		// &:focus
+		// 	border-color cl2
 
 	&.valid, &.success
 		border-color csucces
+
+	// размеры
 	&.xsmall
 		height 26px
 		padding 0 6px
@@ -76,6 +78,7 @@ textarea
 		padding 0 10px
 		font-size fzn + 2px
 
+	// стиль 2
 	&.second
 		border-color transparent
 		box-shadow 0 1px 1px rgba(0,0,0,0.12)
@@ -252,6 +255,12 @@ input[type='checkbox']
 				box-shadow inset 0 0 10px 10px cl2
 				&:after
 					text-shadow 0 1px 0 rgba(#000,0.1)
+	&:disabled
+		&:checked
+			+ label.label_check
+				.icon
+					box-shadow inset 0 0 0 15px ctextdis
+
 
 // --------------------
 
@@ -389,30 +398,36 @@ input.search_left
 
 // -------------- поле с добавление иконки/текста перед полем --------------
 .input_group
-	display table
+	display flex
 	vertical-align middle
 	input[type="text"],
 	input[type="tel"],
 	input[type="email"],
 	input[type="password"],
 	input[type="number"]
-		display table-cell
 		width 100%
 		& ~ .input_group_addon
 			border 1px solid cbd
 			border-left none
 
 	.ms-parent, .drop-input
-		display table
+	// 	display table
 		width 100%
-		table-layout fixed
+		flex 1 0
+	// 	table-layout fixed
 
-
+rad-select2
+	display none
+.input_group_button
+	margin-left -1px
+	flex 0 0 auto
+	order 3
+	&:first-of-type
+		border-radius 0 brbut brbut 0
 .input_group_addon
-	display table-cell
-	width 45px
+	flex 0 0 auto
+	min-width 45px
 	height 40px
-	min-width 40px
 	line-height 38px
 	border 1px solid cbd
 	border-right none
@@ -465,6 +480,15 @@ input.search_left
 		// 	color cl2
 		// &.error ~ .input_title
 		// 	color ctextlight
+
+	.input_group_title_button_right
+		position absolute
+		&.small
+			right 2px
+			top 21px
+		&.middle
+			right 0px
+			top 18px
 
 
 // переключатели
@@ -903,3 +927,13 @@ input.date_to
 	bottom 0
 	right 0
 	left 0
+
+
+// визивиг
+.mce-tinymce
+	&.error
+		.mce-edit-area
+			border 1px solid cerror
+	&.success
+		.mce-edit-area
+			border 1px solid csucces

@@ -1,10 +1,11 @@
 aside
-	transform translateX(-95px)
-	z-index 1500
+	transform translateX(-65px)
+	z-index 1000
 	transition transform ease .3s 0s
 	&:hover
-		transition transform ease .3s .3s
+		transition transform ease .3s .3s, z-index .3s .3s
 		transform translateX(0)
+		z-index 1500
 		.aside_tablet_overlay
 			opacity 0
 			visibility hidden

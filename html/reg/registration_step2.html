@@ -7,26 +7,12 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/registration.css">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
-  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
-  	<script src="js/select.js"></script>
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+  	<script src="js/init.js"></script>
 
 </head>
-<body ng-app="myapp">
+<body>
 
-<script>
-	var module = angular.module('myapp', ['ui.select', 'ngSanitize']);
-	module.controller('selectController',function($scope){
-		$scope.cities=[
-			{name:'Москва'},
-			{name:'Уфа'},
-			{name:'Казань'},
-			{name:'Нижний Новгород'},
-			{name:'Оренбург'},
-			{name:'Омск'},
-		];
-	});
-</script>
 
 <div class="reg">
 	<div class="wrap">

@@ -87,14 +87,16 @@ button
 				color ctextdis
 
 	&.light
-		background-color cbgsky
-		border 1px solid cbglight - 15%
+		background-color #EDFAFF
+		border 1px solid #A9CFDE
 		box-shadow  none
 		color clink
 		text-shadow none!important
 		font-weight 300
+		height 44px
+
 		&:hover
-			background cbgsky + 30%
+			background #F7FDFF
 		&[class*="icon-"]:before
 			color clinklight
 
@@ -170,6 +172,9 @@ button
 		&:before
 			float none
 			margin 0 8px!important
+		&.middle
+			&:before
+				margin 0 11px!important
 
 
 	&.loader

@@ -5,14 +5,14 @@ html, body
 	position relative
 	background cbglight
 	overflow auto
-	min-width 900px
+	min-width 945px
 	animation-name fadeIn
 	animation-duration .8s
 	-webkit-overflow-scrolling touch
 
 aside
 	position absolute
-	width 140px
+	width 110px
 	top 0
 	left 0
 	bottom 0
@@ -49,13 +49,14 @@ aside
 	display block
 	height 40px
 	background cl1 + 5% url(../images/logo_w.svg) no-repeat center center
+	background-size 90% auto
 	text-indent -10000em
 
 header
 	position absolute
 	top 0
 	right 0
-	left 140px
+	left 110px
 	height 40px
 	background saturate(cbglight - 5%, 10%)
 	z-index 900
@@ -165,7 +166,7 @@ header
 	position absolute
 	top 0
 	height 100%
-	left calc(50% - 69px - 49px)
+	left calc(50% - 55px - 49px)
 	a.add
 		display block
 		width 49px
@@ -200,6 +201,7 @@ header
 	top 40px!important
 	left 50%!important
 	transform translateX(-50%) translateX(-23px)!important
+	margin-right -2000px
 
 .header_add_drop.drop-content-inner
 	padding 25px 35px
@@ -266,7 +268,7 @@ header
 	position absolute
 	top 0
 	height 100%
-	left calc(50% - 69px + 1px)
+	left calc(50% - 55px + 1px)
 	a
 		display block
 		height 100%
@@ -346,40 +348,72 @@ header
 
 // меню слева
 .menu
-	margin 20px 0 0
+	margin 10px 0 0
 	li
-
-		margin 0 0 20px
+		margin 0 0 2px
 		box-sizing border-box
+
 		&.active a
-			border-color cl2
+			border-color cl3
 			background cl1 + 10%
 		&.active_parent>a
-			border-color cl2
+			border-color cl3
 			background none
+	// a
+	// 	display block
+	// 	padding 10px 0 10px 7px
+	// 	font-size fzn - 1px
+	// 	color #fff
+	// 	text-decoration none
+	// 	font-weight fwn + 100
+	// 	text-transform uppercase
+	// 	border-left 3px solid transparent
+
+	// 	&:hover
+	// 		background cl1 + 10%
+	// 	&:before
+	// 		margin 0 5px 0 0
+	// 		display inline-block
+	// 		width 20px
+	// 		text-align center
+	// 		font-size 16px
+	// 		vertical-align -2px
+	// 		transition 0
+	// 	&.icon_menu_post
+	// 		&:before
+	// 			font-size 17px
+
+	// 	&.title_submenu
+	// 		&:hover
+	// 			background none
+	// 			cursor default
+
 	a
 		display block
-		padding 10px 0 10px 7px
-		font-size fzn - 1px
+		padding 14px 0
+		font-size fzn - 3px
 		color #fff
 		text-decoration none
 		font-weight fwn + 100
-		text-transform uppercase
 		border-left 3px solid transparent
+		text-align center
 
 		&:hover
 			background cl1 + 10%
 		&:before
-			margin 0 5px 0 0
-			display inline-block
-			width 20px
+			margin 0 0 5px
+			display block
 			text-align center
-			font-size 16px
-			vertical-align -2px
+			font-size 24px
 			transition 0
 		&.icon_menu_post
 			&:before
 				font-size 17px
+
+		&.icon-menu-clients2
+			&:before
+				font-size 38px
+				line-height 28px
 
 		&.title_submenu
 			&:hover
@@ -408,7 +442,7 @@ header
 section.main
 	position absolute
 	top 40px
-	left 140px
+	left 110px
 	right 0
 	bottom 0
 	z-index 10
@@ -424,12 +458,12 @@ section.main
 
 .section_top_area
 	background cbglight
-	padding 25px 15px 25px 25px
+	padding 25px
 	border-bottom 3px solid cseparator
 
 .section_content
 	background #fff
-	padding 25px 15px 25px 25px
+	padding 25px
 	.side_right_fixed
 		padding-top 30px
 
@@ -470,6 +504,8 @@ section.main
 		margin-top -25px
 		padding-top 25px
 		border-left 1px solid cbdlight
+.side_padding
+	padding-left 20px
 
 
 
@@ -494,8 +530,8 @@ article.page
 	transform translateX(200px)
 
 	@media (max-width: 945px)
-		max-width calc(100% - 45px)
-		min-width calc(100% - 45px)
+		// max-width calc(100% - 45px)
+		// min-width calc(100% - 45px)
 		left 45px!important
 		right auto!important
 		position absolute
@@ -904,7 +940,6 @@ article.page
 		font-size fzn - 1px
 	p
 		margin 10px 0
-		color ctextlight
 	[class*='info']
 		margin-left -20px
 		margin-right -20px
@@ -1214,7 +1249,7 @@ article.page
 	.line_block_item
 		padding 0 0 20px 28px
 		line-height 1.4
-		word-break break-all
+		word-break break-word
 		&:before
 			content ''
 			width 1px
@@ -1386,6 +1421,8 @@ article.page
 		margin 0 0 0 20px
 		&:first-child
 			margin-left 0
+		&>.c_light
+			vertical-align middle
 		.values
 			display inline-block
 			vertical-align top
@@ -1568,6 +1605,7 @@ article.page
 		flex-wrap nowrap
 		justify-content space-around
 	.cashflow_widget_title
+		margin -5px 0
 		strong
 			font-weight 400
 	.cashflow_filter
@@ -1583,6 +1621,7 @@ article.page
 		font-size fzn
 		white-space nowrap
 
+
 		@media (min-width:1100px)
 			font-size fzn + 2px
 		@media (min-width:1200px)
@@ -1593,6 +1632,56 @@ article.page
 			font-size fzn + 7px
 		@media (min-width:1600px)
 			font-size fzn + 10px
+
+.cashflow_widget_side
+	margin-bottom 30px
+	// margin-left -10px
+	background cbginfo
+	border-color desaturate(cbginfo - 15%,20%)
+	&.light_block
+		.list
+			margin 20px -20px -20px
+			padding 20px
+			border-top 1px solid desaturate(cbginfo - 15%,20%)
+
+	.cashflow_widget_title
+		margin -5px 0
+		strong
+			font-weight 400
+	.cashflow_filter
+		padding 10px 0 0
+		font-size fzn - 4px
+		color ctextlight
+	.list
+		background-color cbginfo
+	.item
+		margin-bottom 10px
+		overflow hidden
+	.name
+		font-size fzn - 3px
+		color ctextlight
+		padding 4px 0 0
+		display inline-block
+		@media (min-width:1340px)
+			padding-top 7px
+		@media (min-width:1400px)
+			padding-top 7px
+		@media (min-width:1500px)
+			padding-top 10px
+	.value
+		font-size fzn - 2px
+		white-space nowrap
+		float right
+		@media (min-width:1290px)
+			font-size fzn
+		@media (min-width:1380px)
+			font-size fzn + 2px
+		@media (min-width:1420px)
+			font-size fzn + 3px
+		@media (min-width:1520px)
+			font-size fzn + 5px
+
+
 
 .dashboard_transaction
 	.tabs_content
@@ -1867,7 +1956,7 @@ article.page
 	.status
 		color ctextsuccess
 		font-weight normal
-
+		overflow hidden
 .tarif_serv_row
 	padding-top 15px
 	padding-bottom 15px
@@ -1940,7 +2029,6 @@ article.page
 	.more
 		display block
 		margin 0 0 8px
-		text-decoration none
 	.desc
 		color ctextlight
 		margin-bottom 12px
@@ -1958,6 +2046,7 @@ article.page
 		font-weight 600
 		color ctextlight
 		padding-top 5px
+		overflow hidden
 .banner_other_tarif
 	background-image url(../images/banner_other_tarif.png)
 	background-repeat no-repeat
@@ -1977,13 +2066,12 @@ article.page
 		font-size 27px
 		font-weight normal
 		text-align right
-		padding 10px 0
-
+		line-height 18px
 		div
-			margin 0
-			line-height 0
+			margin-top -5px
 		.price_free
 			font-size 20px
+			margin 0
 
 		a
 			font-size fzn - 4px
@@ -1991,7 +2079,7 @@ article.page
 	.tarif_noactiv_info
 		clear both
 		background #fff
-		margin 0 -20px -20px
+		margin 20px -20px -20px
 		padding 20px
 		border-top 1px solid cseparator
 		overflow hidden

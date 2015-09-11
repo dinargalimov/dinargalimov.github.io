@@ -131,11 +131,11 @@ h1
 h2
 	font-size 20px
 	margin 0 0 20px
-	font-weight 400
+	font-weight fwn
 h3
 	font-size 18px
 	margin 0 0 20px
-	font-weight 400
+	font-weight fwn
 
 
 
@@ -254,6 +254,7 @@ h3
 		// display inline-block
 		// user-select none
 		font-family 'Ruble'
+		line-height 1
 
 
 	&:after
@@ -1084,6 +1085,47 @@ for $i in (1..10)
 .w100
 	width 100% !important
 
+.w5px
+	width 5px !important
+.w15px
+	width 15px !important
+.w25px
+	width 25px !important
+.w35px
+	width 35px !important
+.w45px
+	width 45px !important
+.w55px
+	width 55px !important
+.w65px
+	width 65px !important
+.w75px
+	width 75px !important
+.w85px
+	width 85px !important
+.w95px
+	width 95px !important
+.w10px
+	width 10px !important
+.w20px
+	width 20px !important
+.w30px
+	width 30px !important
+.w40px
+	width 40px !important
+.w50px
+	width 50px !important
+.w60px
+	width 60px !important
+.w70px
+	width 70px !important
+.w80px
+	width 80px !important
+.w90px
+	width 90px !important
+.w100px
+	width 100px !important
+
 
 // -------------- шаги визарда --------------------
 .page_wizard
@@ -1307,6 +1349,26 @@ a.icon-info
 		list-style circle
 	.page_header
 		box-shadow none
+	.account_details_actions
+		display none
+	.legend
+		border-bottom none
+		text-transform none
+		font-size 24px
+		span
+			border-bottom none
+	.ms-choice
+		border none
+		box-shadow none
+		padding 0
+		height auto
+		font-weight normal !important
+	.form_horizontal .property_label
+		padding-top 0
+	.print_hide
+		display none!important
+	.ms-drop
+		display none!important
 
 @media print
 	html
@@ -1319,24 +1381,17 @@ a.icon-info
 		min-height 1px!important
 		min-width 1px!important
 		font-family Arial!important
+		font-weight normal !important
 	.printable
 		display block
 	aside, header, section, article, .notifyjs-corner, .drop, .tooltip
 		display none
-	.account_details_actions
-		display none
 
-	.legend
-		border-bottom none
-		text-transform none
-		font-size 24px
-		span
-			border-bottom none
 
 
 // ------------- нотификации ------------------
 .notifyjs-corner
-	z-index 1800
+	z-index 2100
 	.inner
 		padding 10px
 		color #fff
@@ -1381,7 +1436,6 @@ a.icon-info
 			& > ul li
 				background-color cbgsky + 10%
 				display inline-block
-				margin-right 3px
 				border-top 2px solid transparent
 				border-bottom 1px solid transparent
 				box-sizing border-box
@@ -1395,6 +1449,7 @@ a.icon-info
 					color ctextlight
 					text-decoration none
 					text-align center
+					position relative
 				&.active
 					background #fff
 					border-top 2px solid cl3
@@ -1404,6 +1459,16 @@ a.icon-info
 					a
 						color ctext
 						cursor default
+				.new_label
+					position absolute
+					right 5px
+					top -6px
+					font-size 7px
+					font-weight 600
+					border-radius 10px
+					padding 2px 4px
+					background ctextdanger
+					color #fff
 			&.tabs_scroll
 				padding 0
 				.owl-stage-outer
@@ -1414,6 +1479,11 @@ a.icon-info
 						font-size 16px
 						border-radius 50%
 						box-shadow 0 0 0 5px #fff
+			&.tabs_narrow
+				& > ul li
+					&> a
+						padding 10px 20px
+
 		&> .tabs_content
 			padding 30px
 
@@ -1581,7 +1651,7 @@ a.icon-info
 .drop-element
 	position absolute
 	display none
-	z-index 1200
+	z-index 1600
 
 	&.drop-open
 		display block
@@ -1739,7 +1809,7 @@ a.icon-info
 	background-position calc(100% - 15px) center
 	font-family ffn
 	font-size fzn - 1px
-	font-weight 300
+	font-weight fwn
 	padding 0 40px 0 15px
 	color ctext
 	box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)

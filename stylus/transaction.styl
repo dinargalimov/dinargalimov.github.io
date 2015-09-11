@@ -66,6 +66,10 @@
 				.cur
 					color @color
 
+	.currency_filter_right
+		float right
+		margin -4px 0 0
+
 // выбор счета
 
 .transaction_choose_account
@@ -93,7 +97,7 @@
 			transform translateY(-3px)
 			box-shadow 0px 2px 3px 0px rgba(0,0,0,0.12)
 			.desc:after
-				opacity .6
+				opacity 1
 
 		// активный счет
 		&.active
@@ -131,10 +135,10 @@
 		// долларовый счет
 		&.account_dollar
 			.desc:after
-				background-color cdollar
+				background-color cl3
 			&.active
 				.desc
-					background cdollar
+					background cl3
 
 		// евровый счет
 		&.account_euro
@@ -180,6 +184,7 @@
 			max-width calc(100% - 40px)
 			white-space nowrap
 			overflow hidden
+			font-weight 300
 			.cur
 				font-weight 300
 	.add_account
@@ -256,6 +261,7 @@
 	float right
 	text-align right
 	padding-right 60px
+	margin-top -6px
 	.cur
 		position absolute
 		top 0
@@ -263,7 +269,9 @@
 		font-size 78px
 		font-weight 300
 		&.ruble
-			line-height 1
+			line-height .5
+			span
+				line-height .6
 	.account_card_money_balance
 		font-size 38px
 		margin 0 0 5px
@@ -277,29 +285,41 @@
 
 .account_card_actions
 	clear both
-	margin 30px 0 0
+	margin 20px 0 0
 	a
 		margin-right 20px
 
 .account_details_actions
 	float right
+.share_actions
 	a
 		color clinklight
 		display inline-block
 		vertical-align middle
-		margin-left 3px
+		margin-right 10px
 		&:before
 			font-size fzn + 2px
+			vertical-align middle
 		&:hover
 			&:before
 				color cl2
-		&.icon-save
+		// &.icon-save
+		// 	&:before
+		// 		font-size fzn
+		// &.icon-mail-sent
+		// 	&:before
+		// 		font-size fzn + 6px
+	&.share_big
+		a
 			&:before
-				font-size fzn
-		&.icon-mail-sent
-			height 20px
-			&:before
-				font-size fzn + 6px
+				font-size fzn + 8px
+			// &.icon-save
+			// 	&:before
+			// 		font-size fzn + 6px
+			// &.icon-mail-sent
+			// 	height auto
+			// 	&:before
+			// 		font-size fzn + 12px
 
 
 // описание транзакции
@@ -355,7 +375,7 @@
 	min-height 45px
 	.name
 		font-weight normal
-		font-size fzn + 2px
+		font-size fzn + 3px
 		margin-bottom 20px
 		.transaction_status_stamp
 			top 100%
@@ -368,6 +388,7 @@
 		background #fff
 		color ctextlight
 		font-style italic
+		word-break break-word
 
 
 // печать статуса

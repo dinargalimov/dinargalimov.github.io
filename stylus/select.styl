@@ -1,4 +1,7 @@
 @import 'variables.styl'
+
+.jsRadSelect2
+	display inline
 // мультиселект
 .ms-parent
 	display inline-block
@@ -45,7 +48,7 @@
 		cursor default
 		&:focuc
 			border-color inherit
-	&.open, &:focus, &.open.error
+	&.open, &:focus
 		border-color cl2
 		box-shadow none
 	> span
@@ -74,12 +77,13 @@
 			visibility visible
 .ms-choice-input
 	background-image none
+	cursor text
 
 
 .ms-drop
 	display block!important
 	position absolute
-	z-index 1200
+	z-index 1600
 	background #fff
 	box-shadow 0px 2px 6px rgba(0,0,0,0.1)
 	border 1px solid rgba(0,0,0,0.1)
@@ -89,6 +93,8 @@
 	box-sizing border-box
 	padding-right 20px
 	max-width 350px
+	max-height 260px
+	overflow auto
 	margin-right -1000px
 	transform-origin top
 	transform perspective(600px) rotateX(-90deg)
@@ -112,8 +118,6 @@
 	.ms-drop-inner
 		width calc(100% + 20px)
 
-		overflow auto
-
 	ul
 		max-height 100% !important
 		li
@@ -136,7 +140,7 @@
 					vertical-align top
 					line-height 1.2
 					overflow ellipsis
-					max-width 100%
+					max-width calc(100% - 21px)
 
 				.select_item_info
 					padding 3px 0 0
@@ -151,6 +155,7 @@
 					>span
 						margin-left 0
 						max-width 100%
+						display block
 
 
 			.select_item_info
@@ -187,9 +192,10 @@
 @media (-webkit-min-device-pixel-ratio:0)
 	.ms-drop
 		padding-right 0
+		overflow overlay
 		.ms-drop-inner
 			width 100%
-			overflow overlay
+
 
 
 .ms-search

@@ -1,91 +1,377 @@
-@font-face
-    font-family 'Ruble'
-    src url('../fonts/ruble/PTRouble-Regular.woff') format('woff')
-    font-weight normal
-    font-style normal
-@font-face
-    font-family 'Ruble'
-    src url('../fonts/ruble/PTRouble-Light.woff') format('woff')
-    font-weight 300
-    font-style normal
+@charset "utf-8"
+
+// Open Sans
 
 @font-face
-    font-family 'Ruble'
-    src url('../fonts/ruble/PTRouble-Medium.woff') format('woff')
-    font-weight 600
-    font-style normal
+	font-family: 'Open Sans';
+	src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/open_sans/opensans-bold.woff') format('woff')
+	font-weight: bold;
+	font-style: normal;
 
 @font-face
-    font-family 'Ruble'
-    src url('../fonts/ruble/PTRouble-Bold.woff') format('woff')
-    font-weight bold
-    font-style normal
-
-@font-face
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('PT Sans'), local('PTSans-Regular'), url(http://fonts.gstatic.com/l/font?kit=MgVSvZ2VF6B5ZasO93_McReUf3jBLYbrBpOXgY0Q2HU&skey=fd0b32f0f3e6a1fc) format('woff2');
+	font-family: 'Open Sans';
+	src local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('../fonts/open_sans/opensans-bolditalic.woff') format('woff')
+	font-weight: bold;
+	font-style italic
 
 
 
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Regular'), local('Roboto-Regular'), url('../fonts/roboto/roboto-regular.woff') format('woff')
-    font-weight normal
-    font-style normal
+	font-family: 'Open Sans';
+	src: local('Open Sans Light'), local('OpenSans-Light'), url('../fonts/open_sans/opensans-light.woff') format('woff')
+	font-weight: 300;
+	font-style: normal;
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Thin'), local('Roboto-Thin'), url('../fonts/roboto/roboto-thin.woff') format('woff')
-    font-weight 100
-    font-style normal
+	font-family: 'Open Sans';
+	src: local('Open Sans Light Italic'), local('OpenSans-LightItalic'), url('../fonts/open_sans/opensans-lightitalic.woff') format('woff')
+	font-weight: 300;
+	font-style italic
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Light'), local('Roboto-Light'), url('../fonts/roboto/roboto-light.woff') format('woff')
-    font-weight 300
-    font-style normal
+	font-family: 'Open Sans';
+	src local('Open Sans'), local('OpenSans'), url('../fonts/open_sans/opensans-regular.woff') format('woff')
+	font-weight: normal
+	font-style: normal
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/roboto/roboto-medium.woff') format('woff')
-    font-weight 500
-    font-style normal
+	font-family: 'Open Sans';
+	src: local('Open Sans Italic'), local('OpenSans-Italic'), url('../fonts/open_sans/opensans-italic.woff') format('woff')
+	font-weight: normal;
+	font-style italic
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto/roboto-bold.woff') format('woff')
-    font-weight bold
-    font-style normal
+	font-family: 'Open Sans';
+	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('../fonts/open_sans/opensans-semibold.woff') format('woff')
+	font-weight: 600;
+	font-style normal
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Black'), local('Roboto-Black'), url('../fonts/roboto/roboto-black.woff') format('woff')
-    font-weight 900
-    font-style normal
+	font-family: 'Open Sans';
+	src: local('Open Sans Semibold'), local('OpenSans-SemiboldItalic'), url('../fonts/open_sans/opensans-semibolditalic.woff') format('woff')
+	font-weight: 600;
+	font-style italic
+
+
+//Знак Рубля
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Italic'), local('Roboto-Italic'), url('../fonts/roboto/roboto-italic.woff') format('woff')
-    font-weight normal
-    font-style italic
+	font-family 'Ruble'
+	src url('../fonts/ruble/PTRouble-Regular.woff') format('woff')
+	font-weight normal
+	font-style normal
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('../fonts/roboto/roboto-bolditalic.woff') format('woff')
-    font-weight bold
-    font-style italic
+	font-family 'Ruble'
+	src url('../fonts/ruble/PTRouble-Light.woff') format('woff')
+	font-weight 300
+	font-style normal
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Light Italic'), local('Roboto-LightItalic'), url('../fonts/roboto/roboto-lightitalic.woff') format('woff')
-    font-weight 300
-    font-style italic
+	font-family 'Ruble'
+	src url('../fonts/ruble/PTRouble-Medium.woff') format('woff')
+	font-weight 600
+	font-style normal
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('../fonts/roboto/roboto-mediumitalic.woff') format('woff')
-    font-weight 500
-    font-style italic
+	font-family 'Ruble'
+	src url('../fonts/ruble/PTRouble-Bold.woff') format('woff')
+	font-weight bold
+	font-style normal
+
+// Иконки
+
+
 @font-face
-    font-family 'Roboto'
-    src local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('../fonts/roboto/roboto-thinitalic.woff') format('woff')
-    font-weight 100
-    font-style italic
-@font-face
-    font-family 'Roboto'
-    src local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('../fonts/roboto/roboto-blackitalic.woff') format('woff')
-    font-weight 900
-    font-style italic
+	font-family: "mb-icon-font";
+	src url("../fonts/icons/icons.woff") format("woff")
+	font-weight: normal;
+	font-style: normal;
+
+
+[data-icon]:before
+	font-family: "mb-icon-font" !important;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before
+	font-family: "mb-icon-font" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+
+.icon-trash-bin
+	&:before
+		content "b"
+.icon-info
+	&:before
+		content "c"
+.icon-menu-dashboard
+	&:before
+		content "e"
+.icon-fullsize2
+	&:before
+		content "f"
+.icon-logout
+	&:before
+		content "h"
+.icon-menu-clients
+	&:before
+		content "i"
+.icon-menu-doc
+	&:before
+		content "j"
+.icon-menu-report
+	&:before
+		content "l"
+.icon-menu-transaction
+	&:before
+		content "k"
+.icon-profile
+	&:before
+		content "m"
+.icon-settings
+	&:before
+		content "n"
+
+.icon-step-check
+	&:before
+		content "r"
+.icon-check
+	&:before
+		content "s"
+.icon-search
+	&:before
+		content "t"
+.icon-arrow-up
+	&:before
+		content "v"
+.icon-close
+	&:before
+		content "w"
+.icon-left-big
+	&:before
+		content "d"
+.icon-left-mini
+	&:before
+		content "x"
+.icon-pencil
+	&:before
+		content "A"
+.icon-user-add
+	&:before
+		content "z"
+.icon-group-half-add
+	&:before
+		content "B"
+.icon-user-full-add
+	&:before
+		content "C"
+.icon-group-full
+	&:before
+		content "D"
+.icon-mail-add
+	&:before
+		content "G"
+.icon-mail
+	&:before
+		content "F"
+.icon-file
+	&:before
+		content "J"
+.icon-down-big
+	&:before
+		content "H"
+.icon-attach
+	&:before
+		content "I"
+.icon-password
+	&:before
+		content "K"
+.icon-thumbs-down
+	&:before
+		content "u"
+.icon-thumbs-up
+	&:before
+		content "L"
+.icon-arrow-right
+	&:before
+		content "N"
+.icon-arrow-left
+	&:before
+		content "O"
+.icon-reload
+	&:before
+		content "P"
+.icon-right-big
+	&:before
+		content "Q"
+.icon-chat
+	&:before
+		content "R"
+.icon-plus
+	&:before
+		content "a"
+.icon-submenu
+	&:before
+		content "U"
+.icon-notes
+	&:before
+		content "T"
+.icon-date
+	&:before
+		content "S"
+.icon-date-from
+	&:before
+		content "V"
+.icon-date-to
+	&:before
+		content "W"
+.icon-home
+	&:before
+		content "M"
+.icon-right-open-mini
+	&:before
+		content "X"
+.icon-sort-down
+	&:before
+		content "Y"
+.icon-sort-up
+	&:before
+		content "Z"
+.icon-phone
+	&:before
+		content "1"
+.icon-change
+	&:before
+		content "2"
+.icon-mail-accept
+	&:before
+		content "3"
+.icon-help
+	&:before
+		content "g"
+.icon-round-plus
+	&:before
+		content "4"
+.icon-round-action
+	&:before
+		content "9"
+.icon-round-check
+	&:before
+		content "6"
+.icon-round-minus
+	&:before
+		content "5"
+.icon-more
+	&:before
+		content "7"
+.icon-warning
+	&:before
+		content "8"
+.icon-more-small
+	&:before
+		content "0"
+.icon-redo
+	&:before
+		content "!"
+.icon-favorites
+	&:before
+		content '"'
+.icon-delete-circle
+	&:before
+		content "$"
+.icon-clock
+	&:before
+		content "#"
+.icon-checkbox
+	&:before
+		content "&"
+.icon-stop
+	&:before
+		content "y"
+.icon-favorites-solid
+	&:before
+		content "%"
+.icon-payment
+	&:before
+		content "'"
+.icon-user
+	&:before
+		content "("
+.icon-bell
+	&:before
+		content ")"
+.icon-sign
+	&:before
+		content "E"
+.icon-down-small
+	&:before
+		content "*"
+.icon-fullsize
+	&:before
+		content "+"
+.icon-currency-change
+	&:before
+		content ","
+.icon-customs
+	&:before
+		content "-"
+.icon-government
+	&:before
+		content "."
+.icon-insurance
+	&:before
+		content "/"
+.icon-building
+	&:before
+		content ":"
+.icon-smile-bubble
+	&:before
+		content ";"
+.icon-smile-bubble-angry
+	&:before
+		content "<"
+.icon-smile-bubble-happy
+	&:before
+		content "="
+.icon-smile-bubble-wow
+	&:before
+		content ">"
+.icon-news
+	&:before
+		content "?"
+.icon-next
+	&:before
+		content "@"
+.icon-menu-clients2:before {
+  content: "[";
+}
+.icon-menu-contragents:before {
+  content: "]";
+}
+
+.icon-print:before {
+  content: "q";
+}
+.icon-mail-sent:before {
+  content: "p";
+}
+.icon-save:before {
+  content: "^";
+}
+

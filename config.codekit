@@ -182,6 +182,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/style_mobile_agreement.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style_mobile_agreement.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/temp.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -1244,6 +1253,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/html\/transaction\/transaction_page_currency_spravka_error.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/transaction\/transaction_page_currency_spravka_error.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/html\/transaction\/transaction_page_currency_trans_account.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1666,6 +1684,17 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
+	"\/js\/rad-select.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/rad-select.js",
+		"outputAbbreviatedPath": "\/js\/min\/rad-select-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/select.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -2001,6 +2030,22 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"resolveRelativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0
+		},
+	"\/stylus\/style_mobile_agreement.styl": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"fileType": 8,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"importCSS": 0,
+		"inputAbbreviatedPath": "\/stylus\/style_mobile_agreement.styl",
+		"outputAbbreviatedPath": "\/css\/style_mobile_agreement.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"resolveRelativeURLS": 1,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0
 		},
