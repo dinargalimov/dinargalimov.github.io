@@ -105,6 +105,9 @@ body {
 .reg .reg_article p:first-of-type {
   margin-top: 0;
 }
+.reg .reg_article .copyright {
+  display: none;
+}
 .reg .login .reg_section {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -265,12 +268,14 @@ body {
     display: block;
     width: 100%;
   }
+  .reg .reg_side {
+    padding-bottom: 20px;
+  }
+  .reg .reg_side .title {
+    margin-bottom: 15px;
+  }
   .reg .reg_side .copyright {
-    margin-top: 30px;
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
+    display: none;
   }
   .reg .reg_article .w80 {
     width: 100% !important;
@@ -286,6 +291,9 @@ body {
   }
   .reg .reg_article .form_buttons .button {
     width: 100%;
+  }
+  .reg .reg_article .copyright {
+    display: block;
   }
 }
 /*# sourceMappingURL=registration.css.map */
