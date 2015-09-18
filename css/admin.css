@@ -11731,13 +11731,16 @@ body {
     width: 100%;
   }
   .reg .reg_side {
-    padding-bottom: 20px;
+    padding: 20px;
   }
   .reg .reg_side .title {
     margin-bottom: 15px;
   }
   .reg .reg_side .copyright {
     display: none;
+  }
+  .reg .reg_article {
+    padding: 20px;
   }
   .reg .reg_article .w80 {
     width: 100% !important;
