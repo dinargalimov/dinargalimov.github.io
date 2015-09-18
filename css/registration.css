@@ -242,7 +242,24 @@ body {
   .reg .reg_header {
     margin-left: 30px;
     margin-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
+  .reg .reg_header .logo {
+    width: 100%;
+    -webkit-background-size: cover 100%;
+    -moz-background-size: cover 100%;
+    background-size: cover 100%;
+    background-position: center;
+  }
+  .reg .reg_header .header_links {
+    position: relative;
+    text-align: center;
+    top: auto;
+    right: auto;
+    margin-top: 15px;
+  }
+  .reg .reg_section,
   .reg .reg_side,
   .reg .reg_article {
     display: block;
