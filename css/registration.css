@@ -242,6 +242,26 @@ body {
     width: 100%;
     margin-bottom: 0;
   }
+  .reg .wrap.login {
+    width: 100%;
+  }
+  .reg .wrap.login .reg_header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .reg .wrap.login .reg_header .title {
+    margin-top: 30px;
+  }
+  .reg .wrap.login .reg_article {
+    padding: 20px;
+  }
+  .reg .wrap.login .login_links {
+    background: #fff;
+    padding: 10px 0 20px;
+  }
+  .reg .wrap.login .login_links a {
+    color: #006aa1;
+  }
   .reg .reg_header {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -294,6 +314,17 @@ body {
   }
   .reg .reg_article .form_buttons .button {
     width: 100%;
+  }
+  .reg .reg_article .form_buttons .links {
+    margin: 20px 0 0;
+    display: block;
+  }
+  .reg .reg_article .form_buttons .links a {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 0 10px;
+    color: #006aa1;
   }
   .reg .reg_article .copyright {
     display: block;

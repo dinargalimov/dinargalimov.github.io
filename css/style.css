@@ -2052,6 +2052,7 @@ article.page .popup_layer {
   color: #fff;
   border: 6px double #fff;
   margin-top: -4px;
+  margin-bottom: 4px;
 }
 .wizard_steps .active .label:after,
 .wizard_steps .done .label:after {
@@ -11399,6 +11400,7 @@ article.page.hide ~ .page.open ~ .page.open ~ .page.open ~ .page.open {
 }
 #chart .svg-content-responsive {
   display: inline-block;
+  height: 300px;
 }
 .certificate_block {
   width: 550px;
