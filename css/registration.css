@@ -247,10 +247,12 @@ body {
   }
   .reg .reg_header .logo {
     width: 100%;
-    -webkit-background-size: cover 100%;
-    -moz-background-size: cover 100%;
-    background-size: cover 100%;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    background-size: auto 100%;
     background-position: center;
+    height: 10vw;
+    max-height: 50px;
   }
   .reg .reg_header .header_links {
     position: relative;
