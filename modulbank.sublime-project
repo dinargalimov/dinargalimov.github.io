@@ -2,14 +2,49 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
-			"path": "."
+			"path": ".",
+			"file_exclude_patterns": ["*.css*"]
+		},
+		{
+			"path": "html/admin"
+		},
+		{
+			"path": "html/clients"
+		},
+		{
+			"path": "html/contragents"
+		},
+		{
+			"path": "html/open_account"
+		},
+		{
+			"path": "html/messenger"
+		},
+		{
+			"path": "html/payment"
+		},
+		{
+			"path": "html/reg"
+		},
+		{
+			"path": "html/settings"
+		},
+		{
+			"path": "html/security_lock"
+		},
+		{
+			"path": "html/timeline"
+		},
+		{
+			"path": "html/transaction"
 		}
 	],
-	"settings": {
-        "sublime-view-in-browser": {
-            "basePath": "/Volumes/Work/МодульБанк/html/ModulBank",
-            "baseUrl": "http://macbook-pro-dinar.local:5757"
-        }
-    }
+	"settings":
+	{
+		"sublime-view-in-browser":
+		{
+			"basePath": "/Volumes/Work/Modulbank/html/ModulBank",
+			"baseUrl": "http://localhost:5757"
+		}
+	}
 }

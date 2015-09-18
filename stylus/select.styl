@@ -9,12 +9,11 @@
 	vertical-align middle
 
 .ms-choice-focusser
-	width 0!important
-	height 0!important
 	opacity 0!important
 	position absolute!important
 	padding 0!important
 	border none!important
+	left -9999px
 	&:focus ~ .ms-choice
 		border-color cl2
 		box-shadow none
@@ -28,7 +27,7 @@
 	border-radius brform
 	font-family ffn
 	font-size fzn - 1px
-	font-weight 300
+	font-weight fwn
 	padding 0 45px 0 15px
 	box-sizing border-box
 	color ctext
@@ -65,6 +64,7 @@
 		display none
 	.placeholder
 		color ctextholder
+		font-weight 300
 	&.error
 		border-color cerror
 		color ctexterror
@@ -93,7 +93,7 @@
 	box-sizing border-box
 	padding-right 20px
 	max-width 350px
-	max-height 260px
+	max-height 212px
 	overflow auto
 	margin-right -1000px
 	transform-origin top

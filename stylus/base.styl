@@ -204,6 +204,8 @@ h3
 	color clink!important
 .c_linklight
 	color clinklight!important
+.c_sky
+	color cl4!important
 
 .bg_success
 	background-color cbgsuccess
@@ -376,6 +378,9 @@ h3
 	display inline-block
 	vertical-align middle
 	border-radius 30px
+	&.big
+		font-size fzn
+		padding 4px 10px
 
 .info_label_success
 	background-color cl3
@@ -415,6 +420,7 @@ h3
 
 .small_text
 	font-size fzn - 2px
+	font-weight lighter
 	color ctextlight
 	p
 		margin 0 0 10px
@@ -1438,8 +1444,11 @@ a.icon-info
 				display inline-block
 				border-top 2px solid transparent
 				border-bottom 1px solid transparent
+				border-right 1px solid transparent
+				border-left 1px solid transparent
 				box-sizing border-box
 				background-clip content-box
+				margin-right 2px
 				&:hover
 					a
 						color ctext
@@ -1453,8 +1462,8 @@ a.icon-info
 				&.active
 					background #fff
 					border-top 2px solid cl3
-					border-left 1px solid cbdlightsky
-					border-right 1px solid cbdlightsky
+					border-left-color cbdlightsky
+					border-right-color cbdlightsky
 					border-bottom-color #fff
 					a
 						color ctext
@@ -1513,9 +1522,10 @@ a.icon-info
 
 				&.title
 					padding 0 5px 10px 25px
-					font-size fzn - 6px
-					font-weight bold
+					font-size fzn - 5px
 					text-transform uppercase
+					font-weight 600
+					color cl2
 					&~ .title
 						padding-top 25px
 

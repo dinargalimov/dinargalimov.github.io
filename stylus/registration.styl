@@ -1,6 +1,7 @@
 @import 'nib'
 @import 'variables.styl'
-
+html, body
+	min-width 240px
 .reg
 	background cbglight
 	position absolute
@@ -15,7 +16,7 @@
 		margin 0 auto 30px
 		animation-name zoomIn
 		animation-duration .5s
-		animation-fill-mode both
+		// animation-fill-mode both
 		&.login
 			width 420px
 		&.reg_admin
@@ -186,3 +187,36 @@
 			text-align center
 			font-weight 300
 			margin 0 0 40px
+
+
+@media screen and (max-width: 760px)
+	.reg
+		background radial-gradient(65% 100%, cbglight 45%, cbglight - 20% 100%)
+		.wrap
+			width 100%
+			margin-bottom 0
+		.reg_header
+			margin-left 30px
+			margin-right 30px
+		.reg_side, .reg_article
+			display block
+			width 100%
+		.reg_side
+			.copyright
+				margin-top 30px
+				position relative
+				bottom auto
+				left auto
+				right auto
+		.reg_article
+			.w80
+				width 100%!important
+			.col, .column
+				float none
+				margin 0
+				width 100%
+			input.column.half:first-child
+				margin-bottom 15px
+			.form_buttons
+				.button
+					width 100%

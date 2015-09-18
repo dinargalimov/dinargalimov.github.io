@@ -171,7 +171,7 @@
 
 			<div class="form_group">
 				<div class="input_group w100">
-					<div class="input_group_addon">УИП</div>
+					<div class="input_group_addon w70px">УИП</div>
 					<input type="text" name="" placeholder="Уникальный идентификатор платежа" id="" class="drop-target">
 					<div class="drop-content">
 						<div class="drop-content-inner inner_pad">
@@ -183,7 +183,7 @@
 			<div class="form_group">
 
 				<div class="input_group w100">
-					<div class="input_group_addon">Со счета</div>
+					<div class="input_group_addon w70px">Со счета</div>
 
 
 						<a class="w100 drop-input drop-target">
@@ -271,7 +271,7 @@
 			<div class="form_group row">
 				<div class="col half">
 					<div class="input_group w100">
-						<div class="input_group_addon">Сумма</div>
+						<div class="input_group_addon w70px">Сумма</div>
 						<input type="text" name="" placeholder="0,00" id="" class="">
 					</div>
 				</div>
@@ -288,19 +288,16 @@
 				</div>
 
 			</div>
-			<div class="form_group m_bot_30">
-				<div class="col half">
-					<div class="f_small">
-						<p class="m_bot_10">Комиссия банка: 70 <span class="cur ruble"><span>р.</span></span>*</p>
-						<p>Итого: <strong>4424,00 <span class="cur ruble"><span>р.</span></span></strong></p>
-					</div>
-				</div>
-				<div class="col half">
-					<div class="f_small c_light">НДС 18% - 18,00 Р сверх суммы</div>
-				</div>
+			<div class="form_group a_right m_bot_30">
+				<p class="d_ib c_light f_small m_right_15">Комиссия банка: 70 <span class="cur ruble"><span>р.</span></span>*</p>
+				<p class="d_ib info_label big">Итого: <strong>4 424,00 <span class="cur ruble"><span>р.</span></span></strong></p>
 			</div>
 			<div class="form_group">
-				<textarea name="" id="" placeholder="Назначение платежа" class="w100 js_autosize textarea_middle"></textarea>
+				<div class="textarea_block">
+					<textarea name="" id="" placeholder="Назначение платежа" class="w100 js_autosize"></textarea>
+					<div class="textarea_border"></div>
+					<div class="textarea_text">В том числе НДС 18%</div>
+				</div>
 			</div>
 			<div class="form_group">
 				<input type="checkbox" name="name" id="a1">
