@@ -1679,7 +1679,7 @@ article.page .popup_layer {
   background-size: auto 100%;
   margin: 0 0 30px;
 }
-@media screen and (min-device-width: 370px) {
+@media screen and (min-width: 370px) {
   .popup_mobile_download {
     background-position: 90% bottom;
   }
