@@ -1015,13 +1015,16 @@ article.page
 .popup_mobile_download
 	text-align center
 	background #fff url(../images/mobile_ios.png) no-repeat center 110%
-	background-size 200px auto
+	background-size auto 50%
 	padding-bottom 220px
 	.logo
 		height 40px
 		background url(../images/logo.svg) no-repeat center 0
 		background-size auto 100%
 		margin 0 0 30px
+
+	@media screen and (min-width: 350px)
+		background-position 90% bottom
 
 // загрузка аватара с обрезкой
 .cropped_image
