@@ -1678,6 +1678,9 @@ article.page .popup_layer {
 @media screen and (min-width: 400px) {
   .popup_mobile_download {
     background-position: 90% bottom;
+    background-size: auto 80%;
+    padding-bottom: 40px;
+    padding-right: 240px;
   }
 }
 .cropped_image {
