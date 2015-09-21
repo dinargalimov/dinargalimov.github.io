@@ -11043,6 +11043,7 @@ body {
     background: -o-radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
     background: -ms-radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
     background: radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
+    -webkit-text-size-adjust: 100%;
   }
   .reg .wrap {
     width: 100%;
