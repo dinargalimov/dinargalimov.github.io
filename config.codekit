@@ -1506,6 +1506,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/mobile_android.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 223723,
+		"inputAbbreviatedPath": "\/images\/mobile_android.png",
+		"outputAbbreviatedPath": "\/images\/mobile_android.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/mobile_ios.png": {
 		"fileType": 32768,
 		"ignore": 0,
