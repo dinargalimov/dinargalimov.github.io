@@ -447,7 +447,15 @@
 			"file": "stylus/forms.styl",
 			"settings":
 			{
-				"buffer_size": 17102,
+				"buffer_size": 17465,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/buttons.styl",
+			"settings":
+			{
+				"buffer_size": 7201,
 				"line_ending": "Unix"
 			}
 		},
@@ -455,7 +463,7 @@
 			"file": "stylus/main.styl",
 			"settings":
 			{
-				"buffer_size": 36604,
+				"buffer_size": 36619,
 				"line_ending": "Unix"
 			}
 		},
@@ -463,7 +471,23 @@
 			"file": "stylus/base.styl",
 			"settings":
 			{
-				"buffer_size": 34309,
+				"buffer_size": 34412,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/select.styl",
+			"settings":
+			{
+				"buffer_size": 5145,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/registration.styl",
+			"settings":
+			{
+				"buffer_size": 4788,
 				"line_ending": "Unix"
 			}
 		},
@@ -476,10 +500,69 @@
 			}
 		},
 		{
-			"file": "html/transaction/transaction_account_page.html",
+			"file": "html/reg/registration.html",
 			"settings":
 			{
-				"buffer_size": 4053,
+				"buffer_size": 4165,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/reg/registration_city1.html",
+			"settings":
+			{
+				"buffer_size": 2445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/reg/registration_city2.html",
+			"settings":
+			{
+				"buffer_size": 2615,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/reg/registration_step2.html",
+			"settings":
+			{
+				"buffer_size": 2049,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/reg/registration_step3.html",
+			"settings":
+			{
+				"buffer_size": 2437,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/reg/login.html",
+			"settings":
+			{
+				"buffer_size": 2520,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\" >\n	<base href=\"../../\"/>\n	<title>Восстановление пароля</title>\n	<link rel=\"stylesheet\" href=\"css/style.css\">\n	<link rel=\"stylesheet\" href=\"css/registration.css\">\n\n</head>\n<body>\n\n<div class=\"reg\">\n	<div class=\"wrap login\">\n		<div class=\"reg_header\">\n			<a href=\"/\" class=\"logo\">МодульБанк</a>\n			<div class=\"title\">Вход в систему</div>\n		</div>\n		<div class=\"reg_section\">\n\n			<div class=\"reg_article\">\n				<p>Для восстановления пароля укажите телефон, который вы указали при регистрации:</p>\n				<div class=\"form\">\n					<div class=\"form_group\">\n						<input type=\"tel\" name=\"\" id=\"\" placeholder=\"Телефон\" class=\"column twelve\">\n					</div>\n\n					<!-- <div class=\"form_group info captcha\">\n						<div class=\"captcha_left\">\n							<input type=\"text\" name=\"\" id=\"\" placeholder=\"Введите код\" class=\"small\">\n							<a href=\"#\">Обновить код</a>\n						</div>\n						<img src=\"https://yastatic.net/doccenter/images/tech-ru/cleanweb/freeze/0WLRscWa-KXnsJM3K9jyjORMUEc.gif\" alt=\"\" width=\"140\" height=\"50\">\n					</div> -->\n\n					<!-- <div class=\"info info_error\">\n						Неправильный мобильный телефон или пароль!\n					</div> -->\n\n					<div class=\"form_buttons\">\n						<input type=\"submit\" value=\"Далее\" class=\"button\">\n					</div>\n\n				</div>\n\n\n			</div>\n			<div class=\"login_links\">\n				<a href=\"#\">Войти в систему</a>\n				<a href=\"#\">Зарегистрироваться</a>\n			</div>\n		</div>\n	</div>\n</div>\n\n<script src=\"http://yastatic.net/jquery/2.1.3/jquery.min.js\"></script>\n<script src=\"js/jquery.validate.js\"></script>\n<script src=\"js/bootstrap.tooltip.min.js\"></script>\n<script src=\"js/jquery-validate.bootstrap-tooltip.js\"></script>\n\n<script src=\"js/select.js\"></script>\n\n\n<script src=\"js/init.js\"></script>\n\n</body>\n</html>",
+			"file": "html/reg/forgot_password.html",
+			"file_size": 2070,
+			"file_write_time": 130870338160000000,
+			"settings":
+			{
+				"buffer_size": 1858,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/payment/payment_page_new.html",
+			"settings":
+			{
+				"buffer_size": 16161,
 				"line_ending": "Unix"
 			}
 		}
@@ -682,13 +765,25 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/Work/Modulbank/html/ModulBank"
 	],
 	"file_history":
 	[
-		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/stylus/forms.styl",
+		"/Applications/CodeKit.app/Contents/Resources/engines/nib/lib/nib/vendor.styl",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/hayaku-master/dictionaries/hayaku_CSS_dictionary.json",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step1.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/untitled",
 		"/Volumes/Work/Modulbank/html/ModulBank/modulbank.sublime-project",
+		"/Volumes/Work/Modulbank/html/ModulBank/css/buttons.css",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/404.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_account_page.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/js/init.js",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/dashboard.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/404.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/js/jquery.textarea_autosize.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/stylus/forms.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/forms.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/base.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/main.styl",
@@ -711,8 +806,6 @@
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/registration.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/datetimepicker.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/icons.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/404.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragents.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_popup_search.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_popup_search_list.html",
@@ -761,7 +854,6 @@
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22b.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22a.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_21.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step1.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_sms.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_invite.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_city2.html",
@@ -770,7 +862,6 @@
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login_sms.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login_invite.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login_admin.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password_sms.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password_newpass.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password_admin.html",
@@ -804,16 +895,7 @@
 		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/account_instruction.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/account_rekvisits.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger_popup_error_file.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger_new_chat.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger_empty_list.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger_chat_first_message.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger_chat.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/index.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/header.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/forms.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/drop.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/dashboard.html"
+		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger.html"
 	],
 	"find":
 	{
@@ -885,6 +967,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".col",
+			"col",
+			"transi",
+			"transform",
+			"border-rad",
+			"box-sh",
+			"trans",
+			"tran",
+			"wiz",
+			"active",
+			"svg-",
+			"svg",
+			"hide_mobile",
+			"show_mobile",
+			"place",
+			"addon_code",
+			"c_s",
+			"Назн",
+			"page404",
+			"m_top",
+			"label",
+			"w100",
+			"texta",
+			"Назначение",
+			"tabs_menu",
+			"nine",
+			"three",
 			"143",
 			"account_card_money",
 			"account_card_money ",
@@ -985,34 +1094,7 @@
 			".circ",
 			" li.D",
 			"drop-ti",
-			"add_news_dashboard",
-			".name",
-			".new",
-			".row ",
-			".row",
-			"w55",
-			".col",
-			"email_logo.png\" width=\"205\" height=\"39\" alt=\"ModulBank\" style=\"\"",
-			"Мы выполняем проверку ",
-			"offset-by",
-			"off",
-			"transaction_view_contragent",
-			"transaction_view_info_money",
-			"transaction_view_exchange",
-			".w5\n	width 5% !important",
-			" \n",
-			"m_",
-			"transaction_view_info_money",
-			"w100",
-			"m_bot",
-			"w100",
-			"m_bot",
-			"transaction_view_contragent",
-			"a_left",
-			"company_item_info",
-			"file_upload_list",
-			"file_upload_list ",
-			"form_sep"
+			"add_news_dashboard"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1080,7 +1162,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1089,15 +1171,47 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17102,
+						"buffer_size": 17465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1849,
-								1849
+								213,
+								26
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "stylus/buttons.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3721,
+								3709
 							]
 						],
 						"settings":
@@ -1107,27 +1221,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1460.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "stylus/main.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36604,
+						"buffer_size": 36619,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10391,
-								10391
+								7118,
+								7118
 							]
 						],
 						"settings":
@@ -1138,44 +1252,109 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 8061.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "stylus/base.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34309,
+						"buffer_size": 34412,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2198,
-								2603
+								12249,
+								13066
 							]
 						],
 						"settings":
 						{
+							"auto_indent": true,
 							"editorconfig": true,
 							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2905.0,
+						"translation.y": 15446.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
+					"file": "stylus/select.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1212,
+								1212
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 821.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "stylus/registration.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4788,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3825,
+								3825
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3627.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "stylus/transaction.styl",
 					"semi_transient": false,
 					"settings":
@@ -1202,30 +1381,30 @@
 						"translation.y": 4839.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 14,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "html/transaction/transaction_account_page.html",
+					"buffer": 7,
+					"file": "html/reg/registration.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4053,
+						"buffer_size": 4165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1303,
-								1303
+								3643,
+								3643
 							]
 						],
 						"settings":
@@ -1237,10 +1416,227 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 461.0,
+						"translation.y": 1462.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "html/reg/registration_city1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "html/reg/registration_city2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "html/reg/registration_step2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "html/reg/registration_step3.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "html/reg/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "html/reg/forgot_password.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1858,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1003,
+								1003
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "html/payment/payment_page_new.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								390
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1310,6 +1706,78 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"reg/forgot_password.html"
+			],
+			[
+				"log",
+				"reg/login.html"
+			],
+			[
+				"regs",
+				"reg/registration_step3.html"
+			],
+			[
+				"reg",
+				"reg/registration_step2.html"
+			],
+			[
+				"regc",
+				"reg/registration_city2.html"
+			],
+			[
+				"butt",
+				"ModulBank/stylus/buttons.styl"
+			],
+			[
+				"but",
+				"ModulBank/css/buttons.css"
+			],
+			[
+				"sele",
+				"ModulBank/stylus/select.styl"
+			],
+			[
+				"p",
+				"payment/payment_page_new.html"
+			],
+			[
+				"404",
+				"ModulBank/stylus/404.styl"
+			],
+			[
+				"form",
+				"ModulBank/stylus/forms.styl"
+			],
+			[
+				"js_a",
+				"ModulBank/js/jquery.textarea_autosize.js"
+			],
+			[
+				"init",
+				"ModulBank/js/init.js"
+			],
+			[
+				"pa",
+				"payment/payment_page_new.html"
+			],
+			[
+				"ini",
+				"ModulBank/js/init.js"
+			],
+			[
+				"set",
+				"settings/settings.html"
+			],
+			[
+				"payn",
+				"payment/payment_page_new.html"
+			],
+			[
+				"das",
+				"ModulBank/html/dashboard.html"
+			],
+			[
 				"bas",
 				"ModulBank/stylus/base.styl"
 			],
@@ -1324,10 +1792,6 @@
 			[
 				"traa",
 				"transaction/transaction_account_page.html"
-			],
-			[
-				"form",
-				"ModulBank/stylus/forms.styl"
 			],
 			[
 				"admcl",
@@ -1358,20 +1822,8 @@
 				"html/settings/settings_tarif.html"
 			],
 			[
-				"set",
-				"html/settings/settings.html"
-			],
-			[
 				"pap",
 				"html/payment/payment_page_new.html"
-			],
-			[
-				"but",
-				"stylus/buttons.styl"
-			],
-			[
-				"for",
-				"stylus/forms.styl"
 			],
 			[
 				"pag",
@@ -1388,10 +1840,6 @@
 			[
 				"timel",
 				"html/timeline/timeline.html"
-			],
-			[
-				"reg",
-				"html/reg/registration.html"
 			],
 			[
 				"admset",
@@ -1422,10 +1870,6 @@
 				"html/admin/admin_page_task.html"
 			],
 			[
-				"ini",
-				"js/init.js"
-			],
-			[
 				"dash",
 				"html/dashboard.html"
 			],
@@ -1450,10 +1894,6 @@
 				"stylus/contragents.styl"
 			],
 			[
-				"init",
-				"js/init.js"
-			],
-			[
 				"cli",
 				"html/clients/clients.html"
 			],
@@ -1468,10 +1908,6 @@
 			[
 				"papn",
 				"html/payment/payment_page_new.html"
-			],
-			[
-				"pa",
-				"html/payment/payment_page_exchange.html"
 			],
 			[
 				"pay",
@@ -1578,10 +2014,6 @@
 				"html/admin/admin_news_email.html"
 			],
 			[
-				"payn",
-				"html/payment/payment_page_new.html"
-			],
-			[
 				"payed",
 				"html/payment/payment_page_edit.html"
 			],
@@ -1682,10 +2114,6 @@
 				"html/settings/settings_tarif.html"
 			],
 			[
-				"das",
-				"html/dashboard.html"
-			],
-			[
 				"popup",
 				"html/transaction/popup_rekvisits_send.html"
 			],
@@ -1782,44 +2210,12 @@
 				"html/admin/admin_settings_agents_group.html"
 			],
 			[
-				"butt",
-				"html/buttons.html"
-			],
-			[
 				"admpa",
 				"html/admin/admin_page_task.html"
 			],
 			[
 				"oene",
 				"html/open_account/open_account_step1_3.html"
-			],
-			[
-				"mul",
-				"js/jquery.multiple.select.js"
-			],
-			[
-				"paem",
-				"html/payment/payment_page_new_popup.html"
-			],
-			[
-				"tamo",
-				"html/payment/payment_page_new_tamoz.html"
-			],
-			[
-				"c",
-				"html/contragents/contragents.html"
-			],
-			[
-				"admin.s",
-				"stylus/admin.styl"
-			],
-			[
-				"adimp",
-				"html/admin/admin_page_task.html"
-			],
-			[
-				"atmo",
-				"html/payment/payment_page_new_tamoz.html"
 			]
 		],
 		"width": 0.0
@@ -1849,7 +2245,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":

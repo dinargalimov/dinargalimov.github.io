@@ -911,6 +911,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/html\/reg\/registration_popup_mobile.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/reg\/registration_popup_mobile.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/html\/reg\/registration_sms.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1493,6 +1502,17 @@
 		"initialSize": 8670,
 		"inputAbbreviatedPath": "\/images\/manager_photo1.jpg",
 		"outputAbbreviatedPath": "\/images\/manager_photo1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/mobile_ios.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 227363,
+		"inputAbbreviatedPath": "\/images\/mobile_ios.png",
+		"outputAbbreviatedPath": "\/images\/mobile_ios.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
