@@ -1661,6 +1661,7 @@ article.page .popup_layer {
     width: auto;
     padding: 40px 20px;
     margin: 10px;
+    -webkit-text-size-adjust: 100%;
   }
 }
 .popup_mobile_download {
