@@ -1,13 +1,18 @@
+@import 'nib'
 @import 'variables.styl'
+
 html, body
 	min-height 100%
 	height 100%
 	position relative
 	background cbglight
-	overflow auto
 	min-width 945px
 	animation-name fadeIn
 	animation-duration .8s
+
+
+body
+	overflow auto
 	-webkit-overflow-scrolling touch
 
 aside
@@ -48,7 +53,7 @@ aside
 .aside_logo
 	display block
 	height 40px
-	background cl1 + 5% url(../images/logo_w.svg) no-repeat center center
+	background url(../images/logo_w.svg) no-repeat center center
 	background-size 90% auto
 	text-indent -10000em
 
@@ -305,7 +310,7 @@ header
 	.header_profile_name
 		height 100%
 		float left
-		// border-right 1px solid #CCD7E6
+		border-right 1px solid saturate(cbglight - 12%, 10%)
 		a
 			text-decoration none
 			display block
@@ -473,7 +478,7 @@ section.main
 
 .content
 	box-sizing border-box
-	flex 1 300 auto
+	flex 1 300 74%
 
 	.content_notice
 		padding 100px 0
@@ -487,11 +492,10 @@ section.main
 
 .side
 	min-width 270px
-	max-width 380px
+	max-width 350px
 	width 26%
 	flex 0 1 auto
 	margin-left 20px
-
 
 	&.side_small
 		min-width 220px
@@ -643,7 +647,6 @@ article.page
 		font-size 18px
 		transition .3s
 		text-decoration none
-
 		&:hover
 			color clink
 		&:before
@@ -786,7 +789,7 @@ article.page
 		margin 0 0 5px
 
 .side_parameter
-	margin 20px 0
+	margin 10px 0
 	font-size fzn - 2px
 
 	.side_parameter_name
@@ -1191,10 +1194,11 @@ article.page
 	h1
 		display inline-block
 		margin-bottom 0
+		& ~ .title_buttons
+			margin-left 35px
 	.title_buttons
 		vertical-align 4px
 		display inline-block
-		margin-left 35px
 	.title_actions
 		float right
 		margin-top 7px
@@ -1271,7 +1275,7 @@ article.page
 			bottom 0
 			background cbdlight
 			z-index 0
-		&.last_child
+		&.last_child, &:last-child
 			padding-bottom 0
 			&:before
 				display none
@@ -1633,7 +1637,6 @@ article.page
 		font-size fzn
 		white-space nowrap
 
-
 		@media (min-width:1100px)
 			font-size fzn + 2px
 		@media (min-width:1200px)
@@ -1669,16 +1672,17 @@ article.page
 	.item
 		margin-bottom 10px
 		overflow hidden
+		line-height 1
 	.name
 		font-size fzn - 3px
 		color ctextlight
 		padding 4px 0 0
 		display inline-block
-		@media (min-width:1340px)
+		@media (min-width:1380px)
 			padding-top 7px
-		@media (min-width:1400px)
+		@media (min-width:1420px)
 			padding-top 7px
-		@media (min-width:1500px)
+		@media (min-width:1520px)
 			padding-top 10px
 	.value
 		font-size fzn - 2px
@@ -1925,7 +1929,9 @@ article.page
 		overflow hidden
 	.svg-content-responsive
 		display inline-block
-		height 300px
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+		.svg-content-responsive
+			height 300px
 
 
 // сертификат
@@ -1968,7 +1974,7 @@ article.page
 			padding 3px 0 0
 	.status
 		color ctextsuccess
-		font-weight normal
+		font-weight 600
 		overflow hidden
 .tarif_serv_row
 	padding-top 15px
@@ -1976,14 +1982,16 @@ article.page
 	border-top 1px solid cbdlight
 	overflow hidden
 	.name
-		float left
-		width 50%
+		// float left
+		// width 50%
+
 		.title
 			font-weight normal
 			margin-bottom 5px
 		.desc
-			font-size fzn - 4px
+			font-size fzn - 2px
 			color ctextlight
+			line-height 1.5
 	.value
 		float right
 		width 50%
@@ -2086,10 +2094,8 @@ article.page
 		.price_free
 			font-size 20px
 			margin 0
-
 		a
 			font-size fzn - 4px
-			text-decoration none
 	.tarif_noactiv_info
 		clear both
 		background #fff
@@ -2103,8 +2109,9 @@ article.page
 				font-weight normal
 				margin-bottom 5px
 			p
-				font-size fzn - 4px
+				font-size fzn - 3px
 				color ctextlight
+				line-height 1.5
 
 
 // курсы валют

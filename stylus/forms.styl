@@ -54,6 +54,7 @@ textarea
 	// валидация
 	&.error
 		border-color cerror
+		background-color cerror + 97%
 		// animation error-border-flash .7s both
 		&::-webkit-input-placeholder
 			// color ctexterror
@@ -66,6 +67,7 @@ textarea
 
 	&.valid, &.success
 		border-color csucces
+		background csucces + 96%
 
 	// размеры
 	&.xsmall
@@ -124,6 +126,13 @@ textarea
 		z-index 10
 		position relative
 		background none
+		&:focus ~ .textarea_border
+			border-color cl2
+		&.error ~ .textarea_border
+			border-color cerror
+			background-color cerror + 97%
+
+
 	.textarea_border
 		position absolute
 		z-index 0
@@ -137,6 +146,12 @@ textarea
 	.textarea_text
 		padding 0 15px 15px
 		font-size fzn - 1px
+		z-index 10
+		&.characters_left
+			float right
+			color ctextlight
+			font-size fzn - 4px
+			margin 4px 0 0
 
 .editor-disable
 	color ctextdis
@@ -160,8 +175,7 @@ input[type='search'].input_search
 	padding-left 30px
 	transition .2s
 	&:focus
-		background-position -5px center
-		background-size 0px
+		background-position -15px center
 		padding-left 10px
 
 input.input_search_focus
@@ -390,6 +404,7 @@ input.search_left
 		padding 0 0 6px
 		border-bottom 2px solid cl2
 		margin-bottom -2px
+
 .legend_small
 	border-bottom 1px solid cbdlight
 	font-weight normal
@@ -402,6 +417,7 @@ input.search_left
 		padding 0 10px 0 0
 		background #fff
 		height 20px
+
 
 // блок кнопок в конце формы
 .form_buttons
@@ -485,9 +501,6 @@ rad-select2
 		display block
 
 
-
-
-
 // -------------- поле с заголовком --------------
 .input_group_title
 	display inline-block
@@ -561,7 +574,7 @@ rad-select2
 		border 1px solid cbglight - 15%
 		margin-left -1px
 		color ctextlight
-		padding 0 10px
+		padding 0 15px
 		font-size fzn - 2px
 		cursor pointer
 		z-index 1
@@ -573,7 +586,6 @@ rad-select2
 	&.switch_tabs
 		.switch_item
 			input[type='radio']
-				display none
 				&:checked ~ label
 					&:after, &:before
 						top 100%
@@ -595,13 +607,12 @@ rad-select2
 						border-top-color cl2
 						border-width 7px
 						margin-left -7px
-			label
-				padding 0 15px
 	&.small
 
 		label
 			height 32px
 			line-height 32px
+			padding 0 10px
 
 
 
@@ -822,7 +833,7 @@ rad-select2
 		.file_error_text
 			position absolute
 			right 25px
-			top 8px
+			top 1px
 
 		&.error
 			.file_name
@@ -841,7 +852,7 @@ rad-select2
 		.file_delete
 			position absolute
 			right 0
-			top 6px
+			top 0
 			opacity 0
 			&.show
 				opacity 1

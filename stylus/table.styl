@@ -32,6 +32,7 @@
 			overflow ellipsis
 			box-sizing border-box
 			transition color .2s
+			line-height 1
 			&:hover
 				color clink!important
 
@@ -52,6 +53,7 @@
 				box-sizing border-box
 				margin -7px 0 -5px
 				vertical-align top
+				padding-right 5px
 				&:focus
 					width 70%
 				&.white
@@ -115,17 +117,6 @@
 			left -15px
 			top 50%
 			margin-top -4px
-	&.new
-		&:before
-			content ''
-			position absolute
-			width 8px
-			height 8px
-			border-radius 10px
-			background linear-gradient(cl3 + 30%, cl3)
-			left -15px
-			top 50%
-			margin-top -4px
 
 	// строка при наведении
 	&:hover
@@ -162,6 +153,7 @@
 	padding 15px 15px 15px 0
 	box-sizing border-box
 	line-height 1.3
+
 	&.last_cell
 		padding-right 0
 
@@ -178,13 +170,13 @@
 		font-size fzn - 2px
 
 	&.name
-		float none
 		overflow ellipsis
+		float none
 		.name_title
 			font-weight fwn + 100
 			color clink
 			white-space normal
-
+			word-break break-word
 		.name_desc
 			font-size fzn - 3px
 			color ctextlight
@@ -329,7 +321,7 @@
 			a
 				color ctextlight!important
 			&.name_search
-				margin-left -15px
+				left -15px
 				input
 					margin -13px 0 -3px
 
@@ -460,8 +452,9 @@
 	.contragent
 		float none
 		overflow hidden
-		word-break break-all
 		hyphens auto
+		word-break break-word
+		word-wrap break-word
 	.action
 		width 55px
 		@media (min-width:1400px)
@@ -480,11 +473,11 @@
 		width 15%
 	.service
 		width 5%
-		min-width 30px
+		min-width 35px
 		text-align center
 	.action
 		width 5%
-		min-width 30px
+		min-width 35px
 
 
 // список контрагентов
@@ -513,13 +506,16 @@
 // список транзакций у контрагента
 .table_list.transaction_list_contragent
 	.desc
+		width auto
 		overflow hidden
 		float none
-		width auto
 	.summ
+		width 25%
 		float left
+		max-width 170px
 	.date
-		width 15%
+		width 17%
+		max-width 100%
 
 // банковская выписка
 .statement_list

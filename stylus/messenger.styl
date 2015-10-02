@@ -148,7 +148,7 @@
 		font-size fzn - 4px
 		color ctextlight
 	.name
-		font-weight 500
+		font-weight 600
 		display inline-block
 		margin 0 0 3px
 		color ctext
@@ -195,23 +195,27 @@
 	-webkit-overflow-scrolling touch
 	flex 1 1500 auto
 	.item
-		margin 0 0 10px
-		font-size fzn - 3px
-
+		margin 0 0 15px
+		font-size fzn - 2px
 		&.right
 			.date
 				left 0
+			.photo
+				display none
+			.name
+				display none
 			.desc
 				margin-left 45px
 				margin-right 0
 			.message
 				color ctext
 				background cl4 + 85%
-				font-weight 300
 				margin-right 0
+				margin-top 0
 				word-wrap break-word
 				a
 					color clink
+					word-break break-all
 					&:hover
 						color cl2
 
@@ -226,29 +230,28 @@
 		display inline-block
 		vertical-align middle
 		z-index 10
-		width 40px
-		height 40px
-		margin 0 3px 0 10px
-		font-size 20px
-		border 3px solid #fff
+		width 25px
+		height 25px
+		margin 0 3px 4px 10px
+		font-size 13px
 
 	.name
 		display inline-block
-		vertical-align 0px
+		vertical-align middle
 		font-weight 400
 		color ctext
 		overflow ellipsis
 		max-width 70%
 		overflow ellipssis
+		font-size fzn - 3px
+		font-weight 300
+		margin 0 0 4px
 	.message
 		z-index 0
-		// background cl1 + 30%
 		background cbgsuccess
-		// color #fff
-		// font-weight normal
-		border-radius 10px
-		padding 20px 12px 12px
-		margin -15px 45px 0 0
+		border-radius 20px
+		padding 10px 13px
+		margin 0 45px 0 0
 		word-wrap break-word
 		a
 			// color #fff
@@ -298,8 +301,7 @@
 
 // разделитель в чате
 .messenger_sep_title
-	margin 20px -15px 30px
-	border-bottom 1px solid cbd
+	margin 20px 0
 	text-align center
 	font-size fzn - 4px
 	color ctextlight
@@ -307,11 +309,10 @@
 		position relative
 		display inline-block
 		line-height 18px
-		padding 0 10px
+		padding 4px 10px
 		border-radius 30px
-		background #fff
-		border 1px solid cbd
-		transform translateY(50%)
+		background #f1f1f1
+
 
 
 // блок добавления комментария
@@ -402,7 +403,7 @@
 		clear both
 		max-height 100px
 		overflow auto
-		margin-top 10px
+		padding-top 10px
 		margin-right -10px
 		padding-right 10px
 		-webkit-overflow-scrolling touch
@@ -485,10 +486,9 @@
 				margin-left 100px
 
 	.messenger_sep_title
-		margin 30px 0 40px
+		margin 30px 0
 		>span
 			border none
-			padding 0 15px
 			max-width 80%
 
 			a

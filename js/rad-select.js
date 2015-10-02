@@ -63,7 +63,7 @@ function initRadSelect2() {
 				return _options;
 			},
 			renderOptionItem: function renderOptionItem(o) {
-				return o.html();
+				return o.html().text();
 			}
 		}));
 
@@ -145,7 +145,8 @@ var _defaultOptions = {
 	placeholder: 'Выбрать',
 	autocomplete: false,
 	autocompleteAutoOpen: false,
-	maxItemsCount: 50
+	maxItemsCount: 50,
+	openOnFocus: false
 };
 
 var _trigger = $.fn.trigger;
@@ -162,9 +163,11 @@ var BROWSER = {
 	SAFARI: navigator.userAgent.indexOf("Safari") > -1,
 	OPERA: navigator.userAgent.toLowerCase().indexOf("op") > -1
 };
+
 if (BROWSER.CHROME && BROWSER.SAFARI) {
 	BROWSER.SAFARI = false;
 }
+
 if (BROWSER.CHROME && BROWSER.OPERA) {
 	BROWSER.CHROME = false;
 }
@@ -242,6 +245,7 @@ var RadSelect2 = (function () {
 		this.UID = ++id;
 		this.liIds = 0;
 		this._selectedOptions = [];
+		this._loading = 0;
 		this.init();
 	}
 
@@ -290,47 +294,80 @@ var RadSelect2 = (function () {
 			var _this = this;
 
 			var $selector = this.$selector;
-			var onSearch = debounce(search.bind(this), 200);
+			var onSearch = debounce(search.bind(this), 400);
 
 			$selector.on(RadSelect2.normalizeEventName('input'), '.ms-search-input', function (ev) {
 				onSearch();
 			});
 
+			this.on(RadSelect2.normalizeEventName('closing'), function (ev) {
+				onSearch.cancel();
+			});
+
+			var openAfterClickTimer = undefined;
 			if (this.options.autocomplete) {
-				$selector.on(RadSelect2.normalizeEventName('input'), '.ms-choice', function (ev) {
-					onSearch();
-				});
+				(function () {
+					var clearInput = true; // инвертированный флаг того, что полее ввода изменили НЕ через клавиатуру
+					$selector.on(RadSelect2.normalizeEventName('keydown'), '.ms-choice', function (ev) {
+						clearInput = false;
+					});
+
+					$selector.on(RadSelect2.normalizeEventName('input'), '.ms-choice', function (ev) {
+						if (clearInput) {
+							// если изменили значение поля не вводя символы, а, например, через нажатие на крестик(очистить) у <input type="search">
+							_this.clearSelections();
+							lastSelectedOptions = [];
+							if (openAfterClickTimer) {
+								// при нажатии на крестик срабатывает событие click, обработчик которого отлежен через setTimeout. Отменяем таймаут
+								clearTimeout(openAfterClickTimer);
+							}
+						}
+						clearInput = true;
+						onSearch();
+					});
+				})();
 			} else {
 				// после получения фокуса выпадайкой, нужно переключить фокус на невидимый инпут, чтобы при начале вводу сразу шел поиск
 				$selector.on(RadSelect2.normalizeEventName('focus'), '.ms-choice', function (ev) {
 					setTimeout(function () {
-						return _this.$focusser.focus();
+						_this.$focusser.focus();
+					}, 0);
+				});
+			}
+
+			if (this.options.openOnFocus) {
+				$selector.on(RadSelect2.normalizeEventName('focus'), '.ms-choice-input, .ms-choice-focusser', function () {
+					if (!_this.isOpen) {
+						_this.open();
+					}
+				});
+			}
+
+			if (!this.options.autocomplete || this.options.autocompleteAutoOpen) {
+				// клик на выпадайку скрывает/раскрывает выпадушку
+				$selector.on(RadSelect2.normalizeEventName('click'), '.ms-choice', function (ev) {
+					openAfterClickTimer = setTimeout(function () {
+						_this.toggle();
+						openAfterClickTimer = 0;
 					}, 0);
 				});
 			}
 
 			if (!this.options.isMultySelect) {
 				(function () {
-					var needClose = false;
+					var needReselect = false;
 					$selector.on(RadSelect2.normalizeEventName('mousedown'), '.' + prefix + '-option', function (ev) {
-						needClose = $(ev.currentTarget).find('.input_check:checked').length > 0;
+						needReselect = $(ev.currentTarget).find('.input_check:checked').length > 0;
 						_this.$button.focus();
 					});
 
 					$selector.on(RadSelect2.normalizeEventName('click'), '.' + prefix + '-option', function (ev) {
-						if (needClose) {
-							needClose = false;
-							_this.close();
+						if (needReselect) {
+							needReselect = false;
+							$(ev.currentTarget).find('.input_check:checked').trigger(RadSelect2.normalizeEventName('selected-input'));
 						}
 					});
 				})();
-			}
-
-			if (!this.options.autocomplete || this.options.autocompleteAutoOpen) {
-				// клик на выпадайку скрывает/раскрывает выпадушку
-				$selector.on(RadSelect2.normalizeEventName('click'), '.ms-choice', function (ev) {
-					_this.toggle();
-				});
 			}
 
 			// обработчик выбора элемента выпадайки
@@ -375,21 +412,13 @@ var RadSelect2 = (function () {
 					case KEY.DOWN:
 					case KEY.UP:
 						// навигация по стрелкам вверх/вних
-						var promise = true;
 						if (!_this.isOpen) {
 							if (!_this.options.autocomplete || _this.options.autocompleteAutoOpen) {
-								promise = _this.open();
-							} else {
-								return;
+								_this.open(ev.which == KEY.DOWN);
 							}
 						} else {
-							promise = $.Deferred(function (d) {
-								return d.resolve();
-							});
-						}
-						$.when(promise).then(function () {
 							_this.highlightItem(ev.which == KEY.DOWN);
-						});
+						}
 						ev.preventDefault();
 						break;
 					case KEY.ESC:
@@ -409,26 +438,41 @@ var RadSelect2 = (function () {
 						if (!_this.isOpen) {
 							_this.$element.closest('form').submit();
 						} else {
-							_this.toogleHighlightItem();
+							toogleHighlightItem();
 						}
 						ev.preventDefault();
 						break;
 					case KEY.SPACE:
-						if (_this.isOpen && _this.highlightedItem) {
-							_this.toogleHighlightItem();
+						if (_this.isOpen && _this.highlightedItem && (ev.target != _this.$button[0] && ev.target != _this.$searchInput[0])) {
+							toogleHighlightItem();
 							ev.preventDefault();
 						}
 						break;
 					case KEY.TAB:
 						//при нажатии таб, скрываем выпадайки и передаем фокус дальше
 						if (_this.isOpen) {
-							_this.close();
+							if (!_this.options.isMultySelect) {
+								var seatchText = _this.getSearchText();
+								if (!_this.isLoading() && _this.$selector.find('.' + prefix + '-option').length && _this.lastSearchText === seatchText) {
+									_this.clearSelections();
+									_this.toogleHighlightItem();
+								}
+							}
 						}
+						_this.close();
 						break;
 					default:
 						break;
 				}
 			});
+
+			var toogleHighlightItem = function toogleHighlightItem() {
+				var result = _this.toogleHighlightItem();
+				if (!result) {
+					_this.close();
+				}
+				if (!_this.options.isMultySelect) _this.$button.focus();
+			};
 
 			//При вводе на невидимый инпут, открываем выпадайку и копируем введенный текст в поле для поиска
 			var focusserOnInput = debounce(focusserInput.bind(this), 200);
@@ -458,8 +502,8 @@ var RadSelect2 = (function () {
 						_this.setHighlightItem(selectedLi);
 					}
 				}
-
 				lastSelectedOptions = _this._selectedOptions.slice(0);
+
 				innerEventChanel.trigger('opened', _this);
 			});
 
@@ -494,34 +538,29 @@ var RadSelect2 = (function () {
 			});
 
 			// обработчик строки поиска
-			var lastSeatchText = this.getSearchText();
-
 			function search() {
 				var seatchText = this.getSearchText();
+				var searchDefer = undefined;
 
 				if (this.options.autocomplete) {
 					if (seatchText || this.options.autocompleteAutoOpen) {
 						if (!this.isOpen) {
-							this.open();
+							searchDefer = this.open();
 						} else {
-							this.renderOptions();
+							searchDefer = this.renderOptions();
 						}
 					} else {
 						if (this.isOpen) {
-							this.close();
+							searchDefer = this.close();
 						}
 					}
 				} else {
-					if (seatchText != lastSeatchText) {
-						if (!this.isOpen) {
-							this.open();
-						} else {
-							this.renderOptions();
-						}
+					if (!this.isOpen) {
+						searchDefer = this.open();
+					} else {
+						searchDefer = this.renderOptions();
 					}
 				}
-
-				lastSeatchText = seatchText;
 			};
 
 			var $focusserClearTimeout = undefined;
@@ -565,6 +604,10 @@ var RadSelect2 = (function () {
 				lastSelectedOptions = lastSelectedOptions || [];
 				var selectedOptions = this._selectedOptions || [];
 
+				//if (this.options.autocomplete) {
+				//	return !!selectedOptions.length;
+				//}
+
 				var arrayItemsIsEqual = function arrayItemsIsEqual() {
 					return lastSelectedOptions.filter(function (o) {
 						return selectedOptions.filter(function (selectedO) {
@@ -602,7 +645,7 @@ var RadSelect2 = (function () {
 			var $html = [];
 
 			if (this.options.autocomplete) {
-				this.$button = $('<input type="search" class="ms-choice ms-choice-input">');
+				this.$button = $('<input type="search" class="ms-choice ms-choice-input" placeholder="' + this.options.placeholder + '">');
 			} else {
 				var tabIndex = BROWSER.SAFARI ? '' : 'tabindex="-1"';
 				this.$button = $('<button type="button" class="ms-choice" ' + tabIndex + '>');
@@ -664,7 +707,12 @@ var RadSelect2 = (function () {
 		value: function renderOptions() {
 			var _this4 = this;
 
+			var toDown = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+
+			this._loading++;
+
 			var seatchText = this.getSearchText();
+			this.lastSearchText = seatchText;
 
 			var showLoaderTimeout = setTimeout(function () {
 				_this4.showLoader();
@@ -721,6 +769,8 @@ var RadSelect2 = (function () {
 						}
 					});
 				}
+			}).then(function () {
+				_this4.highlightItem(toDown);
 			}).always(function (reason) {
 				clearInterval(showLoaderTimeout);
 				if (!renderingNoActualData(reason)) {
@@ -733,12 +783,18 @@ var RadSelect2 = (function () {
 
 				return $.Deferred().reject();
 			}).always(function () {
+				_this4._loading--;
 				_this4.renderDefer = null;
 			});
 
 			function renderingNoActualData(reason) {
 				return reason && reason.renderingNoActualData;
 			}
+		}
+	}, {
+		key: 'isLoading',
+		value: function isLoading() {
+			return !!this._loading;
 		}
 
 		/**
@@ -981,8 +1037,9 @@ var RadSelect2 = (function () {
 					highlightedItem = this.$ulPlaceholder.find('.' + prefix + '-option').filter(fisrtSelector);
 				}
 			}
-
-			this.setHighlightItem(highlightedItem, toDown);
+			if (highlightedItem.length) {
+				this.setHighlightItem(highlightedItem, toDown);
+			}
 		}
 
 		/**
@@ -1049,15 +1106,15 @@ var RadSelect2 = (function () {
 			if (this.highlightedItem) {
 				if (this.options.isMultySelect) {
 					this.highlightedItem.toogleSelection();
-				} else {
-					if (!this.highlightedItem.isSelected()) {
-						this.highlightedItem.toogleSelection();
-					} else {
-						this.close();
-					}
-					this.$button.focus();
+					return true;
+				}
+
+				if (!this.highlightedItem.isSelected()) {
+					this.highlightedItem.toogleSelection();
+					return true;
 				}
 			}
+			return false;
 		}
 
 		/**
@@ -1089,6 +1146,8 @@ var RadSelect2 = (function () {
 		value: function open() {
 			var _this9 = this;
 
+			var toDown = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+
 			if (this.openDefer) {
 				return this.openDefer;
 			}
@@ -1104,7 +1163,7 @@ var RadSelect2 = (function () {
 			this.$button.addClass('open');
 			this.$drop.show();
 
-			var openDefer = this.openDefer = this.renderOptions();
+			var openDefer = this.openDefer = this.renderOptions(toDown);
 
 			return openDefer.then(function () {
 				_this9.$drop.removeClass('right');
@@ -1142,16 +1201,26 @@ var RadSelect2 = (function () {
 			if (this.closeDefer) {
 				return this.closeDefer;
 			}
-
+			this.trigger(RadSelect2.normalizeEventName('closing'));
 			this.closeDefer = $.Deferred();
 
-			this.$drop.one(transitionEndEvent, transitionOnEndEvent.bind(this));
+			var onClosed = transitionOnEndEvent.bind(this);
+			var closeTimeot = setTimeout(onClosed, 300);
+			this.$drop.on(transitionEndEvent, onClosed);
+
 			this.$button.removeClass('open');
 			this.$drop.hide();
 
 			return this.closeDefer;
 
 			function transitionOnEndEvent() {
+				clearTimeout(closeTimeot);
+				if (!this.$drop) {
+					return;
+				}
+
+				this.$drop.off(transitionEndEvent, onClosed);
+
 				this.closeDefer.resolve();
 
 				if (this.isOpen) {
@@ -1163,12 +1232,32 @@ var RadSelect2 = (function () {
 			}
 		}
 	}, {
+		key: 'clearSelections',
+		value: function clearSelections() {
+			this.setSelects([]);
+		}
+	}, {
 		key: 'setSelects',
 		value: function setSelects(items) {
+			var _this10 = this;
+
 			this._selectedOptions = items || [];
 			this._selectedOptions = Array.isArray(this._selectedOptions) ? this._selectedOptions : [this._selectedOptions];
 			this.renderSelectedOption();
 			if (this.isOpen) {
+
+				var all = this.$ulPlaceholder.find('.input_check');
+
+				all.prop('checked', false);
+
+				var x = all.filter(function (i, item) {
+					return _this10._selectedOptions.filter(function (o) {
+						return _this10.options.compareOptions(o, $(item).data(prefix + '-option'));
+					}).length > 0;
+				});
+
+				x.prop('checked', true);
+
 				this.highlightSelectedItems();
 			}
 		}
@@ -1184,8 +1273,9 @@ var RadSelect2 = (function () {
 
 			if ($li.length && !this.isScrolledIntoView($li)) {
 				var position = $li.position(),
-				    elementTop = position.top,
-				    viewPort = this.$ulPlaceholder;
+				    parentPosition = this.$ulPlaceholder.position(),
+				    elementTop = position.top + parentPosition.top,
+				    viewPort = this.$drop;
 
 				var diff = elementTop + $li.outerHeight() - viewPort.height();
 				viewPort[0].scrollTop = alignToTop ? viewPort[0].scrollTop + diff + viewPort.height() - $li.outerHeight() : viewPort[0].scrollTop + diff;
@@ -1195,10 +1285,11 @@ var RadSelect2 = (function () {
 		key: 'isScrolledIntoView',
 		value: function isScrolledIntoView($li) {
 			var position = $li.position(),
-			    elementTop = position.top,
-			    viewPort = this.$ulPlaceholder;
+			    parentPosition = this.$ulPlaceholder.position(),
+			    elementTop = position.top + parentPosition.top,
+			    scrollableViewPort = this.$drop;
 
-			return elementTop >= 0 && elementTop + $li.outerHeight() <= viewPort.height();
+			return elementTop >= 0 && elementTop + $li.outerHeight() <= scrollableViewPort.height();
 		}
 	}]);
 
@@ -1220,7 +1311,7 @@ function printableChar(keycode) {
 
 function debounce(fn, delay) {
 	var timer = null;
-	return function () {
+	var debouncedFn = function debouncedFn() {
 		var context = this,
 		    args = arguments;
 		clearTimeout(timer);
@@ -1228,6 +1319,12 @@ function debounce(fn, delay) {
 			fn.apply(context, args);
 		}, delay);
 	};
+
+	debouncedFn.cancel = function () {
+		clearTimeout(timer);
+	};
+
+	return debouncedFn;
 };
 
 function asyncMap(array, fn) {

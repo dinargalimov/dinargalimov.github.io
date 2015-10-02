@@ -11,7 +11,7 @@
 @import 'select.styl'
 @import 'main.styl'
 @import 'messenger.styl'
-@import 'registration.styl'
+// @import 'registration.styl'
 
 header
 	background desaturate(cl1,30%) + 5%
@@ -32,6 +32,12 @@ section.main
 	.header_profile_settigs a,
 	.header_profile_logout a
 		color #fff
+
+	.header_profile_settigs,
+	.header_profile_help,
+	.header_profile_logout,
+	.header_profile_name
+		border-color desaturate(cl1,30%) + 12%
 
 .profile_progress
 	float right

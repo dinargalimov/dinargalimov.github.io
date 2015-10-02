@@ -47,6 +47,8 @@
 
 		<div class="content">
 
+			<h1>Клиенты</h1>
+
 			<div class="table_list table_list_white clients_list">
 
 				<!-- шапка таблицы -->
@@ -72,7 +74,7 @@
 					<div class="table_list_cell city">
 						Город
 					</div>
-					<div class="table_list_cell name">
+					<div class="table_list_cell name name_search">
 						<input type="search" class="small input_search second" value="" placeholder="Поиск ...">
 					</div>
 				</div>
@@ -86,12 +88,12 @@
 							<a href="" class="icon-chat"></a>
 						</div>
 						<div class="table_list_cell group">
-							<select class="select_multi select_inline" data-placeholder="Выбрать">
-								<option value="" selected>Чемпионы</option>
-								<option value="">Бригада</option>
-								<option value="">Колхозники</option>
-								<option value="">Юристы</option>
-							</select>
+							<div class="jsRadSelect2 select_multi select_inline" data-placeholder="Выбрать">
+								<option class="jsRadSelect2Options" value="" selected>Чемпионы</option>
+								<option class="jsRadSelect2Options" value="">Бригада</option>
+								<option class="jsRadSelect2Options" value="">Колхозники</option>
+								<option class="jsRadSelect2Options" value="">Юристы</option>
+							</div>
 						</div>
 
 						<div class="table_list_cell service">
@@ -121,12 +123,12 @@
 						</div>
 
 						<div class="table_list_cell group">
-							<select class="select_multi select_inline" data-placeholder="Выбрать">
-								<option value="" selected>Чемпионы</option>
-								<option value="">Бригада</option>
-								<option value="">Колхозники</option>
-								<option value="">Юристы</option>
-							</select>
+							<div class="jsRadSelect2 select_multi select_inline" data-placeholder="Выбрать">
+								<option class="jsRadSelect2Options" value="" selected>Чемпионы</option>
+								<option class="jsRadSelect2Options" value="">Бригада</option>
+								<option class="jsRadSelect2Options" value="">Колхозники</option>
+								<option class="jsRadSelect2Options" value="">Юристы</option>
+							</div>
 						</div>
 
 						<div class="table_list_cell service">
@@ -156,12 +158,12 @@
 						</div>
 
 						<div class="table_list_cell group">
-							<select class="select_multi select_inline" data-placeholder="Выбрать">
-								<option value="" selected>Чемпионы</option>
-								<option value="">Бригада</option>
-								<option value="">Колхозники</option>
-								<option value="">Юристы</option>
-							</select>
+							<div class="jsRadSelect2 select_multi select_inline" data-placeholder="Выбрать">
+								<option class="jsRadSelect2Options" value="" selected>Чемпионы</option>
+								<option class="jsRadSelect2Options" value="">Бригада</option>
+								<option class="jsRadSelect2Options" value="">Колхозники</option>
+								<option class="jsRadSelect2Options" value="">Юристы</option>
+							</div>
 						</div>
 
 						<div class="table_list_cell service">
@@ -191,9 +193,11 @@
 		<div class="side">
 			<div class="widget_block">
 				<div class="widget_filters">
-					<ul>
-						<li><input type="checkbox" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i> Без закрепленной группы (2)</label></li>
-					</ul>
+					<div class="side_filter">
+						<ul>
+							<li><input type="checkbox" name="1" id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Без закрепленной группы (2)</span></label></li>
+						</ul>
+					</div>
 
 				</div>
 			</div>

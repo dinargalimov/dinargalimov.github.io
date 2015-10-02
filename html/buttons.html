@@ -9,90 +9,72 @@
 
 	<script src="../js/init.js"></script>
 </head>
-<body ng-app="app">
-<aside>
-</aside>
-<header ng-controller="DropdownCtrl">
-</header>
-
-<section class="main">
-	<div class="m_bot_20">
-		<a class="button waves-effect">a.button</a>
-		<a class="button light">a.button.light</a>
-		<a class="button second">Отправить</a>
-		<a class="button cancel">a.button.cancel</a>
-		<a class="button dark">a.button.dark</a>
-		<button class="button" disabled="disabled">a.button.disabled</button>
-		<a class="button_clean">a.button.clean</a>
-		<button class="button_clean" disabled="disabled">a.button.clean</button>
-	</div>
-	<div class="m_bot_20">
-		<button type="submit" class="button">Отправить</button>
-		<button type="submit" class="button disabled">Отправить</button>
-	</div>
-	<div class="m_bot_20">
-		<button class="button xsmall">a.button.xsmall</button>
-		<button class="button small">a.button.small</button>
-		<button class="button middle">a.button.middle</button>
-		<button class="button">a.button</button>
-
-	</div>
-	<div class="m_bot_20">
-		<button class="button xsmall icon-plus">a.button.small.icon-plus</button>
-		<button class="button small icon-plus">a.button.small.icon-plus</button>
-		<button class="button middle icon-plus">Добавить</button>
-		<button class="button icon-plus">button.icon-plus</button>
-
-	</div>
-	<div class="m_bot_20">
-		<a class="button">Отправить</a>
-		<a class="button loader">Отправить</a>
-		<a class="button second loader">Отправить</a>
-
-		<a class="button disabled loader">Отправить</a>
-		<input type="submit" value="Отправить" class="button">
-		<button type="submit" class="button disabled loader" disabled>Отправить</button>
-
-	</div>
-	<div class="m_bot_20">
-		<input type="text" name="" id="" placeholder="text">
-		<a class="button middle icon-trash-bin">Удалить</a>
-	</div>
-	<div class="m_bot_20">
-		<a href="#" class="icon-plus m_right_20">asdfasdf</a>
-		<a href="#" class="icon-print m_right_20">asdfaf</a>
-		<a href="#" class="icon-profile m_right_20">a[vpasjdf</a>
-	</div>
-	<div class="m_bot_20">
-		<!-- переключатель отображения -->
-		<div class="switch_group switch_tabs small m_bot_20">
-			<div class="switch_item">
-				<input type="radio" name="12" id="tab1" checked>
-				<label for="tab1">По фамилиям</label>
-			</div>
-			<div class="switch_item">
-				<input type="radio" name="12" id="tab2">
-				<label for="tab2">По группам</label>
-			</div>
+<body>
+	<div style="padding: 20px;">
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">Размер:</span>
+			<a class="button xsmall">button.xsmall</a>
+			<a class="button small">button.small</a>
+			<a class="button middle">button.middle</a>
+			<a class="button">button</a>
 		</div>
 
-		<!-- переключатель отображения -->
-		<div class="switch_group switch_tabs m_bot_20">
-			<div class="switch_item">
-				<input type="radio" name="13" id="tab3" checked>
-				<label for="tab3">По фамилиям</label>
-			</div>
-			<div class="switch_item">
-				<input type="radio" name="13" id="tab4">
-				<label for="tab4">По группам</label>
-			</div>
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">Цвет:</span>
+			<a class="button small second">button.second</a>
+			<a class="button small cancel">button.cancel</a>
+			<a class="button small dark">button.dark</a>
+			<a class="button small light">button.light</a>
+			<a class="button_clean">button_clean</a>
+		</div>
+
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">С иконкой:</span>
+			<a class="button xsmall icon-plus">button.icon-plus</a>
+			<a class="button small icon-plus">button.icon-plus</a>
+			<a class="button middle icon-plus">button.icon-plus</a>
+			<a class="button icon-plus">button.icon-plus</a>
+			<a class="button_clean icon-trash-bin">button_clean</a>
+		</div>
+
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">Disabled:</span>
+			<button class="button small icon-plus" disabled>button</button>
+			<button class="button small second" disabled>button.second</button>
+			<button class="button small cancel" disabled>button.cancel</button>
+			<button class="button small dark" disabled>button.dark</button>
+			<button class="button small light" disabled>button.light</button>
+			<button class="button_clean" disabled>button_clean</button>
+		</div>
+
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">Загрузка:</span>
+			<a class="button small loader">button.second</a>
+			<a class="button small second loader">button.second</a>
+			<a class="button small cancel loader">button.cancel</a>
+			<a class="button small dark loader">button.dark</a>
+			<a class="button small light loader">button.light</a>
+		</div>
+
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">Без текста:</span>
+			<a class="button xsmall icon-plus button_notext"></a>
+			<a class="button small icon-plus button_notext"></a>
+			<a class="button middle icon-plus button_notext"></a>
+			<a class="button icon-plus button_notext"></a>
+		</div>
+
+		<div class="m_bot_20">
+			<span class="w100px d_ib c_light">Группа:</span>
+				<div class="buttons_group">
+					<a class="button small">button</a>
+					<a class="button small">button</a>
+					<a class="button small icon-down-big button_notext"></a>
+				</div>
+
 		</div>
 	</div>
-	<div class="loading">
-		<div></div>
-	</div>
 
-</section>
 
 </body>
 </html>

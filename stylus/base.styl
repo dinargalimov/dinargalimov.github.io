@@ -68,7 +68,6 @@ a
 		cursor default
 
 	&[class*='icon-']
-		text-decoration none
 		&:before
 			transition 0
 	&[class*='icon-close']
@@ -80,6 +79,10 @@ a
 		&:hover
 			&:before
 				transform rotate(90deg)
+		&:active
+			&:before
+				transform rotate(90deg) scale(.9)
+				transition 0s
 	&[class*='icon-favorites-solid']
 		&:before
 			color ctextwarning!important
@@ -270,14 +273,11 @@ h3
 		// line-height .92
 		// font-size smaller
 
-		// content 'Р'
-
 
 .dollar
 	// color cdollar
 .euro
 	// color ceuro
-
 
 .money_income
 	color cl3 - 20%
@@ -288,15 +288,12 @@ h3
 	&:before
 		content '– '
 
-
-
 .equalize_height
 	display flex
 	align-items stretch
 
 
 // блоки
-
 .info, .info_error, .info_success, .info_sms
 	background cbginfo
 	padding 13px 20px 15px
@@ -327,7 +324,6 @@ h3
 	background-color cbgsuccess
 	border-color cbgsuccess - 20%
 	color ctext
-
 
 .info_sms
 	font-size fzn - 2px
@@ -439,7 +435,8 @@ h3
 		padding 35px 0 0
 		min-height 24px
 		min-width 24px
-		max-width 300px
+		max-width 350px
+		font-size fzn - 2px
 		color ctextlight
 
 
@@ -988,28 +985,7 @@ article.page
 	.popup_layer
 		box-shadow 0 15px 100px rgba(#000,0.2)
 
-@media screen and (max-width: 760px)
-	.popup_overlay
-		position fixed
-		transform translateZ(1px)
-	.popup_table
-		position absolute
-		display block
-	.popup_cell
-		padding 0
-		display block
-		position absolute
-		width 100%
-		height 100%
-		overflow auto
-		-webkit-overflow-scrolling touch
-	.popup_layer
-		min-height calc(100% - 20px)
-		box-sizing border-box
-		width auto
-		padding 40px 20px
-		margin 10px
-		-webkit-text-size-adjust 100%
+
 
 
 .popup_mobile_download
@@ -1080,6 +1056,8 @@ step = 5
 
 for $i in (1..10)
 	N = step*$i px
+	.m_{N}
+		margin N !important
 	.m_top_{N}
 		margin-top N !important
 	.m_left_{N}
@@ -1619,8 +1597,8 @@ a.icon-info
 			box-shadow none
 			&>ul>li.active
 				box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
-				border-left none
-				border-right none
+				border-left-color transparent
+				border-right-color transparent
 		.tabs_content
 			background #fff
 			box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
@@ -1739,8 +1717,8 @@ a.icon-info
 		background #fff
 		background-clip padding-box
 		padding 0
-		box-shadow 0px 2px 6px rgba(0,0,0,0.1)
-		border 1px solid rgba(0,0,0,0.1)
+		box-shadow 0px 4px 15px rgba(0,30,60,0.2)
+		// border 1px solid rgba(0,0,0,0.1)
 		transform-origin top
 		margin-left -1px
 		padding-right 20px
@@ -2012,3 +1990,120 @@ a.drop_input
 		color ctextlight
 	p
 		margin 0 0 15px
+
+
+// анимированный фон
+.back_anim
+	position absolute
+	top 0
+	bottom 0
+	right 0
+	left 0
+	overflow hidden
+	z-index 0
+	[class*="cub"]
+		position absolute
+	.cub1
+		height 400px
+		width 16vw
+		min-width 240px
+		background url(../images/cub1.png) no-repeat 0 0
+		background-size 100% auto
+		bottom 40px
+		left 12%
+		animation cub1 30s linear infinite
+	.cub2
+		height 400px
+		width 16vw
+		margin 240px
+		background url(../images/cub2.png) no-repeat 0 0
+		background-size 100% auto
+		top -100px
+		right -100px
+		animation cub2 20s linear infinite
+	.cub3
+		height 143px
+		width 143px
+		background url(../images/cub3.png) no-repeat 0 0
+		top 150px
+		left 15%
+		animation cub3 30s linear infinite
+	.cub4
+		height 131px
+		width 131px
+		background url(../images/cub4.png) no-repeat 0 0
+		bottom 10%
+		right 21%
+		animation cub4 40s linear infinite
+	.cub5
+		height 67px
+		width 67px
+		background url(../images/cub5.png) no-repeat 0 0
+		top 95px
+		right 290px
+		animation cub5 30s linear infinite
+	.cub6
+		height 58px
+		width 58px
+		background url(../images/cub6.png) no-repeat 0 0
+		bottom 30%
+		left 40%
+		animation cub6 30s linear infinite
+	.cub7
+		height 29px
+		width 29px
+		background url(../images/cub7.png) no-repeat 0 0
+		top 100px
+		left 70px
+		animation cub7 30s linear infinite
+	.cub8
+		height 33px
+		width 33px
+		background url(../images/cub8.png) no-repeat 0 0
+		bottom 340px
+		right 460px
+		animation cub8 20s linear infinite
+	.cub9
+		height 29px
+		width 29px
+		background url(../images/cub9.png) no-repeat 0 0
+		top 150px
+		right 40%
+		animation cub9 20s linear infinite
+
+@keyframes cub1 {
+    from { transform: rotate(-180deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(180deg) translateX(150px) rotate(-360deg); }
+}
+@keyframes cub2 {
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+@keyframes cub3 {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+}
+@keyframes cub4 {
+    from { transform: rotate(180deg) translateX(200px) rotate(0deg); }
+    to   { transform: rotate(-180deg) translateX(200px) rotate(360deg); }
+}
+@keyframes cub5 {
+    from { transform: rotate(90deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(450deg) translateX(50px) rotate(-360deg); }
+}
+@keyframes cub6 {
+    from { transform: rotate(180deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(-180deg) translateX(50px) rotate(360deg); }
+}
+@keyframes cub7 {
+    from { transform: rotate(180deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(-180deg) translateX(50px) rotate(360deg); }
+}
+@keyframes cub8 {
+    from { transform: rotate(90deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(-270deg) translateX(50px) rotate(360deg); }
+}
+@keyframes cub9 {
+    from { transform: rotate(-180deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(180deg) translateX(50px) rotate(-360deg); }
+}

@@ -1,5 +1,7 @@
 @import 'nib'
 @import 'variables.styl'
+
+
 html, body
 	min-width 240px
 .reg
@@ -7,9 +9,8 @@ html, body
 	position absolute
 	width 100%
 	min-height 100%
-	background url(../images/404_back.png) no-repeat center center, radial-gradient(65% 100%, cbglight 45%, cbglight - 20% 100%)
+	background radial-gradient(65% 100%, cbglight 45%, cbglight - 30% 100%)
 	background-size 115% auto, 100% 100%
-
 
 	.wrap
 		width 850px
@@ -23,23 +24,28 @@ html, body
 			width 700px
 
 	.reg_header
-		padding 30px 0
+		padding 20px 0
 		.logo
 			display inline-block
-			width 270px
+			width 250px
 			height 50px
 			background url(../images/logo.svg) no-repeat 0 0
+			background-size 100% auto
 			text-indent -10000em
+		.slogan
+			display inline-block
+			font-style italic
+			vertical-align -20px
+			margin-left 30px
 		.header_links
 			position absolute
 			right 0
-			top 45px
+			top 35px
 	.reg_section
 		display table
 		width 100%
 		box-shadow 7px 7px 0 rgba(cl1,0.1)
-		min-height 400px
-
+		height 450px
 	.reg_side
 		background cl1
 		color #fff
@@ -62,7 +68,7 @@ html, body
 			left 30px
 			right 30px
 			font-size fzn - 4px
-			color cl1+50%
+			color cl1+70%
 	.reg_article
 		background #fff
 		display table-cell
@@ -86,12 +92,14 @@ html, body
 			box-shadow none
 			min-height 0px
 		.reg_header
-			padding 50px 0 20px
+			padding 9vh 0 20px
 			text-align center
 			.title
-				margin 70px 0 0
-				font-size 24px
+				margin 11vh 0 0
+				font-size 22px
 				color ctextlight
+				font-weight 300
+				text-transform uppercase
 
 		.reg_article
 			display block
@@ -115,13 +123,14 @@ html, body
 			padding 20px 0 0
 			text-align center
 			a
-				color ctextlight + 20%
+
 				font-size fzn - 2px
 				display inline-block
-				margin 0 5px
-				text-decoration none
+				margin 0 10px
+				opacity .7
 				&:hover
 					color cl2
+					opacity 1
 
 	.share
 		border-top 1px solid cbd + 30%
@@ -228,7 +237,8 @@ html, body
 				right auto
 				margin-top 15px
 
-
+		.reg_section
+			height auto
 		.reg_section, .reg_side, .reg_article
 			display block
 			width 100%
@@ -262,3 +272,25 @@ html, body
 						color clink
 			.copyright
 				display block
+
+	.popup_overlay
+		position fixed
+		transform translateZ(1px)
+	.popup_table
+		position absolute
+		display block
+	.popup_cell
+		padding 0
+		display block
+		position absolute
+		width 100%
+		height 100%
+		overflow auto
+		-webkit-overflow-scrolling touch
+	.popup_layer
+		min-height calc(100% - 20px)
+		box-sizing border-box
+		width auto
+		padding 40px 20px
+		margin 10px
+		-webkit-text-size-adjust 100%

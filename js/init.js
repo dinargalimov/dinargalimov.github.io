@@ -10,7 +10,9 @@ var arrayOfJS = [
 	'drop',
 	'bootstrap.tooltip',
 	'equalize',
-	'stream_layers'
+	'stream_layers',
+	'shepherd',
+	'hopscotch'
 ];
 
 loadJs();
@@ -73,7 +75,7 @@ function init(){
     	}
     });
 
-     $(".select_multi").multipleSelect({
+    $(".select_multi").multipleSelect({
     	selectAll: false,
     	selectAllText: 'Выбрать все',
     	allSelected: 'Выбраны все',
@@ -181,9 +183,71 @@ function init(){
 	    }
 	});
 
+	 //var init, setupShepherd;
 
+  // init = function() {
+  //   return setupShepherd();
+  // };
+
+ //  function setupShepherd() {
+ //  	var shepherd;
+ //  	shepherd = new Shepherd.Tour({
+ //  		defaults: {
+ //  			classes: 'shepherd-theme-arrows',
+ //  			showCancelLink: true,
+ //  			scrollTo: true
+ //  		}
+ //  	});
+ //  	shepherd.addStep('welcome', {
+ //  		text: ['Shepherd is a javascript library for guiding users through your app. It uses <a href="http://github.hubspot.com/tether/">Tether</a>, another open source library, to position all of its steps.', 'Tether makes sure your steps never end up off screen or cropped by an overflow. Try resizing your browser to see what we mean.'],
+ //  		attachTo: 'header bottom',
+ //  		classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
+ //  		buttons: [
+ //  		{
+ //  			text: 'Exit',
+ //  			classes: 'shepherd-button-secondary',
+ //  			action: shepherd.cancel
+ //  		}, {
+ //  			text: 'Next',
+ //  			action: shepherd.next,
+ //  			classes: 'shepherd-button-example-primary'
+ //  		}
+ //  		]
+ //  	});
+
+ //  	// return shepherd.start();
+
+ //  }
+
+	// setupShepherd();
+
+
+
+	// Define the tour!
+    var tour = {
+      id: "my",
+      i18n: {
+        nextBtn: "Далее",
+        prevBtn: "Назад",
+        doneBtn: "Готово",
+        skipBtn: "Пропустить",
+        closeTooltip: "Закрыть",
+        stepNums : ["1", "2", "3"]
+      },
+      steps: [
+        {
+          title: "Подсказка 1",
+          content: "Введите ОГРН для продолжения регистрации компании",
+          target: document.querySelector("header"),
+          placement: "bottom"
+        }
+      ]
+    };
+
+    // Start the tour!
+    $('.start').click(function() {
+    	hopscotch.startTour(tour);
+    });
 
 }
-
-
 
