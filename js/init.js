@@ -62,29 +62,29 @@ function init(){
 
 
 
-    $("select, .select, .select_inline").filter(function(){
-    	return !$(this).hasClass('select_multi');
-    }).multipleSelect({
-    	selectAll: false,
-    	noMatchesFound: 'Ничего не найдено',
-    	single: true,
-    	isOpen: false,
-        keepOpen: false,
-        textTemplate: function(el){
-    		return el.html();
-    	}
-    });
+    // $("select, .select, .select_inline").filter(function(){
+    // 	return !$(this).hasClass('select_multi');
+    // }).multipleSelect({
+    // 	selectAll: false,
+    // 	noMatchesFound: 'Ничего не найдено',
+    // 	single: true,
+    // 	isOpen: false,
+    //     keepOpen: false,
+    //     textTemplate: function(el){
+    // 		return el.html();
+    // 	}
+    // });
 
-    $(".select_multi").multipleSelect({
-    	selectAll: false,
-    	selectAllText: 'Выбрать все',
-    	allSelected: 'Выбраны все',
-    	noMatchesFound: 'Ничего не найдено',
-    	countSelected: '# из % выбрано',
-    	textTemplate: function(el){
-    		return el.html();
-    	}
-    });
+    // $(".select_multi").multipleSelect({
+    // 	selectAll: false,
+    // 	selectAllText: 'Выбрать все',
+    // 	allSelected: 'Выбраны все',
+    // 	noMatchesFound: 'Ничего не найдено',
+    // 	countSelected: '# из % выбрано',
+    // 	textTemplate: function(el){
+    // 		return el.html();
+    // 	}
+    // });
 
 
 

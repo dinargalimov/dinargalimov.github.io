@@ -282,13 +282,19 @@
 				margin 0
 		.thumbs_down
 			vertical-align -5px
-			color ctextlight
-		a.thumbs_down:hover
-			color cerror
-		.thumbs_up
-			color cl3
-		a.thumbs_up:hover
-			color cl3 - 10%
+
+.thumbs_up, .thumbs_down
+	&:before
+		margin-right 0
+		min-width 0
+.thumbs_down
+	color ctexterror
+a.thumbs_down:hover
+	color cerror
+.thumbs_up
+	color ctextsuccess
+a.thumbs_up:hover
+	color cl3 - 10%
 
 // инфо сообщение после первого сообщения
 .first_message_add

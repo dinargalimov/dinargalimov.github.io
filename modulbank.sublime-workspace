@@ -444,26 +444,37 @@
 	"buffers":
 	[
 		{
-			"file": "stylus/forms.styl",
-			"settings":
-			{
-				"buffer_size": 17507,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "stylus/buttons.styl",
 			"settings":
 			{
-				"buffer_size": 7205,
+				"buffer_size": 7434,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "stylus/main.styl",
+			"file": "stylus/forms.styl",
 			"settings":
 			{
-				"buffer_size": 36619,
+				"buffer_size": 17760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "@import 'nib'\n@import 'variables.styl'\n\nhtml, body\n	min-height 100%\n	height 100%\n	position relative\n	background cbglight\n	min-width 945px\n	animation-name fadeIn\n	animation-duration .8s\n\n\nbody\n	overflow auto\n	-webkit-overflow-scrolling touch\n\naside\n	position absolute\n	width 110px\n	top 0\n	left 0\n	bottom 0\n	background cl1\n	color #fff\n	overflow auto\n	overflow overlay\n	-webkit-overflow-scrolling touch\n\n	.aside_tablet_overlay\n		visibility hidden\n		position absolute\n		top 0\n		bottom 0\n		width 100%\n		height 100%\n		background cl1\n		a\n			position absolute\n			top 0\n			bottom 0\n			width 100%\n			height 100%\n			color #fff\n			text-align right\n			padding 7px 13px 0 0\n			box-sizing border-box\n			font-size fzn + 4px\n			&:before\n				margin 0\n\n\n.aside_logo\n	display block\n	height 40px\n	background url(../images/logo_w.svg) no-repeat center center\n	background-size 90% auto\n	text-indent -10000em\n\nheader\n	position absolute\n	top 0\n	right 0\n	left 110px\n	height 40px\n	background saturate(cbglight - 5%, 10%)\n	z-index 900\n	transition box-shadow .5s\n	&.shadow\n		box-shadow 0 12px 20px -8px rgba(cl1,0.13)\n		transition box-shadow 1s\n\n@media screen and (-webkit-min-device-pixel-ratio:0)\n	header\n		&.shadow\n			box-shadow 0 15px 25px -8px rgba(cl1,0.13)\n\n	_::-webkit-full-page-media, _:future, :root  .page_header\n		&.shadow\n			box-shadow 0 12px 20px -8px rgba(cl1,0.13)\n\n\n// поиск в шапке\n\n.header_search\n	height 100%\n	display inline-block\n	float left\n	background #fff\n	z-index 1\n	&:after\n		left 100%\n		top 50%\n		border solid transparent\n		content \" \"\n		height 0\n		width 0\n		position absolute\n		pointer-events none\n		border-color rgba(0, 0, 0, 0)\n		border-left-color #fff\n		border-width 8px\n		border-top-width 20px\n		border-bottom-width 20px\n		margin-top -20px\n	&:before\n		content \"\"\n		position absolute\n		left 12px\n		height 100%\n		width 25px\n		background url(../images/icon_search.svg) no-repeat 0 center\n		z-index -1\n		transition .2s\n	&:hover\n		&:before\n			opacity 1\n\n	.name\n		color cl1\n		position absolute\n		left 45px\n		top 10px\n		z-index 0\n\n	input\n		position relative\n		height 100%\n		border none\n		width 67px\n		cursor pointer\n		transition width ease-in-out .2s\n		margin-left 25px\n		padding-left 20px\n		padding-right 0\n		background transparent\n		opacity 0\n		box-sizing content-box\n		z-index 10\n		&::-webkit-input-placeholder\n			color ctext\n		&::-moz-placeholder\n			color ctext\n		&:-ms-input-placeholder\n			color ctext!important\n		&:hover\n			width 75px\n\n		&:focus\n			width 250px\n			transition width ease-in-out .2s\n			opacity 1\n			&::-webkit-input-placeholder\n				color ctextholder\n			&::-moz-placeholder\n				color ctextholder\n			&:-ms-input-placeholder\n				color ctextholder!important\n			& ~ .name\n				opacity 0\n		// &:valid\n		// 	opacity 1\n		// 	width 250px\n		// 	& ~ .name\n		// 		opacity 0\n\n\n// быстрое добавление в шапке\n\n.header_add\n	position absolute\n	top 0\n	height 100%\n	left calc(50% - 55px - 49px)\n	a.add\n		display block\n		width 49px\n		height 100%\n		background cl2\n		transition .2s\n		&:before, &:after\n			content ''\n			width 3px\n			height 23px\n			background #fff\n			position absolute\n			top 8px\n			left 23px\n			transition transform .15s\n		&:after\n			height 3px\n			width 23px\n			top 18px\n			left 13px\n		&:hover\n			background-color cl2+10%\n\n\n		&.drop-enabled\n			&:before, &:after\n				transform rotate(45deg)\n			&:after\n				transform rotate(45deg)\n\n.drop.header_add_submenu\n	top 40px!important\n	left 50%!important\n	transform translateX(-50%) translateX(-23px)!important\n	margin-right -2000px\n\n.header_add_drop.drop-content-inner\n	padding 25px 35px\n	max-height 100vh\n	overflow visible\n	&:after, &:before\n		bottom 100%\n		left 50%\n		border solid transparent\n		content \" \"\n		height 0\n		width 0\n		position absolute\n		pointer-events none\n	&:after\n		border-color rgba(255, 255, 255, 0)\n		border-bottom-color #fff\n		border-width 8px\n		margin-left -8px\n	&:before\n		border-color rgba(#0, 0, 0, 0)\n		border-bottom-color rgba(0,0,0,0.2)\n		border-width 9px\n		margin-left -9px\n	h3\n		font-size fzn - 4px\n		font-weight 500\n		text-transform uppercase\n		margin 0 0 15px\n	.col\n		width 193px\n		& ~ .col\n			margin-left 60px\n	.quick_add\n		margin -10px -10px 0!important\n	li\n		a\n			padding-left 0\n			padding-right 0\n			color clink\n			&:hover\n				background none\n				color cl2\n\n	.more\n		clear both\n		padding 15px 0 0\n		margin 0 0 -5px 0\n		text-align right\n		a\n			text-decoration none\n			color ctextlight\n			font-size fzn - 3px\n			&:hover\n				color cl2\n\n\n\n\n\n.header_chat\n	position absolute\n	top 0\n	height 100%\n	left calc(50% - 55px + 1px)\n	a\n		display block\n		height 100%\n		width 49px\n		background cl3 url(../images/icon_chat.svg)no-repeat center\n		&:hover\n			background-color cl3 + 3%\n	label\n		padding 0 4px\n		box-sizing border-box\n		height 14px\n		min-width 14px\n		line-height 14px\n		text-align center\n		border-radius 20px\n		color #fff\n		background cerror\n		font-size fzn - 5px\n		font-weight normal\n		position absolute\n		top 5px\n		right -5px\n		cursor pointer\n\n\n// профиль и выход в шапке\n\n.header_profile\n	float right\n	height 100%\n	.header_profile_settigs,\n	.header_profile_help,\n	.header_profile_logout,\n	.header_profile_name\n		height 100%\n		float left\n		border-right 1px solid saturate(cbglight - 12%, 10%)\n		a\n			text-decoration none\n			display block\n			height 40px\n			width 40px\n			text-align center\n			line-height 40px\n			font-size 20px\n			color clinklight\n			&:hover\n				color cl2\n			&:hover:before\n				color cl2\n	.header_profile_settigs,\n	.header_profile_help,\n	.header_profile_logout\n		[class*='icon-']:before\n			margin-right 0\n\n	.header_profile_logout a:before\n		font-size 18px\n\n	.header_profile_name\n		font-size 13px\n		padding 0 15px\n		font-weight 400\n		max-width 250px\n		line-height 39px\n		color clinklight\n		a\n			width auto\n			font-size fzn - 3px\n			overflow ellipsis\n			max-width 100%\n			&:before\n				font-size 16px\n				vertical-align -3px\n				margin 0 10px 0 0\n\n\n// меню слева\n.menu\n	margin 10px 0 0\n	li\n		margin 0 0 2px\n		box-sizing border-box\n\n		&.active a\n			border-color cl3\n			background cl1 + 10%\n		&.active_parent>a\n			border-color cl3\n			background none\n	// a\n	// 	display block\n	// 	padding 10px 0 10px 7px\n	// 	font-size fzn - 1px\n	// 	color #fff\n	// 	text-decoration none\n	// 	font-weight fwn + 100\n	// 	text-transform uppercase\n	// 	border-left 3px solid transparent\n\n	// 	&:hover\n	// 		background cl1 + 10%\n	// 	&:before\n	// 		margin 0 5px 0 0\n	// 		display inline-block\n	// 		width 20px\n	// 		text-align center\n	// 		font-size 16px\n	// 		vertical-align -2px\n	// 		transition 0\n	// 	&.icon_menu_post\n	// 		&:before\n	// 			font-size 17px\n\n	// 	&.title_submenu\n	// 		&:hover\n	// 			background none\n	// 			cursor default\n\n	a\n		display block\n		padding 14px 0\n		font-size fzn - 3px\n		color #fff\n		text-decoration none\n		font-weight fwn + 100\n		border-left 3px solid transparent\n		text-align center\n\n		&:hover\n			background cl1 + 10%\n		&:before\n			margin 0 0 5px\n			display block\n			text-align center\n			font-size 24px\n			transition 0\n		&.icon_menu_post\n			&:before\n				font-size 17px\n\n		&.icon-menu-clients2\n			&:before\n				font-size 38px\n				line-height 28px\n\n		&.title_submenu\n			&:hover\n				background none\n				cursor default\n\n	// подменю слева\n	.submenu\n		li\n			margin 0\n			&.active a\n				border-color cl3\n		a\n			font-size fzn - 3px\n			padding-left 10px\n			text-transform none\n\n\n		li.active a, a.active\n			&:before\n				background cl5\n\n\n// каркас\n\nsection.main\n	position absolute\n	top 40px\n	left 110px\n	right 0\n	bottom 0\n	z-index 10\n	padding 25px 15px 25px 25px\n	overflow-x hidden\n	overflow-y scroll\n	// overflow-y overlay\n	-webkit-overflow-scrolling touch\n\n	&.section_areas\n		background #fff\n		padding 0\n\n.section_top_area\n	background cbglight\n	padding 25px\n	border-bottom 3px solid cseparator\n\n.section_content\n	background #fff\n	padding 25px\n	.side_right_fixed\n		padding-top 30px\n\n.flex_row\n	display flex\n\n\n.content\n	box-sizing border-box\n	flex 1 300 74%\n\n	.content_notice\n		padding 100px 0\n		.notice_center\n			width 400px\n			margin 0 auto\n			text-align center\n			color ctextlight\n\n\n\n.side\n	min-width 270px\n	max-width 350px\n	width 26%\n	flex 0 1 auto\n	margin-left 20px\n\n	&.side_small\n		min-width 220px\n		max-width 350px\n		width 23%\n\n	&.side_border\n		padding-left 25px\n		margin-left 25px\n		margin-top -25px\n		padding-top 25px\n		border-left 1px solid cbdlight\n.side_padding\n	padding-left 20px\n\n\n\n\narticle.page\n	position fixed\n	// overflow hidden\n	z-index 1050\n	right 0\n	left auto!important\n	bottom 0\n	top 40px\n	width 66%\n	min-width 900px\n	max-width 1000px\n	background #fff\n	box-shadow -4px 10px 30px rgba(cl1,0.25)\n	box-sizing border-box\n	transition width .4s ease, max-width .4s ease, transform .5s ease, opacity .5s ease\n	will-change width, max-width\n	opacity 0\n	transform translateX(200px)\n\n	@media (max-width: 945px)\n		// max-width calc(100% - 45px)\n		// min-width calc(100% - 45px)\n		left 45px!important\n		right auto!important\n		position absolute\n\n	&.hide\n		// animation pageHide .5s ease both\n		opacity 0\n		transform translateX(200px)\n	&.open\n		// animation pageOpen .5s ease backwards\n		opacity 1\n		transform translateX(0px)\n\n	&.fullsize\n		width 100%!important\n		max-width 2000px\n\n	&.normalsize\n		width 66%\n\n\n	&.side_right\n		.page_header\n			margin-right 270px\n		.page_content\n			right 270px\n\n	&.side_right_wide\n		.page_header\n			margin-right 340px\n		.page_content\n			right 340px\n\n	&.page_small\n		// min-width 740px\n		// width 45%\n		.page_content\n			padding-right 24%\n\n	&.open ~ .page.open\n		transform translateX(-12px)\n		z-index 1049\n		.page_expand\n			opacity 0\n		& ~ .page.open\n			transform translateX(-24px)\n			z-index 1048\n			& ~ .page.open\n				transform translateX(-36px)\n				z-index 1047\n				& ~ .page.open\n					transform translateX(-48px)\n					z-index 1046\n\n	&.hide ~ .page.open\n		z-index 1049\n		& ~ .page.open\n			z-index 1048\n			& ~ .page.open\n				z-index 1047\n				& ~ .page.open\n					z-index 1046\n\n// шапка слоя\n.page_header\n	height 80px\n	background #fff\n	padding 23px 30px 0\n	box-sizing border-box\n	z-index 100\n	box-shadow 0 6px 5px -7px rgba(cl1,0.3)\n	transition box-shadow .2s\n\n	&.clean\n		border-bottom none\n		box-shadow none\n		& + .page_content\n			padding-top 10px\n\n	&.header_forward\n		z-index 2100\n		background transparent\n\n	&.shadow\n		box-shadow 0 6px 17px -7px rgba(cl1,0.2)\n		transition box-shadow .5s\n\n	h1\n		display inline-block\n		margin 0 30px 0 35px\n		color ctext\n		max-width calc(100% - 70px)\n		.link_dashed\n			max-width 100%\n			display inline-block\n			span\n				display inline-block\n				overflow ellipsis\n				max-width 100%\n\n	.page_close\n		position absolute\n		top 31px\n		left 30px\n		width 18px\n		height 18px\n		display inline-block\n		color ctext\n		font-size 18px\n		transition .3s\n		text-decoration none\n		&:hover\n			color clink\n		&:before\n			width 18px\n			height 18px\n			margin 0\n			vertical-align 0\n\n\n	// .page_expand\n	// 	&.rotate\n	// 		transition 0\n	// 		&:before\n	// 			transform rotate(180deg)\n	// 			transition 0\n\n	.page_expand\n		position absolute\n		top calc(50vh - 40px)\n		left -16px\n		width 16px\n		height 50px\n		line-height 48px\n		text-align center\n		font-size 12px\n		color ctextlight\n		border-top-left-radius 90px 50px\n		border-bottom-left-radius 90px 50px\n		background #fff\n		box-shadow -4px 0 5px rgba(49,68,93,0.08)\n		text-align center\n		transition .3s\n		&:before\n			width auto\n			margin 0\n			transition .2s\n			transform translateX(2px)\n		&:hover\n			&:before\n				transform translateX(0px)\n		&.rotate\n			transform scaleX(-1)\n			left 0\n			box-shadow -1px 0 3px rgba(49,68,93,0.2)\n\n	.header_action\n		float right\n		margin-top 5px\n		a\n			font-size 22px\n			line-height 22px\n			vertical-align middle\n			display inline-block\n			margin 0 0 0 10px\n			color clinklight\n			&:before\n				color clinklight\n			&:hover:before\n				color cl2\n			&.icon-save\n				font-size 18px\n			&.icon-mail-sent\n				font-size 26px\n	.header_button\n		display inline-block\n		vertical-align 4px\n\n@media screen and (-webkit-min-device-pixel-ratio:0)\n	.page_header\n		box-shadow 0 6px 7px -7px rgba(cl1,0.3)\n		&.shadow\n			box-shadow 0 8px 20px -7px rgba(cl1,0.2)\n\n	_::-webkit-full-page-media, _:future, :root  .page_header\n		box-shadow 0 6px 5px -7px rgba(cl1,0.3)\n		&.shadow\n			box-shadow 0 6px 17px -7px rgba(cl1,0.2)\n\n\n\n// контент слоя\n.page_content\n	position absolute\n	top 80px\n	left 0\n	bottom 0\n	right 0\n	overflow-x hidden\n	overflow-y auto\n	padding 30px 30px 0\n	-webkit-overflow-scrolling touch\n	&:after\n		content ' '\n		display block\n		height 30px\n		width 100%\n		bottom 0\n\n// сайдбар слоя\n.page_side\n	position absolute\n	z-index 100\n	top 0\n	right 0\n	width 270px\n	bottom 0\n	background cbgsky\n	background-clip border-box\n	overflow-x hidden\n	overflow-y auto\n	padding 30px 20px\n	box-sizing border-box\n	font-size fzn - 2px\n	box-shadow inset 4px 0 0 -2px cseparator\n	-webkit-overflow-scrolling touch\n	&.page_side_wide\n		width 340px\n		padding 30px\n	.side_sep\n		background cbdlight\n\n\n.side_title\n	text-transform uppercase\n	font-weight 600\n	text-transform uppercase\n	color ctextlight\n	margin 0 0 25px\n	font-size fzn - 2px\n\n.side_block\n	margin 20px 0\n	.side_block_title\n		font-size fzn - 4px\n		font-weight 500\n		text-transform uppercase\n		color ctextlight\n		margin 0 0 12px\n	p\n		margin 0 0 5px\n\n.side_parameter\n	margin 10px 0\n	font-size fzn - 2px\n\n	.side_parameter_name\n		color ctextlight\n		margin-bottom 5px\n	.side_parameter_value\n		max-width 100%\n		.ms-parent\n			.ms-choice\n				font-size fzn - 2px\n		.select2-container\n			max-width 100%\n			.select2-choice\n				font-size fzn - 2px\n				overflow ellipsis\n				max-width 100%\n\n	&.parameter_inline\n		.side_parameter_name\n			display inline-block\n			padding-right 4px\n			margin-bottom 0\n		.side_parameter_value\n			display inline-block\n\n\n\n.side_sep\n	height 1px\n	margin 20px 0\n	overflow hidden\n	background cbdlight\n\n.side_filter\n	margin 10px 0\n	font-size fzn - 2px\n	ul + ul\n		margin-right 10px\n	li\n		margin 0\n	.label_check\n		padding 6px 0\n		display block\n	.label_filter\n		color cl2\n		display inline-block\n		padding 3px 10px 4px\n		border-radius 30px\n		box-shadow 0 0 0 1px cl2, inset 0 0 0 15px #fff, inset 0 0 0 15px rgba(cl2,0)\n		transition .15s\n	.input_filter:checked + label\n		box-shadow 0 0 0 1px cl2, inset 0 0 0 0 #fff, inset 0 0 0 15px cl2\n		color #fff\n\n\n\n\n\n// виджет\n.widget_block\n	background #fff\n	box-shadow 0px 2px 4px -2px rgba(0,0,0,0.3)\n	padding 20px\n	box-sizing border-box\n	margin-bottom 20px\n\n	.title\n		margin 0 0 15px\n		padding 0 0 15px\n		border-bottom 2px solid cseparator\n		font-weight normal\n\n		.buttons_group_filter\n			margin -6px 0 0\n			float right\n\n		.title_filter\n			float right\n			font-weight fwn\n			.ms-choice\n				font-size fzn - 2px\n\n.light_block\n	background cbgsky\n	padding 20px\n	border 1px solid cbdlightsky\n	box-shadow 0px 9px 6px -5px rgba(0,0,0,0.05)\n	margin-bottom 20px\n\n.border_block\n	padding 20px\n	border 2px solid cseparator\n	margin-bottom 20px\n\n// уведомления\n\n.notice_block\n	font-size fzn - 2px\n	padding 15px\n	margin 0 0 7px\n	border-left 3px solid cl2\n	padding-right 25px\n	&:before\n		color cl2\n	.close\n		position absolute\n		right 10px\n		top 10px\n		color ctextlight + 60%\n		font-size 12px\n		&:before\n			min-width 0\n			margin 0\n		&:hover\n			color ctext\n\n\n	&.warning\n		background cbginfo + 30%\n		border-left 3px solid ctextwarning\n		&:before\n			color ctextwarning\n	&.danger\n		background cbgerror + 30%\n		border-left 3px solid cerror\n		&:before\n			color ctexterror\n	&.success\n		background cbgsuccess + 20%\n		border-left-color cl3\n		&:before\n			color ctextsuccess\n\n	&[class*=\"icon-\"]\n		padding-left 50px\n		&:before\n			position absolute\n			left 15px\n			top 12px\n			font-size 24px\n\n\n	p\n		margin 0 0 10px\n		&:last-child\n			margin-bottom 0\n\n.notice_sep\n	height 25px\n\n\n\n// виджет открытия счета на dashboard\n.account_widget\n	font-size fzn - 3px\n	h3\n		font-weight 300\n		text-align center\n	h4\n		color ctextlight\n		font-weight normal\n		margin 0 0 12px\n		font-size fzn - 1px\n	p\n		margin 10px 0\n	[class*='info']\n		margin-left -20px\n		margin-right -20px\n\n	.found_company\n		background-size 30px auto\n		background-position 10px 10px\n		padding-left 50px\n		h3\n			font-size fzn - 2px\n			text-align left\n			font-weight normal\n			margin 0 0 10px\n		p\n			font-size fzn - 4px\n	.form_buttons\n		margin 20px 0 0\n		.button\n			font-size fzn\n			width 100%\n			padding 0\n			text-align center\n		.links\n			font-size fzn - 3px\n			margin 15px 0 0\n			a\n				margin 0 0 7px\n				display block\n				&:last-child\n					margin-bottom 0\n	.info.status\n		margin-top -20px\n		border-top none\n		border-bottom 3px solid cbginfo - 20%\n		padding-top 20px\n		&.success\n			background-color cbgsuccess + 30%\n			border-bottom-color cbgsuccess - 10%\n			.desc\n				background url(../images/account_widget_status_success.svg) no-repeat 3px 3px\n		&.error\n			background-color cbgerror + 40%\n			border-bottom-color cbgerror - 5%\n			.desc\n				background url(../images/account_widget_status_error.svg) no-repeat 0 3px\n		p\n			color ctext\n			&:last-child\n				margin-bottom 0\n		h3\n			text-transform uppercase\n			font-weight normal\n			font-size fzn\n			margin-bottom 15px\n		.desc\n			padding-left 50px\n			background url(../images/account_widget_status.svg) no-repeat 0 5px\n\n\n\n\n\n// виджет остатка на счетах\n.account_balance_widget\n\n	.icon-info\n		position absolute\n		right 15px\n		top 70px\n		z-index 10\n	.item\n		font-size fzn + 2px\n		margin 0 0 15px\n		.light_text\n			font-size fzn - 2px\n			margin 0 0 4px\n\n	.balance\n		.value\n			font-size 30px\n			text-decoration none\n			color ctext\n\n	.account_balance_widget_empty\n		text-align center\n		padding 20px 0\n		p\n			font-style italic\n			font-size fzn - 2px\n			color ctextlight\n			margin 0 0 15px\n\n\n\n// ------------- Блокировка активности ----------------\n\n.security_lock\n	border-radius 50%\n	text-align center\n	width 410px\n	height 410px\n	background #fff url(../images/security_lock.jpg) center 30px no-repeat\n	background-size 95px auto\n	padding 150px 20px 0\n	overflow hidden\n	h1\n		font-size 20px\n		margin 0 0 20px\n	.small_text\n		font-size fzn - 4px\n	.links\n		display block\n		margin 15px 0 0\n		a\n			margin 0\n	.info_sms\n		margin 0 -20px\n		margin-top 20px\n		padding-top 20px\n		padding-bottom 20px\n\n\n// ---------- фильтры --------------\n\n.widget_filters\n	a\n		color ctext\n		&:hover\n			color cl2\n	.side_filter\n		.label_check\n\n			font-size fzn - 2px\n			color ctextlight\n			display block\n			text-decoration none\n			position relative\n			margin 0 -20px\n			padding 8px 20px 8px 20px\n			transition none\n			z-index 2\n			&:hover\n				background  cbghighlight\n\n		.input_check:checked\n			& + .label_check\n				background  cbghighlight\n\n\n\n\n//------------------- время задачи -------------------\n.task_side_time\n	text-align center\n	font-size 24px\n	margin 0 0 30px\n	[class*=\"icon-\"]\n		&:before\n			font-size 30px\n			vertical-align -7px\n			margin-right 10px\n\n//------------------- инфо клиента в слое задачи -------------------\n.task_side_client\n	font-size fzn - 2px\n	text-align center\n	background #fff\n	padding 15px\n	margin-bottom 30px\n	.avatar\n		width 40px\n		height 40px\n		font-size @width*0.5\n		margin 0 0 5px\n	.name\n		font-size fzn\n		margin 0 0 5px\n	.desc\n		// margin-left 50px\n	.company\n		color ctextlight\n		margin 0 0 3px\n		font-size fzn - 5px\n	.status\n		position absolute\n		top 10px\n		right 10px\n		[class*='info_label']\n			font-size fzn - 6px\n\n\n\n//------------------- выпадающий блок -------------------\n.accordion_block\n	padding 25px 60px 25px 25px\n	margin 0 0 20px\n	background #fafafa\n	box-shadow 0 2px 1px 1px rgba(0,0,0,0.1)\n	border-top 2px solid cbdlight\n	&:after, &:before\n		display none\n		bottom 100%\n		border solid transparent\n		content \" \"\n		height 0\n		width 0\n		position absolute\n		pointer-events none\n	&:after\n		border-color rgba(255, 255, 255, 0)\n		border-bottom-color #fafafa\n		border-width 10px\n	&:before\n		border-color rgba(203, 220, 231, 0)\n		border-bottom-color cbdlight\n		border-width 13px\n		margin-right -3px\n\n	&.r200\n		&:after, &:before\n			display block\n			right 200px\n	&.r100\n		&:after, &:before\n			display block\n			right 100px\n	&.r50\n		&:after, &:before\n			display block\n			right 50px\n\n// ------------------- панель с действиями над списком -------------------\n.title_panel\n	padding 0 0 25px\n	clearfix()\n\n	h1\n		display inline-block\n		margin-bottom 0\n		& ~ .title_buttons\n			margin-left 35px\n	.title_buttons\n		vertical-align 4px\n		display inline-block\n	.title_actions\n		float right\n		margin-top 7px\n		.action_item\n			margin-left 20px\n			display inline-block\n		.icon-submenu\n			background url(../images/action_arrow.svg) no-repeat right bottom\n			padding-right 20px\n			margin-right 18px\n			&:before\n				font-size fzn - 2px\n\n\n// ------------------- лента событий --------------------\n\n.timeline\n	font-size fzn - 3px\n	max-height 70vh\n	overflow auto\n	margin -15px -20px -20px\n	padding 20px\n	-webkit-overflow-scrolling touch\n	.timeline_block\n		margin 0 0 30px\n\n	.timeline_clean\n		text-align center\n		color ctextdis\n		padding 80px 0 50px\n		background url(../images/icon_timeline.svg) no-repeat center 30px\n\n	// блок важно\n	.timeline_important\n		background cbginfo\n		margin -10px -20px 30px\n		padding 20px\n		.timeline_line_block\n			margin-bottom 0\n			[class*=\"icon-\"]\n				box-shadow 0 0 0 3px cbginfo\n				background cbginfo\n		.line_block_title\n			.icon\n				box-shadow 0 0 0 2px cbginfo, 0 0 0 4px clinklight\n\n	.timeline_more\n		padding 0\n\n	// заголовок\n	.line_block_title\n		font-weight 500\n		.icon\n			position absolute\n			left 8px\n			top 7px\n			width 3px\n			height 3px\n			box-shadow 0 0 0 2px #fff, 0 0 0 4px clinklight\n			background clinklight\n			border-radius 50%\n\n	// блок дня\n	.line_block_item\n		padding 0 0 20px 28px\n		line-height 1.4\n		word-break break-word\n		&:before\n			content ''\n			width 1px\n			position absolute\n			left 9px\n			top 5px\n			bottom 0\n			background cbdlight\n			z-index 0\n		&.last_child, &:last-child\n			padding-bottom 0\n			&:before\n				display none\n		.item_icon\n			width 19px\n			height 19px\n			border-radius 50%\n			background #fff\n			z-index 10\n			position absolute\n			left 0\n			top 1px\n			text-align center\n			display block\n			line-height 15px\n			box-shadow 0 0 0 3px #fff\n\n			&:before\n				margin 0\n				width auto\n				font-size fzn + 1px\n		.item_message\n			margin 10px 0 0\n			padding 7px 10px\n			background cbgsky\n			border 1px solid cbdlightsky\n			&:after, &:before\n				bottom 100%\n				left 20px\n				border solid transparent\n				content \" \"\n				height 0\n				width 0\n				position absolute\n				pointer-events none\n			&:after\n				border-color rgba(cbgsky, 0)\n				border-bottom-color cbgsky\n				border-left-color cbgsky\n				border-width 5px\n				margin-left -5px\n			&:before\n				border-color rgba(cbdlightsky, 0)\n				border-bottom-color cbdlightsky\n				border-left-color cbdlightsky\n				border-width 6px\n				margin-left -6px\n		.item_delete\n			position absolute\n			top 1px\n			right -14px\n			width 18px\n			height 14px\n			font-size 14px\n			color ctextlight\n			text-align right\n			opacity 0\n			transition .3s\n			&:before\n				vertical-align 0\n				margin 0\n				width auto\n			&:hover\n				color ctexterror\n		&:hover\n			.item_delete\n				opacity 1\n\n// список компаний\n.list_company\n	.company_item\n		background cbgsky\n		padding 20px\n		border 1px solid cbdlightsky\n		box-shadow 0px 4px 8px 0px rgba(0,0,0,0.07)\n		margin-bottom 10px\n		.select_company\n			position absolute\n			right 15px\n			bottom 15px\n			opacity 0\n		&:hover\n			.select_company\n				opacity 1\n	.company_item_name\n		font-weight 400\n		margin 0 0 15px\n		font-size fzn - 3px\n		text-transform uppercase\n\n	.company_item_info\n		font-size fzn - 3px\n		.form_group\n			margin-bottom 5px\n		.property_label\n			text-align right\n\n// блоки слоя\n\n.page_content_area_solid\n	margin-left -30px\n	margin-right -30px\n	padding 20px 30px\n	background cl2\n	color #fff\n	font-weight normal\n	a\n		color #fff\n		&:hover\n			color #fff\n			text-decoration underline\n	.top_area_desc\n		overflow hidden\n		h1\n			font-weight 500\n			margin 0 0 10px\n			font-size 22px\n		p\n			font-size fzn - 2px\n.page_content_area_light\n	margin-left -30px\n	margin-right -30px\n	padding 30px\n	background cbglight\n\n.page_content_area_top\n	margin-top -30px\n.page_content_area_bot\n	padding-bottom 50px\n	margin-bottom -42px\n\n\n// контрагент\n.contragent_contacts\n	p\n		margin 0 0 12px\n	.address\n		margin-bottom 15px\n	.contact\n		font-weight normal\n	.contact, .email, .phone\n		position relative\n		padding-left 30px\n		&:before\n			position absolute\n			top 3px\n			left 0\n			width 20px\n			text-align center\n			margin 0\n			color ctextlight\n\n.contragent_money\n	overflow hidden\n	float right\n	margin 5px 0 0\n	.item\n		display inline-block\n		margin 0 0 0 20px\n		&:first-child\n			margin-left 0\n		&>.c_light\n			vertical-align middle\n		.values\n			display inline-block\n			vertical-align top\n			margin 0 0 4px\n		.value\n			font-size fzn + 2px\n			margin 0 5px\n			display block\n\n\n\n\n\n// список своих счетов в выпадушке\n.drop_account_list\n	li\n		a\n			clearfix()\n	.account_value\n		float right\n		font-weight 400\n		font-size fzn\n		color ctext\n	.account_name\n		padding 2px 20px 0 0\n		display inline-block\n		overflow ellipsis\n		max-width 330px\n		min-width 142px\n		float left\n	.account_num\n		color ctextlight\n		font-size fzn - 5px\n		display block\n		clear both\n\n// список счетов контрагентов в выпадушке\n.drop_bank_account\n	.bank_name\n		display block\n		padding 0 0 2px\n	.bank_account_num\n		color ctextlight\n		font-weight fzn - 5px\n\n\n// автозаполенение реквизитов\n.payment_autocompelete_details\n	margin-bottom 50px\n\n	&:after, &:before\n		left -32px\n		top 30px\n		border solid transparent\n		content \" \"\n		height 0\n		width 0\n		position absolute\n		pointer-events none\n	&:after\n		border-color rgba(255, 255, 255, 0)\n		border-left-color #fff\n		border-top-color #fff\n		border-width 9px\n	&:before\n		border-color rgba(0, 0, 0, 0)\n		border-left-color cbdlightsky\n		border-top-color cbdlightsky\n		border-width 11px\n		margin-top -2px\n\n\n\n	.title\n		padding 12px 0 35px 50px\n		background url(../images/icon_eva.svg) no-repeat 0 0\n		font-size fzn\n		color ctextlight\n	.autocompelete_details_textarea\n		font-size fzn - 2px\n		min-height 220px\n		max-height 350px\n	.form_buttons\n		margin-top 10px\n\n	.file_upload_block\n		position absolute\n		top 0\n		left 0\n		width 100%\n		height 100%\n		.uploaded\n			border-radius 0\n		.file_delete\n			right 10px\n			top 10px\n		.file_icon\n			width 60px\n			height 81px\n			background-size 100%\n			margin-bottom 15px\n		.file_name\n			font-size fzn - 2px\n\n// список избранных платежей\n.payment_favorites_list\n	.title\n		font-size fzn - 4px\n		font-weight 500\n		text-transform uppercase\n		margin 0 0 10px\n		color ctextlight\n	.item\n		position relative\n		display block\n		margin 0 -10px 2px\n		padding 10px 10px 10px 30px\n		&:before\n			position absolute\n			top 11px\n			left 10px\n		&:hover\n			color clink\n			background #fff\n\n\n// новый платеж, выбор типа платежа\n.payment_new_type_popup\n	width 360px\n	padding 0\n	a\n		display block\n		height 65px\n		line-height 62px\n		background cl2\n		color #fff\n		font-weight normal\n		padding 0 0 0 24px\n		margin 0 0 3px\n		&:before\n			font-size 24px\n			width 35px\n			vertical-align -5px\n		&:hover\n			background cl2 + 5%\n			font-size fzn + 1px\n		&:first-child\n			border-top-right-radius brbut\n			border-top-left-radius brbut\n		&:last-child\n			border-bottom-right-radius brbut\n			border-bottom-left-radius brbut\n		&.icon-building\n			&:before\n				font-size 22px\n\n// дашборд\n.dashboard\n	.dashboard_title\n		display block\n		float left\n		margin-right 30px\n		margin-bottom 20px\n.dashboard_content_filter\n	display inline-block\n	.drop-target\n		margin-right 5px\n\n.cashflow_widget\n	margin-bottom 30px\n	&.light_block\n		.list\n			margin 20px -20px -20px\n			padding 20px\n			background #fff\n			border-top 1px solid cseparator\n			justify-content space-between\n	.list\n		display flex\n		flex-wrap nowrap\n		justify-content space-around\n	.cashflow_widget_title\n		margin -5px 0\n		strong\n			font-weight 400\n	.cashflow_filter\n		padding 2px 0 0\n		float right\n		font-size fzn - 2px\n		color ctextlight\n	.name\n		font-size fzn - 3px\n		color ctextlight\n		padding 0 0 10px\n	.value\n		font-size fzn\n		white-space nowrap\n\n		@media (min-width:1100px)\n			font-size fzn + 2px\n		@media (min-width:1200px)\n			font-size fzn + 3px\n		@media (min-width:1300px)\n			font-size fzn + 5px\n		@media (min-width:1400px)\n			font-size fzn + 7px\n		@media (min-width:1600px)\n			font-size fzn + 10px\n\n.cashflow_widget_side\n	margin-bottom 30px\n	// margin-left -10px\n	background cbginfo\n	border-color desaturate(cbginfo - 15%,20%)\n	&.light_block\n		.list\n			margin 20px -20px -20px\n			padding 20px\n			border-top 1px solid desaturate(cbginfo - 15%,20%)\n\n	.cashflow_widget_title\n		margin -5px 0\n		strong\n			font-weight 400\n	.cashflow_filter\n		padding 10px 0 0\n		font-size fzn - 4px\n		color ctextlight\n	.list\n		background-color cbginfo\n	.item\n		margin-bottom 10px\n		overflow hidden\n		line-height 1\n	.name\n		font-size fzn - 3px\n		color ctextlight\n		padding 4px 0 0\n		display inline-block\n		@media (min-width:1380px)\n			padding-top 7px\n		@media (min-width:1420px)\n			padding-top 7px\n		@media (min-width:1520px)\n			padding-top 10px\n	.value\n		font-size fzn - 2px\n		white-space nowrap\n		float right\n		@media (min-width:1290px)\n			font-size fzn\n		@media (min-width:1380px)\n			font-size fzn + 2px\n		@media (min-width:1420px)\n			font-size fzn + 3px\n		@media (min-width:1520px)\n			font-size fzn + 5px\n\n\n\n.dashboard_transaction\n	.tabs_content\n		.table_list\n			margin -10px -20px -21px\n			width auto\n			.table_list_header\n				background #fff\n\n\n// поиск в выпадушке MagicSearch\n.drop-search\n	max-width 600px\n	min-width 400px\n\n	.no_found\n		padding 15px\n		color ctextlight\n		text-align center\n		font-size fzn - 2px\n		&:before\n			font-size 30px\n			display block\n			text-align center\n			margin 0 0 10px\n	.drop_search_list\n		white-space nowrap\n		.group\n			border-bottom 1px solid cbd\n\n		.group_name\n			width 100px\n			display inline-block\n			vertical-align top\n			padding 12px 15px 0\n			text-transform uppercase\n			font-size fzn - 5px\n			font-weight normal\n			color ctextlight\n			letter-spacing 1px\n			box-sizing border-box\n		.group_list\n			display inline-block\n			vertical-align top\n			width calc(100% - 100px)\n			max-width calc(100% - 100px)\n			margin-left -4px\n\n			li\n				clearfix()\n				a\n					overflow ellipsis\n					max-width 480px\n			.show_more\n				padding-top 0\n				a\n					color clink\n					font-size fzn - 3px\n\n			.value\n				float right\n				font-weight 400\n				font-size fzn\n				color ctext\n				text-align right\n				& ~ .name\n					padding 2px 20px 2px 0\n					display inline-block\n					max-width 300px\n					float left\n				& ~ .desc\n					max-width 300px\n			.name\n				display block\n				overflow ellipsis\n\n			.desc\n				color ctextlight\n				font-size fzn - 4px\n				display block\n				clear left\n				overflow ellipsis\n			.actions\n				display block\n				margin 5px 0 0\n				font-size fzn - 2px\n				span\n					opacity 0.5\n					color ctextlight\n					&:hover\n						color cl2\n			li:hover\n				.actions\n					span\n						opacity 1\n\n\n// Настройки\n\n.personal_settings\n	max-width 600px\n	.avatar\n		margin-bottom 20px\n\n\n\n// подсказки к графику\n.tooltip_graph\n	position absolute\n	pointer-events none\n	z-index 3000\n	display inline-block\n	background rgba(cl1,0.9)\n	padding 10px 10px 7px\n	border-radius 2px\n	color #fff\n	.date\n		font-weight normal\n		font-size fzn - 3px\n		margin 0 0 10px\n		text-align center\n	.money\n		overflow hidden\n		font-size fzn - 4px\n		margin-bottom 4px\n		.money_expense\n			color ctexterror + 40%\n		.money_income\n			color ctextsuccess + 30%\n\n		.name\n			display inline-block\n			margin-right 15px\n		.value\n			float right\n			font-weight normal\n\n\n\n\n\n// Графики\n#chart\n	circle\n		stroke-width 2px\n		fill #fff\n		&.debet\n			stroke cl2\n			transform translateY(-5px)\n			&.debet_select\n				fill cl2\n		&.credit\n			stroke cerror\n			transform translateY(-5px)\n			&.credit_select\n				fill cerror\n\n	path\n		&.credit\n			stroke cerror\n			stroke-width 2px\n			fill none\n			transform translateY(-5px)\n		&.debet\n			stroke cl2\n			stroke-width 2px\n			fill none\n			transform translateY(-5px)\n	rect\n		&.bar\n			fill saturate(cbglight - 5%, 10%)\n			transform translateY(-5px)\n		&.bar_select\n			fill saturate(cbglight - 10%, 20%)\n\n	.graph_disabled\n		opacity 0\n	.legend_disabled\n		fill-opacity 0\n\n	.legend\n		circle\n			stroke-width 1px\n		.debet\n			fill cl2\n			circle\n				fill cl2\n				stroke cl2\n		.credit\n			fill cerror\n			circle\n				fill cerror\n				stroke cerror\n		.bar\n			fill ctextlight\n			circle\n				fill saturate(cbglight - 5%, 10%)\n				stroke saturate(cbglight - 5%, 10%)\n		text\n			font-size 11px\n			text-transform none\n\n	.legend circle,\n	.legend text\n		cursor pointer\n\n	.axis\n		path,line\n			fill none\n			stroke #E4E8EA\n			shape-rendering crispEdges\n		path\n			// stroke-width 2px\n		// &.y, &.y2\n		// 	path, line\n		// 		stroke #EAF1F5\n		text\n			font-size 10px\n			font-weight 600\n			fill ctextlight + 30%\n\n	.overlayGraph\n		fill none\n		pointer-events all\n	.svg-container\n		position relative\n		width 100%\n		vertical-align top\n		overflow hidden\n	.svg-content-responsive\n		display inline-block\n	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)\n		.svg-content-responsive\n			height 300px\n\n\n// сертификат\n.certificate_block\n	width 550px\n	margin 0 auto\n	height 330px\n	background url(../images/cert.jpg) no-repeat 0 0\n	background-size 100% 100%\n	box-sizing border-box\n	padding 70px 30px 30px 40px\n	font-size fzn - 1px\n	.title\n		text-align center\n		font-size fzn + 4px\n		font-weight 600\n		margin-bottom 30px\n		font-style italic\n		text-transform uppercase\n	.property_label\n		text-align right\n\n\n// настройки тарифы\n.tarif_info\n	padding-bottom 20px\n	border-bottom 1px solid cbdlight\n	overflow hidden\n	.price\n		float right\n		text-align right\n		line-height 1.1\n		p\n			font-weight normal\n			font-size fzn\n		a\n			font-size fzn - 4px\n		.small_text\n			font-size fzn - 4px\n			padding 3px 0 0\n	.status\n		color ctextsuccess\n		font-weight 600\n		overflow hidden\n.tarif_serv_row\n	padding-top 15px\n	padding-bottom 15px\n	border-top 1px solid cbdlight\n	overflow hidden\n	.name\n		// float left\n		// width 50%\n\n		.title\n			font-weight normal\n			margin-bottom 5px\n		.desc\n			font-size fzn - 2px\n			color ctextlight\n			line-height 1.5\n	.value\n		float right\n		width 50%\n		text-align right\n		.title\n			font-size fzn - 4px\n			color ctextlight\n			margin-bottom 5px\n		.price\n			color cl2\n			font-weight normal\n\n.tarif_balance\n	border-top 2px solid cl3\n	margin-top 10px\n	padding 20px 0\n	.title\n		font-weight normal\n		margin 0 0 20px\n	.balance_list\n		display flex\n\n		.list\n			flex 0 1 80%\n			padding-right 15px\n			box-sizing border-box\n			.item\n				margin-bottom 10px\n				.name\n					font-size fzn - 4px\n					color ctextlight\n				.price\n					float right\n					font-weight normal\n\n		.total\n			flex 0 0 auto\n			font-weight normal\n			float right\n			text-align right\n			padding 20px 0 0 20px\n			background url(../images/summ.svg) no-repeat 0 center\n			box-sizing border-box\n			min-height 42px\n\n.tarif_dop_serv\n	font-size fzn - 4px\n	margin-left 20px\n	&.dop_serv_connect\n		background cbgsuccess\n		border-color cl3\n	.title\n		font-size fzn + 2px\n		font-weight normal\n		margin 0 0 8px\n	.more\n		display block\n		margin 0 0 8px\n	.desc\n		color ctextlight\n		margin-bottom 12px\n	.add\n		float right\n		padding-top 5px\n		.connect\n			color ctextsuccess\n			font-weight 600\n			&:before\n				margin-right 0\n		.button\n			margin-top -5px\n	.price\n		font-weight 600\n		color ctextlight\n		padding-top 5px\n		overflow hidden\n.banner_other_tarif\n	background-image url(../images/banner_other_tarif.png)\n	background-repeat no-repeat\n	background-position right 0\n	background-size auto 100%\n	margin-bottom 30px\n	.title\n		font-weight normal\n		margin 0 0 12px\n	.desc\n		font-size fzn - 4px\n		margin 0 0 15px\n\n.tarif_noactiv\n	overflow hidden\n	.price\n		float right\n		font-size 27px\n		font-weight normal\n		text-align right\n		line-height 18px\n		div\n			margin-top -5px\n		.price_free\n			font-size 20px\n			margin 0\n		a\n			font-size fzn - 4px\n	.tarif_noactiv_info\n		clear both\n		background #fff\n		margin 20px -20px -20px\n		padding 20px\n		border-top 1px solid cseparator\n		overflow hidden\n		.item\n			margin 0 0 15px\n			.title\n				font-weight normal\n				margin-bottom 5px\n			p\n				font-size fzn - 3px\n				color ctextlight\n				line-height 1.5\n\n\n// курсы валют\n.currencies_table\n	.item_currency\n		margin 0 0 20px\n		padding 20px\n		background #FFF\n		.currency_name\n			font-weight 600\n			margin 0 0 12px\n			padding 0 0 0 30px\n			line-height 24px\n			background-position 0 0\n			background-size 24px\n			background-repeat no-repeat\n			&.dollar\n				background-image url(../images/dollar_color.svg)\n			&.euro\n				background-image url(../images/euro_color.svg)\n		.item_cost\n			margin 0 0 6px\n		.cost_name\n			display inline-block\n			width 100px\n			color ctextlight\n		.cost_value\n			display inline-block\n			font-weight normal\n			&:after\n				font-size 7px\n				display inline-block\n				margin-left 3px\n				vertical-align 3px\n			&.up\n				color ctextsuccess\n				&:after\n					content '▲'\n			&.down\n				color ctexterror\n				&:after\n					content '▼'\n\n\n// список кодов валют в дропе\n.drop_code_currency_list\n	.drop-title\n		font-style normal\n	.code\n		display inline-block\n		vertical-align top\n		color ctextlight\n		width 60px\n	.value\n		display inline-block\n		vertical-align top\n		max-width calc(100% - 65px)\n",
+			"file": "stylus/main.styl",
+			"file_size": 37408,
+			"file_write_time": 130885008780000000,
+			"settings":
+			{
+				"buffer_size": 36816,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/admin.styl",
+			"settings":
+			{
+				"buffer_size": 2165,
 				"line_ending": "Unix"
 			}
 		},
@@ -471,15 +482,7 @@
 			"file": "stylus/base.styl",
 			"settings":
 			{
-				"buffer_size": 38366,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "stylus/404.styl",
-			"settings":
-			{
-				"buffer_size": 521,
+				"buffer_size": 38126,
 				"line_ending": "Unix"
 			}
 		},
@@ -487,15 +490,15 @@
 			"file": "stylus/select.styl",
 			"settings":
 			{
-				"buffer_size": 5145,
+				"buffer_size": 5297,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "stylus/registration.styl",
+			"file": "stylus/style.styl",
 			"settings":
 			{
-				"buffer_size": 4924,
+				"buffer_size": 436,
 				"line_ending": "Unix"
 			}
 		},
@@ -503,7 +506,23 @@
 			"file": "stylus/transaction.styl",
 			"settings":
 			{
-				"buffer_size": 7157,
+				"buffer_size": 7192,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/messenger.styl",
+			"settings":
+			{
+				"buffer_size": 8429,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/variables.styl",
+			"settings":
+			{
+				"buffer_size": 923,
 				"line_ending": "Unix"
 			}
 		},
@@ -511,112 +530,67 @@
 			"file": "stylus/table.styl",
 			"settings":
 			{
-				"buffer_size": 9618,
+				"buffer_size": 9507,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/payment/payment_page_new.html",
+			"file": "html/transaction/transaction_page_currency.html",
 			"settings":
 			{
-				"buffer_size": 16161,
+				"buffer_size": 12629,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/reg/registration_popup_mobile.html",
+			"file": "html/dashboard.html",
 			"settings":
 			{
-				"buffer_size": 4558,
+				"buffer_size": 16725,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/contragents/contragent_page_view.html",
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>Goodybox</title>\n	<link rel=\"stylesheet\" href=\"css/style.css\">\n	<link rel=\"stylesheet\" href=\"css/select.css\">\n	<link rel=\"stylesheet\" href=\"css/magnific-popup.css\">\n	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>\n\n\n</head>\n<body>\n		<header>\n			<div class=\"wrap\">\n				<a class=\"logo\">Goodybox</a>\n				<div class=\"header_profile\">\n					<div class=\"name\">Привет, Александр</div>\n					<a class=\"logout\">Выход</a>\n\n					<!-- окно входа -->\n					<div id=\"login_popup\" class=\"popup_content\">\n						<h1>Вход в систему <small>Войди под своей почтой и паролем</small></h1>\n						<form>\n							<div class=\"form_group\">\n								<div class=\"form_label\">Эл. почта</div>\n								<input type=\"email\" name=\"\" id=\"\" class=\"w100\">\n							</div>\n							<div class=\"form_group\">\n								<a class=\"forgot_password\">Забыл пароль?</a>\n								<div class=\"form_label\">Пароль</div>\n								<input type=\"password\" name=\"\" id=\"\" class=\"w100\">\n								<input type=\"checkbox\" name=\"l1\" id=\"l1\">\n								<label for=\"l1\" class=\"label_check f_small m_top_10\"><i class=\"icon\"></i><span>Запомнить пароль</span></label>\n							</div>\n							<div class=\"form_buttons\">\n								<button class=\"button\">Войти</button>\n							</div>\n						</form>\n					</div>\n\n					<!-- окно регистрации -->\n					<div id=\"login_popup\" class=\"popup_content\">\n						<h1>Вход в сист</h1>\n						<form>\n							<div class=\"form_group\">\n								<div class=\"form_label\">Эл. почта</div>\n								<input type=\"email\" name=\"\" id=\"\" class=\"w100\">\n							</div>\n							<div class=\"form_group\">\n								<a class=\"forgot_password\">Забыл пароль?</a>\n								<div class=\"form_label\">Пароль</div>\n								<input type=\"password\" name=\"\" id=\"\" class=\"w100\">\n								<input type=\"checkbox\" name=\"l1\" id=\"l1\">\n								<label for=\"l1\" class=\"label_check f_small m_top_10\"><i class=\"icon\"></i><span>Запомнить пароль</span></label>\n							</div>\n							<div class=\"form_buttons\">\n								<button class=\"button\">Войти</button>\n							</div>\n						</form>\n					</div>\n\n				</div>\n				<nav>\n					<ul>\n						<li><a class=\"active\">Меню</a></li>\n						<li><a>FAQ</a></li>\n						<li><a href=\"#login_popup\" class=\"popup\">Вход</a></li>\n						<li><a>Регистрация</a></li>\n					</ul>\n				</nav>\n			</div>\n		</header>\n\n		<!-- баннер на главной -->\n		<div class=\"page_banner banner_menu\">\n			<div class=\"wrap\">\n				<h1>Меню</h1>\n			</div>\n		</div>\n\n		<div class=\"container wrap\">\n			<div class=\"side\"><div class=\"side_top\">\n\n					<div class=\"form_group_title\">Размер коробки</div>\n					<div class=\"form_group m_bot_50\">\n						<select>\n							<option value=\"4 снека\">4 снека</option>\n							<option value=\"8 снека\">8 снеков</option>\n						</select>\n					</div>\n\n					<div class=\"order_box\">\n						<ul class=\"order_list\">\n							<li>\n								<div class=\"img\"><img src=\"images/img2.jpg\" alt=\"\"></div>\n								<div class=\"name\">Семечки тыквы, ананас и лепестки миндаля</div>\n								<a class=\"delete\"></a>\n							</li>\n							<li>\n								<div class=\"img\"><img src=\"images/img2.jpg\" alt=\"\"></div>\n								<div class=\"name\">Семечки тыквы, ананас и лепестки миндаля</div>\n								<a class=\"delete\"></a>\n							</li>\n							<li class=\"noactive\">\n								<div class=\"img\"></div>\n								<div class=\"name\">Добавь еще один снек из меню</div>\n							</li>\n							<li class=\"noactive\">\n								<div class=\"img\"></div>\n								<div class=\"name\">Добавь еще один снек из меню</div>\n							</li>\n						</ul>\n						<div class=\"form_group\">\n\n							<input type=\"checkbox\" name=\"c1\" id=\"c1\">\n							<label class=\"label_check w100\" for=\"c1\">Удивите меня<i class=\"icon f_right\"></i></label>\n						</div>\n						<div class=\"small_text\">Выбери опцию «Удивите меня», и мы подберем для тебя оставшиеся снеки сами</div>\n					</div>\n\n					<div class=\"form_group_title\">Периодичность доставки</div>\n					<div class=\"form_group choose_period small\">\n						<input type=\"radio\" name=\"\" id=\"f3\" checked>\n						<label for=\"f3\">Разовый заказ</label>\n						<input type=\"radio\" name=\"\" id=\"f4\" disabled>\n						<label for=\"f4\" title=\"Временно недоступно\">1 раз в неделю</label>\n						<input type=\"radio\" name=\"\" id=\"f5\" disabled>\n						<label for=\"f5\" title=\"Временно недоступно\">2 раза в неделю</label>\n						<input type=\"radio\" name=\"\" id=\"f6\" disabled>\n						<label for=\"f6\" title=\"Временно недоступно\">1 раз в 2 недели</label>\n					</div>\n					<button class=\"button middle orange arrow-right full\">ОФОРМИТЬ ЗАКАЗ</button>\n				</div></div>\n\n			<div class=\"content\">\n				<div class=\"form_group_title\">Категория</div>\n				<div class=\"form_group m_bot_50\">\n					<select>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n						<option value=\"4 снека\">Орехи и семечки</option>\n						<option value=\"8 снека\">Сухофрукты</option>\n					</select>\n				</div>\n\n				<ul class=\"catalog_list\">\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n\n						<div id=\"product_desc\" class=\"popup_content\">\n							<div class=\"product_desc\">\n								<figure><img src=\"images/img3.jpg\" alt=\"\"></figure>\n								<div class=\"info\">\n									<h1>Семечки тыквы, ананас и лепестки миндаля</h1>\n									<div class=\"include\">\n										Состав: тыква, миндаль, изюм, цукаты, тыква, миндаль, изюм, цукаты\n									</div>\n\n									<div class=\"table\">\n										<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n											<tr>\n												<th></th>\n												<th>на 100 гр.</th>\n												<th>порция</th>\n											</tr>\n											<tr>\n												<td>Калорийность</td>\n												<td>846 ккал</td>\n												<td>446 ккал</td>\n											</tr>\n											<tr>\n												<td>Белки</td>\n												<td>24 г</td>\n												<td>12 г</td>\n											</tr>\n											<tr>\n												<td>Жиры</td>\n												<td>34 г</td>\n												<td>17 г</td>\n											</tr>\n											<tr>\n												<td>Углеводы</td>\n												<td>56 г</td>\n												<td>28 г</td>\n											</tr>\n										</table>\n									</div>\n									<div class=\"form_buttons\">\n										<a class=\"button\">Добавить в набор</a>\n									</div>\n								</div>\n\n							</div>\n						</div>\n					</li>\n					<li class=\"selected\">\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n					<li>\n						<a class=\"show_desc popup\" href=\"#product_desc\">\n							<figure><img src=\"images/img1.jpg\" alt=\"\"></figure>\n							<span class=\"name\">Семечки тыквы, ананас и лепестки миндаля</span>\n						</a>\n						<div class=\"buy\">\n							<a class=\"button small arrow-right\">Добавить</a>\n						</div>\n					</li>\n\n				</ul>\n			</div>\n\n		</div>\n\n		<!-- подвал -->\n		<footer class=\"wrap\">\n			<a class=\"logo_fot\">Goodybox.ru</a>\n			<nav>\n				<ul>\n					<li><a>Меню</a></li>\n					<li><a>FAQ</a></li>\n					<li><a>О нас</a></li>\n					<li><a>Как это работает</a></li>\n				</ul>\n			</nav>\n			<div class=\"soc soc_fot\">\n				<a class=\"fb\">Мы на Facebook</a>\n				<a class=\"vk\">Мы в вконтакте</a>\n				<a class=\"in\">Мы на Instagram</a>\n			</div>\n		</footer>\n\n\n\n	<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\"></script>\n    <script src=\"http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js\"></script>\n    <script src=\"js/selectBox.js\"></script>\n    <script src=\"js/jquery.magnific-popup.js\"></script>\n    <script>\n        $(function() {\n\n        	var selectBox = $(\"select\").selectBoxIt({\n        		dynamicPositioning: false\n        	});\n\n        	$('.popup').magnificPopup({\n		    	type: 'inline'\n			});\n		});\n\n		$(window).scroll(function() {\n		    var scroll = $(window).scrollTop();\n		    if (scroll >= 150) {\n		        $(\"header\").addClass(\"thin\");\n		    }\n		    else {\n		    	$(\"header\").removeClass(\"thin\");\n		    }\n		});\n    </script>\n</body>\n</html>",
+			"file": "/Volumes/Work/HTML/Goodybox/html/menu.html",
+			"file_size": 13547,
+			"file_write_time": 130885114410000000,
 			"settings":
 			{
-				"buffer_size": 12961,
+				"buffer_size": 12708,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/reg/registration.html",
+			"file": "/Volumes/Work/HTML/Goodybox/html/stylus/style.styl",
 			"settings":
 			{
-				"buffer_size": 4656,
+				"buffer_size": 16014,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/reg/registration_step2.html",
+			"file": "html/open_account/open_account_step2_1.html",
 			"settings":
 			{
-				"buffer_size": 2030,
+				"buffer_size": 5656,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/admin/admin_page_new_email.html",
+			"file": "html/open_account/account_widget.html",
 			"settings":
 			{
-				"buffer_size": 2281,
+				"buffer_size": 9776,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "html/open_account/open_account_step1_4_загрузка.html",
+			"file": "html/forms.html",
 			"settings":
 			{
-				"buffer_size": 5795,
+				"buffer_size": 10625,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "html/payment/payment_page_disable.html",
-			"settings":
-			{
-				"buffer_size": 15560,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "html/payment/payment_page_edit.html",
-			"settings":
-			{
-				"buffer_size": 11172,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "html/reg/login.html",
-			"settings":
-			{
-				"buffer_size": 2799,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>404</title>\n	<base href=\"../\"/>\n	<link rel=\"stylesheet\" href=\"css/style.css\">\n	<link rel=\"stylesheet\" href=\"css/registration.css\">\n	<link rel=\"stylesheet\" href=\"css/404.css\">\n</head>\n<body>\n\n\n\n<div class=\"page404\">\n\n	<div class=\"back_anim\">\n		<div class=\"cub1\"></div>\n		<div class=\"cub2\"></div>\n		<div class=\"cub3\"></div>\n		<div class=\"cub4\"></div>\n		<div class=\"cub5\"></div>\n		<div class=\"cub6\"></div>\n		<div class=\"cub7\"></div>\n		<div class=\"cub8\"></div>\n		<div class=\"cub9\"></div>\n	</div>\n	<a href=\"#\" class=\"logo\">ModulBank</a>\n	<div class=\"content_wrap\">\n		<div class=\"content_cell\">\n			<div class=\"content\">\n				<h1>ССЫЛКА УСТАРЕЛА</h1>\n				<p>Для получения новой ссылки вам необходимо отправить новый запрос на смену пароля.</p>\n			</div>\n		</div>\n	</div>\n</div>\n\n</body>\n</html>",
-			"file": "html/404.html",
-			"file_size": 941,
-			"file_write_time": 130873141950000000,
-			"settings":
-			{
-				"buffer_size": 858,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "{\n    //Debug logging\n    \"debug_enable\": false,\n\n    // When only either the left or right bracket can be found\n    // this defines if the unmatched bracket should be shown.\n    \"show_unmatched\": true,\n\n    // Do the opposite of \"show_unmatched\" for the languages listed below\n    \"show_unmatched_exceptions\": [],\n\n    // Enable high visibility by default when sublime starts up\n    // If sublime is already running and this gets changed,\n    // you will not see any changes (restart required to see change)\n    \"high_visibility_enabled_by_default\": false,\n\n    // Experimental: Creates a visible bar at the beginning of all lines between\n    // multiline bracket spans.\n    \"content_highlight_bar\": false,\n\n    // Experimental: Align the content highlight bar at the bracket indent level\n    \"align_content_highlight_bar\": false,\n\n    // Show brackets in the minimap.\n    // Depending on your highlight style, regions may not be visible in minimap.\n    // \"underline\" won't show up due to it being a style consisting of\n    // multiple zero width selections to create a fat underline.\n    // But the following styles should show up fine as they are normal regions styles:\n    //     - thin_underline\n    //     - solid\n    //     - outline\n    //     - squiggly\n    //     - stippled\n    \"show_in_minimap\": false,\n\n    // High visibility style and color for high visibility mode\n    // (solid|outline|underline)\n    // ST3 has additional options of (thin_underline|squiggly|stippled)\n    \"high_visibility_style\": \"outline\",\n\n    // (scope|__default__|__bracket__)\n    \"high_visibility_color\": \"__bracket__\",\n\n    // Match brackets only when the cursor is touching the inside of the bracket\n    \"match_only_adjacent\": false,\n\n    // Outside adjacent bracket matching\n    \"bracket_outside_adjacent\": true,\n\n    // When \"bracket_outside_adjacet\" is set, and a plugin command explicitly sets\n    // \"no_outside_adj\" to \"None\" instead of \"true\" or the default \"false\",\n    // this value will be used.\n    \"ignore_outside_adjacent_in_plugin\": true,\n\n    // Character threshold to search\n    \"search_threshold\": 5000,\n\n    // Ignore threshold\n    \"ignore_threshold\": false,\n\n    // Set mode for string escapes to ignore (regex|string)\n    \"bracket_string_escape_mode\": \"string\",\n\n    // Set max number of multi-select brackets that will be searched automatically\n    \"auto_selection_threshold\" : 10,\n\n    // Enable this to completely kill highlighting if \"auto_selection_threshold\"\n    // is exceeded.  Default is to highlight up to the \"auto_selection_threshold\".\n    \"kill_highlight_on_threshold\": true,\n\n    // Disable gutter icons when doing multi-select\n    \"no_multi_select_icons\": false,\n\n    // Rules that define the finding and matching of brackets\n    // that are contained in a common scope.\n    // Useful for bracket pairs that are the same but\n    // share a common scope.  Brackets are found by\n    // Finding the extent of the scope and using regex\n    // to look at the beginning and end to identify bracket.\n    // Use only if they cannot be targeted with traditional bracket\n    // rules.\n    \"scope_brackets\": [\n        // Quotes\n        {\n            \"name\": \"py_single_quote\",\n            \"open\": \"(?:u|b)?r?((?:'')?')\",\n            \"close\": \"((?:'')?')\",\n            \"style\": \"single_quote\",\n            \"scopes\": [\"string\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Python\", \"PythonImproved\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        {\n            \"name\": \"py_double_quote\",\n            \"open\": \"(?:u|b)?r?((?:\\\"\\\")?\\\")\",\n            \"close\": \"((?:\\\"\\\")?\\\")\",\n            \"style\": \"double_quote\",\n            \"scopes\": [\"string\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Python\", \"PythonImproved\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        {\n            \"name\": \"single_quote\",\n            \"open\": \"(')\",\n            \"close\": \"(')\",\n            \"style\": \"single_quote\",\n            \"scopes\": [\"string\", \"string.quoted\"],\n            \"language_filter\": \"blacklist\",\n            \"language_list\": [\"Plain text\", \"Hex\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        {\n            \"name\": \"double_quote\",\n            \"open\": \"(\\\")\",\n            \"close\": \"(\\\")\",\n            \"style\": \"double_quote\",\n            \"scopes\": [\"string\", \"string.quoted\"],\n            \"language_filter\": \"blacklist\",\n            \"language_list\": [\"Plain text\", \"Hex\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        // Regex for different Languages\n        {\n            \"name\": \"jsregex\",\n            \"open\": \" *(/)\",\n            \"close\": \"(/)[igm]*\",\n            \"style\": \"regex\",\n            \"scopes\": [\"string\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"JavaScript\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        {\n            \"name\": \"perlregex\",\n            \"open\": \"(?:m|s|tr)(.|\\n)\",\n            \"close\": \"(.|\\n)(?:[igmos]*)\",\n            \"style\": \"regex\",\n            \"scopes\": [\"string.regexp\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Perl\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        {\n            \"name\": \"rubyregex\",\n            \"open\": \" *(/)\",\n            \"close\": \"(/)[imxo]*\",\n            \"style\": \"regex\",\n            \"scopes\": [\"string\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Ruby\", \"RSpec\", \"Better RSpec\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        // Markdown\n        {\n            \"name\": \"mditalic\",\n            \"open\": \"(\\\\*|_)\",\n            \"close\": \"(\\\\*|_)\",\n            \"style\": \"default\",\n            \"scopes\": [\"markup.italic\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Markdown\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        },\n        {\n            \"name\": \"mdbold\",\n            \"open\": \"(\\\\*\\\\*|__)\",\n            \"close\": \"(\\\\*\\\\*|__)\",\n            \"style\": \"default\",\n            \"scopes\": [\"markup.bold\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Markdown\"],\n            \"sub_bracket_search\": \"true\",\n            \"enabled\": true\n        }\n    ],\n\n    // Rule definitions for finding and matching brackets.\n    // Brackets are found by using regex and can use scope\n    // qualifiers exclude certain matches.\n    // Once all matches are found, the closest pair surrounding\n    // the cursor are selected.\n    \"brackets\": [\n        // Basic brackets\n        {\n            \"name\": \"curly\",\n            \"open\": \"(\\\\{)\",\n            \"close\": \"(\\\\})\",\n            \"style\": \"curly\",\n            \"scope_exclude\": [\"string\", \"comment\", \"source.yaml-tmlanguage constant.character.escape\"],\n            \"scope_exclude_exceptions\": [\"text.tex string.other.math\"],\n            \"language_filter\": \"blacklist\",\n            \"language_list\": [\"Plain text\", \"Hex\"],\n            \"find_in_sub_search\": \"true\",\n            \"ignore_string_escape\": true,\n            \"enabled\": true\n        },\n        {\n            \"name\": \"round\",\n            \"open\": \"(\\\\()\",\n            \"close\": \"(\\\\))\",\n            \"style\": \"round\",\n            \"scope_exclude_exceptions\": [\n                \"text.tex string.other.math\",\n                \"punctuation.definition.string.begin.shell\",\n                \"punctuation.definition.string.end.shell\"\n            ],\n            \"scope_exclude\": [\n                \"string\",\n                \"comment\",\n                \"punctuation.definition.case-pattern.shell\",\n                \"source.yaml-tmlanguage constant.character.escape\"\n            ],\n            \"language_filter\": \"blacklist\",\n            \"language_list\": [\"Plain text\", \"Hex\"],\n            \"find_in_sub_search\": \"true\",\n            \"ignore_string_escape\": true,\n            \"enabled\": true\n        },\n        {\n            \"name\": \"square\",\n            \"open\": \"(\\\\[)\",\n            \"close\": \"(\\\\])\",\n            \"style\": \"square\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"scope_exclude_exceptions\": [\"text.tex string.other.math\", \"source.yaml-tmlanguage meta.value -constant.character.escape\"],\n            \"language_filter\": \"blacklist\",\n            \"language_list\": [\"Plain text\", \"Hex\"],\n            \"find_in_sub_search\": \"true\",\n            \"ignore_string_escape\": true,\n            \"enabled\": true\n        },\n        // PHP Angle\n        {\n            \"name\": \"php_angle\",\n            \"open\": \"(<\\\\?)(?:php)?\",\n            \"close\": \"(\\\\?>)\",\n            \"style\": \"angle\",\n            \"scope_exclude\": [\"string\", \"comment\", \"keyword.operator\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"HTML\", \"HTML 5\"],\n            \"enabled\": true\n        },\n        // Angle\n        {\n            \"name\": \"angle\",\n            \"open\": \"(<)(?=[^?%]|$)\",\n            \"close\": \"(?:(?<=[^?%])|(?<=^))(>)\",\n            \"style\": \"angle\",\n            \"scope_exclude\": [\n                \"string\",\n                \"comment\",\n                \"keyword.operator\",\n                \"source.ruby.rails.embedded.html\",\n                \"source.ruby.embedded.html\"\n            ],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\n                \"HTML\",\n                \"HTML 5\",\n                \"XML\",\n                \"PHP\",\n                \"HTML (Rails)\",\n                \"HTML (Jinja Templates)\",\n                \"HTML (Twig)\",\n                \"HTML+CFML\",\n                \"ColdFusion\",\n                \"ColdFusionCFC\",\n                \"laravel-blade\",\n                \"Handlebars\",\n                \"AngularJS\"\n            ],\n            \"plugin_library\": \"bh_modules.tags\",\n            \"enabled\": true\n        },\n        // CSSedit groups\n        {\n            \"name\": \"cssedit_groups\",\n            \"open\": \"(/\\\\* *@group .*\\\\*/)\",\n            \"close\": \"(/\\\\* *@end *\\\\*/)\",\n            \"style\": \"default\",\n            \"scope_exclude\": [],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"CSS\"],\n            \"enabled\": true\n        },\n        // Ruby embedded HTML\n        {\n            \"name\": \"ruby_embedded_html\",\n            \"open\": \"((?:(?<=<%)|(?<=^)|(?<==))\\\\s*\\\\b(?:if|begin|case)\\\\b(?!:)|(?:(?<=<%)|(?<=^))\\\\s*\\\\b(?:for|until|unless|while|class|module|def\\\\b[\\\\p{Ll}\\\\p{Lu}]*)\\\\b|(?<!:)\\\\bdo\\\\b(?!:))\",\n            \"close\": \"(?<=[\\\\s;])(end)\\\\b(?!:)\",\n            \"style\": \"default\",\n            \"scope_exclude\": [\"text.html\", \"source\", \"comment\", \"string\"],\n            \"scope_exclude_exceptions\": [\n                \"source.ruby.rails.embedded.html\",\n                \"source.ruby.embedded.html\"\n            ],\n            \"plugin_library\": \"bh_modules.rubykeywords\",\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"HTML\", \"HTML 5\", \"PHP\", \"HTML (Rails)\"],\n            \"enabled\": true\n        },\n        // Ruby conditional statements\n        {\n            \"name\": \"ruby\",\n            \"open\": \"((?:(?<=^)|(?<==))\\\\s*\\\\b(?:if|begin|case)\\\\b(?!:)|^\\\\s*\\\\b(?:for|until|unless|while|class|module|def\\\\b[\\\\p{Ll}\\\\p{Lu}]*)\\\\b|(?<!:)\\\\bdo\\\\b(?!:))\",\n            \"close\": \"(?<=[\\\\s;])(end)\\\\b(?!:)\",\n            \"style\": \"default\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"plugin_library\": \"bh_modules.rubykeywords\",\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Ruby\", \"RSpec\", \"Better RSpec\", \"Ruby on Rails\"],\n            \"enabled\": true\n        },\n        // C/C++ compile switches\n        {\n            \"name\": \"c_compile_switch\",\n            \"open\": \"(\\\\#(?:if|ifdef|ifndef))\\\\b\",\n            \"close\": \"(\\\\#endif)\\\\b\",\n            \"style\": \"c_define\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"C++\", \"C\", \"Objective-C\", \"CCpp\"],\n            \"enabled\": true\n        },\n        // PHP conditional keywords\n        {\n            \"name\": \"php_keywords\",\n            \"open\": \"(?:^\\\\s*|<\\\\?(?:php)?\\\\s*)?\\\\b(if|foreach|for|while|switch)\\\\b(?=.*:\\\\s*(?:\\\\?>\\\\s*)?$)\",\n            \"close\": \"(?:^\\\\s*|<\\\\?(?:php)?\\\\s*)?\\\\b(endif|endfor|endforeach|endwhile|endswitch)\\\\b(?=\\\\s*;\\\\s*(?:\\\\?>\\\\s*)?$)\",\n            \"style\": \"default\",\n            \"language_filter\": \"whitelist\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"plugin_library\": \"bh_modules.phpkeywords\",\n            \"language_list\": [\n                \"HTML\",\n                \"HTML 5\",\n                \"XML\",\n                \"PHP\",\n                \"HTML+CFML\",\n                \"ColdFusion\",\n                \"ColdFusionCFC\"\n            ],\n            \"enabled\": true\n        },\n        // Erlang conditional statements\n        {\n            \"name\": \"erlang\",\n            \"open\": \"\\\\s*(\\\\b(?:if|case|begin|try|fun(?=\\\\s*\\\\()|receive)\\\\b)\",\n            \"close\": \"\\\\b(end)\\\\b\",\n            \"style\": \"default\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"language_filter\": \"whitelist\",\n            \"plugin_library\": \"bh_modules.erlangcase\",\n            \"language_list\": [\"Erlang\", \"HTML (Erlang)\"],\n            \"enabled\": true\n        },\n        //Bash\n        {\n            \"name\": \"bash\",\n            \"open\": \"(?:(?<!\\\\\\\\\\\\n)(?:;|^|&|\\\\|)\\\\s*)\\\\b(if|case|while|select|until|for)\\\\s\",\n            \"close\": \"(?:(?<!\\\\\\\\\\\\n)(?:;|^)\\\\s*)\\\\b(fi|esac|done)(?=;|\\\\s|$)\",\n            \"style\": \"default\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"plugin_library\": \"bh_modules.bashsupport\",\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"Shell-Unix-Generic\"],\n            \"enabled\": true\n        },\n        //Fish shell\n        {\n            \"name\": \"fish\",\n            \"open\": \"(?:(?<!\\\\\\\\\\\\n)(?:;|^|&|\\\\||and|or|not)\\\\s*)\\\\b(begin|if|while|for|switch|function)(?:;|\\\\s)\",\n            \"close\": \"(?:(?<!\\\\\\\\\\\\n)(?:;|^)\\\\s*)\\\\b(end)(?=;|\\\\s|$)\",\n            \"style\": \"default\",\n            \"scope_exclude\": [\"string\", \"comment\"],\n            \"language_filter\": \"whitelist\",\n            \"language_list\": [\"fish\"],\n            \"enabled\": true\n        }\n    ],\n\n    // user_scope_brackets and user_brackets will be appended\n    // to the tail of scope_brackets and brackets respectively\n    // If you have custom rules that you don't want to commit to\n    // the offial list, and do not need to be inserted before\n    // one of the offical defintions, this is a good place to\n    // put yours rules and keep in sync with the defaults.\n    \"user_scope_brackets\": [],\n    \"user_brackets\": [],\n\n    // Define region highlight styles\n    \"bracket_styles\": {\n        // \"default\" and \"unmatched\" styles are special\n        // styles. If they are not defined here,\n        // they will be generated internally with\n        // internal defaults.\n\n        // \"default\" style defines attributes that\n        // will be used for any style that does not\n        // explicitly define that attribute.  So if\n        // a style does not define a color, it will\n        // use the color from the \"default\" style.\n        \"default\": {\n            \"icon\": \"dot\",\n            // BH1's original default color for reference\n            // \"color\": \"entity.name.class\",\n            \"color\": \"brackethighlighter.default\",\n            \"style\": \"underline\"\n        },\n\n        // This particular style is used to highlight\n        // unmatched bracket pairs.  It is a special\n        // style.\n        \"unmatched\": {\n            \"icon\": \"question\",\n            // \"color\": \"brackethighlighter.unmatched\",\n            \"style\": \"outline\"\n        },\n        // User defined region styles\n        \"curly\": {\n            \"icon\": \"curly_bracket\"\n            // \"color\": \"brackethighlighter.curly\",\n            // \"style\": \"underline\"\n        },\n        \"round\": {\n            \"icon\": \"round_bracket\"\n            // \"color\": \"brackethighlighter.round\",\n            // \"style\": \"underline\"\n        },\n        \"square\": {\n            \"icon\": \"square_bracket\"\n            // \"color\": \"brackethighlighter.square\",\n            // \"style\": \"underline\"\n        },\n        \"angle\": {\n            \"icon\": \"angle_bracket\"\n            // \"color\": \"brackethighlighter.angle\",\n            // \"style\": \"underline\"\n        },\n        \"tag\": {\n            \"icon\": \"tag\"\n            // \"color\": \"brackethighlighter.tag\",\n            // \"style\": \"underline\"\n        },\n        \"c_define\": {\n            \"icon\": \"hash\"\n            // \"color\": \"brackethighlighter.c_define\",\n            // \"style\": \"underline\"\n        },\n        \"single_quote\": {\n            \"icon\": \"single_quote\"\n            // \"color\": \"brackethighlighter.quote\",\n            // \"style\": \"underline\"\n        },\n        \"double_quote\": {\n            \"icon\": \"double_quote\"\n            // \"color\": \"brackethighlighter.quote\",\n            // \"style\": \"underline\"\n        },\n        \"regex\": {\n            \"icon\": \"regex\"\n            // \"color\": \"brackethighlighter.quote\",\n            // \"style\": \"underline\"\n        }\n    }\n}\n",
-			"file": "/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
-			"file_size": -1,
-			"file_write_time": -1,
-			"settings":
-			{
-				"buffer_size": 17215,
-				"line_ending": "Unix",
-				"read_only": true,
-				"scratch": true
 			}
 		}
 	],
@@ -627,10 +601,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 374.0,
-		"last_filter": "ins",
+		"height": 363.0,
+		"last_filter": "htm",
 		"selected_items":
 		[
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -657,10 +635,6 @@
 			],
 			[
 				"ht",
-				"Set Syntax: HTML"
-			],
-			[
-				"htm",
 				"Set Syntax: HTML"
 			],
 			[
@@ -792,7 +766,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 543.0
+		"width": 489.0
 	},
 	"console":
 	{
@@ -818,23 +792,108 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/Work/HTML/Goodybox/html"
 	],
 	"file_history":
 	[
+		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_1.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_tarif_noactiv.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/forms.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_task_list.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_client_list.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_tarif.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/buttons.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/js/init.js",
+		"/Volumes/Work/Modulbank/html/ModulBank/js/rad-select.js",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_task.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_currency.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/account_widget.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/dashboard.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_bank_statement.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/admin.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/animations.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/registration.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/404.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_new_task.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/forms.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/drop.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/messenger/messenger_chat.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/help.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view_currency.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/pdf/Реквизиты счета.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/pdf/выписка.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/css/shepherd-theme-arrows.css",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/security_lock/security_lock.html",
+		"/Volumes/Work/Modulbank/html/Letters/настройки/settings_income_money.html",
+		"/Volumes/Work/Modulbank/git/ModulBank/BackEnd/FileStorage.InitialStructure/FileStorage/templates/mails/income_money_notification.htm",
+		"/Volumes/Work/Modulbank/git/ModulBank/BackEnd/FileStorage.InitialStructure/FileStorage/templates/mails/settings_doc_sign.htm",
+		"/Volumes/Work/Modulbank/git/ModulBank/BackEnd/FileStorage.InitialStructure/FileStorage/templates/mails/outcome_money_notification.htm",
+		"/Volumes/Work/Modulbank/git/ModulBank/BackEnd/MailSending/Helpers/MailSendingHelper.cs",
+		"/Volumes/Work/HTML/Goodybox/html/stylus/style.styl",
+		"/Users/Dinar/Downloads/shepherd-master/docs/welcome/index.html",
+		"/Volumes/Work/Megafon/html/index.html",
+		"/Volumes/Work/HTML/Goodybox/html/order.html",
+		"/Volumes/Work/HTML/Goodybox/html/help.html",
+		"/Volumes/Work/HTML/Goodybox/html/css/select.css",
+		"/Users/Dinar/Dropbox/Goodybox/html/css/select.css",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/clients/clients.html",
+		"/Volumes/Work/HTML/Goodybox/html/menu.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2.html",
+		"/Volumes/Work/HTML/Goodybox/html/stylus/select.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_city1.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_city2.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/stylus/tablet.styl",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view_exchange_$_income.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view_exchange_income.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view_exchange_$.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view_exchange.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view_currency_trans_account.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_page_view.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/404.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/radEventIncome.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/finance/radEventMoneyReceived.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/finance/radEventMoneyExpended.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/finance/radEventCurrencyTransferIncome.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/bl/eventRibbon/eventRibbonEnum.js",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_account_page.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_exchange.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/company/radEventBankStatement.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/finance/radEventSignDocumentConfirmCurrencyOperation.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/radEventRibbon.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/radEventRibbon.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/eventRibbon/directives/events/company/radEventCheckCompanyFailed.js",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/invite/controllers/invite.controller/invite.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/invite/controllers/signinbyinvite.controller/signinByInviteController.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/confirmEmail.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/forgot.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/infomessage1.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/infomessage2.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/linkPasswordEmail.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/newPassword.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/signIn.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/signup/signUp.controller.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/signup/signUp.ogrn.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/testSelectors/testSelectors.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/userRegister/userRegister.html",
+		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/js/ui/registration/controllers/wrongEmail.controller.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_popup_mobile.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_page_view.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_new_email.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_4_загрузка.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_disable.html",
+		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_edit.html",
+		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
 		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/Example.sublime-keymap",
 		"/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_wrapping.sublime-settings",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/popup.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_page_edit.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/js/init.js",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_city1.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_city2.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step3.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password.html",
 		"/Volumes/Work/HTML/Goodybox/html/index.html",
 		"/Applications/CodeKit.app/Contents/Resources/engines/nib/lib/nib/vendor.styl",
@@ -843,15 +902,8 @@
 		"/Volumes/Work/Modulbank/html/ModulBank/untitled",
 		"/Volumes/Work/Modulbank/html/ModulBank/modulbank.sublime-project",
 		"/Volumes/Work/Modulbank/html/ModulBank/css/buttons.css",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/404.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/transaction_account_page.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/dashboard.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/404.html",
 		"/Volumes/Work/Modulbank/html/ModulBank/js/jquery.textarea_autosize.js",
 		"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src/app/stylus/forms.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/forms.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/base.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/main.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/select.styl",
@@ -861,105 +913,34 @@
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/variables.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/open_account.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/style_mobile_agreement.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/admin.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/fonts.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/owl.carousel.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/tablet.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/style.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/messenger.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/contragents.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/animations.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/temp.styl",
-		"/Volumes/Work/Modulbank/html/ModulBank/stylus/registration.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/datetimepicker.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/stylus/icons.styl",
 		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragents.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_popup_search.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_popup_search_list.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_page_view.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_page_new.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_settings_agents_group.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_new_task.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_task.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_settings_agents.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_task_list.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_new_email.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_page_new_notice.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_news_email_list.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_news_timeline_list.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_settings_agents_addGroup.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_settings_agents_invite.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_registration.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/admin/admin_settings.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/transaction/popup_rekvisits_send.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/timeline/timeline.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/table.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_subscribe_emailDisable.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_subscribe.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_representatives.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_company.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_representatives_invite.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/settings/settings_ecp.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/security_lock/security_lock.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/security_lock/security_lock_4bii.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/security_lock/security_lock_4bi.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/security_lock/security_lock_4bi_sms.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/ruble.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_24.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_27.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_26b.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_26a.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_23b.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22bvi.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22bvii.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22biv.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22bi_загрузка.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22b.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_22a.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_step2_21.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_sms.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/registration_invite.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login_sms.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login_invite.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/login_admin.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password_sms.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password_newpass.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/reg/forgot_password_admin.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/popup_small.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/popup_small_textarea.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/popup_page.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new_tamoz.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new_popup.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_new_nalog.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_exchange.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_exchange_empty.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_exchange_$.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_edit.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_disable.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_currency.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_currency_view.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/payment/payment_page_currency_income.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step4.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step3.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step2_2.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step2_3.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step2_1.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_5.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_4_загрузка.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_3.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_2.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_step1_1.html",
-		"/Volumes/Work/Modulbank/html/ModulBank/html/open_account/open_account_error.html"
+		"/Volumes/Work/Modulbank/html/ModulBank/html/contragents/contragent_popup_search.html"
 	],
 	"find":
 	{
-		"height": 89.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/Volumes/Work/Modulbank/html",
+			"/Volumes/Work/Modulbank/git/ModulBank",
+			"/Volumes/Work/Modulbank/html/ModulBank/stylus",
+			"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src",
+			"/Volumes/Work/Modulbank/html/ModulBank/",
+			"/Volumes/Work/Modulbank/html/ModulBank/html",
+			"/Volumes/Work/Modulbank/git/ModulBank.FrontEnd/src",
+			"/Volumes/Work/Modulbank/html/ModulBank/",
 			"/Volumes/Work/Modulbank/html/ModulBank/html",
 			"/Volumes/Work/МодульБанк/html/ModulBank/html",
 			"<open files>",
@@ -1022,141 +1003,142 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"login",
-			"page404",
-			"login_links",
-			"button_clean",
-			"reg_header",
-			"reg_side",
-			"transaction_list_contragent",
-			"17",
-			"popu",
-			"300",
-			"touc",
-			"popup",
-			"group",
-			".col",
-			"col",
-			"transi",
-			"transform",
-			"border-rad",
-			"box-sh",
-			"trans",
-			"tran",
-			"wiz",
-			"active",
-			"svg-",
-			"svg",
-			"hide_mobile",
-			"show_mobile",
-			"place",
-			"addon_code",
-			"c_s",
-			"Назн",
-			"page404",
-			"m_top",
-			"label",
-			"w100",
-			"texta",
-			"Назначение",
-			"tabs_menu",
-			"nine",
-			"three",
-			"143",
-			"account_card_money",
-			"account_card_money ",
-			"page_close",
-			"webkit-autofill",
-			"ms-choice-focusser",
-			"ten",
-			"two",
-			"banner_other_tarif",
-			"tabs_menu",
-			"tabs_horizontal",
-			"small_text",
-			"input_group_addon",
-			"light",
-			"wrap with abbreviation",
-			"wrap",
-			"7000",
-			"платеж",
-			"Время",
-			"Подтвердить",
-			"abbre",
-			"платить",
-			"input_search",
-			".action",
-			"role_group_list",
-			"role_group_list ",
-			"line_block_item",
-			":disabled",
-			"close",
-			"label_check",
-			"М",
-			"label_check",
-			"Бизне",
-			"buttons_group",
-			"add_message_buttons",
-			"article.page",
-			"header",
-			"page_h",
-			"header",
-			"page_h",
-			"header",
-			"page_h",
-			"header",
-			"page_h",
-			"header",
-			"header ",
-			"head",
-			"page_hea",
-			"section",
-			".ruble",
-			"contragent_money",
-			"title_but",
-			"disabled",
-			"horizontal",
-			"account_name",
+			"#5e4c3e",
+			"catalog_list",
+			"header_add_drop",
+			"side",
+			"Справ",
+			"март",
+			"мая",
+			"12",
+			"transaction_list",
+			"transaction_list ",
+			"contragent",
+			"<option",
+			"select>",
+			"<select",
+			"clients_list",
+			"<option",
 			"option",
-			"title_button",
-			"title_bu",
-			"timel",
-			"list_panel",
-			".drop-input",
-			".drop-input.second",
-			"light_bl",
-			"label.label_check",
-			"list_panel",
-			"transaction_choose_account",
-			"transaction_choose_account ",
+			"select>",
+			"<select",
+			"select",
+			".side",
+			"Старт",
+			"banner_other_tarif",
+			"tarif_noactiv_info",
+			"tarif_noactiv_info ",
+			"tarif_serv_row",
+			"cashflow_widget_side",
+			"icon-clo",
+			"page_close",
+			"header_profile_settigs",
+			"swit",
+			"textar",
+			"switch_group",
+			"drop-",
+			"sear",
+			"filter",
+			"data-fi",
+			"filter",
+			"_options",
+			"clone",
+			"clonehtml",
+			"clone",
+			"cloone",
+			"ms-drop-inner",
+			"/option",
+			"<option",
+			"option",
+			"Option",
+			"option",
+			"<opt",
+			"on",
+			"drop-in",
+			".select_inline",
+			"w100px",
+			".leg",
+			" name=\"\" id=\"\"",
+			"property_label",
+			"_label",
+			".w",
+			"buttons_group",
+			"icon-",
+			"a[class*='icon-']",
+			"loader",
+			"icon-plus",
+			"a>",
+			"<a",
+			"a",
+			"m_",
+			"logo",
+			"drop",
+			"shepherd-step",
+			"popup",
+			"emailimagesurl",
+			"file_upload_list",
+			"messag",
+			"messeg",
+			"file_error_text",
+			"label_check",
+			".cont",
+			".selectboxit-container .selectboxit-options",
+			"170",
+			".selectboxit-container .selectboxit-options",
+			"name_tit",
+			"word-br",
+			"name_title",
+			"240px",
+			"page_messenger_main",
+			"page_messenger_main ",
+			"table_list_header",
+			".placeholder",
+			".ms-choice .placeholder",
+			"zoomIn",
+			"clean",
+			"currency_filter",
+			"account_item",
+			"transaction_view_contragent",
+			"account_card_money",
+			"actionClass",
+			"rad-event-money-received",
+			"EVENT_CLASS_ICON",
+			"Списано",
+			"c_primary",
+			"timelin",
+			"svg-content-responsive",
+			"erro",
+			"ms-choice-focusser",
+			"load",
+			"money_",
+			"ava",
+			"reg_header",
+			"cub",
+			"300px",
+			"title_buttons",
+			"transaction_table",
+			"transaction_table\ntransaction_table",
+			"transaction_table",
+			".tabs_widget",
+			"tabs.tabs_widget",
+			"class=\"reg\"",
+			"textarea_",
+			"textarea_text",
+			"В том",
+			"side_par",
+			"name_se",
+			"overflow ellipsis",
 			"name_search",
-			"name_search ",
-			"payable",
-			"stamp",
-			".section_top_area",
-			"contragents_widget_money",
-			"equ",
-			"link_das",
-			"link_dah",
-			"inner_pad",
-			"inner-pad",
-			"inner_padding_15",
-			"page_head",
-			"label.label_check",
-			"ms-choice-no-result",
-			"eight",
-			"five",
-			"a_right",
-			"column",
-			"four",
-			"three"
+			"name_sea",
+			"input_s"
 		],
-		"highlight": false,
+		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"ctextsecond",
 			"email_logo.png\" width=\"205\" height=\"39\" alt=\"ModulBank\" style=\"width:205px; height:39px;\"",
 			"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<meta name=\"format-detection\" content=\"telephone=no\">\n	<title>Письмо</title>\n	<style>\n@media screen and (max-width:640px) {\n	.wrap {padding: 0!important; margin: 0 -20px!important;}\n	.wrap>tbody>tr>td, .wrap>tr>td{padding: 0!important;}\n	td[class=\"text_wrap\"] {padding: 20px!important; background: #ffffff!important;}\n	.content_wrap {width: 500px!important;}\n	.content>tbody>tr>td, .content>tr>td {padding:0!important;}\n	.title { font-size: 18px!important;}\n	.footer {width: 100%!important;}\n	.fz_s {font-size: 12px!important;}\n}\n	</style>\n\n</head>\n<body style=\"background:#ffffff\">\n<table align=\"center\" class=\"wrap\" width=\"100%\" bgcolor=\"#fff\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; background: #ffffff;\">\n<tr>\n<td>\n\n	<table class=\"content_wrap\" width=\"640\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; line-height: 100%;\">\n\n		<!-- шапка -->\n		<tr>\n			<td>\n				<table align=\"center\" width=\"100%\" height=\"90\" bgcolor=\"#2D4668\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;\">\n					<tr>\n						<td width=\"25\" height=\"90\"></td>\n						<td height=\"90\" valign=\"middle\">\n							<img class=\"logo\" src=\"http://galimov.net/modulbank/email/email_logo.png\" width=\"205\" height=\"39\" alt=\"ModulBank\" style=\"\">\n						</td>\n						<td width=\"126\" height=\"90\" class=\"header_img_cell\">\n							<img class=\"header_img\" src=\"http://galimov.net/modulbank/email/email_header.png\" height=\"90\" width=\"126\" alt=\"\" style=\"float: right;\">\n						</td>\n					</tr>\n				</table>\n			</td>\n		</tr>\n\n		<!-- контент -->\n		<tr>\n			<td class=\"text_wrap\" style=\"padding:30px; background: #ECF2F6; color: #454E59; \" >\n				<table class=\"content\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;\">\n					<tr>\n						<td style=\"font-family:Calibri, Arial, Tahoma; color: #454E59; font-size: 16px; line-height:1.3em;\">",
 			"color: #454E59",
@@ -1217,70 +1199,189 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "stylus/forms.styl",
+					"file": "stylus/buttons.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17507,
+						"buffer_size": 7434,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8227,
-								8227
+								6081,
+								6081
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
 							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
 							"editorconfig": true,
 							"history_list_is_closing": true,
 							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7293.0,
+						"translation.y": 6707.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "stylus/buttons.styl",
+					"file": "stylus/forms.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7205,
+						"buffer_size": 17760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5660,
-								5660
+								11407,
+								11407
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
 							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
 							"editorconfig": true,
+							"history_list_is_closing": true,
 							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6304.0,
+						"translation.y": 11515.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1289,582 +1390,172 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36619,
+						"buffer_size": 36816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7582,
-								7582
+								3537,
+								3537
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
 							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
 							"editorconfig": true,
+							"history_list_is_closing": true,
 							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 9034.0,
+						"translation.y": 421.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "stylus/base.styl",
+					"file": "stylus/admin.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38366,
+						"buffer_size": 2165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35383,
-								35383
-							]
-						],
-						"settings":
-						{
-							"auto_indent": true,
-							"editorconfig": true,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 42035.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "stylus/404.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 521,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								44,
-								44
+								238,
+								238
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_indent": true,
 							"bh_regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"editorconfig": true,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "stylus/select.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1212,
-								1212
-							]
-						],
-						"settings":
-						{
-							"auto_indent": true,
-							"editorconfig": true,
-							"history_list_is_closing": true,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 821.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "stylus/registration.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4924,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1814,
-								1814
-							]
-						],
-						"settings":
-						{
-							"auto_indent": true,
-							"editorconfig": true,
-							"history_list_is_closing": true,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1556.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "stylus/transaction.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4717,
-								4717
-							]
-						],
-						"settings":
-						{
-							"auto_indent": true,
-							"editorconfig": true,
-							"history_list_is_closing": true,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "stylus/table.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9618,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8719,
-								8719
-							]
-						],
-						"settings":
-						{
-							"auto_indent": true,
-							"editorconfig": true,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 10315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 9,
-					"file": "html/payment/payment_page_new.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16161,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
-								"bh_angle_content"
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 249.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "html/reg/registration_popup_mobile.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								428,
-								428
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "html/contragents/contragent_page_view.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4577,
-								4577
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2521.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "html/reg/registration.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4656,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								725,
-								451
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "html/reg/registration_step2.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2030,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1644,
-								1644
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 659.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "html/admin/admin_page_new_email.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2281,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								527,
-								527
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "html/open_account/open_account_step1_4_загрузка.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5795,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								700,
-								700
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "html/payment/payment_page_disable.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15560,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								506,
-								506
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1875,55 +1566,1079 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
-					"file": "html/payment/payment_page_edit.html",
+					"buffer": 4,
+					"file": "stylus/base.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11172,
+						"buffer_size": 38126,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								605,
-								605
+								1435,
+								1435
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
 							"editorconfig": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 981.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "stylus/select.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1611,
+								1641
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1205.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "stylus/style.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								95
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "stylus/transaction.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1117,
+								1117
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 522.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "stylus/messenger.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6448,
+								6448
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7561.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "stylus/variables.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								707,
+								707
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"editorconfig": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 382.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "html/reg/login.html",
+					"buffer": 10,
+					"file": "stylus/table.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2799,
+						"buffer_size": 9507,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								609,
-								335
+								7737,
+								7737
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"editorconfig": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8589.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 11,
+					"file": "html/transaction/transaction_page_currency.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3358,
+								3358
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1483.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "html/dashboard.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								640,
+								640
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 172.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Volumes/Work/HTML/Goodybox/html/menu.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1490,
+								1490
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 494.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Volumes/Work/HTML/Goodybox/html/stylus/style.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15979,
+								15979
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 17862.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "html/open_account/open_account_step2_1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
 							"editorconfig": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
@@ -1937,20 +2652,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
-					"file": "html/404.html",
+					"buffer": 16,
+					"file": "html/open_account/account_widget.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 858,
+						"buffer_size": 9776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								364,
-								364
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1958,90 +2673,89 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
-								"bh_angle_content"
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"editorconfig": true,
-							"history_list_is_closing": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 52.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
-					"file": "/Users/Dinar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+					"buffer": 17,
+					"file": "html/forms.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17215,
+						"buffer_size": 10625,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17215,
-								17215
+								6264,
+								6276
 							]
 						],
 						"settings":
@@ -2049,69 +2763,72 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
-								"bh_angle_content"
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"editorconfig": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2692.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -2171,7 +2888,7 @@
 	"project": "modulbank.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 70.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -2181,28 +2898,240 @@
 		"selected_items":
 		[
 			[
-				"404",
-				"ModulBank/stylus/404.styl"
+				"openacs2",
+				"open_account/open_account_step2_1.html"
 			],
 			[
-				"login",
-				"reg/login.html"
+				"open",
+				"open_account/open_account_step1_1.html"
 			],
 			[
-				"regs",
-				"reg/registration_step2.html"
+				"accw",
+				"open_account/account_widget.html"
+			],
+			[
+				"d",
+				"ModulBank/html/dashboard.html"
+			],
+			[
+				"form",
+				"ModulBank/html/forms.html"
+			],
+			[
+				"trac",
+				"transaction/transaction_page_currency.html"
+			],
+			[
+				"das",
+				"ModulBank/html/dashboard.html"
+			],
+			[
+				"acco",
+				"open_account/account_widget.html"
+			],
+			[
+				"tracur",
+				"transaction/transaction_page_currency.html"
+			],
+			[
+				"admt",
+				"admin/admin_task_list.html"
+			],
+			[
+				"admli",
+				"admin/admin_client_list.html"
+			],
+			[
+				"settar",
+				"settings/settings_tarif_noactiv.html"
+			],
+			[
+				"set",
+				"settings/settings_tarif_noactiv.html"
+			],
+			[
+				"tr",
+				"transaction/transaction.html"
+			],
+			[
+				"admin",
+				"ModulBank/stylus/admin.styl"
+			],
+			[
+				"adm",
+				"admin/admin_page_task.html"
+			],
+			[
+				"tran",
+				"transaction/transaction_bank_statement.html"
+			],
+			[
+				"se",
+				"settings/settings.html"
 			],
 			[
 				"reg",
 				"reg/registration.html"
 			],
 			[
-				"tab",
-				"ModulBank/stylus/table.styl"
+				"ini",
+				"ModulBank/js/init.js"
 			],
 			[
-				"tr",
-				"ModulBank/stylus/transaction.styl"
+				"paymn",
+				"payment/payment_page_new.html"
+			],
+			[
+				"for",
+				"ModulBank/html/forms.html"
+			],
+			[
+				"fo",
+				"ModulBank/stylus/forms.styl"
+			],
+			[
+				"tar",
+				"settings/settings_tarif.html"
+			],
+			[
+				"trcu",
+				"transaction/transaction_page_currency.html"
+			],
+			[
+				"trc",
+				"transaction/transaction_page_view_currency.html"
+			],
+			[
+				"tranc",
+				"transaction/transaction_page_currency.html"
+			],
+			[
+				"sec",
+				"security_lock/security_lock.html"
+			],
+			[
+				"mess",
+				"messenger/messenger_chat.html"
+			],
+			[
+				"inde",
+				"ModulBank/html/index.html"
+			],
+			[
+				"ind",
+				"html/index.html"
+			],
+			[
+				"sty",
+				"ModulBank/stylus/style.styl"
+			],
+			[
+				"regc",
+				"reg/registration_city2.html"
+			],
+			[
+				"resc",
+				"reg/registration_city1.html"
+			],
+			[
+				"regs",
+				"reg/registration_step2.html"
+			],
+			[
+				"cli",
+				"clients/clients.html"
+			],
+			[
+				"tabl",
+				"ModulBank/stylus/tablet.styl"
+			],
+			[
+				"mes",
+				"ModulBank/stylus/messenger.styl"
+			],
+			[
+				"anim",
+				"ModulBank/stylus/animations.styl"
+			],
+			[
+				"dro",
+				"ModulBank/html/drop.html"
+			],
+			[
+				"butt",
+				"ModulBank/html/buttons.html"
+			],
+			[
+				"var",
+				"ModulBank/stylus/variables.styl"
+			],
+			[
+				"tranpv",
+				"transaction/transaction_page_view_exchange_$_income.html"
+			],
+			[
+				"trpv",
+				"transaction/transaction_page_view_exchange_income.html"
+			],
+			[
+				"trpe",
+				"transaction/transaction_page_view_exchange_$.html"
+			],
+			[
+				"trapa",
+				"transaction/transaction_page_view_exchange.html"
+			],
+			[
+				"trap",
+				"transaction/transaction_page_view_currency.html"
+			],
+			[
+				"trav",
+				"transaction/transaction_page_view.html"
+			],
+			[
+				"traa",
+				"transaction/transaction_account_page.html"
+			],
+			[
+				"trapav",
+				"transaction/transaction_page_view.html"
+			],
+			[
+				"trpage",
+				"transaction/transaction_page_view_exchange.html"
+			],
+			[
+				"paye",
+				"payment/payment_page_exchange.html"
+			],
+			[
+				"log",
+				"reg/login.html"
+			],
+			[
+				"tra",
+				"transaction/transaction.html"
+			],
+			[
+				"da",
+				"ModulBank/html/dashboard.html"
+			],
+			[
+				"404",
+				"ModulBank/html/404.html"
+			],
+			[
+				"pay",
+				"payment/payment_page_new.html"
+			],
+			[
+				"login",
+				"reg/login.html"
+			],
+			[
+				"tab",
+				"ModulBank/stylus/table.styl"
 			],
 			[
 				"contpgv",
@@ -2211,26 +3140,6 @@
 			[
 				"pop",
 				"ModulBank/html/popup.html"
-			],
-			[
-				"ini",
-				"ModulBank/js/init.js"
-			],
-			[
-				"for",
-				"reg/forgot_password.html"
-			],
-			[
-				"log",
-				"reg/login.html"
-			],
-			[
-				"regc",
-				"reg/registration_city2.html"
-			],
-			[
-				"butt",
-				"ModulBank/stylus/buttons.styl"
 			],
 			[
 				"but",
@@ -2245,10 +3154,6 @@
 				"payment/payment_page_new.html"
 			],
 			[
-				"form",
-				"ModulBank/stylus/forms.styl"
-			],
-			[
 				"js_a",
 				"ModulBank/js/jquery.textarea_autosize.js"
 			],
@@ -2261,16 +3166,8 @@
 				"payment/payment_page_new.html"
 			],
 			[
-				"set",
-				"settings/settings.html"
-			],
-			[
 				"payn",
 				"payment/payment_page_new.html"
-			],
-			[
-				"das",
-				"ModulBank/html/dashboard.html"
 			],
 			[
 				"bas",
@@ -2279,10 +3176,6 @@
 			[
 				"ma",
 				"ModulBank/stylus/main.styl"
-			],
-			[
-				"traa",
-				"transaction/transaction_account_page.html"
 			],
 			[
 				"admcl",
@@ -2307,10 +3200,6 @@
 			[
 				"main",
 				"stylus/main.styl"
-			],
-			[
-				"tar",
-				"html/settings/settings_tarif.html"
 			],
 			[
 				"pap",
@@ -2345,10 +3234,6 @@
 				"stylus/messenger.styl"
 			],
 			[
-				"adm",
-				"stylus/admin.styl"
-			],
-			[
 				"admp",
 				"html/admin/admin_page_task.html"
 			],
@@ -2377,32 +3262,16 @@
 				"html/transaction/transaction_bank_statement.html"
 			],
 			[
-				"sec",
-				"html/security_lock/security_lock.html"
-			],
-			[
 				"cont",
 				"stylus/contragents.styl"
-			],
-			[
-				"cli",
-				"html/clients/clients.html"
 			],
 			[
 				"bank",
 				"html/transaction/transaction_bank_statement.html"
 			],
 			[
-				"sty",
-				"stylus/style.styl"
-			],
-			[
 				"papn",
 				"html/payment/payment_page_new.html"
-			],
-			[
-				"pay",
-				"html/payment/payment_page_currency.html"
 			],
 			[
 				"trpav",
@@ -2425,20 +3294,8 @@
 				"html/admin/admin_page_new_notice.html"
 			],
 			[
-				"admt",
-				"html/admin/admin_task_list.html"
-			],
-			[
-				"admli",
-				"html/admin/admin_news_email.html"
-			],
-			[
 				"paym",
 				"html/payment/payment_page_currency.html"
-			],
-			[
-				"acco",
-				"html/open_account/account_widget.html"
 			],
 			[
 				"buton",
@@ -2465,14 +3322,6 @@
 				"html/payment/payment_page_new.html"
 			],
 			[
-				"tra",
-				"stylus/transaction.styl"
-			],
-			[
-				"mess",
-				"html/messenger/messenger_new_chat.html"
-			],
-			[
 				"drop",
 				"html/drop.html"
 			],
@@ -2487,14 +3336,6 @@
 			[
 				"ope",
 				"html/open_account/open_account_step1_4_загрузка.html"
-			],
-			[
-				"open",
-				"html/open_account/open_account_step2_1.html"
-			],
-			[
-				"dro",
-				"js/drop.js"
 			],
 			[
 				"adminn",
@@ -2517,28 +3358,12 @@
 				"html/admin/admin_page_task.html"
 			],
 			[
-				"admin",
-				"stylus/admin.styl"
-			],
-			[
 				"admta",
 				"html/admin/admin_task_list.html"
 			],
 			[
-				"da",
-				"html/dashboard.html"
-			],
-			[
-				"anim",
-				"stylus/animations.styl"
-			],
-			[
 				"payme",
 				"html/payment/payment_page_edit.html"
-			],
-			[
-				"trapa",
-				"html/transaction/transaction_page_view.html"
 			],
 			[
 				"pama",
@@ -2551,10 +3376,6 @@
 			[
 				"payex",
 				"html/payment/payment_page_exchange_empty.html"
-			],
-			[
-				"mes",
-				"stylus/messenger.styl"
 			],
 			[
 				"tarif",
@@ -2577,10 +3398,6 @@
 				"html/timeline/timeline.html"
 			],
 			[
-				"ind",
-				"html/index.html"
-			],
-			[
 				"acc",
 				"html/open_account/account_widget.html"
 			],
@@ -2591,106 +3408,6 @@
 			[
 				"payenen",
 				"html/payment/payment_page_new_nalog.html"
-			],
-			[
-				"til",
-				"html/timeline/timeline.html"
-			],
-			[
-				"setta",
-				"html/settings/settings_tarif.html"
-			],
-			[
-				"popup",
-				"html/transaction/popup_rekvisits_send.html"
-			],
-			[
-				"invi",
-				"html/reg/registration_invite.html"
-			],
-			[
-				"admse",
-				"html/admin/admin_settings_agents_invite.html"
-			],
-			[
-				"setc",
-				"html/settings/settings_ecp.html"
-			],
-			[
-				"styl",
-				"css/style.css"
-			],
-			[
-				"inde",
-				"html/index.html"
-			],
-			[
-				"pyan",
-				"html/payment/payment_page_new.html"
-			],
-			[
-				"head",
-				"html/header.html"
-			],
-			[
-				"accou",
-				"html/open_account/account_widget.html"
-			],
-			[
-				"new",
-				"html/reg/forgot_password_newpass.html"
-			],
-			[
-				"he",
-				"html/header.html"
-			],
-			[
-				"rek",
-				"html/open_account/account_rekvisits.html"
-			],
-			[
-				"trac",
-				"html/transaction/transaction_page_view.html"
-			],
-			[
-				"ac",
-				"html/open_account/account_widget.html"
-			],
-			[
-				"tim",
-				"html/timeline/timeline.html"
-			],
-			[
-				"an",
-				"stylus/animations.styl"
-			],
-			[
-				"hea",
-				"html/header.html"
-			],
-			[
-				"nla",
-				"html/payment/payment_page_new_nalog.html"
-			],
-			[
-				"ani",
-				"stylus/animations.styl"
-			],
-			[
-				"fo",
-				"stylus/fonts.styl"
-			],
-			[
-				"tabl",
-				"html/table.html"
-			],
-			[
-				"paymn",
-				"html/payment/payment_page_new.html"
-			],
-			[
-				"admis",
-				"html/admin/admin_settings_agents_group.html"
 			]
 		],
 		"width": 0.0
@@ -2720,7 +3437,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":
