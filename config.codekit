@@ -380,6 +380,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/html\/admin\/admin_settings_SLA.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/admin\/admin_settings_SLA.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/html\/admin\/admin_task_list.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -523,6 +532,39 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/html\/letter_regist\/img1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 473586,
+		"inputAbbreviatedPath": "\/html\/letter_regist\/img1.jpg",
+		"outputAbbreviatedPath": "\/html\/letter_regist\/img1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/html\/letter_regist\/img2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 292199,
+		"inputAbbreviatedPath": "\/html\/letter_regist\/img2.jpg",
+		"outputAbbreviatedPath": "\/html\/letter_regist\/img2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/html\/letter_regist\/img3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 212218,
+		"inputAbbreviatedPath": "\/html\/letter_regist\/img3.jpg",
+		"outputAbbreviatedPath": "\/html\/letter_regist\/img3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/html\/messenger\/messenger.html": {
 		"fileType": 8192,

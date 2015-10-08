@@ -55,6 +55,14 @@
 				&:before
 					transform rotate(180deg)
 
+	.messenger_chat
+		.item
+			&.right
+				.photo
+					display none
+				.name
+					display none
+
 
 .messenger_header
 	height 40px
@@ -72,7 +80,7 @@
 		color #fff
 
 	a[class*='icon-arrow-up']
-		transition .2s
+		transition  .2s
 		&:hover
 			transform translateY(-3px)
 
@@ -84,6 +92,8 @@
 	display inline-block
 	a
 		color #fff
+		transition color .1s
+		text-decoration none
 		&:hover
 			opacity 0.9
 
@@ -200,10 +210,6 @@
 		&.right
 			.date
 				left 0
-			.photo
-				display none
-			.name
-				display none
 			.desc
 				margin-left 45px
 				margin-right 0
@@ -215,7 +221,6 @@
 				word-wrap break-word
 				a
 					color clink
-					word-break break-all
 					&:hover
 						color cl2
 
@@ -254,6 +259,7 @@
 		margin 0 45px 0 0
 		word-wrap break-word
 		a
+			word-break break-all
 			// color #fff
 			&:hover
 				// opacity 0.9
@@ -399,9 +405,9 @@ a.thumbs_up:hover
 			padding 10px 0 0
 			overflow hidden
 		.button_file_upload
-			color ctextlight
+			color clinklight
 			&:hover
-				color ctext
+				color cl2
 
 
 	// загруженнные файлы
@@ -474,7 +480,7 @@ a.thumbs_up:hover
 	-webkit-overflow-scrolling touch
 
 	.messenger_chat
-		padding 10px 30px 20px
+		padding 10px 30px 30px
 		overflow auto
 		height auto
 		box-sizing border-box
@@ -490,6 +496,11 @@ a.thumbs_up:hover
 		.item.right
 			.desc
 				margin-left 100px
+
+		.write_now
+			position absolute
+			padding-left 0
+			color ctextlight
 
 	.messenger_sep_title
 		margin 30px 0

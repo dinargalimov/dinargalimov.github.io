@@ -2,44 +2,7 @@
 	"folders":
 	[
 		{
-			"file_exclude_patterns":
-			[
-				"*.css*"
-			],
 			"path": "."
-		},
-		{
-			"path": "html/admin"
-		},
-		{
-			"path": "html/clients"
-		},
-		{
-			"path": "html/contragents"
-		},
-		{
-			"path": "html/open_account"
-		},
-		{
-			"path": "html/messenger"
-		},
-		{
-			"path": "html/payment"
-		},
-		{
-			"path": "html/reg"
-		},
-		{
-			"path": "html/settings"
-		},
-		{
-			"path": "html/security_lock"
-		},
-		{
-			"path": "html/timeline"
-		},
-		{
-			"path": "html/transaction"
 		}
 	],
 	"settings":
