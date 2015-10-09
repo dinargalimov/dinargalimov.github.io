@@ -32,17 +32,26 @@
 
 	<!-- контент слоя  -->
 	<div class="page_content">
+
+		<!-- восстановление данных -->
+		<!-- <div class="info">
+			<a class="block_close icon-close"></a>
+			<p>При последнем создании платежного документа введенные данные не были сохранены.</p>
+			<p><a class="icon-reload">Восстановить данные</a></p>
+		</div> -->
+
 		<form class="form">
 			<div class="form_group">
-				<select class="w100" data-placeholder="Тип платежа">
-					<option value="111" selected>Перевод между своими счетами</option>
-					<option value="">Платеж контрагенту</option>
-					<option value="">Платеж физическому лицу</option>
-					<option value="">Оплата страховых взносов</option>
-					<option value="">Налоги или бюджетный платеж</option>
-					<option value="">Таможенный платеж</option>
-					<option value="">Валютный перевод</option>
-				</select>
+				<div class="jsRadSelect2 w100" data-placeholder="Селект" name="adfasd" id="adsf">
+					<option class="jsRadSelect2Options" value="111" selected>Перевод между своими счетами</option>
+					<option class="jsRadSelect2Options" value="">Платеж контрагенту</option>
+					<option class="jsRadSelect2Options" value="">Платеж физическому лицу</option>
+					<option class="jsRadSelect2Options" value="">Оплата страховых взносов</option>
+					<option class="jsRadSelect2Options" value="">Налоги или бюджетный платеж</option>
+					<option class="jsRadSelect2Options" value="">Таможенный платеж</option>
+					<option class="jsRadSelect2Options" value="">Валютный перевод</option>
+				</div>
+
 			</div>
 
 			<div class="form_sep"></div>
@@ -276,15 +285,15 @@
 					</div>
 				</div>
 				<div class="col half">
-					<select class="w100" data-placeholder="НДС">
-						<option value="111" selected>Без НДС</option>
-						<option value="">18% включен в сумму</option>
-						<option value="">18% сверх суммы</option>
-						<option value="">10% включен в сумму</option>
-						<option value="">10% сверх суммы</option>
-						<option value="">18% включен в сумму</option>
-						<option value="">Не указывать</option>
-					</select>
+					<div class="jsRadSelect2 w100" data-placeholder="Селект" name="adfasd" id="adsf">
+						<option class="jsRadSelect2Options" value="111" selected>Без НДС</option>
+						<option class="jsRadSelect2Options" value="">18% включен в сумму</option>
+						<option class="jsRadSelect2Options" value="">18% сверх суммы</option>
+						<option class="jsRadSelect2Options" value="">10% включен в сумму</option>
+						<option class="jsRadSelect2Options" value="">10% сверх суммы</option>
+						<option class="jsRadSelect2Options" value="">18% включен в сумму</option>
+						<option class="jsRadSelect2Options" value="">Не указывать</option>
+					</div>
 				</div>
 
 			</div>

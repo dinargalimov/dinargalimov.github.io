@@ -45,7 +45,7 @@ a
 	color clink
 	text-decoration underline
 	cursor pointer
-	transition .1s
+	transition color .1s ease
 	&:hover
 		color cl2
 	&:active
@@ -75,7 +75,7 @@ a
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
 			text-decoration none
 	&[class*='icon-close']
-		transition all .3s
+		transition transform .3s
 		&:before
 			transition transform .3s
 			margin 0
@@ -312,7 +312,7 @@ h3
 	p
 		margin-bottom 10px!important
 		&:last-child
-			margin-bottom 0
+			margin-bottom 0!important
 	ul,ol
 		&:last-child
 			margin-bottom 0
@@ -452,7 +452,6 @@ h3
 
 
 .loading_block
-	transition .4s
 	position relative
 	&[data-loading-text]
 		&:after
@@ -471,7 +470,7 @@ h3
 		text-shadow 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff
 
 	&:after
-		transition .5s background-color
+		transition background-color .5s ease
 		content ''
 		position absolute
 		top 0
@@ -497,13 +496,11 @@ h3
 
 
 .disable_block
-	transition .4s
 	position relative
 	> *
 		opacity .4
 
 	&:after
-		transition .5s background-color
 		content ''
 		position absolute
 		top 0
@@ -1647,7 +1644,7 @@ a.icon-info
 	.avatar_edit
 		opacity 0
 		transform scale(.6)
-		transition .3s
+		transition color .3s, opacity .3s, transform .3s
 		position absolute
 		background rgba(ctext,0.5)
 		border-radius 100px
@@ -1793,7 +1790,7 @@ a.icon-info
 				padding 9px 15px 9px 15px
 				font-size fzn - 2px
 				// width calc(100% + 15px)
-				transition .05s
+				transition color .05s, background .05s
 				&:hover
 					color clink
 					background cbghighlight
@@ -1861,7 +1858,7 @@ a.icon-info
 	box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
 	box-sizing border-box
 	vertical-align middle
-	transition .2s
+	transition color .2s
 	text-decoration none
 	line-height 38px
 

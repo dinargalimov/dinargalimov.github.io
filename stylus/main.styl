@@ -111,10 +111,6 @@ header
 		width 25px
 		background url(../images/icon_search.svg) no-repeat 0 center
 		z-index -1
-		transition .2s
-	&:hover
-		&:before
-			opacity 1
 
 	.name
 		color cl1
@@ -129,7 +125,7 @@ header
 		border none
 		width 67px
 		cursor pointer
-		transition width ease-in-out .2s
+		transition width .2s ease-in-out
 		margin-left 25px
 		padding-left 20px
 		padding-right 0
@@ -177,7 +173,7 @@ header
 		width 49px
 		height 100%
 		background cl2
-		transition .2s
+		transition background-color .2s
 		&:before, &:after
 			content ''
 			width 3px
@@ -186,7 +182,7 @@ header
 			position absolute
 			top 8px
 			left 23px
-			transition transform .15s
+			transition transform .35s
 		&:after
 			height 3px
 			width 23px
@@ -198,9 +194,9 @@ header
 
 		&.drop-enabled
 			&:before, &:after
-				transform rotate(45deg)
+				transform rotate(135deg)
 			&:after
-				transform rotate(45deg)
+				transform rotate(135deg)
 
 .drop.header_add_submenu
 	top 40px!important
@@ -408,7 +404,7 @@ header
 			display block
 			text-align center
 			font-size 24px
-			transition 0
+			transition none
 		&.icon_menu_post
 			&:before
 				font-size 17px
@@ -644,7 +640,6 @@ article.page
 		display inline-block
 		color ctext
 		font-size 18px
-		transition .3s
 		text-decoration none
 		&:hover
 			color clink
@@ -677,11 +672,11 @@ article.page
 		background #fff
 		box-shadow -4px 0 5px rgba(49,68,93,0.08)
 		text-align center
-		transition .3s
+		transition transform .3s, left .3s, box-shadow .3s
 		&:before
 			width auto
 			margin 0
-			transition .2s
+			transition transform .2s
 			transform translateX(2px)
 		&:hover
 			&:before
@@ -780,15 +775,15 @@ article.page
 	margin 20px 0
 	.side_block_title
 		font-size fzn - 4px
-		font-weight 500
+		font-weight 600
 		text-transform uppercase
-		color ctextlight
+		color ctext
 		margin 0 0 12px
 	p
 		margin 0 0 5px
 
 .side_parameter
-	margin 10px 0
+	margin 15px 0
 	font-size fzn - 2px
 
 	.side_parameter_name
@@ -829,16 +824,19 @@ article.page
 		margin-right 10px
 	li
 		margin 0
+
 	.label_check
 		padding 6px 0
 		display block
+
 	.label_filter
 		color cl2
 		display inline-block
 		padding 3px 10px 4px
 		border-radius 30px
 		box-shadow 0 0 0 1px cl2, inset 0 0 0 15px #fff, inset 0 0 0 15px rgba(cl2,0)
-		transition .15s
+		transition box-shadow .15s, color .15s
+
 	.input_filter:checked + label
 		box-shadow 0 0 0 1px cl2, inset 0 0 0 0 #fff, inset 0 0 0 15px cl2
 		color #fff
@@ -1332,7 +1330,7 @@ article.page
 			color ctextlight
 			text-align right
 			opacity 0
-			transition .3s
+			transition color .3s
 			&:before
 				vertical-align 0
 				margin 0
