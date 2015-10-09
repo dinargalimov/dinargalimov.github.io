@@ -1728,6 +1728,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/email\/dop1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108945,
+		"inputAbbreviatedPath": "\/images\/email\/dop1.png",
+		"outputAbbreviatedPath": "\/images\/email\/dop1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/email\/dop2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 98348,
+		"inputAbbreviatedPath": "\/images\/email\/dop2.png",
+		"outputAbbreviatedPath": "\/images\/email\/dop2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/email\/dop3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 113311,
+		"inputAbbreviatedPath": "\/images\/email\/dop3.png",
+		"outputAbbreviatedPath": "\/images\/email\/dop3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/email\/email_header.png": {
 		"fileType": 32768,
 		"ignore": 0,
