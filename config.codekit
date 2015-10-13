@@ -1728,13 +1728,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/email\/desc_mob.jpg": {
-		"fileType": 16384,
+	"\/images\/email\/desc_mob.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 36511,
-		"inputAbbreviatedPath": "\/images\/email\/desc_mob.jpg",
-		"outputAbbreviatedPath": "\/images\/email\/desc_mob.jpg",
+		"initialSize": 70957,
+		"inputAbbreviatedPath": "\/images\/email\/desc_mob.png",
+		"outputAbbreviatedPath": "\/images\/email\/desc_mob.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1794,13 +1794,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/email\/serv1.jpg": {
-		"fileType": 16384,
+	"\/images\/email\/serv1.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 64771,
-		"inputAbbreviatedPath": "\/images\/email\/serv1.jpg",
-		"outputAbbreviatedPath": "\/images\/email\/serv1.jpg",
+		"initialSize": 124830,
+		"inputAbbreviatedPath": "\/images\/email\/serv1.png",
+		"outputAbbreviatedPath": "\/images\/email\/serv1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
