@@ -2298,7 +2298,7 @@ a.icon-info:hover {
   }
 }
 .notifyjs-corner {
-  z-index: 2100;
+  z-index: 2100 !important;
 }
 .notifyjs-corner .inner {
   padding: 10px;
@@ -8200,7 +8200,6 @@ input.date_to {
   max-height: 100% !important;
 }
 .ms-drop ul li {
-  white-space: nowrap;
   border-bottom: 1px solid #f1f2f3;
 }
 .ms-drop ul li:last-child {
@@ -8211,7 +8210,6 @@ input.date_to {
   display: block;
   padding: 9px 15px 9px 15px;
   cursor: pointer;
-  white-space: nowrap;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -8378,9 +8376,16 @@ input.date_to {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
+.ms-parent.drop_item_wrap label >span,
 .ms-parent.ws_n label >span,
+.ms-parent.drop_item_wrap .label_check >span,
 .ms-parent.ws_n .label_check >span {
   white-space: normal;
+}
+.ms-parent.choise_wrap .ms-choice>span {
+  white-space: normal;
+  display: inline;
+  line-height: 1.3;
 }
 html,
 body {

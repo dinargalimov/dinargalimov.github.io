@@ -120,7 +120,6 @@
 	ul
 		max-height 100% !important
 		li
-			white-space nowrap
 			border-bottom 1px solid cbdlight + 40%
 
 			&:last-child
@@ -130,7 +129,6 @@
 				display block
 				padding 9px 15px 9px 15px
 				cursor pointer
-				white-space nowrap
 				box-sizing border-box
 				font-size fzn - 2px
 				color ctext
@@ -294,10 +292,14 @@
 				max-width 100%
 				overflow ellipsis
 
-	&.ws_n
+	&.drop_item_wrap, &.ws_n
 		label, .label_check
 			>span
 				white-space normal
 
-
-
+	&.choise_wrap
+		.ms-choice
+			&>span
+				white-space normal
+				display inline
+				line-height 1.3
