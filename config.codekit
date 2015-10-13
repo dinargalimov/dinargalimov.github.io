@@ -1739,6 +1739,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/email\/doc.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 156519,
+		"inputAbbreviatedPath": "\/images\/email\/doc.png",
+		"outputAbbreviatedPath": "\/images\/email\/doc.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/email\/dop1.png": {
 		"fileType": 32768,
 		"ignore": 0,
