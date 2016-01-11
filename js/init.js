@@ -35,6 +35,10 @@ function loadJs(){
 }
 
 function init(){
+	$('.transaction_currency_filter').delay(500).fadeIn(300);
+	$('.transaction_choose_account').delay(900).fadeIn(300);
+	$('.transaction_table').delay(2000).fadeIn(300);
+	$('.side').delay(1400).fadeIn(300);
 
 	$('.open_schet').click(function(){
 		$('.page').removeClass('hide');
@@ -255,10 +259,7 @@ function init(){
     	hopscotch.startTour(tour);
     });
 
-    $('.transaction_currency_filter').delay(500).fadeIn(300);
-	$('.transaction_choose_account').delay(900).fadeIn(300);
-	$('.transaction_table').delay(2000).fadeIn(300);
-	$('.side').delay(1400).fadeIn(300);
+
 
 }
 
