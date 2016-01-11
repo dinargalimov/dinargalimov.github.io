@@ -35,8 +35,18 @@
 
 	<div class="header_admin_menu">
 		<ul>
-			<li class="active"><a class="icon-check">Задачи</a></li>
+			<li><a class="icon-check">Задачи</a></li>
 			<li><a class="icon-menu-clients">Клиенты</a></li>
+			<li class="active"><a class="icon-notes drop-target">Отчеты</a>
+				<div class="drop-content">
+					<div class="drop-content-inner">
+						<ul class="drop-menu">
+							<li><a>Статистика по задачам</a></li>
+							<li><a>Общая статистика</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
 			<li>
 				<a class="icon-news drop-target">Новости</a>
 				<div class="drop-content">
@@ -48,6 +58,7 @@
 					</div>
 				</div>
 			</li>
+
 		</ul>
 	</div>
 
@@ -119,13 +130,48 @@
 								</div>
 							</div>
 							<div class="table_list_cell status">
-								Новая
+								Новая <a class="views">(22)</a>
+							</div>
+
+							<div class="table_list_cell number">
+								2722
+							</div>
+
+							<div class="table_list_cell name name_link">
+								<div class="name_title">ООО «Ромашка» </div>
+								<div class="name_desc">Мне срочно необходимо снять помещение внутри Садового срочно необходимо снять помещение внутри Садового</div>
+							</div>
+
+						</div>
+						<!-- строка таблицы -->
+						<div class="table_list_row new row_link">
+							<div class="table_list_cell deadline ">
+								<span class="icon-clock">03:45</span>
+							</div>
+							<div class="table_list_cell performer">
+								<a class="button xsmall">Взять в работу</a>
+							</div>
+							<div class="table_list_cell group">
+								<div class="jsRadSelect2 select_inline" data-placeholder="Выбрать">
+									<option class="jsRadSelect2Options" value="" selected>Чемпионы</option>
+									<option class="jsRadSelect2Options" value="">Бригада</option>
+									<option class="jsRadSelect2Options" value="">Колхозники и колхозницы</option>
+									<option class="jsRadSelect2Options" value="">Юристы</option>
+								</div>
+							</div>
+							<div class="table_list_cell status">
+								Новая <span class="views">(0)</span>
+							</div>
+
+							<div class="table_list_cell number">
+								2722
 							</div>
 
 							<div class="table_list_cell name name_link">
 								<div class="name_title">ООО «Ромашка»</div>
 								<div class="name_desc">Мне срочно необходимо снять помещение внутри Садового срочно необходимо снять помещение внутри Садового</div>
 							</div>
+
 						</div>
 
 						<!-- строка таблицы -->
@@ -157,8 +203,13 @@
 							<div class="table_list_cell status">
 								Завершена <span class="thumbs_up icon-thumbs-up"></span>
 							</div>
+
+							<div class="table_list_cell number">
+								2721
+							</div>
+
 							<div class="table_list_cell name name_link">
-								<div class="name_title">ИП “Сидоров А.Н”</div>
+								<div class="name_title">ИП “Сидоров А.Н” <span class="info_label_error small">Блокировка ПОД/ФТ</span></div>
 								<div class="name_desc"><strong>Иванов Саша:</strong> Найдите мне нормального бухгалтера<div class="write_now">
 									<span class="icon-pencil"></span>
 								</div></div>
@@ -194,6 +245,9 @@
 							</div>
 							<div class="table_list_cell status">
 								Завершена <span class="thumbs_down icon-thumbs-down"></span>
+							</div>
+							<div class="table_list_cell number">
+								2720
 							</div>
 							<div class="table_list_cell name name_link">
 								<div class="name_title">ИП “Сидоров А.Н”</div>
@@ -233,6 +287,9 @@
 							<div class="table_list_cell status">
 								В работе
 							</div>
+							<div class="table_list_cell number">
+								2719
+							</div>
 							<div class="table_list_cell name name_link">
 								<div class="name_title">СП “Лига”</div>
 								<div class="name_desc">Нужен счет в Замбийских квачах...</div>
@@ -268,6 +325,9 @@
 							<div class="table_list_cell status">
 								Ждем клиента
 							</div>
+							<div class="table_list_cell number">
+								2718
+							</div>
 							<div class="table_list_cell name name_link">
 								<div class="name_title">СП “Лига”</div>
 								<div class="name_desc">Нужен счет в Замбийских квачах...</div>
@@ -295,9 +355,19 @@
 						<div class="side_parameter_name">Группа:</div>
 						<div class="side_parameter_value">
 							<div class="jsRadSelect2 select_inline" data-placeholder="выбрать">
-								<option class="jsRadSelect2Options" value="t1" selected>все группы</option>
-								<option class="jsRadSelect2Options" value="t2">Бригада</option>
+								<option class="jsRadSelect2Options" value="t1" selected>Бригада</option>
+								<option class="jsRadSelect2Options" value="t2">Телемаркетинг</option>
 								<option class="jsRadSelect2Options" value="t3">Аналитики</option>
+							</div>
+						</div>
+					</div>
+					<div class="side_parameter parameter_inline">
+						<div class="side_parameter_name">Агент:</div>
+						<div class="side_parameter_value">
+							<div class="jsRadSelect2 select_inline" data-placeholder="выбрать">
+								<option class="jsRadSelect2Options" value="t1" selected>Иванов Александр</option>
+								<option class="jsRadSelect2Options" value="t2">Петров Николай</option>
+								<option class="jsRadSelect2Options" value="t3">Сидоров Афанасий</option>
 							</div>
 						</div>
 					</div>
@@ -306,7 +376,7 @@
 
 					<div class="side_filter">
 						<ul>
-							<li><input type="checkbox" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Непрочитанные</span></label></li>
+							<li><input type="checkbox" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Нераспределенные </span><span class="count">55</span></label></li>
 						</ul>
 					</div>
 
@@ -314,22 +384,25 @@
 
 					<div class="side_filter">
 						<ul>
-							<li><input type="radio" name="2"  id="2" class="input_check"><label for="2" class="label_check"><i class="icon"></i><span>Нераспределенные (1)</span></label></li>
-							<li><input type="radio" name="2"  id="3" class="input_check"><label for="3" class="label_check"><i class="icon"></i><span>Без исполнителей (15)</span></label></li>
-							<li><input type="radio" name="2"  id="4" class="input_check"><label for="4" class="label_check"><i class="icon"></i><span>Мои открытые (3)</span></label></li>
-							<li><input type="radio" name="2"  id="5" class="input_check"><label for="5" class="label_check"><i class="icon"></i><span>Все открытые (27)</span></label></li>
+							<li><input type="radio" name="2"  id="2" class="input_check"><label for="2" class="label_check"><i class="icon"></i><span>Без исполнителя</span><span class="count">21</span></label></li>
+
+							<li><input type="radio" name="2"  id="3" class="input_check"><label for="3" class="label_check"><i class="icon"></i><span>В работе</span></label></li>
+							<li><input type="radio" name="2"  id="31" class="input_check"><label for="31" class="label_check sub_label_check"><i class="icon"></i><span>Все</span><span class="count">29</span></label></li>
+							<li><input type="radio" name="2"  id="32" class="input_check"><label for="32" class="label_check sub_label_check"><i class="icon"></i><span>Просроченные</span><span class="count">26</span></label></li>
+
+							<li><input type="radio" name="2"  id="4" class="input_check"><label for="4" class="label_check"><i class="icon"></i><span>Ждут ответа клиента</span><span class="count">40</span></label></li>
+							<li><input type="radio" name="2"  id="5" class="input_check"><label for="5" class="label_check"><i class="icon"></i><span>Закрытые (агентом)</span><span class="count">20</span></label></li>
+
+							<li><input type="radio" name="2"  id="6" class="input_check"><label for="6" class="label_check"><i class="icon"></i><span>Завершенные (клиентом)</span></label></li>
+							<li><input type="radio" name="2"  id="61" class="input_check"><label for="61" class="label_check sub_label_check"><i class="icon"></i><span>Все</span><span class="count">29</span></label></li>
+							<li><input type="radio" name="2"  id="62" class="input_check"><label for="62" class="label_check sub_label_check"><i class="icon"></i><span>Позитивные</span><span class="count">18</span></label></li>
+							<li><input type="radio" name="2"  id="63" class="input_check"><label for="63" class="label_check sub_label_check"><i class="icon"></i><span>Негативные</span><span class="count">11</span></label></li>
+
+							<li><input type="radio" name="2"  id="5" class="input_check"><label for="5" class="label_check"><i class="icon"></i><span>Все задачи</span><span class="count">421</span></label></li>
 						</ul>
 					</div>
 
-					<div class="side_sep"></div>
 
-					<div class="side_filter">
-						<ul>
-							<li><input type="radio" name="3"  id="6" class="input_check"><label for="6" class="label_check"><i class="icon"></i><span>Закрытые клиентом (1)</span></label></li>
-							<li><input type="radio" name="3"  id="7" class="input_check"><label for="7" class="label_check"><i class="icon"></i><span>Завершенные (3)</span></label></li>
-							<li><input type="radio" name="3"  id="8" class="input_check"><label for="8" class="label_check"><i class="icon"></i><span>Все задачи (15)</span></label></li>
-						</ul>
-					</div>
 				</div>
 			</div>
 		</div>

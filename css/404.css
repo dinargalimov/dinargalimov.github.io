@@ -1,15 +1,18 @@
-.page404 {
+@charset "utf-8";
+.page404,
+.page_clear {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-radial-gradient(68% 100%, #fff 45%, #e0f3ff 100%);
-  background: -moz-radial-gradient(68% 100%, #fff 45%, #e0f3ff 100%);
-  background: -o-radial-gradient(68% 100%, #fff 45%, #e0f3ff 100%);
-  background: -ms-radial-gradient(68% 100%, #fff 45%, #e0f3ff 100%);
-  background: radial-gradient(68% 100%, #fff 45%, #e0f3ff 100%);
-  background-size: 120% auto, 100% 100%;
+  background: -webkit-radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
+  background: -moz-radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
+  background: -o-radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
+  background: -ms-radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
+  background: radial-gradient(65% 100%, #ecf2f6 45%, #abc5d7 100%);
+  overflow: auto;
 }
-.page404 .logo {
+.page404 .logo,
+.page_clear .logo {
   width: 270px;
   height: 50px;
   position: absolute;
@@ -18,19 +21,84 @@
   background: url("../images/logo_full_d.svg");
   text-indent: -10000em;
 }
-.page404 .content_wrap {
+.page404 .content_wrap,
+.page_clear .content_wrap {
   display: table;
   width: 100%;
   height: 100%;
 }
-.page404 .content_cell {
+.page404 .content_cell,
+.page_clear .content_cell {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
 }
-.page404 .content {
+.page404 .content,
+.page_clear .content {
   width: 400px;
   margin: 0 auto;
   text-align: center;
+}
+.page404 .content p,
+.page_clear .content p {
+  margin: 0 0 15px;
+}
+.page404.old_browser .content_cell,
+.page_clear.old_browser .content_cell {
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+.page404.old_browser .content,
+.page_clear.old_browser .content {
+  width: 600px;
+  text-align: justify;
+  font-size: 14px;
+}
+.page404.old_browser .browser_list,
+.page_clear.old_browser .browser_list {
+  overflow: hidden;
+  margin: 50px 0 0;
+}
+.page404.old_browser .browser_list li,
+.page_clear.old_browser .browser_list li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5px;
+  font-size: 13px;
+}
+.page404.old_browser .browser_list li a,
+.page_clear.old_browser .browser_list li a {
+  display: block;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: center 15px;
+  padding: 110px 0 25px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+.page404.old_browser .browser_list li a:hover,
+.page_clear.old_browser .browser_list li a:hover {
+  background-color: #fff;
+}
+.page404.old_browser .browser_list li a.chrome,
+.page_clear.old_browser .browser_list li a.chrome {
+  background-image: url("../images/browser_chrome.png");
+}
+.page404.old_browser .browser_list li a.firefox,
+.page_clear.old_browser .browser_list li a.firefox {
+  background-image: url("../images/browser_firefox.png");
+}
+.page404.old_browser .browser_list li a.ie,
+.page_clear.old_browser .browser_list li a.ie {
+  background-image: url("../images/browser_ie.png");
+}
+.page404.old_browser .browser_list li a.safari,
+.page_clear.old_browser .browser_list li a.safari {
+  background-image: url("../images/browser_safari.png");
 }
 /*# sourceMappingURL=404.css.map */

@@ -182,8 +182,8 @@
 
 					<div class="side_sep"></div>
 
-					<div class="side_parameter parameter_inline">
-						<div class="side_parameter_name">Период:</div>
+					<div class="side_parameter">
+						<!-- <div class="side_parameter_name">Период:</div>
 						<div class="side_parameter_value">
 							<select class="select_inline" data-placeholder="выбрать">
 								<option value="d1" selected>за текущий день</option>
@@ -196,7 +196,31 @@
 						<div class="filter_date_value">
 							<input type="text" name="" id="" class="datetimepicker filter_date_input small date_from">
 							<input type="text" name="" id="" class="datetimepicker filter_date_input small date_to">
+						</div> -->
+
+						<div class="side_parameter_name">Операции за период:</div>
+						<div class="side_parameter_value">
+							<a class="drop-target icon-date link_dashed"><span>c 15.03.2015 по 23.12.2015</span></a>
+							<div class="drop-content">
+								<div class="drop-content-inner dashboard-period-choose">
+									<ul class="drop-menu">
+										<li><a>Последние 30 дней</a></li>
+										<li><a>Текущая неделя</a></li>
+										<li><a>Текущий месяц</a></li>
+										<li><a>Текущий квартал</a></li>
+										<li><a>Весь год</a></li>
+									</ul>
+									<div class="drop-date-choose">
+										<div class="filter_date_value">
+											<input type="text" name="" id="" class="datetimepicker filter_date_input small date_from">
+											<input type="text" name="" id="" class="datetimepicker filter_date_input small date_to">
+											<button class="button small">Ок</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
+
 					</div>
 
 				</div>

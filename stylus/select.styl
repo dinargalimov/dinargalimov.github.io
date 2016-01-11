@@ -110,12 +110,15 @@
 	&.right
 		right 0
 		margin-right 0
+		margin-left -1000em
 	.ms-drop-inner
 		width calc(100% + 20px)
 		max-height 214px
 		-webkit-overflow-scrolling touch
 		overflow auto
 
+	.loading
+		width 150px
 
 	ul
 		max-height 100% !important
@@ -127,7 +130,7 @@
 
 			label, .label_check
 				display block
-				padding 9px 15px 9px 15px
+				padding 8px 15px
 				cursor pointer
 				box-sizing border-box
 				font-size fzn - 2px
@@ -135,8 +138,8 @@
 				>span
 					display inline-block
 					vertical-align top
-					line-height 1.2
-					overflow ellipsis
+					line-height 1.35
+					// overflow ellipsis
 					max-width calc(100% - 21px)
 
 				.select_item_info
@@ -180,7 +183,7 @@
 
 	.ms-group-title
 		font-size fzn - 4px
-		font-weight 500
+		font-weight fwm
 		color ctextlight
 		color cl2
 		font-style italic
@@ -248,6 +251,7 @@
 		.ms-drop
 			right 0
 			margin-right 0
+			margin-left -1000em
 
 	&.select_full
 		width 100%

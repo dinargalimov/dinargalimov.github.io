@@ -15,7 +15,7 @@ button
 	display inline-block
 	font-size fzn + 3px
 	font-family ffn
-	font-weight 600
+	font-weight fwm
 	color #fff
 	background cl2
 	background-repeat no-repeat
@@ -162,13 +162,13 @@ button
 		&:before
 			vertical-align -2px
 			font-size fzn - 3px
-			margin 0 5px 0 -5px
+			margin 0 5px 0 0
 
 	&.xsmall[class*='icon-']
 		&:before
 			vertical-align -2px
 			font-size fzn - 3px
-			margin 0 5px 0 -5px
+			margin 0 5px 0 0
 
 	&.button_notext
 		padding-left 0!important
@@ -328,7 +328,7 @@ a.block_close
 	color clink
 	text-decoration underline
 	font-size fzn - 1px
-
+	display inline-block
 	&:before
 		margin-right 5px
 	&:hover
@@ -358,12 +358,19 @@ a.block_close
 	color ctextlight
 	text-align center
 	border-radius brbut
+	font-size fzn
 	&:before
 		width auto
+		min-width auto
 		margin 0
-
 	&:hover
 		color clink
+
+	&.small
+		width 16px
+		height 16px
+		font-size fzn - 3px
+
 
 .waves-effect
 	position relative

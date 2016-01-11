@@ -7,42 +7,20 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/registration.css">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
-  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
-  	<script src="js/select.js"></script>
+  	<script src="js/init.js"></script>
 
 </head>
-<body ng-app="myapp">
+<body>
 
-<script>
-	var module = angular.module('myapp', ['ui.select', 'ngSanitize']);
-	module.controller('selectController',function($scope){
-		$scope.cities=[
-			{name:'Москва'},
-			{name:'Уфа'},
-			{name:'Казань'},
-			{name:'Нижний Новгород'},
-			{name:'Оренбург'},
-			{name:'Омск'},
-		];
-	});
-</script>
 
 <div class="reg">
 	<div class="wrap">
 		<div class="reg_header">
-				<a href="/" class="logo">МодульБанк</a>
-				<div class="header_links"><a href="#" class="login">Войти в систему</a></div>
+				<include data-file="reg/registration.html .reg_header>*"></include>
 			</div>
 			<div class="reg_section">
 				<div class="reg_side">
-					<div class="title">Регистрация компании</div>
-					<p>Тариф «Старт»: 0 рублей/в месяц</p>
-					<p>Команда: Ассистент, Бухгалтер, Юрист</p>
-					<div class="copyright">
-						<p>Для получения дополнительной информации позвоните по телефону 8 (800) 333 79 96 с 09:00 до 21:00</p>
-						<p>Банковские услуги представляются ОАО КБ «Региональный Кредит». Лицензия ЦБ РФ №1927 от 07.08.2012 г.</p>
-					</div>
+					<include data-file="reg/registration.html .reg_side>*"></include>
 				</div>
 				<div class="reg_article" ng-controller="selectController">
 
@@ -62,13 +40,13 @@
 
 				</div>
 
-				<p>Укажите регистрационный номер вашей компании или ИП</p>
+				<p>Укажите ваш регистрационный номер</p>
 
 				<div class="form">
 					<form action="" id="form">
-						<div class="w80">
+						<div class="w100">
 							<div class="form_group">
-								<input type="text" name="" value="" placeholder="ОГРН или ОГРНИП" class="column eight" >
+								<input type="text" name="" value="" placeholder="ОГРН или ОГРНИП" class="w100">
 							</div>
 						</div>
 
@@ -101,12 +79,11 @@
 								<input type="text" name="" id="" placeholder="Отчество *" class="w80">
 							</div>
 							<div class="form_group">
-								<ui-select ng-model="person.selected" class="select2-nosearch w80" theme="select2-nosearch">
-									<ui-select-match placeholder="выберите город">{{$select.selected.name}}</ui-select-match>
-									<ui-select-choices repeat="city in cities">
-										<div ng-bind-html="city.name"></div>
-									</ui-select-choices>
-								</ui-select>
+								<div class="jsRadSelect2 w80" data-placeholder="Регион места жительства*" name="" id="">
+									<option class="jsRadSelect2Options" value="1">Москва</option>
+									<option class="jsRadSelect2Options" value="2">Уфа</option>
+									<option class="jsRadSelect2Options" value="3">Нижний Новгород</option>
+								</div>
 							</div>
 
 							<div class="form_buttons">
@@ -117,7 +94,9 @@
 				</div>
 
 			</div>
+
 		</div>
+		<include data-file="reg/registration.html .reg_footer"></include>
 	</div>
 </div>
 

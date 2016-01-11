@@ -22,7 +22,7 @@
 
 		<div class="content">
 
-			<include data-file="open_account/account_widget.html .account_widget:nth-child(6)"></include>
+			<include data-file="open_account/account_widget_dashboard.html .account_widget_dashboard:nth-child(5)"></include>
 
 			<!-- уведомления -->
 			<!-- <div class="notices">
@@ -76,10 +76,10 @@
 							</div>
 						</div>
 					</div>
-					<a class="drop-target drop-input second small">на всех счетах в рублях</a>
+					<a class="drop-target drop-input second small dashboard_content_filter_account">все счета в рублях</a>
 					<div class="drop-content">
-						<div class="drop-content-inner">
-							<ul class="drop-menu max_w_500 drop_account_list">
+						<div class="drop-content-inner drop_account_list">
+							<ul class="drop-menu max_w_500">
 								<li>
 									<a>
 										<strong>Счета в рублях</strong>
@@ -101,6 +101,14 @@
 									</a>
 								</li>
 
+								<li class="submenu">
+									<a>
+										<span class="account_value">203 597,25 <span class="cur ruble"><span>р.</span></span></span>
+										<span class="account_name">Овердрафт длинное название счета длинное название счета длинное название счета длинное название счета</span>
+										<span class="account_num">40101234560000000000</span>
+									</a>
+								</li>
+
 								<li>
 									<a>
 										<strong>Счета в долларах США</strong>
@@ -118,12 +126,24 @@
 							</ul>
 						</div>
 					</div>
+
+					<a class="drop-target icon-settings dashboard_content_filter_settings"></a>
+					<div class="drop-content">
+						<div class="drop-content-inner inner_pad">
+							<input type="checkbox" name="g1" id="g1">
+							<label for="g1" class="label_check f_small"><i class="icon"></i><span>Учитывать операции между счетами</span></label>
+						</div>
+					</div>
+
 				</div>
 
 			</h1>
 
 			<!-- виджет графика -->
 			<div class="widget_block">
+
+
+
 				<div id="chart" class='' style="height:300px">
 				    <svg></svg>
 				</div>

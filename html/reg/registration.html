@@ -22,21 +22,21 @@
 	<div class="wrap">
 		<div class="reg_header">
 			<div class="logo">МодульБанк</div>
+			<div class="slogan">Онлайн банк для вашего бизнеса</div>
 			<!-- <div class="header_links"><a href="#" class="login">Войти в систему</a></div> -->
 		</div>
 		<div class="reg_section">
 			<div class="reg_side">
 				<!-- <div class="title">Регистрация компании</div> -->
-				<p class="fw_m c_sky">Тариф «Оптимальный»</p>
+				<p class="fw_m c_sky f_big">Тариф «Оптимальный»</p>
 				<ul class="point f_small">
 					<li>За один платеж 19 <span class="cur ruble"><span>р.</span></span></li>
 					<li>До 3% на остаток по расчетному счету</li>
 					<li>Бесплатное снятие наличных до 50 000 <span class="cur ruble"><span>р.</span></span> в месяц</li>
 				</ul>
-				<p class="f_big fw_m">490 <span class="cur ruble"><span>р.</span></span>/месяц</p>
+				<p class="fw_m f_big">490 <span class="cur ruble"><span>р.</span></span>/месяц</p>
 				<div class="copyright">
-					<p>Позвоните, если у вас есть вопросы<br>8 (800) 333-79-96. Отвечаем даже в субботу ночью.</p>
-					<p>Услуги банка ОАО КБ&nbsp;&laquo;Региональный Кредит&raquo;. Лицензия ЦБ&nbsp;РФ &#8470;1927 от&nbsp;07.08.2012&nbsp;г.</p>
+					<p>Круглосуточная поддержка:<span class="phone">8 800 333-79-96</span></p>
 				</div>
 			</div>
 			<div class="reg_article" ng-controller="selectController">
@@ -77,39 +77,45 @@
 							</div>
 
 							<div class="form_group">
-								<select class="w100" data-placeholder="Выбрать город обслуживания">
-									<option value="">Уфа</option>
-									<option value="">Москва</option>
-									<option value="">Уфа</option>
-									<option value="">Москва</option>
-									<option value="">Уфа</option>
-									<option value="">Москва</option>
-									<option value="">Уфа</option>
-									<option value="">Москва</option>
-									<option value="">Уфа</option>
-									<option value="">Москва</option>
-									<option value="">Уфа</option>
-									<option value="">Москва</option>
-								</select>
+								<div class="jsRadSelect2 w100" data-placeholder="Выбрать город обслуживания">
+									<option class="jsRadSelect2Options" value="">Уфа</option>
+									<option class="jsRadSelect2Options" value="">Москва</option>
+									<option class="jsRadSelect2Options" value="">Уфа</option>
+									<option class="jsRadSelect2Options" value="">Москва</option>
+									<option class="jsRadSelect2Options" value="">Уфа</option>
+									<option class="jsRadSelect2Options" value="">Москва</option>
+									<option class="jsRadSelect2Options" value="">Уфа</option>
+									<option class="jsRadSelect2Options" value="">Москва</option>
+									<option class="jsRadSelect2Options" value="">Уфа</option>
+									<option class="jsRadSelect2Options" value="">Москва</option>
+									<option class="jsRadSelect2Options" value="">Уфа</option>
+									<option class="jsRadSelect2Options" value="">Москва</option>
+								</div>
 							</div>
 
 						</div>
-						<div class="small_text">
+						<!-- <div class="small_text">
 							<p>Нажимая на кнопку «Далее», вы принимаете <a href="#">соглашение об оказании услуг</a> и соглашаетесь на обработку своих персональных данных.</p>
-						</div>
+						</div> -->
 						<div class="form_buttons">
 							<button type="submit" class="button second">Далее</button>
 						</div>
 
 						<div class="copyright small_text border">
-							<p>Для получения дополнительной информации позвоните по телефону 8 (800) 333 79 96 с 09:00 до 21:00</p>
-							<p>Банковские услуги представляются ОАО КБ «Региональный Кредит». Лицензия ЦБ РФ №1927 от 07.08.2012 г.</p>
+							<p>Регистрируясь в системе, вы принимаете <a>соглашение об оказании услуг</a> и соглашаетесь на обработку своих персональных данных.</p>
+							<p>Круглосуточная поддержка: <a class="phone">8 800 333-79-96</a></p>
+							<p>Услуги банка ОАО КБ «Региональный Кредит». Лицензия ЦБ РФ №1927 от 07.08.2012 г.</p>
 						</div>
 
 					</form>
 				</div>
 
 			</div>
+		</div>
+
+		<div class="reg_footer">
+			<p>Регистрируясь в системе, вы принимаете <a>соглашение об оказании услуг</a> и соглашаетесь на обработку своих персональных данных.</p>
+			<p>Услуги банка ОАО КБ «Региональный Кредит». Лицензия ЦБ РФ №1927 от 07.08.2012 г.</p>
 		</div>
 	</div>
 </div>

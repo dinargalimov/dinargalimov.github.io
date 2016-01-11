@@ -1,5 +1,74 @@
 @charset "utf-8"
 
+
+// Roboto
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src: local('Roboto Bold'), local('RobotoBold'),
+// 		url('../fonts/roboto/robotobold.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotobold.woff') format('woff')
+// 	font-weight: bold;
+// 	font-style: normal;
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src local('Roboto Bold Italic'), local('RobotoBoldItalic'),
+// 		url('../fonts/roboto/robotobolditalic.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotobolditalic.woff') format('woff')
+// 	font-weight: bold;
+// 	font-style italic
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src: local('Roboto Light'), local('RobotoLight'),
+// 		url('../fonts/roboto/robotolight.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotolight.woff') format('woff')
+// 	font-weight: 300;
+// 	font-style: normal;
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src: local('Roboto Light Italic'), local('RobotoLightItalic'),
+// 		url('../fonts/roboto/robotolightitalic.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotolightitalic.woff') format('woff')
+// 	font-weight: 300;
+// 	font-style italic
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src local('Roboto'),
+// 		url('../fonts/roboto/roboto.woff2') format('woff2'),
+// 		url('../fonts/roboto/roboto.woff') format('woff')
+// 	font-weight: normal
+// 	font-style: normal
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src: local('Roboto Italic'), local('RobotoItalic'),
+// 		url('../fonts/roboto/robotoitalic.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotoitalic.woff') format('woff')
+// 	font-weight: normal;
+// 	font-style italic
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src: local('Roboto Medium'), local('RobotoMedium'),
+// 		url('../fonts/roboto/robotomedium.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotomedium.woff') format('woff')
+// 	font-weight: 500;
+// 	font-style normal
+
+// @font-face
+// 	font-family: 'Roboto';
+// 	src: local('Roboto Medium Italic'), local('RobotoMediumItalic'),
+// 		url('../fonts/roboto/robotomediumitalic.woff2') format('woff2'),
+// 		url('../fonts/roboto/robotomediumitalic.woff') format('woff')
+// 	font-weight: 600;
+// 	font-style italic
+
+
+
 // Open Sans
 
 @font-face
@@ -13,8 +82,6 @@
 	src local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('../fonts/open_sans/opensans-bolditalic.woff') format('woff')
 	font-weight: bold;
 	font-style italic
-
-
 
 @font-face
 	font-family: 'Open Sans';
@@ -78,15 +145,18 @@
 	font-weight bold
 	font-style normal
 
+
+
 // Иконки
-
-
 @font-face
 	font-family: "mb-icon-font";
-	src url("../fonts/icons/icons.woff") format("woff")
+	src:url("../fonts/icons/mb-icon-font.eot");
+	src:url("../fonts/icons/mb-icon-font.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/icons/mb-icon-font.woff") format("woff"),
+		url("../fonts/icons/mb-icon-font.ttf") format("truetype"),
+		url("../fonts/icons/mb-icon-font.svg#mb-icon-font") format("svg");
 	font-weight: normal;
 	font-style: normal;
-
 
 [data-icon]:before
 	font-family: "mb-icon-font" !important;
@@ -114,264 +184,279 @@
 	-moz-osx-font-smoothing: grayscale;
 
 
-.icon-trash-bin
-	&:before
-		content "b"
-.icon-info
-	&:before
-		content "c"
-.icon-menu-dashboard
-	&:before
-		content "e"
-.icon-fullsize2
-	&:before
-		content "f"
-.icon-logout
-	&:before
-		content "h"
-.icon-menu-clients
-	&:before
-		content "i"
-.icon-menu-doc
-	&:before
-		content "j"
-.icon-menu-report
-	&:before
-		content "l"
-.icon-menu-transaction
-	&:before
-		content "k"
-.icon-profile
-	&:before
-		content "m"
-.icon-settings
-	&:before
-		content "n"
-
-.icon-step-check
-	&:before
-		content "r"
-.icon-check
-	&:before
-		content "s"
-.icon-search
-	&:before
-		content "t"
-.icon-arrow-up
-	&:before
-		content "v"
-.icon-close
-	&:before
-		content "w"
-.icon-left-big
-	&:before
-		content "d"
-.icon-left-mini
-	&:before
-		content "x"
-.icon-pencil
-	&:before
-		content "A"
-.icon-user-add
-	&:before
-		content "z"
-.icon-group-half-add
-	&:before
-		content "B"
-.icon-user-full-add
-	&:before
-		content "C"
-.icon-group-full
-	&:before
-		content "D"
-.icon-mail-add
-	&:before
-		content "G"
-.icon-mail
-	&:before
-		content "F"
-.icon-file
-	&:before
-		content "J"
-.icon-down-big
-	&:before
-		content "H"
-.icon-attach
-	&:before
-		content "I"
-.icon-password
-	&:before
-		content "K"
-.icon-thumbs-down
-	&:before
-		content "u"
-.icon-thumbs-up
-	&:before
-		content "L"
-.icon-arrow-right
-	&:before
-		content "N"
-.icon-arrow-left
-	&:before
-		content "O"
-.icon-reload
-	&:before
-		content "P"
-.icon-right-big
-	&:before
-		content "Q"
-.icon-chat
-	&:before
-		content "R"
-.icon-plus
-	&:before
-		content "a"
-.icon-submenu
-	&:before
-		content "U"
-.icon-notes
-	&:before
-		content "T"
-.icon-date
-	&:before
-		content "S"
-.icon-date-from
-	&:before
-		content "V"
-.icon-date-to
-	&:before
-		content "W"
-.icon-home
-	&:before
-		content "M"
-.icon-right-open-mini
-	&:before
-		content "X"
-.icon-sort-down
-	&:before
-		content "Y"
-.icon-sort-up
-	&:before
-		content "Z"
-.icon-phone
-	&:before
-		content "1"
-.icon-change
-	&:before
-		content "2"
-.icon-mail-accept
-	&:before
-		content "3"
-.icon-help
-	&:before
-		content "g"
-.icon-round-plus
-	&:before
-		content "4"
-.icon-round-action
-	&:before
-		content "9"
-.icon-round-check
-	&:before
-		content "6"
-.icon-round-minus
-	&:before
-		content "5"
-.icon-more
-	&:before
-		content "7"
-.icon-warning
-	&:before
-		content "8"
-.icon-more-small
-	&:before
-		content "0"
-.icon-redo
-	&:before
-		content "!"
-.icon-favorites
-	&:before
-		content '"'
-.icon-delete-circle
-	&:before
-		content "$"
-.icon-clock
-	&:before
-		content "#"
-.icon-checkbox
-	&:before
-		content "&"
-.icon-stop
-	&:before
-		content "y"
-.icon-favorites-solid
-	&:before
-		content "%"
-.icon-payment
-	&:before
-		content "'"
-.icon-user
-	&:before
-		content "("
-.icon-bell
-	&:before
-		content ")"
-.icon-sign
-	&:before
-		content "E"
-.icon-down-small
-	&:before
-		content "*"
-.icon-fullsize
-	&:before
-		content "+"
-.icon-currency-change
-	&:before
-		content ","
-.icon-customs
-	&:before
-		content "-"
-.icon-government
-	&:before
-		content "."
-.icon-insurance
-	&:before
-		content "/"
-.icon-building
-	&:before
-		content ":"
-.icon-smile-bubble
-	&:before
-		content ";"
-.icon-smile-bubble-angry
-	&:before
-		content "<"
-.icon-smile-bubble-happy
-	&:before
-		content "="
-.icon-smile-bubble-wow
-	&:before
-		content ">"
-.icon-news
-	&:before
-		content "?"
-.icon-next
-	&:before
-		content "@"
+.icon-trash-bin:before {
+  content: "\62";
+}
+.icon-info:before {
+  content: "\63";
+}
+.icon-menu-dashboard:before {
+  content: "\65";
+}
+.icon-fullsize2:before {
+  content: "\66";
+}
+.icon-logout:before {
+  content: "\68";
+}
+.icon-menu-clients:before {
+  content: "\69";
+}
+.icon-menu-doc:before {
+  content: "\6a";
+}
+.icon-menu-report:before {
+  content: "\6c";
+}
+.icon-menu-transaction:before {
+  content: "\6b";
+}
+.icon-profile:before {
+  content: "\6d";
+}
+.icon-settings:before {
+  content: "\6e";
+}
+.icon-mail-sent2:before {
+  content: "\6f";
+}
+.icon-step-check:before {
+  content: "\72";
+}
+.icon-check:before {
+  content: "\73";
+}
+.icon-search:before {
+  content: "\74";
+}
+.icon-arrow-up:before {
+  content: "\76";
+}
+.icon-close:before {
+  content: "\77";
+}
+.icon-left-big:before {
+  content: "\64";
+}
+.icon-left-mini:before {
+  content: "\78";
+}
+.icon-pencil:before {
+  content: "\41";
+}
+.icon-user-add:before {
+  content: "\7a";
+}
+.icon-group-half-add:before {
+  content: "\42";
+}
+.icon-user-full-add:before {
+  content: "\43";
+}
+.icon-group-full:before {
+  content: "\44";
+}
+.icon-mail-add:before {
+  content: "\47";
+}
+.icon-mail:before {
+  content: "\46";
+}
+.icon-file:before {
+  content: "\4a";
+}
+.icon-down-big:before {
+  content: "\48";
+}
+.icon-attach:before {
+  content: "\49";
+}
+.icon-password:before {
+  content: "\4b";
+}
+.icon-thumbs-down:before {
+  content: "\75";
+}
+.icon-thumbs-up:before {
+  content: "\4c";
+}
+.icon-arrow-right:before {
+  content: "\4e";
+}
+.icon-arrow-left:before {
+  content: "\4f";
+}
+.icon-reload:before {
+  content: "\50";
+}
+.icon-right-big:before {
+  content: "\51";
+}
+.icon-chat2:before {
+  content: "\52";
+}
+.icon-plus:before {
+  content: "\61";
+}
+.icon-submenu:before {
+  content: "\55";
+}
+.icon-notes:before {
+  content: "\54";
+}
+.icon-date:before {
+  content: "\53";
+}
+.icon-date-from:before {
+  content: "\56";
+}
+.icon-date-to:before {
+  content: "\57";
+}
+.icon-home:before {
+  content: "\4d";
+}
+.icon-right-open-mini:before {
+  content: "\58";
+}
+.icon-sort-down:before {
+  content: "\59";
+}
+.icon-sort-up:before {
+  content: "\5a";
+}
+.icon-phone:before {
+  content: "\31";
+}
+.icon-change:before {
+  content: "\32";
+}
+.icon-mail-accept:before {
+  content: "\33";
+}
+.icon-help:before {
+  content: "\67";
+}
+.icon-round-plus:before {
+  content: "\34";
+}
+.icon-round-action:before {
+  content: "\39";
+}
+.icon-round-check:before {
+  content: "\36";
+}
+.icon-round-minus:before {
+  content: "\35";
+}
+.icon-more:before {
+  content: "\37";
+}
+.icon-warning:before {
+  content: "\38";
+}
+.icon-more-small:before {
+  content: "\30";
+}
+.icon-redo:before {
+  content: "\21";
+}
+.icon-favorites:before {
+  content: "\22";
+}
+.icon-delete-circle:before {
+  content: "\24";
+}
+.icon-clock:before {
+  content: "\23";
+}
+.icon-checkbox:before {
+  content: "\26";
+}
+.icon-stop:before {
+  content: "\79";
+}
+.icon-favorites-solid:before {
+  content: "\25";
+}
+.icon-payment:before {
+  content: "\27";
+}
+.icon-user:before {
+  content: "\28";
+}
+.icon-bell:before {
+  content: "\29";
+}
+.icon-sign:before {
+  content: "\45";
+}
+.icon-down-small:before {
+  content: "\2a";
+}
+.icon-fullsize:before {
+  content: "\2b";
+}
+.icon-currency-change:before {
+  content: "\2c";
+}
+.icon-customs:before {
+  content: "\2d";
+}
+.icon-government:before {
+  content: "\2e";
+}
+.icon-insurance:before {
+  content: "\2f";
+}
+.icon-building:before {
+  content: "\3a";
+}
+.icon-smile-bubble:before {
+  content: "\3b";
+}
+.icon-smile-bubble-angry:before {
+  content: "\3c";
+}
+.icon-smile-bubble-happy:before {
+  content: "\3d";
+}
+.icon-smile-bubble-wow:before {
+  content: "\3e";
+}
+.icon-news:before {
+  content: "\3f";
+}
+.icon-next:before {
+  content: "\40";
+}
 .icon-menu-clients2:before {
-  content: "[";
+  content: "\5b";
 }
 .icon-menu-contragents:before {
-  content: "]";
+  content: "\5d";
 }
-
 .icon-print:before {
-  content: "q";
+  content: "\71";
 }
 .icon-mail-sent:before {
-  content: "p";
+  content: "\70";
 }
 .icon-save:before {
-  content: "^";
+  content: "\5e";
 }
-
+.icon-share:before {
+  content: "\5f";
+}
+.icon-chat:before {
+  content: "\60";
+}
+.icon-delivered:before {
+  content: "\7b";
+}
+.icon-timer:before {
+  content: "\7c";
+}
+.icon-stop-light:before {
+  content: "\7d";
+}

@@ -1,5 +1,6 @@
 var root = document.getElementsByTagName('script')[0].parentElement;
 var arrayOfJS = [
+
 	'rad-select',
 	'include',
 	'jquery.datetimepicker',
@@ -145,8 +146,7 @@ function init(){
 	})});
 
 	$('[b365-tooltip]').tooltip({
-		placement: 'left',
-		trigger: 'click'
+		html: true
 	});
 
 	// $('.equalize_height').equalize('innerHeight');
@@ -182,6 +182,12 @@ function init(){
 	    	$(".page_header").removeClass("shadow");
 	    }
 	});
+
+
+	$( ".message" ).click(function() {
+	  $( ".add_new_task_for_message" ).addClass('show');
+	});
+
 
 	 //var init, setupShepherd;
 

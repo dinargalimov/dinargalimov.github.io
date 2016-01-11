@@ -120,6 +120,7 @@ textarea
 		max-height 209px
 
 .textarea_block
+	clearfix()
 	textarea
 		box-shadow none
 		border none
@@ -144,7 +145,7 @@ textarea
 		border-radius brform
 		box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
 	.textarea_text
-		padding 0 15px 15px
+		padding 0 15px 10px
 		font-size fzn - 1px
 		z-index 10
 		&.characters_left
@@ -304,6 +305,9 @@ input[type='checkbox']
 
 // --------------------
 
+form
+	position relative
+
 // фильтры на чекбоксах
 .label_filter
 	display inline-block
@@ -391,13 +395,17 @@ input.search_left
 	.property_label
 		padding-top 5px
 
+.form_vertical
+	.property_label
+		padding-bottom 8px
+
 
 // заголовки
 .legend
 	border-bottom 2px solid cbdlight
 	text-transform uppercase
-	font-weight 600
-	margin-bottom 30px
+	font-weight fwm
+	margin-bottom 25px
 	span
 		display inline-block
 		padding 0 0 6px
@@ -436,6 +444,16 @@ input.search_left
 	&+[class*="info_"], &+[class*="captcha"]
 		margin-top 15px
 
+	.form_button_right
+		float right
+		&.button_clean
+			margin-top 13px
+
+	.ms-parent.select_inline
+		vertical-align baseline
+	.button, .button_clean
+		& ~ .ms-parent
+			margin-left 20px
 
 
 // -------------- поле с добавление иконки/текста перед полем --------------
@@ -574,7 +592,7 @@ rad-select2
 		border 1px solid cbglight - 15%
 		margin-left -1px
 		color ctextlight
-		padding 0 15px
+		padding 0 13px
 		font-size fzn - 2px
 		cursor pointer
 		z-index 1
@@ -608,7 +626,6 @@ rad-select2
 						border-width 7px
 						margin-left -7px
 	&.small
-
 		label
 			height 32px
 			line-height 32px
@@ -815,13 +832,14 @@ rad-select2
 		padding 0 0 12px
 		font-size fzn - 2px
 		overflow hidden
-		&:last-child
-			border-bottom none
-		.file_upload_item_info
-			position relative
-			display block
-			margin -6px 0
-			padding 6px 0
+		// &:last-child
+		// 	border-bottom none
+		// 	padding-bottom 0
+		// .file_upload_item_info
+		// 	position relative
+		// 	display block
+		// 	margin -6px 0
+		// 	padding 6px 0
 
 		.file_icon
 			display inline-block
@@ -854,6 +872,9 @@ rad-select2
 			right 0
 			top 0
 			opacity 0
+			transition opacity .2s
+			font-size 14px
+			color ctexterror
 			&.show
 				opacity 1
 		&:hover
@@ -861,7 +882,7 @@ rad-select2
 				opacity 1
 
 		.total-progress-box
-			height 20px
+			height 19px
 			margin-right 25px
 		.total-progress-value
 			color ctextlight
@@ -912,14 +933,14 @@ rad-select2
 	display block
 	height 1px
 	width 100%
-	margin 20px auto
+	margin 20px 0
 	background cbdlight
 
 
 // фильтр по дате
 input.datetimepicker
-	padding-left 30px!important
-	background url(../images/icon_date.svg) no-repeat 8px center
+	padding-left 28px!important
+	background url(../images/icon_date.svg) no-repeat 6px center
 
 .filter_date_value
 	padding 15px 0 0
@@ -932,9 +953,9 @@ input.date_from, input.date_to
 	width 48%
 	float left
 input.date_from
-	background url(../images/icon_date_from.svg) no-repeat 8px center
+	background url(../images/icon_date_from.svg) no-repeat 6px center
 input.date_to
-	background url(../images/icon_date_to.svg) no-repeat 8px center
+	background url(../images/icon_date_to.svg) no-repeat 6px center
 	float right
 
 // textarea с загрузкой

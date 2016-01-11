@@ -57,7 +57,7 @@ a
 	&.link_dashed
 		text-decoration none
 		color clink
-		span
+		&>span
 			border-bottom 1px dashed @color
 		&:hover
 			color cl2
@@ -125,11 +125,11 @@ ul
 				font-size fzn
 
 b, strong
-	font-weight 600
+	font-weight fwm
 i, em
 	font-style italic
 h1, h2, h3, h4
-	font-weight 500
+	font-weight fwm
 h1
 	font-size 26px
 	font-weight 300
@@ -237,11 +237,11 @@ h3
 .fw_n
 	font-weight normal
 .fw_l
-	font-weight 300
+	font-weight fwl
 .fw_m
-	font-weight 600
+	font-weight fwm
 .fw_b
-	font-weight bold
+	font-weight fwb
 
 .max_w_600
 	max-width 600px
@@ -249,10 +249,10 @@ h3
 
 
 // денежный поток
-.cur
-	display inline-block
-.ruble
-	// color cruble
+// .cur
+// 	display inline-block
+.ruble, .rur
+	// color cRUR
 
 	span
 		// width 0
@@ -277,10 +277,12 @@ h3
 		// font-size smaller
 
 
-.dollar
-	// color cdollar
-.euro
-	// color ceuro
+.dollar, .usd
+	// color cUSD
+.euro, .eur
+	// color cEUR
+.yuan, .cny
+	// color cCNY
 
 .money_income
 	color cl3 - 20%
@@ -305,6 +307,7 @@ h3
 	border-top 2px solid cbginfo - 20%
 	color ctext
 	font-size fzn - 2px
+	line-height 1.4
 	&:first-child
 		margin-top 0
 	h3
@@ -338,15 +341,21 @@ h3
 	.small_text
 		margin 0
 
-.info_icon_error, .info_icon_success, .info_icon_load
+.info_icon_error,
+.info_icon_success,
+.info_icon_load,
+.info_icon_warning
 	padding-left 70px
 	background-image url("../images/account_widget_status_error.svg")
 	background-repeat no-repeat
-	background-position 20px 13px
+	background-position 20px 9px
+	min-height 55px
 .info_icon_success
 	background-image url("../images/account_widget_status_success.svg")
 .info_icon_load
 	background-image url("../images/account_widget_status.svg")
+.info_icon_warning
+	background-image url("../images/icon-warning.svg")
 
 .found_company
 	background-image url(../images/icon_found_company.svg)
@@ -356,7 +365,7 @@ h3
 	padding-bottom 25px
 	h3
 		font-size fzn + 1px
-		font-weight 500
+		font-weight fwm
 		margin 0 0 12px
 	p
 		margin 0
@@ -365,19 +374,26 @@ h3
 
 
 
-.info_label, .info_label_success, .info_label_error
+.info_label,
+.info_label_success,
+.info_label_error,
+.info_label_danger
 	background cbginfo
-	padding 1px 5px
+	padding 2px 8px
 	box-sizing border-box
 	border 1px solid desaturate(cbginfo - 20%,10%)
 	color #555
 	font-size fzn - 5px
 	display inline-block
 	vertical-align middle
-	border-radius 30px
+	border-radius 9px
 	&.big
 		font-size fzn
 		padding 4px 10px
+	&.small
+		font-size fzn - 7px
+		padding 2px 5px
+		font-weight fwm
 
 .info_label_success
 	background-color cl3
@@ -385,11 +401,20 @@ h3
 	border none
 	font-weight normal
 
+.info_label_danger
+	background-color ctextdanger
+	border-color ctextdanger
+	font-weight normal
+	color #fff
+
 .info_label_error
 	background-color cerror
 	color #fff
 	border none
 	font-weight normal
+	a
+		color #fff
+		text-decoration underline!important
 
 
 .info_bot_text
@@ -416,8 +441,7 @@ h3
 	color cl3 - 30%
 
 .small_text
-	font-size fzn - 2px
-	font-weight lighter
+	font-size fzn - 4px
 	color ctextlight
 	p
 		margin 0 0 10px
@@ -441,6 +465,7 @@ h3
 		max-width 350px
 		font-size fzn - 2px
 		color ctext
+		box-sizing border-box
 	&.info
 		margin 0 0 15px
 		div
@@ -465,7 +490,7 @@ h3
 		transform translate(-50%, 10px)
 		text-transform uppercase
 		font-size fzn - 5px
-		font-weight 500
+		font-weight fwm
 		color ctextlight
 		text-shadow 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff
 
@@ -980,10 +1005,14 @@ h3
 	p
 		line-height 140%
 		margin 0 0 15px
-	ol,ul
+	ol, &>ul
 		margin 15px 0 15px 20px
 		li
 			margin 0 0 10px
+	ol
+		ol
+			margin-left 20px
+			font-size fzn - 2px
 .popup_panel
 	margin-top 30px
 
@@ -1013,11 +1042,21 @@ article.page
 		background-size auto 100%
 		margin 0 0 30px
 
-	@media screen and (min-width: 550px)
+	@media screen and (min-width: 550px) and (max-height: 600px)
 		background-position 90% bottom
 		background-size auto 80%
-		padding-bottom 40px
-		padding-right 45%
+		padding-bottom 40px!important
+		padding-right 45%!important
+		min-height 0
+	@media screen and (max-height: 500px) and (max-width: 550px)
+		background-size auto 40%
+	@media screen and (max-height: 320px) and (min-width: 470px) and (max-width: 490px)
+		background-position 90% bottom
+		background-size auto 60%
+		padding-bottom 40px!important
+		padding-right 45%!important
+		min-height 0
+
 
 // загрузка аватара с обрезкой
 .cropped_image
@@ -1062,7 +1101,7 @@ article.page
 // ----------------- отступы margin ------------------
 step = 5
 
-for $i in (1..10)
+for $i in (0..20)
 	N = step*$i px
 	.m_{N}
 		margin N !important
@@ -1074,9 +1113,22 @@ for $i in (1..10)
 		margin-right N !important
 	.m_bot_{N}
 		margin-bottom N !important
+
+	.p_{N}
+		padding N !important
+	.p_top_{N}
+		padding-top N !important
+	.p_left_{N}
+		padding-left N !important
+	.p_right_{N}
+		padding-right N !important
+	.p_bot_{N}
+		padding-bottom N !important
+
 .m_null
 	margin 0
-
+.p_null
+	padding 0
 
 // ----------------------------------------
 
@@ -1313,15 +1365,97 @@ for $i in (1..10)
 			&:before
 				background cl3
 
+	&.vertical
+		display inline-block
+		overflow visible
+		margin 0
+		padding 0
+		&:before
+			height auto
+			width 2px
+			left calc(50% - 1px)
+			right auto
+			top 10px
+			bottom 20px
+		.step
+			float none
+			margin 0
+			padding 0 0 30px
+			width auto!important
+			&:last-child
+				padding-bottom 0
+			.label
+				margin 0
 
+		.active, .done
+			.label
+				background-color cl3
+				margin 0
+				&:after
+					content ''
+					position absolute
+					transform rotate(90deg)
+					left calc(50% - 5px)
+					top calc(100% - 3px)
+					width 9px
+					height 17px
+					background url(../images/wizard_step_arrow.svg) no-repeat 0 0
+				&:before
+					content ''
+					position absolute
+					left calc(50% - 4px)
+					right auto
+					bottom calc(100% - 2px)
+					top auto
+					width 9px
+					height 17px
+					background url(../images/wizard_step_arrow.svg) no-repeat 0 0
+					transform rotate(-90deg)
 
+	&.light
+		&:before
+			background #fff!important
+			display none
+		.step
+			&:after
+				content ""
+				display block
+				width 2px
+				position absolute
+				left calc(50% - 1px)
+				top 34px
+				bottom 0
+				background #fff
+		.label
+			background-color transparent
+			border-color #fff
+			color #fff
+		.active, .done
+			&:after
+				top 38px
+			.label
+				background-color #fff
+				border 6px double cl2
+				&:after, &:before
+					background url(../images/wizard_step_arrow_white.svg) no-repeat 0 0
+				&:after
+					top calc(100% - 2px)
+		.active
+			.label
+				color cl2
+				font-weight fwm
+		.done
+			.label
+				color transparent
+				background-image url(../images/check_b.svg)
 // иконки
 [class*='icon-']
 	&:before
 		display inline-block
-		min-width 16px
+		// min-width 16px
 		vertical-align -2px
 		margin-right 5px
+
 
 
 
@@ -1406,6 +1540,8 @@ a.icon-info
 		display none!important
 	.ms-drop
 		display none!important
+	.ms-choice > span
+		white-space wrap
 
 @media print
 	html
@@ -1421,7 +1557,7 @@ a.icon-info
 		font-weight normal !important
 	.printable
 		display block
-	aside, header, section, article, .notifyjs-corner, .drop, .tooltip
+	aside, header, section, article, .notifyjs-corner, .drop, .tooltip, .messenger
 		display none
 
 
@@ -1437,7 +1573,7 @@ a.icon-info
 		font-weight normal
 		width 320px
 		.title
-			font-weight 500
+			font-weight fwm
 			font-size fzn - 1px
 			margin 0 0 5px
 			&:empty
@@ -1504,7 +1640,7 @@ a.icon-info
 					right 5px
 					top -6px
 					font-size 7px
-					font-weight 600
+					font-weight fwm
 					border-radius 10px
 					padding 2px 4px
 					background ctextdanger
@@ -1555,7 +1691,7 @@ a.icon-info
 					padding 0 5px 10px 25px
 					font-size fzn - 5px
 					text-transform uppercase
-					font-weight 600
+					font-weight fwm
 					color cl2
 					&~ .title
 						padding-top 25px
@@ -1629,7 +1765,9 @@ a.icon-info
 	border-radius 50%
 	text-align center
 	text-shadow 2px 2px 0 rgba(0,0,0,0.1)
-
+	background-size cover
+	background-repeat no-repeat
+	background-position center
 	img
 		width 100%
 		height 100%
@@ -1670,16 +1808,18 @@ a.icon-info
 
 // пишет сейчас - движущийся карандаш
 .write_now
-	padding 0 4px 0 10px
 	height 16px
 	color ctextlight
 	font-size fzn - 4px
+	transform translateZ(0)
 	[class*='icon-']
+		display inline-block
 		font-size fzn - 2px
-		animation-duration 1.5s
-		animation-name writeNow
-		animation-iteration-count infinite
-		animation-direction normal
+		// animation-duration 1.5s
+		// animation-name writeNow
+		// animation-iteration-count infinite
+		// animation-direction normal
+		animation 1.5s writeNow infinite
 		margin-right 4px
 
 
@@ -1730,7 +1870,6 @@ a.icon-info
 		box-shadow 0px 4px 16px rgba(0,30,60,0.2)
 		// border 1px solid rgba(0,0,0,0.1)
 		transform-origin top
-		margin-left -1px
 		padding-right 20px
 		margin-top 5px
 		will-change transform
@@ -1808,7 +1947,7 @@ a.icon-info
 
 	.drop-title
 		font-size fzn - 4px
-		font-weight 500
+		font-weight fwm
 		color ctextlight
 		color cl2
 		font-style italic
@@ -1828,7 +1967,8 @@ a.icon-info
 		.filter_date_value
 			max-width none
 		.filter_date_input
-			width 105px
+			width 98px
+			padding-right 0
 		input.date_to
 			float none
 			margin-left 4px
@@ -2011,6 +2151,7 @@ a.drop_input
 	left 0
 	overflow hidden
 	z-index 0
+	display none
 	[class*="cub"]
 		position absolute
 	.cub1
@@ -2021,7 +2162,7 @@ a.drop_input
 		background-size 100% auto
 		bottom 40px
 		left 12%
-		animation cub1 30s linear infinite
+		animation cub1 30s linear 2
 	.cub2
 		height 400px
 		width 16vw
@@ -2030,60 +2171,60 @@ a.drop_input
 		background-size 100% auto
 		top -100px
 		right -100px
-		animation cub2 20s linear infinite
+		animation cub2 20s linear 3
 	.cub3
 		height 143px
 		width 143px
 		background url(../images/cub3.png) no-repeat 0 0
 		top 150px
 		left 15%
-		animation cub3 30s linear infinite
+		animation cub3 30s linear 2
 	.cub4
 		height 131px
 		width 131px
 		background url(../images/cub4.png) no-repeat 0 0
 		bottom 10%
 		right 21%
-		animation cub4 40s linear infinite
+		animation cub4 40s linear 2
 	.cub5
 		height 67px
 		width 67px
 		background url(../images/cub5.png) no-repeat 0 0
 		top 95px
 		right 290px
-		animation cub5 30s linear infinite
+		animation cub5 30s linear 2
 	.cub6
 		height 58px
 		width 58px
 		background url(../images/cub6.png) no-repeat 0 0
 		bottom 30%
 		left 40%
-		animation cub6 30s linear infinite
+		animation cub6 30s linear 2
 	.cub7
 		height 29px
 		width 29px
 		background url(../images/cub7.png) no-repeat 0 0
 		top 100px
 		left 70px
-		animation cub7 30s linear infinite
+		animation cub7 30s linear 2
 	.cub8
 		height 33px
 		width 33px
 		background url(../images/cub8.png) no-repeat 0 0
 		bottom 340px
 		right 460px
-		animation cub8 20s linear infinite
+		animation cub8 20s linear 3
 	.cub9
 		height 29px
 		width 29px
 		background url(../images/cub9.png) no-repeat 0 0
 		top 150px
 		right 40%
-		animation cub9 20s linear infinite
+		animation cub9 20s linear 3
 
 @keyframes cub1 {
-    from { transform: rotate(-180deg) translateX(150px) rotate(0deg); }
-    to   { transform: rotate(180deg) translateX(150px) rotate(-360deg); }
+    from { transform: rotate(-180deg) translateX(150px) rotate(360deg); }
+    to   { transform: rotate(180deg) translateX(150px) rotate(0deg); }
 }
 @keyframes cub2 {
     from { transform: rotate(0deg) translateX(50px) rotate(0deg); }

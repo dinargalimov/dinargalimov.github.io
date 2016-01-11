@@ -95,7 +95,7 @@
 		transform scale(1)
 		&:hover
 			transform translateY(-3px)
-			box-shadow 0px 2px 3px 0px rgba(0,0,0,0.12)
+			box-shadow 0px 2px 2px 0px rgba(0,0,0,0.2)
 			.desc:after
 				opacity 1
 
@@ -124,7 +124,7 @@
 				margin-left -11px
 
 			.desc
-				background cruble
+				background cRUR
 				color #fff
 				&:after
 					display none
@@ -140,17 +140,42 @@
 				.desc
 					background cl3
 
+
 		// евровый счет
 		&.account_euro
 			.desc:after
-				background-color ceuro
+				background-color cEUR
 			&.active
 				.desc
-					background ceuro
+					background cEUR
+
+
+		// юаньский счет
+		&.account_cny
+			.desc:after
+				background-color cCNY
+			&.active
+				.desc
+					background cCNY
+
+
+		&.account_closed
+			.desc, .value
+				color ctextlight
+			.desc:after
+				background cbd!important
+			&:hover
+				.hide_account
+					opacity 1
+
+			.value
+				font-size 22px
+				padding-bottom 15px
+				padding-top 2px
 
 		.desc
 			padding 15px
-			margin 0 0 10px
+			margin 0 0 8px
 			overflow hidden
 			font-size fzn - 2px
 			&:after
@@ -158,7 +183,7 @@
 				display block
 				width 90px
 				height 4px
-				background cruble
+				background cRUR
 				position absolute
 				bottom 0
 				left 15px
@@ -177,6 +202,12 @@
 				&:hover
 					color cl2
 
+		.light_text
+			font-size fzn - 2px
+			font-weight fwl
+			padding 0 15px 2px
+
+
 		.value
 			font-size 26px
 			text-align left
@@ -187,6 +218,14 @@
 			font-weight 300
 			.cur
 				font-weight 300
+		.hide_account
+			position absolute
+			right 15px
+			bottom 18px
+			opacity 0
+			font-size fzn - 3px
+			transition opacity .3s
+
 	.add_account
 		background cbglight - 4%
 		.desc:after
@@ -204,13 +243,35 @@
 			font-size 70px
 			color #fff
 			text-align center
-			line-height 1.4
+			line-height 100px
+			transition line-height .2s, font-size .2s
+		&:before
+			content 'Создать счет'
+			display block
+			width 100%
+			position absolute
+			text-align center
+			bottom 20px
+			color #fff
+			font-weight fwb
+			z-index 10
+			opacity 0
+			transform translateY(20px)
+			transition opacity .2s, transform .2s
 		&:hover
 			&:after
 				background-color rgba(cl3 + 40%,0.8)
+				line-height 70px
+				font-size 50px
+			&:before
+				opacity 1
+				transform translateY(0px)
 	.owl-item
 		padding 3px 0 12px
 		box-sizing border-box
+		text-align left!important
+	.owl-prev, .owl-next
+		top 47px
 
 
 // контент в транзакциях
@@ -255,37 +316,97 @@
 
 // просмотр счета
 .account_card
-	padding 30px
-	margin-bottom 40px
+	padding 25px
+	margin-bottom 30px
+	clearfix()
+
 .account_card_money
-	float right
-	text-align right
-	margin-top -12px
-	// .cur
-	// 	position absolute
-	// 	top 0
-	// 	right 0
-	// 	font-size 78px
-	// 	font-weight lighter
-	// 	line-height 1
-	// 	&.ruble
-	// 		line-height .5
-	// 		span
-	// 			line-height .6
-	.account_card_money_balance
-		font-size 42px
-		margin 0
-		font-weight lighter
-	.account_card_money_hold
+	float left
+	font-size 42px
+	margin 0 0 20px
+	font-weight fwl
+	.light_text
 		font-size fzn - 2px
+		display block
+		font-weight normal
+	.account_card_actions
+		font-size fzn
+		font-weight normal
+	.account_card_money_hold
+		font-size fzn
+
+
+.account_card_money_detail_anim
+	height 0
+	transition height .3s, padding .3s
+	overflow hidden
+	clear both
+	margin 0 -25px
+	&.ng-hide
+		display block!important
+	&.show
+		height 69px
+		padding 10px 0 0
+
+.account_card_money_detail
+	padding 15px 25px
+
+	background cbgsky - 5%
+	clear both
+	box-sizing border-box
+
+	&:before
+		content ''
+		position absolute
+		bottom 100%
+		left 50px
+		border 10px solid transparent
+		border-bottom-color cbgsky - 5%
+	.item
+		display inline-block
+		margin-right 30px
+		&[class*="icon-round"]
+			padding-left 45px
+			&:before
+				position absolute
+				top 10px
+				left 0
+		&.icon-round-minus
+			&:before
+				color ctextdanger
+		&.icon-round-plus
+			&:before
+				color ctextsuccess
+	.title
+		font-size fzn - 4px
 		color ctextlight
-		span
-			color ctext
+	.value
+		font-size fzn + 2px
 .account_card_info
 	overflow hidden
+	float right
+	width 50%
+
+.account_card_money_dop_serv
+	background #fff
+	padding 25px
+	margin 0 -25px
+	border-top 1px solid cbdlightsky
+	border-bottom 1px solid cbdlightsky
+	clear both
+	.title
+		margin 0 0 20px
+		font-size fzn + 2px
+	.col.seven:nth-child(2)
+		border-left 1px solid cbdlight
+		padding-left 40px
+		margin-left 0
+	.form_group_list:last-child
+		margin-bottom 0
 
 .account_card_actions
 	clear both
+	overflow hidden
 	margin 20px 0 0
 	a
 		margin-right 20px
@@ -332,11 +453,13 @@
 .transaction_view_info_money
 	font-size 40px
 	margin-right 30px
+	font-weight fwl
 	.light_text
 		font-size fzn
 .transaction_view_info_account
 	font-size fzn + 2px
 	padding 2px 0 0
+	font-weight fwl
 
 
 
@@ -420,4 +543,4 @@
 	.date
 		display block
 		font-size fzn - 5px
-		font-weight 500
+		font-weight fwm

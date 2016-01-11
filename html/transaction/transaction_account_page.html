@@ -21,11 +21,11 @@
 <article class="page open ">
 
 	<!-- шапка слоя -->
-	<div class="page_header">
+	<div class="page_header clean">
 		<a class="page_close icon-close"></a>
 		<a class="page_expand icon-fullsize"></a>
 		<h1>
-			<a class="link_dashed drop-target"><span>Расчетный счет длинное название счет длинное название счет длинное название счет длинное название</span></a>
+			<a class="link_dashed drop-target"><span>Расчетный счет</span><i class="icon-pencil"></i></a>
 			<div class="drop-content">
 				<div class="drop-content-inner inner_pad">
 					<form class="form">
@@ -40,12 +40,17 @@
 
 	<!-- контент слоя  -->
 	<div class="page_content">
-		<div class="account_card light_block">
-			<div class="account_card_money">
 
-				<div class="account_card_money_balance">999 143 902,00 <span class="cur ruble"><span>р.</span></span></div>
-				<div class="account_card_money_hold">В обработке: <span>12 354,54 <span class="cur ruble"><span>р.</span></span></span></div>
+		<!-- <div class="info_error">На данный момент вы можете использовать ваш счет для приема платежей и для подготовки платежных поручений.
+Другие операции по счету будут доступны после встречи с нашим представителем и подписания нескольких простых документов.</div> -->
+
+		<div class="account_card light_block">
+
+			<div class="account_card_money">
+					<span class="light_text">Доступно для операций</span>
+					<a class="link_dashed"><span>405 000,00 <span class="cur ruble"><span>р.</span></span></span></a>
 			</div>
+
 			<div class="account_card_info">
 				<div class="form_group">
 					<div class="column three property_label a_left">№ счета:</div>
@@ -56,12 +61,53 @@
 					<div class="column nine property_value">Расчетный счет - RUR</div>
 				</div>
 			</div>
+
+			<!-- сделать анимацию slideUp/slideDown -->
+			<div class="account_card_money_detail_anim show">
+				<div class="account_card_money_detail">
+					<div class="item">
+						<div class="title">Остаток на счете</div>
+						<div class="value">600 000 <span class="cur ruble"><span>р.</span></span></div>
+					</div>
+					<div class="item rezerv icon-round-minus">
+						<div class="title">Зарезервировано на платежи</div>
+						<div class="value">200 000 <span class="cur ruble"><span>р.</span></span></div>
+					</div>
+					<div class="item overdraft icon-round-plus">
+						<div class="title">Доступный овердрафт</div>
+						<div class="value">5 000 <span class="cur ruble"><span>р.</span></span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="account_card_money_dop_serv">
+				<div class="title">Овердрафт по договору №10</div>
+				<div class="f_small">
+						<span class="m_right_30">
+							<span class="light_text">Установленный лимит:</span>
+							<span>1 000 000 <span class="cur ruble"><span>р.</span></span> </span>
+						</span>
+						<span class="m_right_30">
+							<span class="light_text">Дата активации:</span>
+							<span>10.10.2015</span>
+						</span>
+						<span class="m_right_30">
+							<span class="light_text">Дата закрытия:</span>
+							<span>10.10.2016</span>
+						</span>
+
+				</div>
+			</div>
+
 			<div class="account_card_actions">
 				<a class="icon-change">Перевод между счетами</a>
 				<a class="icon-payment">Новый платеж</a>
 				<a class="icon-notes">Получить выписку</a>
 			</div>
+
 		</div>
+
+
 		<div class="account_details">
 			<div class="legend">
 				<span>Реквизиты счета</span>
@@ -72,7 +118,7 @@
 				<a href="#" class="icon-save"></a>
 				<a href="#" class="icon-mail-sent"></a>
 			</div> -->
-			<div class="w85 ov_h">
+			<div class="ov_h">
 				<div class="form_group">
 					<div class="col three property_label">&nbsp;</div>
 					<div class="col nine property_value">ИП ИБРАГИМОВ НУР ФАНУРОВИЧ</div>

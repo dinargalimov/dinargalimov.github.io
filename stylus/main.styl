@@ -229,11 +229,11 @@ header
 		margin-left -9px
 	h3
 		font-size fzn - 4px
-		font-weight 500
+		font-weight fwm
 		text-transform uppercase
 		margin 0 0 15px
 	.col
-		width 193px
+		width 194px
 		& ~ .col
 			margin-left 60px
 	.quick_add
@@ -393,7 +393,6 @@ header
 		font-size fzn - 3px
 		color #fff
 		text-decoration none
-		font-weight fwn + 100
 		border-left 3px solid transparent
 		text-align center
 
@@ -539,6 +538,7 @@ article.page
 		// animation pageHide .5s ease both
 		opacity 0
 		transform translateX(200px)
+		pointer-events none
 	&.open
 		// animation pageOpen .5s ease backwards
 		opacity 1
@@ -622,14 +622,24 @@ article.page
 		display inline-block
 		margin 0 30px 0 35px
 		color ctext
-		max-width calc(100% - 70px)
+		max-width calc(100% - 100px)
+		&.f_small
+			font-size 22px!important
 		.link_dashed
 			max-width 100%
 			display inline-block
+			white-space nowrap
 			span
 				display inline-block
 				overflow ellipsis
 				max-width 100%
+			.icon-pencil
+				display inline-block
+				margin-left 10px
+				font-size fzn + 3px
+				vertical-align 7px
+				color clinklight
+
 
 	.page_close
 		position absolute
@@ -694,7 +704,7 @@ article.page
 			line-height 22px
 			vertical-align middle
 			display inline-block
-			margin 0 0 0 10px
+			margin 0 0 0 5px
 			color clinklight
 			&:before
 				color clinklight
@@ -704,9 +714,23 @@ article.page
 				font-size 18px
 			&.icon-mail-sent
 				font-size 26px
+			&.icon-share
+				font-size 18px
+			&.icon-chat
+				font-size 19px
+				&:hover
+					&:before
+						color ctextsuccess
 	.header_button
 		display inline-block
 		vertical-align 4px
+
+	.page_number
+		position absolute
+		right 20px
+		top 30px
+		font-size fzn
+		color ctextlight
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
 	.page_header
@@ -751,21 +775,21 @@ article.page
 	background-clip border-box
 	overflow-x hidden
 	overflow-y auto
-	padding 30px 20px
+	padding 25px 20px
 	box-sizing border-box
 	font-size fzn - 2px
 	box-shadow inset 4px 0 0 -2px cseparator
 	-webkit-overflow-scrolling touch
 	&.page_side_wide
 		width 340px
-		padding 30px
+		padding 25px 30px
 	.side_sep
 		background cbdlight
 
 
 .side_title
 	text-transform uppercase
-	font-weight 600
+	font-weight fwm
 	text-transform uppercase
 	color ctextlight
 	margin 0 0 25px
@@ -774,8 +798,8 @@ article.page
 .side_block
 	margin 20px 0
 	.side_block_title
-		font-size fzn - 4px
-		font-weight 600
+		font-size fzn - 2px
+		font-weight fwm
 		text-transform uppercase
 		color ctext
 		margin 0 0 12px
@@ -785,6 +809,7 @@ article.page
 .side_parameter
 	margin 15px 0
 	font-size fzn - 2px
+	clearfix()
 
 	.side_parameter_name
 		color ctextlight
@@ -869,6 +894,14 @@ article.page
 			.ms-choice
 				font-size fzn - 2px
 
+	.widget_settings_drop
+		position absolute
+		right 10px
+		top 10px
+		color clinklight
+		font-size fzn
+		z-index 100
+
 .light_block
 	background cbgsky
 	padding 20px
@@ -946,7 +979,6 @@ article.page
 		font-weight 300
 		text-align center
 	h4
-		color ctextlight
 		font-weight normal
 		margin 0 0 12px
 		font-size fzn - 1px
@@ -1012,6 +1044,78 @@ article.page
 
 
 
+// открытие счета виджет на дашборде
+.account_widget_dashboard
+	background linear-gradient(left, cl2 0, cl3 - 10% 150%)
+	color #fff
+	padding 30px 40px
+	overflow hidden
+	min-height 240px
+	margin-bottom 30px
+	&.error
+		background linear-gradient(left, #DA6A43 0, #ED5865 100%)
+		.active, .done
+			.label
+				border-color #DA6A43
+		.active
+			.label
+				color #da6a43
+		.done
+			.label
+				background-image url(../images/check_r.svg)
+	.wizard_steps
+		position absolute
+		top 30px
+		bottom 30px
+		display flex
+		flex-direction column
+
+		.step
+			height 100%
+			padding-bottom 0
+			&:last-child
+				height 34px
+
+	.desc
+		margin-left 80px
+		padding-top 5px
+		h3
+			text-transform uppercase
+			font-weight fwm
+		h4
+			font-weight fwm
+			margin 0 0 10px
+		p
+			font-size fzn
+			margin 0 0 15px
+
+		a
+			color #fff
+		.light_text
+			color rgba(#fff,0.7)
+
+		.info, .info_error
+			background none
+			color #fff
+			padding 0 0 20px
+			border none
+			border-bottom 1px solid rgba(#fff,0.5)
+			.desc
+				margin-left 0
+				padding-top 0
+		.button
+			background transparent
+			box-shadow 0 0 0 2px #fff
+
+		.found_company
+			padding 20px
+			background rgba(cl1,0.3)
+
+		.info_error
+			padding 20px
+			background rgba(#000,0.1)
+
+
 
 
 // виджет остатка на счетах
@@ -1027,13 +1131,37 @@ article.page
 		margin 0 0 15px
 		.light_text
 			font-size fzn - 2px
-			margin 0 0 4px
+			@media screen and (max-width:1210px)
+				font-size fzn - 3px
 
 	.balance
 		.value
 			font-size 30px
 			text-decoration none
 			color ctext
+			font-weight fwl
+
+	.balance_available,
+	.balance_reserved,
+	.balance_overdraft
+		padding-left 26px
+
+	.balance_reserved,
+	.balance_overdraft
+		&:before
+			position absolute
+			top 11px
+			left 0
+			font-size fzn + 1px
+	.balance_reserved:before
+		color ctextdanger
+	.balance_overdraft:before
+		color ctextsuccess
+
+	.balance_deposit
+		border-top 1px solid cbdlight
+		padding-top 15px
+		margin-bottom 0
 
 	.account_balance_widget_empty
 		text-align center
@@ -1077,70 +1205,41 @@ article.page
 // ---------- фильтры --------------
 
 .widget_filters
+	margin-top -10px
+	margin-bottom -10px
 	a
 		color ctext
 		&:hover
 			color cl2
 	.side_filter
 		.label_check
-
 			font-size fzn - 2px
 			color ctextlight
 			display block
 			text-decoration none
 			position relative
-			margin 0 -20px
+			margin 0 -20px 1px
 			padding 8px 20px 8px 20px
 			transition none
 			z-index 2
 			&:hover
 				background  cbghighlight
+		.sub_label_check
+			padding-left 35px
+			font-size fzn - 4px
+			padding-top 6px
+			padding-bottom 6px
 
 		.input_check:checked
 			& + .label_check
 				background  cbghighlight
+		.count
+			float right
+	.side_sep
+		margin 10px 0
 
 
 
-
-//------------------- время задачи -------------------
-.task_side_time
-	text-align center
-	font-size 24px
-	margin 0 0 30px
-	[class*="icon-"]
-		&:before
-			font-size 30px
-			vertical-align -7px
-			margin-right 10px
-
-//------------------- инфо клиента в слое задачи -------------------
-.task_side_client
-	font-size fzn - 2px
-	text-align center
-	background #fff
-	padding 15px
-	margin-bottom 30px
-	.avatar
-		width 40px
-		height 40px
-		font-size @width*0.5
-		margin 0 0 5px
-	.name
-		font-size fzn
-		margin 0 0 5px
-	.desc
-		// margin-left 50px
-	.company
-		color ctextlight
-		margin 0 0 3px
-		font-size fzn - 5px
-	.status
-		position absolute
-		top 10px
-		right 10px
-		[class*='info_label']
-			font-size fzn - 6px
 
 
 
@@ -1220,7 +1319,12 @@ article.page
 	padding 20px
 	-webkit-overflow-scrolling touch
 	.timeline_block
-		margin 0 0 30px
+		margin 0 0 20px
+		padding 0 0 20px
+		border-bottom 1px solid cbdlight
+		&:last-of-type
+			border none
+			padding-bottom 0
 
 	.timeline_clean
 		text-align center
@@ -1247,11 +1351,12 @@ article.page
 
 	// заголовок
 	.line_block_title
-		font-weight 500
+		font-weight fwm
+		font-size fzn - 1px
 		.icon
 			position absolute
 			left 8px
-			top 7px
+			top 9px
 			width 3px
 			height 3px
 			box-shadow 0 0 0 2px #fff, 0 0 0 4px clinklight
@@ -1260,7 +1365,7 @@ article.page
 
 	// блок дня
 	.line_block_item
-		padding 0 0 20px 28px
+		padding 0 0 15px 28px
 		line-height 1.4
 		word-break break-word
 		&:before
@@ -1268,7 +1373,7 @@ article.page
 			width 1px
 			position absolute
 			left 9px
-			top 5px
+			top 7px
 			bottom 0
 			background cbdlight
 			z-index 0
@@ -1387,7 +1492,7 @@ article.page
 	.top_area_desc
 		overflow hidden
 		h1
-			font-weight 500
+			font-weight fwm
 			margin 0 0 10px
 			font-size 22px
 		p
@@ -1472,6 +1577,23 @@ article.page
 		display block
 		clear both
 
+	.account_target_value
+		font-weight fwm
+		font-size fzn
+		display inline-block
+		vertical-align top
+	.account_target_name
+		padding 0 5px 0 0
+		display inline-block
+		overflow ellipsis
+		max-width calc(100% - 220px)
+		vertical-align top
+	.account_target_num
+		color ctextlight
+		display inline-block
+		padding 0 10px 0 0
+		vertical-align top
+
 // список счетов контрагентов в выпадушке
 .drop_bank_account
 	.bank_name
@@ -1544,7 +1666,7 @@ article.page
 .payment_favorites_list
 	.title
 		font-size fzn - 4px
-		font-weight 500
+		font-weight fwm
 		text-transform uppercase
 		margin 0 0 10px
 		color ctextlight
@@ -1553,6 +1675,7 @@ article.page
 		display block
 		margin 0 -10px 2px
 		padding 10px 10px 10px 30px
+		text-decoration none
 		&:before
 			position absolute
 			top 11px
@@ -1560,6 +1683,7 @@ article.page
 		&:hover
 			color clink
 			background #fff
+
 
 
 // новый платеж, выбор типа платежа
@@ -1603,7 +1727,16 @@ article.page
 	display inline-block
 	.drop-target
 		margin-right 5px
+	.dashboard_content_filter_account
+		max-width 270px
+		overflow ellipsis
 
+	.dashboard_content_filter_settings
+		font-size fzn + 4px
+		color clinklight
+		margin 5px 0 0 10px
+		&:hover
+			color cl2
 .cashflow_widget
 	margin-bottom 30px
 	&.light_block
@@ -1642,8 +1775,10 @@ article.page
 			font-size fzn + 5px
 		@media (min-width:1400px)
 			font-size fzn + 7px
+			font-weight fwl
 		@media (min-width:1600px)
 			font-size fzn + 10px
+			font-weight fwl
 
 .cashflow_widget_side
 	margin-bottom 30px
@@ -1667,31 +1802,39 @@ article.page
 	.list
 		background-color cbginfo
 	.item
-		margin-bottom 10px
+		margin-bottom 15px
 		overflow hidden
 		line-height 1
+
 	.name
 		font-size fzn - 3px
 		color ctextlight
-		padding 4px 0 0
+		padding 3px 0 0
 		display inline-block
-		@media (min-width:1380px)
-			padding-top 7px
-		@media (min-width:1420px)
+		@media (min-width:1430px)
+			padding-top 4px
+		@media (min-width:1470px)
 			padding-top 7px
 		@media (min-width:1520px)
+			padding-top 7px
+		@media (min-width:1600px)
 			padding-top 10px
 	.value
 		font-size fzn - 2px
 		white-space nowrap
 		float right
-		@media (min-width:1290px)
-			font-size fzn
-		@media (min-width:1380px)
+		@media (max-width:1340px)
+			display block
+			float none
+			padding-top 3px
 			font-size fzn + 2px
-		@media (min-width:1420px)
-			font-size fzn + 3px
+		@media (min-width:1430px)
+			font-size fzn
+		@media (min-width:1470px)
+			font-size fzn + 2px
 		@media (min-width:1520px)
+			font-size fzn + 3px
+		@media (min-width:1600px)
 			font-size fzn + 5px
 
 
@@ -1724,11 +1867,12 @@ article.page
 		white-space nowrap
 		.group
 			border-bottom 1px solid cbd
+			&:last-child
+				border-bottom none
 
 		.group_name
 			width 100px
 			display inline-block
-			vertical-align top
 			padding 12px 15px 0
 			text-transform uppercase
 			font-size fzn - 5px
@@ -1764,13 +1908,11 @@ article.page
 					padding 2px 20px 2px 0
 					display inline-block
 					max-width 300px
-					float left
 				& ~ .desc
 					max-width 300px
 			.name
 				display block
 				overflow ellipsis
-
 			.desc
 				color ctextlight
 				font-size fzn - 4px
@@ -1913,7 +2055,7 @@ article.page
 		// 		stroke #EAF1F5
 		text
 			font-size 10px
-			font-weight 600
+			font-weight fwm
 			fill ctextlight + 30%
 
 	.overlayGraph
@@ -1934,17 +2076,18 @@ article.page
 // сертификат
 .certificate_block
 	width 550px
-	margin 0 auto
+	margin 0 auto 30px
 	height 330px
 	background url(../images/cert.jpg) no-repeat 0 0
 	background-size 100% 100%
 	box-sizing border-box
 	padding 70px 30px 30px 40px
 	font-size fzn - 1px
+
 	.title
 		text-align center
 		font-size fzn + 4px
-		font-weight 600
+		font-weight fwm
 		margin-bottom 30px
 		font-style italic
 		text-transform uppercase
@@ -1969,9 +2112,15 @@ article.page
 		.small_text
 			font-size fzn - 4px
 			padding 3px 0 0
+		.old_price
+			text-decoration line-through
+			display inline-block
+			color ctextlight
+			font-size fzn - 2px
+			margin-left 10px
 	.status
 		color ctextsuccess
-		font-weight 600
+		font-weight fwm
 		overflow hidden
 .tarif_serv_row
 	padding-top 15px
@@ -2037,6 +2186,7 @@ article.page
 .tarif_dop_serv
 	font-size fzn - 4px
 	margin-left 20px
+	overflow hidden
 	&.dop_serv_connect
 		background cbgsuccess
 		border-color cl3
@@ -2051,19 +2201,17 @@ article.page
 		color ctextlight
 		margin-bottom 12px
 	.add
-		float right
 		padding-top 5px
 		.connect
 			color ctextsuccess
-			font-weight 600
-			&:before
-				margin-right 0
+			font-weight fwm
 		.button
 			margin-top -5px
 	.price
-		font-weight 600
+		font-weight fwm
+		font-size fzn - 3px
 		color ctextlight
-		padding-top 5px
+		padding-top 7px
 		overflow hidden
 .banner_other_tarif
 	background-image url(../images/banner_other_tarif.png)
@@ -2114,21 +2262,23 @@ article.page
 // курсы валют
 .currencies_table
 	.item_currency
-		margin 0 0 20px
-		padding 20px
+		margin 0 0 10px
+		padding 15px 20px
 		background #FFF
 		.currency_name
-			font-weight 600
+			font-weight fwm
 			margin 0 0 12px
 			padding 0 0 0 30px
 			line-height 24px
 			background-position 0 0
 			background-size 24px
 			background-repeat no-repeat
-			&.dollar
+			&.dollar, &.usd
 				background-image url(../images/dollar_color.svg)
-			&.euro
+			&.euro, &.eur
 				background-image url(../images/euro_color.svg)
+			&.yuan, &.cny
+				background-image url(../images/yuan_color.svg)
 		.item_cost
 			margin 0 0 6px
 		.cost_name
@@ -2166,3 +2316,43 @@ article.page
 		display inline-block
 		vertical-align top
 		max-width calc(100% - 65px)
+
+// цена предложения другого тарифа
+.popup_other_tarif_price
+	margin-top 20px
+	float right
+	background cbginfo
+	border-radius 10px
+	border 1px solid cbginfo - 20%
+	padding 10px 20px
+	font-size 24px
+	.small
+		font-size 13px
+
+// анимация загрузки
+.header_load
+	position absolute
+	height 2px
+	position absolute
+	top 40px
+	z-index 1000
+	left 110px
+	right 0
+	div
+		height 2px
+		width 100%
+		background linear-gradient(left, rgba(cl2,0.3), cl2)
+		animation headerLoad 2s both
+		animation-timing-function cubic-bezier(0.7,0,0.9,0.2)
+@keyframes headerLoad {
+	0% {
+		width 0
+	}
+	99% {
+		width 100%
+		opacity 1
+	}
+	100% {
+		opacity 0
+	}
+}
