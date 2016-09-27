@@ -19,14 +19,15 @@
 		angular.module('app',['ui.bootstrap']).controller('DropdownCtrl', function ($scope, $log) {});
 	</script>
 </head>
-<body ng-app="app">
+<body>
 <div class="blur">
 
-<include data-file="aside.html"></include>
+
 <include data-file="header.html"></include>
 
 <section class="main">
-	<include data-file="dashboard.html section>*"></include>
+	<include data-file="aside.html"></include>
+	<include data-file="transaction/transaction.html section>*"></include>
 </section>
 </div>
 
@@ -34,19 +35,16 @@
 <div class="popup_table">
 	<div class="popup_cell">
 		<div class="popup_layer security_lock">
-			<h1>
-				Мы заботимся о
-				<br/>
-				безопасности ваших данных
-			</h1>
-			<div class="small_text">
-				Ваш сеанс работы в системе будет приостановлен
-				<br/>
-				через <strong class="error_text">180 секунд</strong>
-				ввиду вашей неактивности.
+
+			<div class="security_lock_header timer">
+				<div class="icon"></div>
+				175 <span class="light_text">секунд</span>
+			</div>
+			<div class="security_lock_text">
+				<div class="security_lock_text_inner">Ваш сеанс работы в системе будет приостановлен ввиду вашей неактивности.</div>
 			</div>
 			<div class="form_buttons">
-				<a class="button second">Продолжить работу</a>
+				<a class="button light full">Продолжить работу</a>
 			</div>
 		</div>
 	</div>

@@ -6,15 +6,16 @@
 	position absolute
 	width 100%
 	height 100%
-	background radial-gradient(65% 100%, cbglight 45%, cbglight - 20% 100%)
+	background url(../images/404_back.png) no-repeat center, radial-gradient(65% 100%, cbglight 45%, cbglight - 20% 100%)
+	background-size auto 95%
 	overflow auto
 	.logo
-		width 270px
-		height 50px
+		width 270rem
+		height 50rem
 		position absolute
-		top 40px
-		left calc(50% - 135px)
-		background url('../images/logo_full_d.svg')
+		top 40rem
+		left calc(50% - 135rem)
+		background url('../images/logo_full_d.svg') no-repeat 0 0
 		text-indent -10000em
 	.content_wrap
 		display table
@@ -25,37 +26,37 @@
 		width 100%
 		vertical-align middle
 	.content
-		width 400px
+		width 400rem
 		margin 0 auto
 		text-align center
 		p
-			margin 0 0 15px
+			margin 0 0 15rem
 
 	&.old_browser
 		.content_cell
-			padding-top 120px
-			padding-bottom 30px
+			padding-top 120rem
+			padding-bottom 30rem
 		.content
-			width 600px
+			width 600rem
 			text-align justify
-			font-size fzn - 2px
+			font-size fzn - 2rem
 		.browser_list
 			overflow hidden
-			margin 50px 0 0
+			margin 50rem 0 0
 			li
 				float left
 				width 25%
 				text-align center
 				box-sizing border-box
-				padding 0 5px
-				font-size fzn - 3px
+				padding 0 5rem
+				font-size fzn - 3rem
 				a
 					display block
 					background-size 50% auto
 					background-repeat no-repeat
-					background-position center 15px
-					padding 110px 0 25px
-					border-radius 5px
+					background-position center 15rem
+					padding 110rem 0 25rem
+					border-radius 5rem
 					background-color rgba(#fff,0.5)
 					text-decoration none
 					&:hover
@@ -68,6 +69,40 @@
 						background-image url(../images/browser_ie.png)
 					&.safari
 						background-image url(../images/browser_safari.png)
-
-
-
+	&.page_system_update
+		background url(../images/404_back.png) no-repeat center
+		background-size auto 95%
+		.logo
+			top 20rem
+			left 20rem
+			width 200rem
+			background-size 100% auto
+		.contact
+			position absolute
+			right 20rem
+			top 20rem
+			color ctext
+			font-size 14rem
+			z-index 100
+			a
+				text-decoration none
+				color ctext
+				font-size 18rem
+				display inline-block
+				margin 0 5rem
+				vertical-align middle
+				&:hover
+					color clink
+		.content
+			width 80%
+		h1
+			font-size fzn + 25rem
+		p
+			font-size fzn + 4rem
+		form
+			display inline-block
+			margin-top 50rem
+			padding 30rem
+			background rgba(#fff,0.5)
+			p
+				font-size fzn

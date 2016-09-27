@@ -21,7 +21,7 @@
 	100% {
 		opacity 0
 		visibility hidden
-		transform translateX(200px)
+		transform translateX(200rem)
 	}
 
 }
@@ -29,12 +29,12 @@
 @keyframes pageOpen {
 	0% {
 		opacity: 0;
-		transform translateX(200px)
+		transform translateX(200rem)
 		visibility visible
 	}
 	100% {
 		opacity: 1;
-		transform translateX(0px)
+		transform translateX(0rem)
 	}
 }
 
@@ -44,16 +44,16 @@
 	}
 	100% {
 		width 100%
-		max-width 2000px
+		max-width 2000rem
 	}
 }
 @keyframes pageNorsize {
 	0% {
-		top 40px
+		top 40rem
 		width 100%
 	}
 	100% {
-		top 65px
+		top 65rem
 		width 66%
 	}
 }
@@ -72,7 +72,7 @@
 		transform translateX(0) translateZ(0)
 	}
 	to {
-		transform translateX(10px) translateZ(0)
+		transform translateX(10rem) translateZ(0)
 	}
 }
 
@@ -88,36 +88,34 @@
 // }
 @keyframes dropShow {
 	0% {
-		visibility visible
 		opacity 0
-		transform perspective(600px) rotateX(-90deg)
+		transform translateY(10rem)
 	}
 	100% {
-		visibility visible
 		opacity 1
-		transform perspective(600px) rotateX(0deg)
+		transform translateY(0rem)
 	}
 }
 @keyframes dropHide {
 	0% {
 		opacity 1
-		transform scale(1)
+		transform translateY(0rem)
 	}
 	100% {
 		opacity 0
-		transform scale(0)
+		transform translateY(10rem)
 	}
 }
 
 @keyframes popupOpen {
 	0% {
 		opacity 0
-		transform: scale3d(.8, .8, .8) translate3d(0, 50px, 0);
+		transform: scale(.95) translate3d(0, 30rem, 0);
 	}
 
 	100% {
 		opacity 1
-		transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
+		transform: scale(1) translate3d(0, 0, 0);
 	}
 }
 
@@ -133,32 +131,32 @@
 @keyframes zoomIn {
 	0% {
 		opacity 0
-		transform: scale3d(.9, .9, .9) translate3d(0, 30px, 0);
+		transform: scale3d(.9, .9, .9) translate3d(0, 30rem, 0);
 	}
 	100% {
 		opacity 1
-		transform: scale3d(1, 1, 1) translate3d(0, 0px, 0);
+		transform: scale3d(1, 1, 1) translate3d(0, 0rem, 0);
 	}
 }
 
 @keyframes noticeOut {
   0 {
-    transform: perspective(1500px);
+    transform: perspective(1500rem);
   }
 
   20% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, -20deg);
     opacity: 1;
   }
 
   80% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 90deg);
     opacity: 0;
 
   }
 
   100% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 90deg);
     opacity: 0;
     max-height: 0;
   }
@@ -166,68 +164,138 @@
 
 @keyframes noticeIn {
   from {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 90deg);
     animation-timing-function: ease-in;
     opacity: 0;
     max-height: 0;
   }
 
   20% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 90deg);
     animation-timing-function: ease-in;
     opacity: 0;
   }
 
   55% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, -20deg);
     animation-timing-function: ease-in;
 
   }
 
   70% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 0deg);
     opacity: 1;
-     max-height: 300px;
+     max-height: 300rem;
   }
 
   85% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, -5deg);
 
   }
 
   100% {
-    transform: perspective(1500px);
+    transform: perspective(1500rem);
   }
 }
 
 @keyframes noticeIn2 {
   0% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 90deg);
     animation-timing-function: ease-in;
     opacity: 0;
-    max-height: 300px;
+    max-height: 300rem;
   }
 
   40% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, -20deg);
     animation-timing-function: ease-in;
 
   }
 
   60% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, 0deg);
     opacity: 1;
   }
 
   80% {
-    transform: perspective(1500px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(1500rem) rotate3d(1, 0, 0, -5deg);
 
   }
 
   100% {
-    transform: perspective(1500px);
+    transform: perspective(1500rem);
   }
 }
+
+
+@keyframes heartFlash {
+  0% {
+    transform: scale(1);
+    opacity 1;
+    color #fff
+  }
+
+  30% {
+    transform: scale(1.4);
+    opacity 0.6
+  }
+  100% {
+    transform: scale(1);
+    opacity 1
+  }
+
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1rem, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2rem, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4rem, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4rem, 0, 0);
+  }
+}
+
+@keyframes rotatingSms {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50%{
+  	transform: rotate(180deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+// @keyframes showFilter {
+//   0% {
+//     transform: translateX(265rem);
+//   }
+//   100% {
+//     transform: translateX(0rem);
+//   }
+// }
+// @keyframes hideFilter {
+//   0% {
+//     transform: translateX(0rem);
+// 	visibility visible
+//   }
+//   99% {
+//     visibility visible
+//   }
+//   100% {
+//     transform: translateX(285rem);
+//   }
+// }
 
 
 
@@ -246,7 +314,7 @@
 		backface-visibility visible !important
 		// transition 1s
 		// transition-delay .3s
-		max-height 300px
+		max-height 300rem
 		.notice_block
 			visibility visible
 
@@ -258,7 +326,7 @@
 		animation-name noticeIn
 		backface-visibility visible !important
 		// transition .7s
-		max-height 300px
+		max-height 300rem
 		.notice_block
 			visibility visible
 

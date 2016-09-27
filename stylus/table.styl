@@ -9,21 +9,21 @@
 .table_list_header
 	box-sizing border-box
 	text-transform uppercase
-	// padding 14px 0 10px 15px
-	padding 0 0 0 15px
+	// padding 14rem 0 10rem 15rem
+	padding 0 0 0 15rem
 	background #D7F0FA
-	border-bottom 2px solid #B0DAED
+	border-bottom 2rem solid #B0DAED
 
 	clearfix()
-	// margin -1px -1px 0
+	// margin -1rem -1rem 0
 
 	.table_list_cell
-		font-size fzn - 6px!important
+		font-size fzn - 6rem!important
 		font-weight 500!important
 		color clinklight!important
 		overflow ellipsis
-		padding-top 15px
-		padding-bottom 13px
+		padding-top 15rem
+		padding-bottom 13rem
 		line-height 1
 		a
 			color clinklight!important
@@ -38,32 +38,32 @@
 				color clink!important
 
 		[class*="icon-sort"]
-			padding-right 20px
+			padding-right 20rem
 			&:before
 				float right
 				min-width 0
-				margin 0 -15px 0 4px
-				font-size fzn - 8px
+				margin 0 -15rem 0 4rem
+				font-size fzn - 8rem
 
 		&.name_search
 
 			input.input_search
-				width 150px
-				min-width 150px
+				width 150rem
+				min-width 150rem
 				max-width 100%
 				box-sizing border-box
-				margin -9px 0 -10px
+				margin -9rem 0 -10rem
 				vertical-align top
-				padding-right 5px
+				padding-right 5rem
 				&:focus
 					width 70%
 				&.white
-					height 28px
+					height 28rem
 					background-color rgba(clink,0.13)
 					background-image url(../images/icon_search_input_white.svg)
-					background-size 12px auto
+					background-size 12rem auto
 					border none
-					font-size fzn - 3px
+					font-size fzn - 3rem
 					color #fff
 					font-weight normal
 					box-shadow none
@@ -96,11 +96,11 @@
 // строка
 .table_list_row
 	width 100%
-	// padding 15px 0 15px 15px
-	padding 0 0 0 15px
+	// padding 15rem 0 15rem 15rem
+	padding 0 0 0 15rem
 	box-sizing border-box
 	background cbgsky
-	border-bottom 1px dotted cbdlightsky
+	border-bottom 1rem dotted cbdlightsky
 	transition background linear .02s
 	clearfix()
 
@@ -111,34 +111,32 @@
 		&:before
 			content ''
 			position absolute
-			width 8px
-			height 8px
-			border-radius 10px
+			width 8rem
+			height 8rem
+			border-radius 10rem
 			background linear-gradient(cl3 + 30%, cl3)
-			left -15px
+			left -15rem
 			top 50%
-			margin-top -4px
+			margin-top -4rem
 	&.row_new
 		background cbgsuccess
-		box-shadow inset 2px 0 0 0 cl3
+		box-shadow inset 2rem 0 0 0 cl3
 		&:hover
 			background cbgsuccess + 30%
 	&.row_error
 		background cbgerror
-		box-shadow inset 2px 0 0 0 cerror
+		box-shadow inset 2rem 0 0 0 cerror
 		&:hover
 			background cbgerror + 30%
 
 	// строка при наведении
 	&:hover
 		background #fff
-		.table_list_cell.action
-			[class*="icon-"]
-				opacity 1
+
 
 	// выделенная строка
 	&.row_checked
-		box-shadow 0 0 0 1px cl2
+		box-shadow 0 0 0 1rem cl2
 		background #fff
 		z-index 2
 	&.row_link
@@ -147,21 +145,41 @@
 	&.row_title
 		background cbgsky!important
 		border-bottom none!important
-		border-top 1px solid cbdlightsky
-		margin-top -1px
+		border-top 1rem solid cbdlightsky
+		margin-top -1rem
 		font-weight normal
 		.table_list_cell
 			float none
-			padding-top 8px
-			padding-bottom 8px
-
+			padding-top 8rem
+			padding-bottom 8rem
+	.show_all
+		position absolute
+		right 19rem
+		top 0
+		bottom 0
+		display flex
+		justify-content space-around
+		align-items center
+		height 100%
+		a
+			font-size fzn + 6rem
+			color cgrey18
+			line-height 0
+			&:before
+				margin 0
+				transition transform .2s
+			&:hover
+				color cgrey50
+		&.active
+			a:before
+				transform scale(-1)
 
 // ячейка
 .table_list_cell
 	float right
-	font-size fzn - 2px
-	// padding-right 15px
-	padding 15px 15px 15px 0
+	font-size fzn - 2rem
+	// padding-right 15rem
+	padding 15rem 15rem 15rem 0
 	box-sizing border-box
 	line-height 1.3
 
@@ -172,34 +190,33 @@
 		text-decoration none
 
 	.ms-choice
-		font-size fzn - 2px
+		font-size fzn - 2rem
 
 	.select2, .select2-choice, .select2-chosen
 		max-width 100%
 	.select2-choice
 		overflow ellipsis
-		font-size fzn - 2px
+		font-size fzn - 2rem
 
 	&.name
 		overflow ellipsis
 		float none
 		.name_title
-			color clink
 			white-space normal
 			word-break break-word
 		.name_desc
-			font-size fzn - 3px
+			font-size fzn - 3rem
 			color ctextlight
 			overflow ellipsis
 			max-width 100%
 			box-sizing border-box
-			margin-top 3px
+			margin-top 3rem
 
 		&.name_link
-			// top -15px
-			// left -15px
-			// margin-bottom -30px
-			// padding 15px
+			// top -15rem
+			// left -15rem
+			// margin-bottom -30rem
+			// padding 15rem
 			// padding-right 0
 			&:hover
 				cursor pointer
@@ -207,104 +224,121 @@
 					color cl2
 
 		&.icon-warning
-			padding-right 30px
+			padding-right 30rem
 			&:before
 				color ctextwarning
 				position absolute
-				right 5px
-				top 17px
+				right 5rem
+				top 17rem
 
 		.info_label_error
-			margin-left 5px
+			margin-left 5rem
 
 	&.number
 		float left
 
 	&.default
-		width 110px
+		width 110rem
 		text-align center
 	&.action
-		width 20px
+		width 20rem
 		text-align right
 		box-sizing content-box
-		line-height 1
+		line-height 0
 		[class*="icon-"]
-			opacity .2
 			font-size fzn
-			color ctextlight
+			color cgrey18
+			line-height 0
+			&:before
+				margin 0
 			&:hover
-				color cl2
+				color cgrey50
 
 
 	&.check
-		width auto
+		width 20rem
+		box-sizing content-box
 		.label_check
-			margin-top -3px
-			margin-bottom -10px
+			margin-top -3rem
+			margin-bottom -10rem
+			margin-left 1rem
+
 	&.date
 		color ctextlight
 		font-weight 400
-		font-size fzn - 4px
+		font-size fzn - 4rem
 	&.summ
 		text-align right
+		font-size fzn
 		.money_income, .money_expense
 			display block
 			overflow ellipsis
 			max-width 100%
+		@media screen and (max-width:1150px)
+			font-size fzn - 2rem
+		.summ_small
+			font-weight fwn
+			padding-top 3rem
+			font-size fzn - 5rem
+			color ctextlight
+			max-width 100%
+			line-height 1
+			display block
+
 	&.deadline
-		width 85px
+		width 85rem
 		text-align right
 	&.status
 		width 15%
-		min-width 110px
+		min-width 110rem
 		.thumbs_up, .thumbs_down
-			margin-left 3px
+			margin-left 3rem
 		.thumbs_down
-			vertical-align -1px
+			vertical-align -1rem
 		span.views
 			color ctexterror
 	&.performer
 		width 15%
-		min-width 130px
+		min-width 130rem
 	&.tarif
 		width 12%
-		min-width 110px
+		min-width 110rem
 	&.city
 		width 15%
-		min-width 110px
+		min-width 110rem
 	&.group
 		width 15%
 	&.contact
 		width 15%
-		min-width 100px
-		max-width 180px
+		min-width 100rem
+		max-width 180rem
 
 	.write_now
 		position absolute
-		right 0px
-		bottom 0px
+		right 0rem
+		bottom 0rem
 		background linear-gradient(left, rgba(#fff,0) 0%, #fff 30%)
-		padding 0 4px 0 10px
+		padding 0 4rem 0 10rem
 
 
 
 .table_list_small
 	.table_list_header
-		padding-left 10px
+		padding-left 10rem
 		.table_list_cell
-			padding 10px 10px 7px 0
+			padding 10rem 10rem 7rem 0
 	.table_list_row
-		padding-left 10px
+		padding-left 10rem
 	.table_list_cell
-		padding 10px 10px 10px 0
+		padding 10rem 10rem 10rem 0
 		&.name
 			.input_search
-				margin-left -10px
+				margin-left -10rem
 			&.name_link
-				top -10px
-				left -10px
-				margin-bottom -20px
-				padding 10px
+				top -10rem
+				left -10rem
+				margin-bottom -20rem
+				padding 10rem
 
 
 .table_list_light
@@ -321,7 +355,7 @@
 				color clinklight!important
 	.table_list_row
 		background none
-		// border-bottom 1px dotted cbdlightsky
+		// border-bottom 1rem dotted cbdlightsky
 		&:hover
 			background cbgsky + 40%
 		&.row_checked
@@ -330,7 +364,7 @@
 
 
 .table_list_border
-	border 1px solid cseparator
+	border 1rem solid cseparator
 
 
 
@@ -347,20 +381,106 @@
 			a
 				color ctextlight!important
 			&.name_search
-				left -15px
+				left -15rem
 				input
-					margin -13px 0 -3px
+					margin -13rem 0 -3rem
 
 	.table_list_row
 		background #fff
-		box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
-		margin-bottom 2px
+		box-shadow 0rem 1rem 1rem 0rem rgba(0,0,0,0.12)
+		margin-bottom 2rem
 		border none
 		transition background .2s
 		&.row_link:hover
 			background cbgsky + 30%
 			.name, .name_title
 				color cl2
+
+
+// новый вид списка - крупный
+.table_list.table_list_big
+	.table_list_header
+		background #fff
+		padding 0 0 0 20rem
+		display flex
+		align-items center
+		border-bottom none
+		text-transform none
+		border-bottom 2rem solid cbdlight
+		.table_list_cell
+			font-size fzn - 3rem!important
+			color ctextlight!important
+			font-weight fwn!important
+			padding-top 12rem
+			padding-bottom 12rem
+
+
+	.table_list_row
+		background #fff
+		padding 0 0 0 20rem
+		display flex
+		align-items center
+		border-bottom 1rem solid cgrey09
+		&:hover
+			background rgba(0,0,0,0.01)
+	.table_list_cell
+		padding 20rem 20rem 18rem 0
+		float none
+
+	.row_date
+		background rgba(0,0,0,0.04)
+		font-size fzn - 3rem
+		color ctextlight
+		border-bottom none
+		&:hover
+			background rgba(0,0,0,0.04)
+		.name, .summ
+			font-size fzn - 3rem
+		.table_list_cell
+			padding-top 10rem
+			padding-bottom 10rem
+			font-weight fwn
+	.check
+		padding-top 18rem
+	.summ
+		font-size 26rem
+		min-width 230rem
+		font-weight fwl
+
+		.account
+			font-weight fwl
+			margin-top 2rem
+			font-size fzn - 2rem
+			color ctextlight
+			overflow ellipsis
+			max-width 100%
+
+	.name
+		white-space normal
+		width 100%
+		.name_title, .contragent
+			font-size fzn + 4rem
+			font-weight fwl
+			display inline
+			margin-right 10rem
+		.name_desc
+			margin-top 6rem
+			font-size fzn - 2rem
+			font-weight fwl
+			color ctextlight
+		.status
+			vertical-align 3rem
+			// margin-left 15rem
+
+
+	.action
+		width 45rem
+		a[class*="icon-"]
+			font-size 20rem
+		a.icon-payment
+			font-size 24rem
+
+
 
 
 
@@ -378,17 +498,17 @@
 			span
 				border-bottom-color cl2
 			&:before
-				transform rotate(90deg) translateX(2px)
+				transform rotate(90deg) translateX(2rem)
 
 
 	.table_list_cell.name
 
 		.group_name_link
-			max-width calc(100% - 30px)
+			max-width calc(100% - 30rem)
 			display inline-block
 			span
 				overflow ellipsis
-				max-width calc(100% - 19px)
+				max-width calc(100% - 19rem)
 				display inline-block
 				vertical-align bottom
 			&:before
@@ -400,7 +520,7 @@
 
 
 .table_list_group_content
-	padding 5px 10px 15px
+	padding 5rem 10rem 15rem
 	&.ng-animate
 		transition .3s
 		overflow hidden
@@ -412,16 +532,16 @@
 		opacity 1
 
 .table_row_info
-	padding 40px 0
+	padding 40rem 0
 	.info_center
-		width 400px
+		width 400rem
 		margin 0 auto
 		color ctextlight
 		text-align center
-		font-size fzn - 2px
+		font-size fzn - 2rem
 
 // .table_list_more
-// 	padding-left 15px
+// 	padding-left 15rem
 
 
 	// список людей с ролями по группам
@@ -429,7 +549,7 @@
 	.chief
 		width 30%
 	.action
-		width 55px
+		width 55rem
 
 
 	// список людей с ролями
@@ -441,61 +561,166 @@
 	.invite
 		width 60%
 		.info_label
-			margin-top -4px
+			margin-top -4rem
 	.action
-		width 20px
+		width 20rem
 		box-sizing content-box
 	.name_info
 		display block
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		color ctextlight
-		margin 2px 0 0
+		margin 2rem 0 0
+
+
+
+
+
+
 
 
 // список транзакций
 .table_list.transaction_list
+	padding 0
+
+	.name
+
+		.purpose
+			margin-top 6rem
+			font-size fzn - 2rem
+			font-weight fwl
+			color ctextlight
+
+
+
+
+
+
+
+
+// .table_list.transaction_list_usn
+// 	.summ
+// 		width 24%
+// 		max-width 215rem
+// 		min-width 150rem
+// 		.summ_with_usn
+// 			// cursor pointer
+// 		.summ_usn
+// 			font-weight fwn
+// 			padding-top 3rem
+// 			font-size fzn - 5rem
+// 			color ctextlight
+// 			max-width 100%
+// 			display inline
+// 			// border-bottom 1rem dashed ctextlight + 20%
+// 			// cursor pointer
+// 			line-height 1
+// 			// &:hover
+// 			// 	color ctextlight - 30%
+// 			// 	border-bottom-color ctextlight - 10%
+// 			// 	.money_income, .money_expense
+// 			// 		color ctextlight - 30%
+// 			.money_income, .money_expense
+// 				display inline-block
+// 				vertical-align baseline
+// 				margin-left 5rem
+// 				color ctextlight
+// 				font-size fzn - 5rem
+
+
+// список контактов
+.table_list.contact_list
+	padding 0
+	.summ
+		font-size 22rem
+
+
+
+
+
+
+.sub_row_group
+	display none
+	.table_list_row
+		background cbgsky - 3%
+		&:hover
+			background #fff
+
+// вложенная строка
+.table_list
+	.table_list_row.table_list_subrow
+		.table_list_cell.name
+			padding-left 50rem
+
+
+// список избранных
+.table_list.favorites_list
 	.date
 		float left
 		width 13%
-		min-width 70px
+		min-width 70rem
 		.status
 			font-weight fwn
-			padding-top 3px
+			padding-top 3rem
 
-	.desc
-		width calc((100% - 300px)/2)
-		overflow hidden
-		color ctextlight
-		word-break break-word
+
 	.summ
 		width 20%
-		min-width 125px
+		min-width 125rem
 		font-weight normal
-		padding-right 25px
 		.account
 			font-weight fwn
-			padding-top 3px
-			font-size fzn - 3px
+			padding-top 3rem
+			font-size fzn - 3rem
 			color ctextlight
 			overflow ellipsis
 			max-width 100%
 
+
 	.contragent
-		float none
-		overflow hidden
-		hyphens auto
 		word-break break-word
 		word-wrap break-word
+		width 25%
+		min-width 100rem
 	.action
-		width 55px
-		@media (min-width:1400px)
-			width 83px
+		width 55rem
+		@media (min-width:1400rem)
+			width 83rem
 
 		.icon-stop
-			font-size fzn - 2px
+			font-size fzn - 2rem
 		.icon-favorites-solid
 			opacity 1
-
+	.name
+		float none
+		word-break break-word
+		word-wrap break-word
+		white-space normal
+		a
+			display inline-block
+			vertical-align top
+			max-width calc(100% - 35rem)
+			br
+				display none
+			&[contenteditable="true"]
+				&:focus
+					color ctext
+					outline none
+					cursor text
+					// white-space nowrap
+					br
+						display none
+					// *
+					// 	display inline
+					// 	white-space nowrap
+					& ~ .edit_name
+						opacity 0
+		.edit_name
+			margin-left 10rem
+			opacity 0
+			transition opacity .2s
+	.table_list_row:hover
+		.edit_name
+			opacity 1
 
 
 // список клиентов в админке
@@ -504,11 +729,11 @@
 		width 15%
 	.service
 		width 5%
-		min-width 35px
+		min-width 35rem
 		text-align center
 	.action
 		width 5%
-		min-width 35px
+		min-width 35rem
 
 
 
@@ -516,8 +741,8 @@
 .table_list.contragents_list
 	.to_pay
 		width 18%
-		max-width 170px
-		min-width 110px
+		max-width 170rem
+		min-width 110rem
 		font-weight 400
 		text-align right
 		overflow ellipsis
@@ -525,12 +750,12 @@
 	.last_paid
 		width 19%
 		text-align right
-		max-width 170px
+		max-width 170rem
 	.paid_period
 		width 18%
 		font-weight 400
-		max-width 170px
-		min-width 110px
+		max-width 170rem
+		min-width 110rem
 		text-align right
 		overflow ellipsis
 		max-width 100%
@@ -544,7 +769,7 @@
 	.summ
 		width 25%
 		float left
-		max-width 170px
+		max-width 170rem
 	.date
 		width 17%
 		max-width 100%
@@ -569,14 +794,14 @@
 		text-align center
 		line-height 1.2
 		.sign_status
-			font-size fzn - 4px
+			font-size fzn - 4rem
 			line-height 1
 			color ctextlight
 	.invite
 		text-align left
 		width 58%
 		.invite_status
-			font-size fzn - 4px
+			font-size fzn - 4rem
 			line-height 1
 			color ctextlight
 
@@ -589,14 +814,14 @@
 		width 16%
 	.people
 		width 20%
-		min-width 170px
+		min-width 170rem
 	.read
 		width 15%
-		min-width 100px
+		min-width 100rem
 	.date_send
-		font-size fzn - 3px
+		font-size fzn - 3rem
 		width 15%
-		min-width 120px
+		min-width 120rem
 
 // список новостей в админке для дашборда
 .news_email_list
@@ -605,20 +830,20 @@
 		color clink
 	.status
 		width 18%
-		min-width 155px
+		min-width 155rem
 	.people
 		width 18%
-		min-width 170px
+		min-width 170rem
 	.read
 		width 10%
-		min-width 100px
+		min-width 100rem
 	.send
 		width 10%
-		min-width 90px
+		min-width 90rem
 	.date_send
-		font-size fzn - 3px
+		font-size fzn - 3rem
 		width 13%
-		min-width 120px
+		min-width 120rem
 
 // кол-во просмотров задачи
 .views_list
@@ -627,3 +852,104 @@
 	.count
 		width 15%
 		text-align right
+
+
+// список счетов
+.accounts_list
+	.balance
+		width 20%
+	.status
+		width 20%
+	.type
+		width 30%
+	.number
+		float none
+
+	.account_close
+		opacity .5
+
+// зарплатный список html/payroll/payroll_page_list_staff.html
+.payroll_staff_list
+	.account
+		width 185rem
+	.bank
+		width 24%
+	.im
+		width 16%
+	.otch
+		width 18%
+	.fam
+		float none
+		overflow hidden
+		word-wrap break-word
+
+// список зарплатный ведомостей
+.table_list.payroll_list
+	padding 0
+
+	.ndfl
+		flex 0 0 20%
+		text-align right
+		min-width 100rem
+	.payments
+		flex 0 0 20%
+		text-align right
+		min-width 100rem
+
+
+// список сотрудников в создание зарплатной ведомости html/payroll/payroll_page_new.html
+.payroll_staff_list_payment
+	.summ
+		width 15%
+		font-size fzn - 2rem
+		input[type='text']
+			width 100%
+			text-align right
+			font-size fzn - 1rem
+			margin-top -7rem
+			margin-bottom -7rem
+	.status
+		width 10%
+		text-align right
+		&~.bank
+			width 22%
+	.account
+		width 185rem
+	.bank
+		width 26%
+	.name
+		white-space normal
+	.check
+		float left
+	.total
+		border-top 2rem solid cseparator
+		border-bottom none
+		text-align right
+		margin-top -1rem
+		background none
+		.summ
+			width 15%
+			display inline-block
+			padding 10rem 15rem 10rem 0
+
+			.count
+				font-size fzn - 4rem
+				color ctextlight
+
+// список задач админки
+.tasks_list
+	.number
+		width 80rem
+	.name_title
+		.online
+			&:after
+				content ''
+				width 6rem
+				height 6rem
+				border-radius 10rem
+				display inline-block
+				background cl3
+				margin-left 4rem
+				vertical-align middle
+	.table_list_cell.status
+		width 12%

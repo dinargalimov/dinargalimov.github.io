@@ -22,7 +22,7 @@
 
 		<div class="content">
 
-			<include data-file="open_account/account_widget_dashboard.html .account_widget_dashboard:nth-child(5)"></include>
+			<!-- <include data-file="open_account/account_widget_dashboard.html .account_widget_dashboard:nth-child(5)"></include> -->
 
 			<!-- уведомления -->
 			<!-- <div class="notices">
@@ -149,27 +149,7 @@
 				</div>
 			</div>
 
-			<!-- виджет средств -->
-			<div class="widget_block cashflow_widget">
-				<div class="list">
-					<div class="item">
-						<div class="name">Остаток на н/п</div>
-						<div class="value">5 471 208,00 <span class="ruble"><span>р.</span></span></div>
-					</div>
-					<div class="item">
-						<div class="name">Пришло</div>
-						<div class="value money_income">5 120 040,00 <span class="ruble"><span>р.</span></span></div>
-					</div>
-					<div class="item">
-						<div class="name">Ушло</div>
-						<div class="value money_expense">19 480,00 <span class="ruble"><span>р.</span></span></div>
-					</div>
-					<div class="item">
-						<div class="name">Остаток на н/п</div>
-						<div class="value">5 570 479,00 <span class="ruble"><span>р.</span></span></div>
-					</div>
-				</div>
-			</div>
+
 
 			<!-- список операций -->
 			<div class="tabs tabs_horizontal tabs_widget dashboard_transaction">
@@ -410,15 +390,16 @@
 				<div class="tabs_content">
 
 						<!-- таблица -->
-						<div class="table_list table_list_light transaction_list">
+						<div class="table_list table_list_light favorites_list">
 
 							<!-- шапка таблицы -->
 							<div class="table_list_header">
 								<div class="table_list_cell action">&nbsp;</div>
-								<div class="table_list_cell desc">Назначение платежа</div>
 								<div class="table_list_cell summ"><a class="icon-sort-up">Сумма</a></div>
 								<div class="table_list_cell date"><a class="icon-sort-down">Дата</a></div>
 								<div class="table_list_cell contragent"><a>Контрагент</a></div>
+								<div class="table_list_cell name"><a>Наименование</a></div>
+
 
 							</div>
 
@@ -432,15 +413,15 @@
 										<a class="icon-reload"></a>
 										<a class="icon-favorites-solid"></a>
 									</div>
-									<div class="table_list_cell desc">Доход от продажи товара</div>
 									<div class="table_list_cell summ">
-										<span class="money_income">125 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<span class="money_expense">125 000,00 <span class="cur dollar"><span>$</span></span></span>
 										<div class="account">Валютный счет</div>
 									</div>
 									<div class="table_list_cell date">
 										17.03
 									</div>
 									<div class="table_list_cell contragent"><a>ООО «Рога и Копыта»</a></div>
+									<div class="table_list_cell name"><a contenteditable="true">Прокат велосипеда</a> <a class="edit_name icon-pencil"></a></div>
 								</div>
 
 								<!-- строка -->
@@ -452,7 +433,6 @@
 										<a class="icon-favorites-solid"></a>
 
 									</div>
-									<div class="table_list_cell desc">Перевод прибыли от предпринимательской деятельности. Без НДС</div>
 									<div class="table_list_cell summ">
 										<span class="money_expense">42 000,00 <span class="cur dollar"><span>$</span></span></span>
 										<div class="account">Текущий счет</div>
@@ -461,6 +441,7 @@
 										17.03
 									</div>
 									<div class="table_list_cell contragent"><a>ОАО «Башкирский Нефтегазовый холдинг»</a></div>
+									<div class="table_list_cell name"><a>Себе ежемесячно</a></div>
 								</div>
 
 								<!-- строка -->
@@ -472,7 +453,6 @@
 										<a class="icon-favorites-solid"></a>
 
 									</div>
-									<div class="table_list_cell desc">Доход от продажи товара</div>
 									<div class="table_list_cell summ">
 										<span class="money_expense">35 000,00 <span class="cur dollar"><span>$</span></span></span>
 										<div class="account">Зарплатный счет</div>
@@ -481,6 +461,7 @@
 										17.03
 									</div>
 									<div class="table_list_cell contragent"><a>ООО «Рога и Копыта»</a></div>
+									<div class="table_list_cell name"><a>Всем на пенсию</a></div>
 								</div>
 
 								<!-- строка -->
@@ -492,14 +473,14 @@
 										<a class="icon-favorites-solid"></a>
 
 									</div>
-									<div class="table_list_cell desc">Перевод прибыли от предпринимательской деятельности. Без НДС</div>
 									<div class="table_list_cell summ">
-										<span class="money_income">105 000,00 <span class="cur dollar"><span>$</span></span></span>
+										<span class="money_expense">105 000,00 <span class="cur dollar"><span>$</span></span></span>
 									</div>
 									<div class="table_list_cell date">
 										17.03
 									</div>
 									<div class="table_list_cell contragent"><a>ОАО «Башкирский Нефтегазовый холдинг»</a></div>
+									<div class="table_list_cell name"><a>Доступ в интернет</a></div>
 								</div>
 
 								<!-- <div class="table_row_info">

@@ -33,13 +33,23 @@
 	<div class="popup_table">
 		<div class="popup_cell">
 			<div class="popup_layer security_lock">
-				<div class="info info_sms">
-					<p>На ваш номер было отправлено SMS-сообщение с кодом. Пожалуйста, введите его в поле ниже.</p>
-					<div class="form">
-						<input type="text" name="" id="" placeholder="СМС-код" size="10">
-						<button class="button middle">Далее</button>
+				<div class="security_lock_header">
+					<div class="icon icon-password"></div>
+					Мы заботимся<br/> о безопасности<br/> ваших данных
+					<a class="logout" href="">Выйти</a>
+				</div>
+				<div class="sms_confirm">
+					<div class="sms_field">
+						<input type="text" class="" placeholder="00000" autofocus>
 					</div>
+					<p>Мы отправили вам СМС-сообщение с кодом. Пожалуйста, введите его в поле выше
+
+					</p>
 					<p class="small_text">Выслать код повторно через 1 минуту 16 секунд</p>
+					<!-- <p class="small_text"><a>Отправить код повторно</a></p> -->
+					<!-- <div class="form_error">
+						Неправильный смс-код!
+					</div> -->
 				</div>
 			</div>
 		</div>

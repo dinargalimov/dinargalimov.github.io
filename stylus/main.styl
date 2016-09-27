@@ -2,11 +2,9 @@
 @import 'variables.styl'
 
 html, body
-	min-height 100%
-	height 100%
-	position relative
+
 	background cbglight
-	min-width 945px
+	min-width 980px
 	animation-name fadeIn
 	animation-duration .8s
 
@@ -15,79 +13,59 @@ body
 	overflow auto
 	-webkit-overflow-scrolling touch
 
-aside
-	position absolute
-	width 110px
-	top 0
-	left 0
-	bottom 0
-	background cl1
-	color #fff
-	overflow auto
-	overflow overlay
-	-webkit-overflow-scrolling touch
 
-	.aside_tablet_overlay
-		visibility hidden
-		position absolute
-		top 0
-		bottom 0
-		width 100%
-		height 100%
-		background cl1
-		a
-			position absolute
-			top 0
-			bottom 0
-			width 100%
-			height 100%
-			color #fff
-			text-align right
-			padding 7px 13px 0 0
-			box-sizing border-box
-			font-size fzn + 4px
-			&:before
-				margin 0
-
-
-.aside_logo
-	display block
-	height 40px
-	background url(../images/logo_w.svg) no-repeat center center
-	background-size 90% auto
-	text-indent -10000em
 
 header
 	position absolute
 	top 0
 	right 0
-	left 110px
-	height 40px
+	left 0
+	height 60rem
 	background saturate(cbglight - 5%, 10%)
+	background-image linear-gradient(left, #00417B 0%, #2072A3 50%, #3AB0AB 100%)
 	z-index 900
 	transition box-shadow .5s
+
 	&.shadow
-		box-shadow 0 12px 20px -8px rgba(cl1,0.13)
+		box-shadow 0 12rem 20rem -8rem rgba(cl1,0.13)
 		transition box-shadow 1s
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
 	header
 		&.shadow
-			box-shadow 0 15px 25px -8px rgba(cl1,0.13)
+			box-shadow 0 15rem 25rem -8rem rgba(cl1,0.13)
 
 	_::-webkit-full-page-media, _:future, :root  .page_header
 		&.shadow
-			box-shadow 0 12px 20px -8px rgba(cl1,0.13)
+			box-shadow 0 12rem 20rem -8rem rgba(cl1,0.13)
 
+// лого в шапке
+.header_logo
+	width 60rem
+	height 60rem
+	background #fff
+	padding 18rem 0 0 18rem
+	box-sizing border-box
+	float left
+	a
+		display block
+		width 24rem
+		height 24rem
+		background url(../images/header_logo.svg) no-repeat 0 0
+		background-size 100%
+		text-indent -10000em
 
 // поиск в шапке
 
 .header_search
+
 	height 100%
 	display inline-block
-	float left
-	background #fff
 	z-index 1
+	background #fff
+	padding-left 10rem
+	background #fff url(../images/icon_search.svg) no-repeat 10rem center
+	background-size 18rem auto
 	&:after
 		left 100%
 		top 50%
@@ -99,113 +77,152 @@ header
 		pointer-events none
 		border-color rgba(0, 0, 0, 0)
 		border-left-color #fff
-		border-width 8px
-		border-top-width 20px
-		border-bottom-width 20px
-		margin-top -20px
-	&:before
-		content ""
-		position absolute
-		left 12px
-		height 100%
-		width 25px
-		background url(../images/icon_search.svg) no-repeat 0 center
-		z-index -1
+		border-width 13rem
+		border-top-width 30rem
+		border-bottom-width 30rem
+		margin-top -30rem
 
 	.name
-		color cl1
+		color ctext
 		position absolute
-		left 45px
-		top 10px
+		top 0
+		left 38rem
+		padding 21rem 0 0 0
+		width 92rem
+		height 100%
+		box-sizing border-box
 		z-index 0
+		text-transform uppercase
+		font-size fzn - 2rem
+		font-weight fwr
+
 
 	input
 		position relative
 		height 100%
+		width 92rem
 		border none
-		width 67px
 		cursor pointer
-		transition width .2s ease-in-out
-		margin-left 25px
-		padding-left 20px
-		padding-right 0
-		background transparent
+		padding-left 0rem
+		padding-right 20rem
 		opacity 0
-		box-sizing content-box
+		box-sizing border-box
 		z-index 10
+		font-size fzn + 2rem
+		transition .2s opacity, .3s width, .1s margin .2s
+
 		&::-webkit-input-placeholder
 			color ctext
 		&::-moz-placeholder
 			color ctext
 		&:-ms-input-placeholder
 			color ctext!important
-		&:hover
-			width 75px
 
-		&:focus
-			width 250px
-			transition width ease-in-out .2s
+
+		&:focus, &.active
+			width calc(50vw - 180rem)
+			margin-left 28rem
 			opacity 1
+			transition .2s opacity, .3s width, 0s margin
 			&::-webkit-input-placeholder
 				color ctextholder
 			&::-moz-placeholder
 				color ctextholder
 			&:-ms-input-placeholder
 				color ctextholder!important
-			& ~ .name
-				opacity 0
+
 		// &:valid
 		// 	opacity 1
-		// 	width 250px
+		// 	width 250rem
 		// 	& ~ .name
 		// 		opacity 0
 
+// меню в шапке
+.header_menu
+	position absolute
+	left 180rem
+	top 0
+	// width calc(50% - 180rem - 21rem)
+	width 28%
+	box-sizing border-box
+	padding 0 10rem
+	display flex
+	justify-content center
+	.header_menu_inner
+		max-width 370rem
+	ul
+		display flex
+		justify-content space-around
+	li
+		margin 0 15rem
+	li.active
+		a
+			color #fff
+		span
+			border-bottom-color cl3
+	a
+		display block
+		line-height 63rem
+		font-weight fwr
+		font-size fzn - 2rem
+		color rgba(#fff,0.8)
+		text-transform uppercase
+		text-decoration none
+		span
+			display block
+			height 55rem
+			border-bottom 5rem solid transparent
+		&:hover
+			color #fff
 
 // быстрое добавление в шапке
 
 .header_add
 	position absolute
-	top 0
-	height 100%
-	left calc(50% - 55px - 49px)
+	top 9rem
+	left calc(50% - 21rem)
 	a.add
 		display block
-		width 49px
-		height 100%
-		background cl2
+		width 42rem
+		height 42rem
+		background #fff
 		transition background-color .2s
+		border-radius 42rem
 		&:before, &:after
 			content ''
-			width 3px
-			height 23px
-			background #fff
+			width 2px
+			height 20rem
+			background #2072A3
 			position absolute
-			top 8px
-			left 23px
+			top 11rem
+			left 20rem
 			transition transform .35s
 		&:after
-			height 3px
-			width 23px
-			top 18px
-			left 13px
-		&:hover
-			background-color cl2+10%
-
+			height 2px
+			width 20rem
+			top 20rem
+			left 11rem
 
 		&.drop-enabled
 			&:before, &:after
 				transform rotate(135deg)
-			&:after
-				transform rotate(135deg)
+
+
 
 .drop.header_add_submenu
-	top 40px!important
-	left 50%!important
-	transform translateX(-50%) translateX(-23px)!important
-	margin-right -2000px
+	top 60rem!important
+	left 0!important
+	right 0!important
+	transform translateX(0%)!important
+	margin-right -2000rem
+	text-align center
+	.drop-content
+		display inline-block
+		text-align left
+
 
 .header_add_drop.drop-content-inner
-	padding 25px 35px
+	padding 25rem 35rem
 	max-height 100vh
 	overflow visible
 	&:after, &:before
@@ -220,24 +237,24 @@ header
 	&:after
 		border-color rgba(255, 255, 255, 0)
 		border-bottom-color #fff
-		border-width 8px
-		margin-left -8px
+		border-width 8rem
+		margin-left -8rem
 	&:before
 		border-color rgba(0, 0, 0, 0)
-		border-bottom-color rgba(0,0,0,0.2)
-		border-width 9px
-		margin-left -9px
+		border-bottom-color rgba(0,0,0,0.1)
+		border-width 9rem
+		margin-left -9rem
 	h3
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		font-weight fwm
 		text-transform uppercase
-		margin 0 0 15px
+		margin 0 0 15rem
 	.col
-		width 194px
+		width 240rem
 		& ~ .col
-			margin-left 60px
+			margin-left 60rem
 	.quick_add
-		margin -10px -10px 0!important
+		margin -10rem -10rem 0!important
 	li
 		a
 			padding-left 0
@@ -249,13 +266,13 @@ header
 
 	.more
 		clear both
-		padding 15px 0 0
-		margin 0 0 -5px 0
+		padding 15rem 0 0
+		margin 0 0 -5rem 0
 		text-align right
 		a
 			text-decoration none
 			color ctextlight
-			font-size fzn - 3px
+			font-size fzn - 3rem
 			&:hover
 				color cl2
 
@@ -263,93 +280,251 @@ header
 
 
 
-.header_chat
-	position absolute
-	top 0
-	height 100%
-	left calc(50% - 55px + 1px)
+// Кнопка чата внизу справа
+
+.button_chat
+	position fixed
+	right 20rem
+	bottom 20rem
+	width 60rem
+	height 60rem
+	z-index 2000
 	a
 		display block
 		height 100%
-		width 49px
-		background cl3 url(../images/icon_chat.svg)no-repeat center
+		width 100%
+		background cl3 url(../images/icon_chat.svg)no-repeat center 55%
+		border-radius 60rem
+		transition background .2s
+		box-shadow 0 4rem 20rem rgba(0,0,0,0.1)
 		&:hover
 			background-color cl3 + 3%
 	label
-		padding 0 4px
+		padding 0 4rem
 		box-sizing border-box
-		height 14px
-		min-width 14px
-		line-height 14px
+		height 26rem
+		min-width 26rem
+		line-height 26rem
 		text-align center
-		border-radius 20px
+		border-radius 20rem
 		color #fff
 		background cerror
-		font-size fzn - 5px
-		font-weight normal
+		font-size fzn
 		position absolute
-		top 5px
-		right -5px
+		top -3rem
+		right -3rem
 		cursor pointer
-
-
+		font-weight fwn
 // профиль и выход в шапке
 
 .header_profile
 	float right
 	height 100%
+	padding-right 10rem
 	.header_profile_settigs,
 	.header_profile_help,
 	.header_profile_logout,
-	.header_profile_name
+	.header_profile_name,
+	.header_profile_referral,
+	.header_profile_news
 		height 100%
 		float left
-		border-right 1px solid saturate(cbglight - 12%, 10%)
+
+		// border-right 1rem solid saturate(cbglight - 12%, 10%)
 		a
 			text-decoration none
 			display block
-			height 40px
-			width 40px
+			height 60rem
+			width 40rem
 			text-align center
-			line-height 40px
-			font-size 20px
-			color clink
-			&:hover
-				color cl2
-			&:hover:before
-				color cl2
+			line-height 62rem
+			font-size 21rem
+			color #fff
+			// &:hover
+			// 	color cl2
+			// &:hover:before
+			// 	color cl2
 	.header_profile_settigs,
 	.header_profile_help,
-	.header_profile_logout
+	.header_profile_logout,
+	.header_profile_referral,
+	.header_profile_news
 		[class*='icon-']:before
 			margin-right 0
 
-	.header_profile_logout a:before
-		font-size 18px
+	// выход
+	.header_profile_logout a
+		font-size 19rem
+		line-height 65rem
+
+	.header_profile_settigs a
+		font-size 20rem
+		line-height 64rem
+
+	.header_profile_news
+		a
+			font-size 20rem
+			line-height 64rem
+		.count
+			position absolute
+			top 10rem
+			left 19rem
+			background cerror
+			color #fff
+			font-weight fwm
+			font-size fzn - 4rem
+			padding 1rem 5rem 3rem
+			border-radius 20rem
+			line-height 1
+			border 2px solid #35A4AA
+	// ссылка акции месяц бесплатно
+	.header_profile_referral a
+		font-size 23rem
+		color #fff
+		line-height 64rem
+		&:before
+			animation heartFlash .5s
+			animation-delay 5s
+			animation-iteration-count 3
+		// &:after
+		// 	display none
+		// 	position absolute
+		// 	top 0
+		// 	left 0
+		// 	width 40rem
+		// 	height 60rem
+		// 	text-align center
+		// 	line-height 58rem
+		// 	content "\6b"
+		// 	color #fff
+		// 	font-family: "mb-icon-font-3" !important;
+		// 	font-style: normal !important;
+		// 	font-weight: normal !important;
+		// 	font-variant: normal !important;
+		// 	text-transform: none !important;
+		// 	-webkit-font-smoothing: antialiased;
+		// 	animation heartFlash .5s
+		// 	animation-delay 5s
+		// 	animation-iteration-count 3
+			// animation-play-state: running, paused, running;
+		// &.red
+		// 	color #fff
+		// 	&:after
+		// 		display block
+
 
 	.header_profile_name
-		font-size 13px
-		padding 0 15px
+
+		text-transform uppercase
+		padding 0 15rem
 		font-weight 400
-		max-width 250px
-		line-height 39px
+		max-width 250rem
+		line-height 60rem
 		color clinklight
 		a
 			width auto
-			font-size fzn - 3px
 			overflow ellipsis
 			max-width 100%
+			font-weight fwr
+			font-size fzn - 2rem
 			&:before
-				font-size 16px
-				vertical-align -3px
-				margin 0 10px 0 0
+				font-size 17rem
+				vertical-align -3rem
+				margin 0 10rem 0 0
 
+
+// выпадушка выбора компании
+.drop_profile
+	.drop-content
+		&:after, &:before
+			bottom 100%
+			left 50rem
+			border solid transparent
+			content " "
+			height 0
+			width 0
+			position absolute
+			pointer-events none
+		&:after
+			border-color rgba(255, 255, 255, 0)
+			border-bottom-color #fff
+			border-width 8rem
+			margin-left -8rem
+		&:before
+			border-color rgba(0, 0, 0, 0)
+			border-bottom-color rgba(0,0,0,0.1)
+			border-width 9rem
+			margin-left -9rem
+
+
+// окно реферральной акции
+.drop.drop_referral
+	right 25rem!important
+	left auto!important
+	transform translateX(0) translateY(60rem)!important
+	.drop-content
+		&:after
+			bottom 100%
+			right 77rem
+			border solid transparent
+			content " "
+			height 0
+			width 0
+			position absolute
+			pointer-events none
+			border-color rgba(136, 183, 213, 0)
+			border-bottom-color cbginfo
+			border-width 8rem
+	.drop-content-inner
+		max-width 300rem
+		max-height 500rem!important
+		padding 20rem 25rem
+		box-sizing border-box
+	.drop_referral_quote
+		background cbginfo
+		margin -20rem -25rem 20rem
+		padding 20rem 25rem
+		.img
+			float left
+			display inline-block
+			width 45rem
+			height 45rem
+			border-radius 50%
+			margin 0 15rem 10rem 0
+			overflow hidden
+			img
+				background #eee
+				border none
+		.text
+			font-style italic
+			font-size 13rem
+			color ctextlight
+	.drop_referral_banner
+		color ctextlight
+		overflow hidden
+		margin 0 0 20rem
+		.big
+			font-size 46rem
+			font-weight fwl
+			float left
+			line-height 40rem
+			margin 0 5rem 0 10rem
+		.light
+			font-size 17.5rem
+			font-weight fwl
+			text-transform uppercase
+		.mid
+			font-size 14rem
+			font-weight fwm
+			text-transform uppercase
+	.drop_referral_text
+		font-size fzn - 3rem
 
 // меню слева
 .menu
-	margin 10px 0 0
+	margin 10rem 0 0
 	li
-		margin 0 0 2px
+		margin 0 0 2rem
 		box-sizing border-box
 
 		&.active a
@@ -358,60 +533,41 @@ header
 		&.active_parent>a
 			border-color cl3
 			background none
-	// a
-	// 	display block
-	// 	padding 10px 0 10px 7px
-	// 	font-size fzn - 1px
-	// 	color #fff
-	// 	text-decoration none
-	// 	font-weight fwn + 100
-	// 	text-transform uppercase
-	// 	border-left 3px solid transparent
 
-	// 	&:hover
-	// 		background cl1 + 10%
-	// 	&:before
-	// 		margin 0 5px 0 0
-	// 		display inline-block
-	// 		width 20px
-	// 		text-align center
-	// 		font-size 16px
-	// 		vertical-align -2px
-	// 		transition 0
-	// 	&.icon_menu_post
-	// 		&:before
-	// 			font-size 17px
-
-	// 	&.title_submenu
-	// 		&:hover
-	// 			background none
-	// 			cursor default
 
 	a
 		display block
-		padding 14px 0
-		font-size fzn - 3px
+		padding 14rem 3rem 14rem 0
+		font-size fzn - 3rem
 		color #fff
 		text-decoration none
-		border-left 3px solid transparent
+		border-left 3rem solid transparent
 		text-align center
 
 		&:hover
 			background cl1 + 10%
 		&:before
-			margin 0 0 5px
+			margin 0 0 5rem
 			display block
 			text-align center
-			font-size 24px
+			font-size 24rem
+			height 26rem
 			transition none
+
+		&.icon-menu-dashboard
+			&:before
+				font-size 27rem
+		&.icon-menu-transaction
+			&:before
+				font-size 26rem
 		&.icon_menu_post
 			&:before
-				font-size 17px
+				font-size 17rem
 
 		&.icon-menu-clients2
 			&:before
-				font-size 38px
-				line-height 28px
+				font-size 38rem
+				line-height 28rem
 
 		&.title_submenu
 			&:hover
@@ -425,8 +581,8 @@ header
 			&.active a
 				border-color cl3
 		a
-			font-size fzn - 3px
-			padding-left 10px
+			font-size fzn - 3rem
+			padding-left 10rem
 			text-transform none
 
 
@@ -434,21 +590,45 @@ header
 			&:before
 				background cl5
 
+// меню справа
+aside.right_menu
+	position absolute
+	z-index 200
+	right 0
+	top 0rem
+	bottom 0
+	width 265rem
+	background: #35414C;
+	background-image: linear-gradient(200deg, rgba(45,157,157,0.25) 0%, rgba(44,157,157,0.0) 50%);
+	box-shadow: 0rem 2rem 4rem 0rem rgba(0,0,0,0.1), 0rem 0rem 1rem 0rem rgba(0,0,0,0.22);
+	padding-top 25rem
+	overflow auto
+
+	&::-webkit-scrollbar
+		height 0rem
+		width 0rem
+	&::-webkit-scrollbar-thumb
+		width 0rem
+		border 0rem
+
+
+	// кнопка сделать выписку
+	.right_menu_button
+		padding 0 25rem 25rem
+		.button
+			width 100%
+			padding 0
+
+
 
 // каркас
-
 section.main
 	position absolute
-	top 40px
-	left 110px
-	right 0
+	top 60rem
+	left 0rem
+	right 0rem
 	bottom 0
 	z-index 10
-	padding 25px 15px 25px 25px
-	overflow-x hidden
-	overflow-y scroll
-	// overflow-y overlay
-	-webkit-overflow-scrolling touch
 
 	&.section_areas
 		background #fff
@@ -456,14 +636,22 @@ section.main
 
 .section_top_area
 	background cbglight
-	padding 25px
-	border-bottom 3px solid cseparator
+	padding 25rem
+	border-bottom 3rem solid cseparator
 
 .section_content
-	background #fff
-	padding 25px
+	padding 30rem 15rem 30rem 25rem
+	overflow-x hidden
+	overflow-y scroll
+	// overflow-y overlay
+	-webkit-overflow-scrolling touch
+	position absolute
+	top 0
+	right 265rem
+	bottom 0
+	left 0
 	.side_right_fixed
-		padding-top 30px
+		padding-top 30rem
 
 .flex_row
 	display flex
@@ -475,9 +663,9 @@ section.main
 	width 70%
 
 	.content_notice
-		padding 100px 0
+		padding 100rem 0
 		.notice_center
-			width 400px
+			width 400rem
 			margin 0 auto
 			text-align center
 			color ctextlight
@@ -485,25 +673,27 @@ section.main
 
 
 .side
-	min-width 270px
-	max-width 350px
+	min-width 270rem
+	max-width 350rem
 	width 26%
 	flex 0 0 auto
-	margin-left 20px
+	margin-left 20rem
 
 	&.side_small
-		min-width 220px
-		max-width 350px
+		min-width 220rem
+		max-width 350rem
 		width 23%
+	&.side_small_fixed
+		width 255rem
 
 	&.side_border
-		padding-left 25px
-		margin-left 25px
-		margin-top -25px
-		padding-top 25px
-		border-left 1px solid cbdlight
+		padding-left 25rem
+		margin-left 25rem
+		margin-top -25rem
+		padding-top 25rem
+		border-left 1rem solid cbdlight
 .side_padding
-	padding-left 20px
+	padding-left 20rem
 
 
 
@@ -515,74 +705,97 @@ article.page
 	right 0
 	left auto!important
 	bottom 0
-	top 40px
+	top 60rem
 	width 66%
-	min-width 900px
-	max-width 1000px
+	min-width 900rem
+	max-width 1000rem
 	background #fff
-	box-shadow -4px 10px 30px rgba(cl1,0.25)
+	box-shadow -4rem 0rem 30rem rgba(cl1,0.25)
 	box-sizing border-box
-	transition width .4s ease, max-width .4s ease, transform .5s ease, opacity .5s ease
+	transition width .4s ease, max-width .4s ease, transform .4s ease, opacity .4s ease
 	will-change width, max-width
 	opacity 0
-	transform translateX(200px)
+	transform translateX(200rem)
 
 	@media (max-width: 945px)
-		// max-width calc(100% - 45px)
-		// min-width calc(100% - 45px)
-		left 45px!important
+		// max-width calc(100% - 45rem)
+		// min-width calc(100% - 45rem)
+		left 45rem!important
 		right auto!important
 		position absolute
 
 	&.hide
 		// animation pageHide .5s ease both
 		opacity 0
-		transform translateX(200px)
+		transform translateX(200rem)
 		pointer-events none
 	&.open
 		// animation pageOpen .5s ease backwards
 		opacity 1
-		transform translateX(0px)
+		transform translateX(0rem)
 
 	&.fullsize
 		width 100%!important
-		max-width 2000px
+		max-width 2000rem
 
 	&.normalsize
 		width 66%
 
+	.page_left
+		position absolute
+		right 0rem
+		left 0
+		top 0
+		bottom 0
+
+		.page_header
+			margin-right 0
+		.page_content
+			right 0
 
 	&.side_right
+		.page_left
+			position absolute
+			right 270rem
+			left 0
+			top 0
+			bottom 0
+			.page_header
+				margin-right 0
+			.page_content
+				right 0
 		.page_header
-			margin-right 270px
+			margin-right 270rem
 		.page_content
-			right 270px
+			right 270rem
 
 	&.side_right_wide
+		.page_left
+			right 340rem
+			.page_header
+				margin-right 0
+			.page_content
+				right 0
 		.page_header
-			margin-right 340px
+			margin-right 340rem
 		.page_content
-			right 340px
+			right 340rem
 
-	&.page_small
-		// min-width 740px
-		// width 45%
-		.page_content
-			padding-right 24%
+
 
 	&.open ~ .page.open
-		transform translateX(-12px)
+		transform translateX(-12rem)
 		z-index 1049
 		.page_expand
 			opacity 0
 		& ~ .page.open
-			transform translateX(-24px)
+			transform translateX(-24rem)
 			z-index 1048
 			& ~ .page.open
-				transform translateX(-36px)
+				transform translateX(-36rem)
 				z-index 1047
 				& ~ .page.open
-					transform translateX(-48px)
+					transform translateX(-48rem)
 					z-index 1046
 
 	&.hide ~ .page.open
@@ -594,68 +807,123 @@ article.page
 				& ~ .page.open
 					z-index 1046
 
+	// промо страницы
+	&.page_promo
+		overflow auto
+		overflow overlay
+		overflow-x hidden
+		.page_header
+			height 354rem
+			background cbgsky
+			padding 44rem 280rem 0 75rem
+			box-shadow none
+			h1
+				font-size 50rem
+				font-weight fwxl
+				margin 0 0 30rem
+				max-width 100%
+			h3
+				font-size 20rem
+				font-weight fwl
+				margin 0 0 30rem
+			p
+				font-size fzn
+				font-weight fwl
+		.page_content
+			position relative
+			top auto
+			left auto
+			right auto
+			bottom auto
+			padding-top 50rem
+			padding-left 70rem
+			padding-right 70rem
+		.page_promo_title
+			font-size 30rem
+			font-weight fwl
+			margin 0 0 30rem
+			text-align center
 // шапка слоя
 .page_header
-	height 80px
+	height 80rem
 	background #fff
-	padding 23px 30px 0
+	padding 25rem 30rem 0
 	box-sizing border-box
 	z-index 100
-	box-shadow 0 6px 5px -7px rgba(cl1,0.3)
-	transition box-shadow .2s
+	box-shadow 0 6rem 5rem -7rem rgba(cl1,0.3)
+	// transition box-shadow .2s
 
 	&.clean
 		border-bottom none
-		box-shadow none
+		box-shadow none!important
 		& + .page_content
-			padding-top 10px
+			padding-top 10rem
 
 	&.header_forward
 		z-index 2100
 		background transparent
 
 	&.shadow
-		box-shadow 0 6px 17px -7px rgba(cl1,0.2)
+		box-shadow 0 6rem 17rem -7rem rgba(cl1,0.2)
 		transition box-shadow .5s
 
 	h1
 		display inline-block
-		margin 0 30px 0 35px
+		margin 0 30rem 0 35rem
 		color ctext
-		max-width calc(100% - 100px)
+		max-width calc(100% - 100rem)
+		vertical-align top
 		&.f_small
-			font-size 22px!important
+			font-size 22rem!important
 		.link_dashed
 			max-width 100%
 			display inline-block
 			white-space nowrap
+			color ctext
+
 			span
 				display inline-block
 				overflow ellipsis
 				max-width 100%
+				border-bottom-color transparent
 			.icon-pencil
 				display inline-block
-				margin-left 10px
-				font-size fzn + 3px
-				vertical-align 7px
+				margin-left 10rem
+				font-size fzn + 2rem
+				vertical-align 11rem
 				color clinklight
-
+	.import_1c
+		display inline-block
+		height 16rem
+		width 30rem
+		background url(../images/1c_icon.png) no-repeat 0 0
+		background-size contain
+	.payment_count, .payroll_count
+		width 95rem
+		font-size 26rem
+		padding 0 7rem
+		font-weight fwl
+		vertical-align 0
+		margin-top -5rem
+	.payroll_count
+		width 65rem
 
 	.page_close
 		position absolute
-		top 31px
-		left 30px
-		width 18px
-		height 18px
+		top 31rem
+		left 30rem
+		width 18rem
+		height 18rem
 		display inline-block
 		color ctext
-		font-size 18px
+		font-size 18rem
 		text-decoration none
+		transition color .2s
 		&:hover
-			color clink
+			color rgba(ctext,0.7)
 		&:before
-			width 18px
-			height 18px
+			width 18rem
+			height 18rem
 			margin 0
 			vertical-align 0
 
@@ -669,97 +937,95 @@ article.page
 
 	.page_expand
 		position absolute
-		top calc(50vh - 40px)
-		left -16px
-		width 16px
-		height 50px
-		line-height 48px
+		top calc(50vh - 40rem)
+		left -16rem
+		width 16rem
+		height 50rem
+		line-height 48rem
 		text-align center
-		font-size 12px
+		font-size 12rem
 		color ctextlight
-		border-top-left-radius 90px 50px
-		border-bottom-left-radius 90px 50px
+		border-top-left-radius 90rem 50rem
+		border-bottom-left-radius 90rem 50rem
 		background #fff
-		box-shadow -4px 0 5px rgba(49,68,93,0.08)
+		box-shadow -4rem 0 5rem rgba(49,68,93,0.08)
 		text-align center
 		transition transform .3s, left .3s, box-shadow .3s
 		&:before
 			width auto
 			margin 0
 			transition transform .2s
-			transform translateX(2px)
+			transform translateX(2rem)
 		&:hover
 			&:before
-				transform translateX(0px)
+				transform translateX(0rem)
 		&.rotate
 			transform scaleX(-1)
 			left 0
-			box-shadow -1px 0 3px rgba(49,68,93,0.2)
+			box-shadow -1rem 0 3rem rgba(49,68,93,0.2)
 
 	.header_action
 		float right
-		margin-top 5px
+		margin-top 5rem
+		padding-left 1rem
 		a
-			font-size 22px
-			line-height 22px
+			font-size fzn
+			line-height 22rem
 			vertical-align middle
 			display inline-block
-			margin 0 0 0 5px
-			color clinklight
+			color ctext
+			// margin 0 0 0 5rem
+
+			text-decoration none
 			&:before
-				color clinklight
-			&:hover:before
-				color cl2
-			&.icon-save
-				font-size 18px
-			&.icon-mail-sent
-				font-size 26px
-			&.icon-share
-				font-size 18px
+				font-size 22rem
+				vertical-align -4rem
+				margin-right 10rem
+			&:hover, &:hover:before
+				color clink
+
 			&.icon-chat
-				font-size 19px
 				&:hover
 					&:before
 						color ctextsuccess
+			&.icon-favorites
+				margin-top -4rem
+				&:before
+					font-size 26rem
 	.header_button
 		display inline-block
-		vertical-align 4px
+		margin-top -3rem
 
-	.page_number
-		position absolute
-		right 20px
-		top 30px
-		font-size fzn
-		color ctextlight
+
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
 	.page_header
-		box-shadow 0 6px 7px -7px rgba(cl1,0.3)
+		box-shadow 0 6rem 7rem -7rem rgba(cl1,0.3)
 		&.shadow
-			box-shadow 0 8px 20px -7px rgba(cl1,0.2)
+			box-shadow 0 8rem 20rem -7rem rgba(cl1,0.2)
 
 	_::-webkit-full-page-media, _:future, :root  .page_header
-		box-shadow 0 6px 5px -7px rgba(cl1,0.3)
+		box-shadow 0 6rem 5rem -7rem rgba(cl1,0.3)
 		&.shadow
-			box-shadow 0 6px 17px -7px rgba(cl1,0.2)
+			box-shadow 0 6rem 17rem -7rem rgba(cl1,0.2)
 
 
 
 // контент слоя
 .page_content
 	position absolute
-	top 80px
+	top 80rem
 	left 0
 	bottom 0
 	right 0
 	overflow-x hidden
 	overflow-y auto
-	padding 30px 30px 0
+	padding 30rem
 	-webkit-overflow-scrolling touch
 	&:after
 		content ' '
 		display block
-		height 30px
+		height 30rem
 		width 100%
 		bottom 0
 
@@ -769,20 +1035,20 @@ article.page
 	z-index 100
 	top 0
 	right 0
-	width 270px
+	width 270rem
 	bottom 0
 	background cbgsky
 	background-clip border-box
 	overflow-x hidden
 	overflow-y auto
-	padding 25px 20px
+	padding 25rem 20rem
 	box-sizing border-box
-	font-size fzn - 2px
-	box-shadow inset 4px 0 0 -2px cseparator
+	font-size fzn
+	box-shadow inset 4rem 0 0 -2rem cseparator
 	-webkit-overflow-scrolling touch
 	&.page_side_wide
-		width 340px
-		padding 25px 30px
+		width 340rem
+		padding 25rem 30rem
 	.side_sep
 		background cbdlight
 
@@ -792,78 +1058,88 @@ article.page
 	font-weight fwm
 	text-transform uppercase
 	color ctextlight
-	margin 0 0 25px
-	font-size fzn - 2px
+	margin 0 0 25rem
+	font-size fzn - 2rem
 
 .side_block
-	margin 20px 0
+	margin 20rem 0
 	.side_block_title
-		font-size fzn - 2px
+		font-size fzn - 2rem
 		font-weight fwm
 		text-transform uppercase
 		color ctext
-		margin 0 0 12px
+		margin 0 0 12rem
+		a
+			text-transform none
 	p
-		margin 0 0 5px
+		margin 0 0 5rem
 
 .side_parameter
-	margin 15px 0
-	font-size fzn - 2px
+	margin 30rem 0
 	clearfix()
 
 	.side_parameter_name
 		color ctextlight
-		margin-bottom 5px
+		margin-bottom 10rem
+		font-size fzn - 2rem
+		font-weight fwl
 	.side_parameter_value
 		max-width 100%
 		.ms-parent
 			.ms-choice
-				font-size fzn - 2px
+				// font-size fzn - 2rem
 		.select2-container
 			max-width 100%
 			.select2-choice
-				font-size fzn - 2px
+				// font-size fzn - 2rem
 				overflow ellipsis
 				max-width 100%
 
 	&.parameter_inline
 		.side_parameter_name
 			display inline-block
-			padding-right 4px
+			padding-right 4rem
 			margin-bottom 0
+			font-size fzn
 		.side_parameter_value
 			display inline-block
 
 
 
 .side_sep
-	height 1px
-	margin 20px 0
+	height 1rem
+	margin 20rem 0
 	overflow hidden
 	background cbdlight
 
 .side_filter
-	margin 10px 0
-	font-size fzn - 2px
+	margin 30rem 0
+
+	.side_filter_name
+		color cgrey36
+		margin-bottom 10rem
+		font-size fzn - 2rem
+		font-weight fwl
+
 	ul + ul
-		margin-right 10px
+		margin-right 10rem
 	li
 		margin 0
 
 	.label_check
-		padding 6px 0
-		display block
+		padding 6rem 0
+		display block7
 
 	.label_filter
 		color cl2
 		display inline-block
-		padding 3px 10px 4px
-		border-radius 30px
-		box-shadow 0 0 0 1px cl2, inset 0 0 0 15px #fff, inset 0 0 0 15px rgba(cl2,0)
+		padding 3rem 10rem 4rem
+		border-radius 30rem
+		box-shadow 0 0 0 1rem cl2, inset 0 0 0 15rem #fff, inset 0 0 0 15rem rgba(cl2,0)
 		transition box-shadow .15s, color .15s
 
 	.input_filter:checked + label
-		box-shadow 0 0 0 1px cl2, inset 0 0 0 0 #fff, inset 0 0 0 15px cl2
+		box-shadow 0 0 0 1rem cl2, inset 0 0 0 0 #fff, inset 0 0 0 15rem cl2
 		color #fff
 
 
@@ -873,63 +1149,65 @@ article.page
 // виджет
 .widget_block
 	background #fff
-	box-shadow 0px 2px 4px -2px rgba(0,0,0,0.3)
-	padding 20px
+	// box-shadow: 0rem 1rem 2rem 0rem rgba(0,0,0,0.09), 0rem 0rem 1rem 0rem rgba(0,0,0,0.22);
+	box-shadow: 0rem 2rem 4rem 0rem rgba(0,0,0,0.09), 0rem 0rem 1rem 0rem rgba(0,0,0,0.22);
+	padding 20rem
 	box-sizing border-box
-	margin-bottom 20px
+	margin-bottom 25rem
+	border-radius: 2rem;
 
 	.title
-		margin 0 0 15px
-		padding 0 0 15px
-		border-bottom 2px solid cseparator
+		margin 0 0 15rem
+		padding 0 0 15rem
+		border-bottom 2rem solid cseparator
 		font-weight normal
 
 		.buttons_group_filter
-			margin -6px 0 0
+			margin -6rem 0 0
 			float right
 
 		.title_filter
 			float right
 			font-weight fwn
 			.ms-choice
-				font-size fzn - 2px
+				font-size fzn - 2rem
 
 	.widget_settings_drop
 		position absolute
-		right 10px
-		top 10px
+		right 10rem
+		top 10rem
 		color clinklight
 		font-size fzn
 		z-index 100
 
 .light_block
 	background cbgsky
-	padding 20px
-	border 1px solid cbdlightsky
-	box-shadow 0px 9px 6px -5px rgba(0,0,0,0.05)
-	margin-bottom 20px
+	padding 20rem
+	border 1rem solid cbdlightsky
+	box-shadow 0rem 9rem 6rem -5rem rgba(0,0,0,0.05)
+	margin-bottom 20rem
 
 .border_block
-	padding 20px
-	border 2px solid cseparator
-	margin-bottom 20px
+	padding 20rem
+	border 2rem solid cseparator
+	margin-bottom 20rem
 
 // уведомления
 
 .notice_block
-	font-size fzn - 2px
-	padding 15px
-	margin 0 0 7px
-	border-left 3px solid cl2
-	padding-right 25px
+	font-size fzn - 2rem
+	padding 15rem
+	margin 0 0 7rem
+	border-left 3rem solid cl2
+	padding-right 25rem
 	&:before
 		color cl2
 	.close
 		position absolute
-		right 10px
-		top 10px
+		right 10rem
+		top 10rem
 		color ctextlight + 60%
-		font-size 12px
+		font-size 12rem
 		&:before
 			min-width 0
 			margin 0
@@ -939,12 +1217,12 @@ article.page
 
 	&.warning
 		background cbginfo + 30%
-		border-left 3px solid ctextwarning
+		border-left 3rem solid ctextwarning
 		&:before
 			color ctextwarning
 	&.danger
 		background cbgerror + 30%
-		border-left 3px solid cerror
+		border-left 3rem solid cerror
 		&:before
 			color ctexterror
 	&.success
@@ -954,104 +1232,234 @@ article.page
 			color ctextsuccess
 
 	&[class*="icon-"]
-		padding-left 50px
+		padding-left 50rem
 		&:before
 			position absolute
-			left 15px
-			top 12px
-			font-size 24px
+			left 15rem
+			top 12rem
+			font-size 24rem
 
 
 	p
-		margin 0 0 10px
+		margin 0 0 10rem
 		&:last-child
 			margin-bottom 0
 
 .notice_sep
-	height 25px
+	height 25rem
 
 
 
 // виджет открытия счета на dashboard
 .account_widget
-	font-size fzn - 3px
+	font-size fzn
+	margin-bottom 40rem
+	padding 30rem 40rem
+	background: #D9F3B8;
+	background-image: linear-gradient(135deg, #E1FFD5 0%, #E9F3A7 100%);
 	h3
-		font-weight 300
-		text-align center
+		font-weight fwl
+		font-size 24rem
+		margin-bottom 15rem
+
 	h4
 		font-weight normal
-		margin 0 0 12px
-		font-size fzn - 1px
+		margin 0 0 12rem
+		font-size fzn
+		font-weight fwm
 	p
-		margin 10px 0
+		margin 12rem 0
+		line-height 1.4
+		&:last-child
+			margin-bottom 0
+	a:not(.button)
+		color ctext
+
+
 	[class*='info']
-		margin-left -20px
-		margin-right -20px
+		margin-left 0rem
+		margin-right 0rem
+		padding-left 0rem
+		padding-right 0rem
+		border none
+		// background-color rgba(#fff,0.4)
+		background-color transparent
+		font-size fzn
 
 	.found_company
-		background-size 30px auto
-		background-position 10px 10px
-		padding-left 50px
+		background-size 50rem auto
+		background-position 15rem 15rem
+		padding-left 90rem
+		border-top 3rem solid rgba(#000,0.1)
+		border-bottom 3rem solid rgba(#000,0.1)
 		h3
-			font-size fzn - 2px
+			font-size fzn + 2rem
 			text-align left
 			font-weight normal
-			margin 0 0 10px
+			margin 0 0 10rem
 		p
-			font-size fzn - 4px
-	.form_buttons
-		margin 20px 0 0
-		.button
 			font-size fzn
-			width 100%
-			padding 0
-			text-align center
+	.form_buttons
+		margin 20rem 0 0
+
 		.links
-			font-size fzn - 3px
-			margin 15px 0 0
+			font-size fzn
+			margin 15rem 0 0 30rem
 			a
-				margin 0 0 7px
-				display block
+				margin 0 10rem
+				display inline-block
+				text-transform uppercase
+				font-weight fwm
 				&:last-child
 					margin-bottom 0
 	.info.status
-		margin-top -20px
+		margin-bottom 20rem
 		border-top none
-		border-bottom 3px solid cbginfo - 20%
-		padding-top 20px
+		padding-bottom 20rem
+		padding-top 0
+		font-size fzn
+		background-image url(../images/account_widget_status.svg)
+		background-repeat no-repeat
+		background-position 0rem 0rem
+		background-size 50rem auto
+		padding-left 90rem
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 90rem
+			width 200rem
+			height 3rem
+			background rgba(#000,0.1)
 		&.success
-			background-color cbgsuccess + 30%
-			border-bottom-color cbgsuccess - 10%
-			.desc
-				background url(../images/account_widget_status_success.svg) no-repeat 3px 3px
+			background-image url(../images/account_widget_status_success.svg)
+			// background-color cbgsuccess + 30%
+			// border-bottom-color cbgsuccess - 10%
+
 		&.error
-			background-color cbgerror + 40%
-			border-bottom-color cbgerror - 5%
-			.desc
-				background url(../images/account_widget_status_error.svg) no-repeat 0 3px
+			background-image url(../images/account_widget_status_error.svg)
+			background-size 45rem auto
+			background-position 5rem 0
+			// background-color cbgerror + 40%
+			// border-bottom-color cbgerror - 5%
+		& ~ *
+			padding-left 90rem
 		p
 			color ctext
 			&:last-child
 				margin-bottom 0
-		h3
-			text-transform uppercase
-			font-weight normal
-			font-size fzn
-			margin-bottom 15px
-		.desc
-			padding-left 50px
-			background url(../images/account_widget_status.svg) no-repeat 0 5px
+
+// виджет открытия счета на dashboard
+// .account_widget
+// 	font-size fzn
+// 	margin-bottom 40rem
+// 	padding 30rem 40rem
+
+// 	h3
+// 		font-weight fwl
+// 		font-size 24rem
+// 		margin-bottom 15rem
+
+// 	h4
+// 		font-weight normal
+// 		margin 0 0 12rem
+// 		font-size fzn
+// 		font-weight fwm
+// 	p
+// 		margin 12rem 0
+// 		line-height 1.4
+// 		&:last-child
+// 			margin-bottom 0
+// 	a:not(.button)
+// 		color ctext
+
+
+// 	[class*='info']
+// 		margin-left 0rem
+// 		margin-right 0rem
+// 		padding-left 0rem
+// 		padding-right 0rem
+// 		border none
+// 		// background-color rgba(#fff,0.4)
+// 		background-color transparent
+// 		font-size fzn
+
+// 	.found_company
+// 		background-size 50rem auto
+// 		background-position 15rem 15rem
+// 		padding-left 90rem
+// 		border-top 3rem solid rgba(#000,0.1)
+// 		border-bottom 3rem solid rgba(#000,0.1)
+// 		h3
+// 			font-size fzn + 2rem
+// 			text-align left
+// 			font-weight normal
+// 			margin 0 0 10rem
+// 		p
+// 			font-size fzn
+// 	.form_buttons
+// 		margin 20rem 0 0
+
+// 		.links
+// 			font-size fzn
+// 			margin 15rem 0 0 30rem
+// 			a
+// 				margin 0 10rem
+// 				display inline-block
+// 				text-transform uppercase
+// 				font-weight fwm
+// 				&:last-child
+// 					margin-bottom 0
+// 	.info.status
+// 		margin -30rem -40rem 20rem
+// 		border-top none
+// 		padding 30rem 40rem
+// 		font-size fzn
+// 		background: #FFFBDB;
+// 		background-image: url(../images/account_widget_status.svg), linear-gradient(135deg, #FFFBDB 0%, #FFD7A4 100%);
+// 		background-repeat no-repeat
+// 		background-position 40rem 30rem, 0 0
+// 		background-size 50rem auto, 100%
+// 		padding-left 130rem
+// 		// &:after
+// 		// 	content ''
+// 		// 	position absolute
+// 		// 	bottom 0
+// 		// 	left 90rem
+// 		// 	width 200rem
+// 		// 	height 3rem
+// 		// 	background rgba(#000,0.1)
+// 		&.success
+// 			background-color: #D9F3B8;
+// 			background-image: url(../images/account_widget_status_success.svg), linear-gradient(135deg, #E1FFD5 0%, #E9F3A7 100%);
+
+
+// 		&.error
+// 			background-color: #FFBEBB;
+// 			background-image: url(../images/account_widget_status_error.svg), linear-gradient(135deg, rgba(255,190,162,1.00) 0%, #FF9292 100%);
+// 			background-size 45rem auto, 100%
+// 			background-position 40rem 30rem, 0 0
+
+// 		& ~ *
+// 			padding-left 90rem
+// 		p
+// 			color ctext
+// 			&:last-child
+// 				margin-bottom 0
+
 
 
 
 // открытие счета виджет на дашборде
 .account_widget_dashboard
 	background linear-gradient(left, cl2 0, cl3 - 10% 150%)
+	background: #D9F3B8;
+	background-image: linear-gradient(left, #F6FAA2 0%, #8DC540 100%);
 	color #fff
-	padding 30px 40px
+	padding 30rem 40rem
 	overflow hidden
-	min-height 240px
-	margin-bottom 30px
+	min-height 240rem
+	margin-bottom 30rem
 	&.error
 		background linear-gradient(left, #DA6A43 0, #ED5865 100%)
 		.active, .done
@@ -1065,8 +1473,8 @@ article.page
 				background-image url(../images/check_r.svg)
 	.wizard_steps
 		position absolute
-		top 30px
-		bottom 30px
+		top 30rem
+		bottom 30rem
 		display flex
 		flex-direction column
 
@@ -1074,20 +1482,20 @@ article.page
 			height 100%
 			padding-bottom 0
 			&:last-child
-				height 34px
+				height 34rem
 
 	.desc
-		margin-left 80px
-		padding-top 5px
+		margin-left 80rem
+		padding-top 5rem
 		h3
 			text-transform uppercase
 			font-weight fwm
 		h4
 			font-weight fwm
-			margin 0 0 10px
+			margin 0 0 10rem
 		p
 			font-size fzn
-			margin 0 0 15px
+			margin 0 0 15rem
 
 		a
 			color #fff
@@ -1097,22 +1505,22 @@ article.page
 		.info, .info_error
 			background none
 			color #fff
-			padding 0 0 20px
+			padding 0 0 20rem
 			border none
-			border-bottom 1px solid rgba(#fff,0.5)
+			border-bottom 1rem solid rgba(#fff,0.5)
 			.desc
 				margin-left 0
 				padding-top 0
 		.button
 			background transparent
-			box-shadow 0 0 0 2px #fff
+			box-shadow 0 0 0 2rem #fff
 
 		.found_company
-			padding 20px
+			padding 20rem
 			background rgba(cl1,0.3)
 
 		.info_error
-			padding 20px
+			padding 20rem
 			background rgba(#000,0.1)
 
 
@@ -1123,20 +1531,20 @@ article.page
 
 	.icon-info
 		position absolute
-		right 15px
-		top 70px
+		right 15rem
+		top 70rem
 		z-index 10
 	.item
-		font-size fzn + 2px
-		margin 0 0 15px
+		font-size fzn + 2rem
+		margin 0 0 15rem
 		.light_text
-			font-size fzn - 2px
+			font-size fzn - 2rem
 			@media screen and (max-width:1210px)
-				font-size fzn - 3px
+				font-size fzn - 3rem
 
 	.balance
 		.value
-			font-size 30px
+			font-size 30rem
 			text-decoration none
 			color ctext
 			font-weight fwl
@@ -1144,91 +1552,159 @@ article.page
 	.balance_available,
 	.balance_reserved,
 	.balance_overdraft
-		padding-left 26px
+		padding-left 26rem
 
 	.balance_reserved,
 	.balance_overdraft
 		&:before
 			position absolute
-			top 11px
+			top 11rem
 			left 0
-			font-size fzn + 1px
+			font-size fzn + 1rem
 	.balance_reserved:before
 		color ctextdanger
 	.balance_overdraft:before
 		color ctextsuccess
 
-	.balance_deposit
-		border-top 1px solid cbdlight
-		padding-top 15px
+	.balance_deposit, .balance_usn
+		border-top 1rem solid cbdlight
+		padding-top 15rem
 		margin-bottom 0
+		margin-top 15rem
 
 	.account_balance_widget_empty
 		text-align center
-		padding 20px 0
+		padding 20rem 0
 		p
 			font-style italic
-			font-size fzn - 2px
+			font-size fzn - 2rem
 			color ctextlight
-			margin 0 0 15px
-
+			margin 0 0 15rem
+	.blocked_money
+		background cbgerror + 30%
+		margin 20rem -20rem -20rem
+		padding 20rem
+		border-top 2rem solid cbgerror - 10%
+		cursor pointer
+		&:hover
+			.light_text
+				color ctext
+		.value
+			font-size 30rem
+			font-weight fwl
+			color cerror
+		.icon-info
+			top 20rem
+			color ctextlight
 
 
 // ------------- Блокировка активности ----------------
 
 .security_lock
-	border-radius 50%
 	text-align center
-	width 410px
-	height 410px
-	background #fff url(../images/security_lock.jpg) center 30px no-repeat
-	background-size 95px auto
-	padding 150px 20px 0
+	width 400rem
+	background-size 95rem auto
+	padding 0 45rem 40rem
 	overflow hidden
-	h1
-		font-size 20px
-		margin 0 0 20px
-	.small_text
-		font-size fzn - 4px
+	box-shadow none
+	border-radius 4rem
+	.security_lock_header
+		height 210rem
+		box-sizing border-box
+		padding 44rem 0 0
+		margin 0 -50rem 0rem
+		text-align center
+		font-weight fwl
+		color #fff
+		font-size 34rem
+		line-height 1.25
+		background: #0A8DE2;
+		background-image: linear-gradient(210deg, rgba(115,255,86,0.43) 0%, rgba(138,195,174,0.00) 100%);
+		.light_text
+			color rgba(#fff,0.5)
+			font-size 24rem
+			display block
+			font-family ffn
+
+		.icon
+			position absolute
+			top 20rem
+			left 20rem
+			width 24rem
+			height 24rem
+			font-size 24rem
+			background-size 100%
+			color rgba(#fff,0.5)
+		.logout
+			position absolute
+			right 20rem
+			top 20rem
+			color rgba(#fff,0.7)
+			font-size fzn
+			&:hover
+				color #fff
+		&.timer
+			padding 35rem 0 0
+			line-height 1.1
+			font-size 100rem
+			background: #E54D4D;
+			font-family Tahoma, 'Trebuchet MS'
+			background-image: linear-gradient(45deg, rgba(225,41,41,0.00) 0%, rgba(255,213,14,0.26) 100%);
+			.icon
+				background url(../images/icon_timer_lock.svg) no-repeat 0 0
+
+	.security_lock_text
+		font-size fzn - 1rem
+		margin 0
+		line-height 1.5
+		height 140rem
+		display flex
+		justify-content center
+		align-items center
+	.form_buttons
+		margin 0
 	.links
 		display block
-		margin 15px 0 0
+		margin 15rem 0 0
 		a
 			margin 0
-	.info_sms
-		margin 0 -20px
-		margin-top 20px
-		padding-top 20px
-		padding-bottom 20px
+	.sms_confirm
+		margin 0 -45rem -40rem
+		box-sizing border-box
+		border none
+		background #fff
+		padding-top 39rem
+		padding-bottom 39rem
+
 
 
 // ---------- фильтры --------------
 
 .widget_filters
-	margin-top -10px
-	margin-bottom -10px
+	margin-top -10rem
+	margin-bottom -10rem
 	a
 		color ctext
 		&:hover
 			color cl2
 	.side_filter
 		.label_check
-			font-size fzn - 2px
+			font-size fzn
 			color ctextlight
 			display block
 			text-decoration none
 			position relative
-			margin 0 -20px 1px
-			padding 8px 20px 8px 20px
+			margin 0 -20rem 1rem
+			padding 8rem 20rem 8rem 20rem
 			transition none
 			z-index 2
 			&:hover
 				background  cbghighlight
 		.sub_label_check
-			padding-left 35px
-			font-size fzn - 4px
-			padding-top 6px
-			padding-bottom 6px
+			padding-left 35rem
+			font-size fzn - 2rem
+			padding-top 6rem
+			padding-bottom 6rem
 
 		.input_check:checked
 			& + .label_check
@@ -1236,7 +1712,7 @@ article.page
 		.count
 			float right
 	.side_sep
-		margin 10px 0
+		margin 10rem 0
 
 
 
@@ -1245,11 +1721,11 @@ article.page
 
 //------------------- выпадающий блок -------------------
 .accordion_block
-	padding 25px 60px 25px 25px
-	margin 0 0 20px
+	padding 25rem 60rem 25rem 25rem
+	margin 0 0 20rem
 	background #fafafa
-	box-shadow 0 2px 1px 1px rgba(0,0,0,0.1)
-	border-top 2px solid cbdlight
+	box-shadow 0 2rem 1rem 1rem rgba(0,0,0,0.1)
+	border-top 2rem solid cbdlight
 	&:after, &:before
 		display none
 		bottom 100%
@@ -1262,66 +1738,93 @@ article.page
 	&:after
 		border-color rgba(255, 255, 255, 0)
 		border-bottom-color #fafafa
-		border-width 10px
+		border-width 10rem
 	&:before
 		border-color rgba(203, 220, 231, 0)
 		border-bottom-color cbdlight
-		border-width 13px
-		margin-right -3px
+		border-width 13rem
+		margin-right -3rem
 
 	&.r200
 		&:after, &:before
 			display block
-			right 200px
+			right 200rem
 	&.r100
 		&:after, &:before
 			display block
-			right 100px
+			right 100rem
 	&.r50
 		&:after, &:before
 			display block
-			right 50px
+			right 50rem
 
 // ------------------- панель с действиями над списком -------------------
 .title_panel
-	padding 0 0 25px
+	padding 0 0 25rem
 	clearfix()
 
 	h1
 		display inline-block
 		margin-bottom 0
 		& ~ .title_buttons
-			margin-left 35px
+			margin-left 35rem
 	.title_buttons
-		vertical-align 4px
+		vertical-align 4rem
 		display inline-block
 	.title_actions
 		float right
-		margin-top 7px
+		.button
+			margin-left 10rem
 		.action_item
-			margin-left 20px
+			margin-left 20rem
 			display inline-block
 		.icon-submenu
 			background url(../images/action_arrow.svg) no-repeat right bottom
-			padding-right 20px
-			margin-right 18px
+			padding-right 20rem
+			margin-right 18rem
 			&:before
-				font-size fzn - 2px
+				font-size fzn - 2rem
 
 
 // ------------------- лента событий --------------------
+.drop.drop_timeline
+	right 25rem!important
+	left auto!important
+	transform translateX(0) translateY(60rem)!important
+	.drop-content
+		&:after
+			// display none
+			bottom 100%
+			right 117rem
+			border solid transparent
+			content " "
+			height 0
+			width 0
+			position absolute
+			pointer-events none
+			border-color rgba(136, 183, 213, 0)
+			border-bottom-color #fff
+			border-width 8rem
+	.drop-content-inner
+		max-height 70vh
+		width 400rem
+		div
+			position relative
+
+.timeline_widget
+	position relative
+
+	.timeline_more
+		padding 0 20rem 20rem
 
 .timeline
-	font-size fzn - 3px
-	max-height 70vh
-	overflow auto
-	margin -15px -20px -20px
-	padding 20px
+	font-size fzn - 2rem
+	padding 20rem 20rem 0
 	-webkit-overflow-scrolling touch
 	.timeline_block
-		margin 0 0 20px
-		padding 0 0 20px
-		border-bottom 1px solid cbdlight
+		margin 0 0 20rem
+		padding 0 0 20rem
+		border-bottom 1rem solid cbdlight
 		&:last-of-type
 			border none
 			padding-bottom 0
@@ -1329,51 +1832,50 @@ article.page
 	.timeline_clean
 		text-align center
 		color ctextdis
-		padding 80px 0 50px
-		background url(../images/icon_timeline.svg) no-repeat center 30px
+		padding 80rem 0 50rem
+		background url(../images/icon_timeline.svg) no-repeat center 30rem
 
 	// блок важно
 	.timeline_important
 		background cbginfo
-		margin -10px -20px 30px
-		padding 20px
+		margin -20rem -20rem 20rem
+		padding 20rem
 		.timeline_line_block
 			margin-bottom 0
 			[class*="icon-"]
-				box-shadow 0 0 0 3px cbginfo
+				box-shadow 0 0 0 3rem cbginfo
 				background cbginfo
 		.line_block_title
 			.icon
-				box-shadow 0 0 0 2px cbginfo, 0 0 0 4px clinklight
+				box-shadow 0 0 0 2rem cbginfo, 0 0 0 4rem clinklight
 
-	.timeline_more
-		padding 0
+
 
 	// заголовок
 	.line_block_title
 		font-weight fwm
-		font-size fzn - 1px
+		font-size fzn - 1rem
 		.icon
 			position absolute
-			left 8px
-			top 9px
-			width 3px
-			height 3px
-			box-shadow 0 0 0 2px #fff, 0 0 0 4px clinklight
+			left 8rem
+			top 9rem
+			width 3rem
+			height 3rem
+			box-shadow 0 0 0 2rem #fff, 0 0 0 4rem clinklight
 			background clinklight
 			border-radius 50%
 
 	// блок дня
 	.line_block_item
-		padding 0 0 15px 28px
-		line-height 1.4
+		padding 0 20rem 20rem 28rem
+		line-height 1.35
 		word-break break-word
 		&:before
 			content ''
-			width 1px
+			width 1rem
 			position absolute
-			left 9px
-			top 7px
+			left 9rem
+			top 7rem
 			bottom 0
 			background cbdlight
 			z-index 0
@@ -1382,31 +1884,31 @@ article.page
 			&:before
 				display none
 		.item_icon
-			width 19px
-			height 19px
+			width 19rem
+			height 19rem
 			border-radius 50%
 			background #fff
 			z-index 10
 			position absolute
 			left 0
-			top 1px
+			top 1rem
 			text-align center
 			display block
-			line-height 15px
-			box-shadow 0 0 0 3px #fff
+			line-height 15rem
+			box-shadow 0 0 0 3rem #fff
 
 			&:before
 				margin 0
 				width auto
-				font-size fzn + 1px
+				font-size fzn + 1rem
 		.item_message
-			margin 10px 0 0
-			padding 7px 10px
+			margin 10rem 0 0
+			padding 7rem 10rem
 			background cbgsky
-			border 1px solid cbdlightsky
+			border 1rem solid cbdlightsky
 			&:after, &:before
 				bottom 100%
-				left 20px
+				left 20rem
 				border solid transparent
 				content " "
 				height 0
@@ -1417,21 +1919,21 @@ article.page
 				border-color rgba(cbgsky, 0)
 				border-bottom-color cbgsky
 				border-left-color cbgsky
-				border-width 5px
-				margin-left -5px
+				border-width 5rem
+				margin-left -5rem
 			&:before
 				border-color rgba(cbdlightsky, 0)
 				border-bottom-color cbdlightsky
 				border-left-color cbdlightsky
-				border-width 6px
-				margin-left -6px
+				border-width 6rem
+				margin-left -6rem
 		.item_delete
 			position absolute
-			top 1px
-			right -14px
-			width 18px
-			height 14px
-			font-size 14px
+			top 1rem
+			right 0rem
+			width 18rem
+			height 14rem
+			font-size 14rem
 			color ctextlight
 			text-align right
 			opacity 0
@@ -1450,37 +1952,37 @@ article.page
 .list_company
 	.company_item
 		background cbgsky
-		padding 20px
-		border 1px solid cbdlightsky
-		box-shadow 0px 4px 8px 0px rgba(0,0,0,0.07)
-		margin-bottom 10px
+		padding 20rem
+		border 1rem solid cbdlightsky
+		box-shadow 0rem 4rem 8rem 0rem rgba(0,0,0,0.07)
+		margin-bottom 10rem
 		.select_company
 			position absolute
-			right 15px
-			bottom 15px
+			right 15rem
+			bottom 15rem
 			opacity 0
 		&:hover
 			.select_company
 				opacity 1
 	.company_item_name
-		font-weight 400
-		margin 0 0 15px
-		font-size fzn - 3px
+		font-weight fwm
+		margin 0 0 15rem
+		font-size fzn - 3rem
 		text-transform uppercase
 
 	.company_item_info
-		font-size fzn - 3px
+		font-size fzn - 3rem
 		.form_group
-			margin-bottom 5px
+			margin-bottom 5rem
 		.property_label
 			text-align right
 
 // блоки слоя
 
 .page_content_area_solid
-	margin-left -30px
-	margin-right -30px
-	padding 20px 30px
+	margin-left -30rem
+	margin-right -30rem
+	padding 20rem 30rem
 	background cl2
 	color #fff
 	font-weight normal
@@ -1493,50 +1995,63 @@ article.page
 		overflow hidden
 		h1
 			font-weight fwm
-			margin 0 0 10px
-			font-size 22px
+			margin 0 0 10rem
+			font-size 22rem
 		p
-			font-size fzn - 2px
+			font-size fzn - 2rem
 .page_content_area_light
-	margin-left -30px
-	margin-right -30px
-	padding 30px
+	margin-left -30rem
+	margin-right -30rem
+	padding 30rem
 	background cbglight
 
 .page_content_area_top
-	margin-top -30px
+	margin-top -30rem
 .page_content_area_bot
-	padding-bottom 50px
-	margin-bottom -42px
+	padding-bottom 50rem
+	margin-bottom -42rem
 
 
 // контрагент
 .contragent_contacts
 	p
-		margin 0 0 12px
+		margin 0 0 12rem
 	.address
-		margin-bottom 15px
+		margin-bottom 15rem
 	.contact
 		font-weight normal
-	.contact, .email, .phone
+	.contact, .email, .phone, .address
 		position relative
-		padding-left 30px
+		padding-left 30rem
 		&:before
 			position absolute
-			top 3px
+			top 3rem
 			left 0
-			width 20px
+			width 20rem
 			text-align center
 			margin 0
 			color ctextlight
+			font-size fzn
+
+	.address
+		&:before
+			font-size fzn + 3rem
+	// .phone
+	// 	&:before
+	// 		font-size fzn + 4rem
+
+	.rating
+		.icon_user_rating
+			margin-left -3rem
+			margin-right 3rem
 
 .contragent_money
 	overflow hidden
 	float right
-	margin 5px 0 0
+	margin 5rem 0 0
 	.item
 		display inline-block
-		margin 0 0 0 20px
+		margin 0 0 0 20rem
 		&:first-child
 			margin-left 0
 		&>.c_light
@@ -1544,10 +2059,10 @@ article.page
 		.values
 			display inline-block
 			vertical-align top
-			margin 0 0 4px
+			margin 0 0 4rem
 		.value
-			font-size fzn + 2px
-			margin 0 5px
+			font-size fzn + 2rem
+			margin 0 5rem
 			display block
 
 
@@ -1565,15 +2080,15 @@ article.page
 		font-size fzn
 		color ctext
 	.account_name
-		padding 2px 20px 0 0
+		padding 2rem 20rem 0 0
 		display inline-block
 		overflow ellipsis
-		max-width 330px
-		min-width 142px
+		max-width 330rem
+		min-width 142rem
 		float left
 	.account_num
 		color ctextlight
-		font-size fzn - 5px
+		font-size fzn - 5rem
 		display block
 		clear both
 
@@ -1583,34 +2098,34 @@ article.page
 		display inline-block
 		vertical-align top
 	.account_target_name
-		padding 0 5px 0 0
+		padding 0 5rem 0 0
 		display inline-block
 		overflow ellipsis
-		max-width calc(100% - 220px)
+		max-width calc(100% - 220rem)
 		vertical-align top
 	.account_target_num
 		color ctextlight
 		display inline-block
-		padding 0 10px 0 0
+		padding 0 10rem 0 0
 		vertical-align top
 
 // список счетов контрагентов в выпадушке
 .drop_bank_account
 	.bank_name
 		display block
-		padding 0 0 2px
+		padding 0 0 2rem
 	.bank_account_num
 		color ctextlight
-		font-weight fzn - 5px
+		font-weight fzn - 5rem
 
 
 // автозаполенение реквизитов
 .payment_autocompelete_details
-	margin-bottom 50px
+	margin-bottom 50rem
 
 	&:after, &:before
-		left -32px
-		top 30px
+		left -32rem
+		top 30rem
 		border solid transparent
 		content " "
 		height 0
@@ -1621,27 +2136,27 @@ article.page
 		border-color rgba(255, 255, 255, 0)
 		border-left-color #fff
 		border-top-color #fff
-		border-width 9px
+		border-width 9rem
 	&:before
 		border-color rgba(0, 0, 0, 0)
 		border-left-color cbdlightsky
 		border-top-color cbdlightsky
-		border-width 11px
-		margin-top -2px
+		border-width 11rem
+		margin-top -2rem
 
 
 
 	.title
-		padding 12px 0 35px 50px
+		padding 12rem 0 35rem 50rem
 		background url(../images/icon_eva.svg) no-repeat 0 0
 		font-size fzn
 		color ctextlight
 	.autocompelete_details_textarea
-		font-size fzn - 2px
-		min-height 220px
-		max-height 350px
+		font-size fzn - 2rem
+		min-height 220rem
+		max-height 350rem
 	.form_buttons
-		margin-top 10px
+		margin-top 10rem
 
 	.file_upload_block
 		position absolute
@@ -1652,60 +2167,98 @@ article.page
 		.uploaded
 			border-radius 0
 		.file_delete
-			right 10px
-			top 10px
+			right 10rem
+			top 10rem
 		.file_icon
-			width 60px
-			height 81px
+			width 60rem
+			height 81rem
 			background-size 100%
-			margin-bottom 15px
+			margin-bottom 15rem
 		.file_name
-			font-size fzn - 2px
+			font-size fzn - 2rem
 
 // список избранных платежей
 .payment_favorites_list
+
 	.title
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		font-weight fwm
 		text-transform uppercase
-		margin 0 0 10px
+		margin 0 0 10rem
 		color ctextlight
 	.item
 		position relative
 		display block
-		margin 0 -10px 2px
-		padding 10px 10px 10px 30px
+		margin 0 0 6rem
+		padding 10rem 10rem 10rem 38rem
 		text-decoration none
+		color ctext
+		font-size fzn - 2rem
+		background #fff
+		transition box-shadow .2s
+		box-shadow 0 1rem 1rem rgba(#000,0.1)
+		overflow hidden
 		&:before
 			position absolute
-			top 11px
-			left 10px
+			top 9rem
+			left 10rem
+			font-size fzn + 2rem
+			transition .35s
+			z-index 0
+		&:after
+			// content ''
+			height 1rem
+			position absolute
+			bottom 0
+			left 38rem
+			right 10rem
+			background cbdlight
 		&:hover
-			color clink
-			background #fff
+			z-index 10
+			box-shadow 0 4rem 16rem rgba(#000,0.1)
+			&:before
+				// left 60rem
+				transform scale(1.2)
+			// .light_text
+			// 	color rgba(#fff,0.7)
+			// 	.money_expense, .money_income
+			// 		color rgba(#fff,0.7)
+		.d_b
+			z-index 10
+			position relative
+		.light_text
+			font-size fzn - 2rem
+			transition color .2s
+			margin-top 4rem
+			z-index 10
+			position relative
+			font-weight fwl
+			.money_expense, .money_income
+				color ctextlight
+				transition color .2s
 
 
 
 // новый платеж, выбор типа платежа
 .payment_new_type_popup
-	width 360px
+	width 360rem
 	padding 0
 	a
 		display block
-		height 65px
-		line-height 62px
+		height 65rem
+		line-height 62rem
 		background cl2
 		color #fff
 		font-weight normal
-		padding 0 0 0 24px
-		margin 0 0 3px
+		padding 0 0 0 24rem
+		margin 0 0 3rem
 		&:before
-			font-size 24px
-			width 35px
-			vertical-align -5px
+			font-size 24rem
+			width 35rem
+			vertical-align -5rem
 		&:hover
 			background cl2 + 5%
-			font-size fzn + 1px
+			font-size fzn + 1rem
 		&:first-child
 			border-top-right-radius brbut
 			border-top-left-radius brbut
@@ -1714,135 +2267,226 @@ article.page
 			border-bottom-left-radius brbut
 		&.icon-building
 			&:before
-				font-size 22px
+				font-size 22rem
 
 // дашборд
 .dashboard
 	.dashboard_title
 		display block
 		float left
-		margin-right 30px
-		margin-bottom 20px
+		margin-right 30rem
+		margin-bottom 20rem
+
+
 .dashboard_content_filter
 	display inline-block
 	.drop-target
-		margin-right 5px
+		margin-right 5rem
 	.dashboard_content_filter_account
-		max-width 270px
+		max-width 270rem
 		overflow ellipsis
 
 	.dashboard_content_filter_settings
-		font-size fzn + 4px
-		color clinklight
-		margin 5px 0 0 10px
+		font-size fzn + 4rem
+		color ctext
+		margin 5rem 0 0 10rem
 		&:hover
 			color cl2
+
+
+// график денежного потока
+.cashflow_graph
+	padding 0
+	transition height .3s
+	display flex
+	align-items stretch
+	&.graph_hidden
+		.cashflow_widget
+			width calc(100% - 140rem)
+			padding-left 20rem
+			padding-right 20rem
+
+			@media (max-width:1200px)
+				width calc(100% - 110rem)
+				padding-right 10rem
+				padding-left 10rem
+			.list
+
+				.item
+					width auto
+					margin-bottom 0
+					flex 0 0 20%
+			.value
+				font-size fzn + 2rem
+				@media (min-width:1050px)
+					font-size fzn + 4rem
+				@media (min-width:1200px)
+					font-size fzn + 6rem
+				@media (min-width:1300px)
+					font-size fzn + 8rem
+				@media (min-width:1400px)
+					font-size fzn + 10rem
+				@media (min-width:1600px)
+					font-size fzn + 12rem
+		.graph_widget
+			width 140rem
+			@media (max-width:1200px)
+				width 110rem
+			#chart
+				display none
+
 .cashflow_widget
-	margin-bottom 30px
+	width 30%
+	border-right 1rem solid cbdlight
+	padding 22rem 40rem
+	box-sizing border-box
+	// transition .3s
+	@media (max-width:1200px)
+		padding-left 30rem
+		padding-right 30rem
 	&.light_block
 		.list
-			margin 20px -20px -20px
-			padding 20px
+			margin 20rem -20rem -20rem
+			padding 20rem
 			background #fff
-			border-top 1px solid cseparator
+			border-top 1rem solid cseparator
 			justify-content space-between
 	.list
 		display flex
-		flex-wrap nowrap
 		justify-content space-around
+		flex-wrap wrap
+		max-width 1100rem
+		.item
+			width 100%
+			margin 0 0 24rem
+			&:last-child
+				margin-bottom 0
 	.cashflow_widget_title
-		margin -5px 0
+		margin -5rem 0
 		strong
 			font-weight 400
 	.cashflow_filter
-		padding 2px 0 0
+		padding 2rem 0 0
 		float right
-		font-size fzn - 2px
+		font-size fzn - 2rem
 		color ctextlight
 	.name
-		font-size fzn - 3px
+		font-size fzn - 3rem
 		color ctextlight
-		padding 0 0 10px
-	.value
-		font-size fzn
-		white-space nowrap
 
+	.value
+		font-size fzn + 4rem
+		white-space nowrap
+		font-weight fwl
+
+		@media (min-width:1000px)
+			font-size fzn + 6rem
 		@media (min-width:1100px)
-			font-size fzn + 2px
-		@media (min-width:1200px)
-			font-size fzn + 3px
-		@media (min-width:1300px)
-			font-size fzn + 5px
-		@media (min-width:1400px)
-			font-size fzn + 7px
-			font-weight fwl
+			font-size fzn + 8rem
+		@media (min-width:1250px)
+			font-size fzn + 10rem
 		@media (min-width:1600px)
-			font-size fzn + 10px
-			font-weight fwl
+			font-size fzn + 12rem
 
 .cashflow_widget_side
-	margin-bottom 30px
-	// margin-left -10px
+	margin-bottom 30rem
+	// margin-left -10rem
 	background cbginfo
 	border-color desaturate(cbginfo - 15%,20%)
 	&.light_block
 		.list
-			margin 20px -20px -20px
-			padding 20px
-			border-top 1px solid desaturate(cbginfo - 15%,20%)
+			margin 20rem -20rem -20rem
+			padding 20rem
+			border-top 1rem solid desaturate(cbginfo - 15%,20%)
 
 	.cashflow_widget_title
-		margin -5px 0
+		margin -5rem 0
 		strong
 			font-weight 400
 	.cashflow_filter
-		padding 10px 0 0
-		font-size fzn - 4px
+		padding 10rem 0 0
+		font-size fzn - 4rem
 		color ctextlight
 	.list
 		background-color cbginfo
 	.item
-		margin-bottom 15px
+		margin-bottom 15rem
 		overflow hidden
 		line-height 1
 
 	.name
-		font-size fzn - 3px
+		font-size fzn - 3rem
 		color ctextlight
-		padding 3px 0 0
+		padding 3rem 0 0
 		display inline-block
 		@media (min-width:1430px)
-			padding-top 4px
+			padding-top 4rem
 		@media (min-width:1470px)
-			padding-top 7px
+			padding-top 7rem
 		@media (min-width:1520px)
-			padding-top 7px
+			padding-top 7rem
 		@media (min-width:1600px)
-			padding-top 10px
+			padding-top 10rem
 	.value
-		font-size fzn - 2px
+		font-size fzn - 2rem
 		white-space nowrap
 		float right
 		@media (max-width:1340px)
 			display block
 			float none
-			padding-top 3px
-			font-size fzn + 2px
+			padding-top 3rem
+			font-size fzn + 2rem
 		@media (min-width:1430px)
 			font-size fzn
 		@media (min-width:1470px)
-			font-size fzn + 2px
+			font-size fzn + 2rem
 		@media (min-width:1520px)
-			font-size fzn + 3px
+			font-size fzn + 3rem
 		@media (min-width:1600px)
-			font-size fzn + 5px
+			font-size fzn + 5rem
 
-
+.graph_widget
+	width 70%
+	text-align center
+	display flex
+	align-items center
+	#chart
+		width 100%
+		svg
+			width 90%
+	.graph_hide
+		display none
+		position absolute
+		top 5rem
+		right 5rem
+		background cgrey05
+		width 24rem
+		height 24rem
+		line-height 26rem
+		border-radius brbut
+		text-align center
+		color cgrey36
+		&:before
+			margin 0
+		&:hover
+			background cgrey09
+		&.visible
+			display block
+	.graph_show
+		display none
+		position absolute
+		left 0
+		bottom 0
+		top 0
+		right 0
+		background url(../images/icon_graph.svg) no-repeat center
+		&.visible
+			display block
 
 .dashboard_transaction
 	.tabs_content
 		.table_list
-			margin -10px -20px -21px
+			margin -10rem -20rem -21rem
 			width auto
 			.table_list_header
 				background #fff
@@ -1850,32 +2494,33 @@ article.page
 
 // поиск в выпадушке MagicSearch
 .drop-search
-	max-width 600px
-	min-width 400px
+	max-width 800rem
+	min-width 500rem
+	max-height calc(100vh - 60rem)
 
 	.no_found
-		padding 15px
+		padding 15rem
 		color ctextlight
 		text-align center
-		font-size fzn - 2px
+		font-size fzn - 2rem
 		&:before
-			font-size 30px
+			font-size 30rem
 			display block
 			text-align center
-			margin 0 0 10px
+			margin 0 0 10rem
 	.drop_search_list
 		white-space nowrap
 		.group
-			border-bottom 1px solid cbd
+			border-bottom 1rem solid cbd
 			&:last-child
 				border-bottom none
 
 		.group_name
-			width 100px
+			width 100rem
 			display inline-block
-			padding 12px 15px 0
+			padding 12rem 15rem 0
 			text-transform uppercase
-			font-size fzn - 5px
+			font-size fzn - 5rem
 			font-weight normal
 			color ctextlight
 			letter-spacing 1px
@@ -1883,20 +2528,20 @@ article.page
 		.group_list
 			display inline-block
 			vertical-align top
-			width calc(100% - 100px)
-			max-width calc(100% - 100px)
-			margin-left -4px
+			width calc(100% - 110rem)
+			max-width calc(100% - 110rem)
+			margin-left -4rem
 
 			li
 				clearfix()
 				a
 					overflow ellipsis
-					max-width 480px
+					max-width 480rem
 			.show_more
 				padding-top 0
 				a
 					color clink
-					font-size fzn - 3px
+					font-size fzn - 3rem
 
 			.value
 				float right
@@ -1905,24 +2550,24 @@ article.page
 				color ctext
 				text-align right
 				& ~ .name
-					padding 2px 20px 2px 0
+					padding 2rem 20rem 2rem 0
 					display inline-block
-					max-width 300px
+					max-width 300rem
 				& ~ .desc
-					max-width 300px
+					max-width 300rem
 			.name
 				display block
 				overflow ellipsis
 			.desc
 				color ctextlight
-				font-size fzn - 4px
+				font-size fzn - 4rem
 				display block
 				clear left
 				overflow ellipsis
 			.actions
 				display block
-				margin 5px 0 0
-				font-size fzn - 2px
+				margin 5rem 0 0
+				font-size fzn - 2rem
 				span
 					opacity 0.5
 					color ctextlight
@@ -1937,9 +2582,8 @@ article.page
 // Настройки
 
 .personal_settings
-	max-width 600px
 	.avatar
-		margin-bottom 20px
+		margin-bottom 20rem
 
 
 
@@ -1949,19 +2593,19 @@ article.page
 	pointer-events none
 	z-index 3000
 	display inline-block
-	background rgba(cl1,0.9)
-	padding 10px 10px 7px
-	border-radius 2px
+	background #35414C
+	padding 10rem 10rem 7rem
+	border-radius 2rem
 	color #fff
 	.date
 		font-weight normal
-		font-size fzn - 3px
-		margin 0 0 10px
+		font-size fzn - 3rem
+		margin 0 0 10rem
 		text-align center
 	.money
 		overflow hidden
-		font-size fzn - 4px
-		margin-bottom 4px
+		font-size fzn - 4rem
+		margin-bottom 4rem
 		.money_expense
 			color ctexterror + 40%
 		.money_income
@@ -1969,7 +2613,7 @@ article.page
 
 		.name
 			display inline-block
-			margin-right 15px
+			margin-right 15rem
 		.value
 			float right
 			font-weight normal
@@ -1981,34 +2625,34 @@ article.page
 // Графики
 #chart
 	circle
-		stroke-width 2px
+		stroke-width 2rem
 		fill #fff
 		&.debet
 			stroke cl2
-			transform translateY(-5px)
+			transform translateY(-5rem)
 			&.debet_select
 				fill cl2
 		&.credit
 			stroke cerror
-			transform translateY(-5px)
+			transform translateY(-5rem)
 			&.credit_select
 				fill cerror
 
 	path
 		&.credit
 			stroke cerror
-			stroke-width 2px
+			stroke-width 2rem
 			fill none
-			transform translateY(-5px)
+			transform translateY(-5rem)
 		&.debet
 			stroke cl2
-			stroke-width 2px
+			stroke-width 2rem
 			fill none
-			transform translateY(-5px)
+			transform translateY(-5rem)
 	rect
 		&.bar
 			fill saturate(cbglight - 5%, 10%)
-			transform translateY(-5px)
+			transform translateY(-5rem)
 		&.bar_select
 			fill saturate(cbglight - 10%, 20%)
 
@@ -2019,7 +2663,7 @@ article.page
 
 	.legend
 		circle
-			stroke-width 1px
+			stroke-width 1rem
 		.debet
 			fill cl2
 			circle
@@ -2036,7 +2680,7 @@ article.page
 				fill saturate(cbglight - 5%, 10%)
 				stroke saturate(cbglight - 5%, 10%)
 		text
-			font-size 11px
+			font-size 11rem
 			text-transform none
 
 	.legend circle,
@@ -2049,12 +2693,12 @@ article.page
 			stroke #E4E8EA
 			shape-rendering crispEdges
 		path
-			// stroke-width 2px
+			// stroke-width 2rem
 		// &.y, &.y2
 		// 	path, line
 		// 		stroke #EAF1F5
 		text
-			font-size 10px
+			font-size 10rem
 			font-weight fwm
 			fill ctextlight + 30%
 
@@ -2070,26 +2714,25 @@ article.page
 		display inline-block
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
 		.svg-content-responsive
-			height 300px
+			height 300rem
 
 
 // сертификат
 .certificate_block
-	width 550px
-	margin 0 auto 30px
-	height 330px
+	width 550rem
+	margin 0 auto 30rem
+	height 330rem
 	background url(../images/cert.jpg) no-repeat 0 0
 	background-size 100% 100%
 	box-sizing border-box
-	padding 70px 30px 30px 40px
-	font-size fzn - 1px
+	padding 80rem 30rem 30rem 40rem
+	font-size fzn - 1rem
 
 	.title
 		text-align center
-		font-size fzn + 4px
+		font-size fzn + 4rem
 		font-weight fwm
-		margin-bottom 30px
-		font-style italic
+		margin-bottom 50rem
 		text-transform uppercase
 	.property_label
 		text-align right
@@ -2097,8 +2740,8 @@ article.page
 
 // настройки тарифы
 .tarif_info
-	padding-bottom 20px
-	border-bottom 1px solid cbdlight
+	padding-bottom 20rem
+	border-bottom 1rem solid cbdlight
 	overflow hidden
 	.price
 		float right
@@ -2108,24 +2751,24 @@ article.page
 			font-weight normal
 			font-size fzn
 		a
-			font-size fzn - 4px
+			font-size fzn - 4rem
 		.small_text
-			font-size fzn - 4px
-			padding 3px 0 0
+			font-size fzn - 4rem
+			padding 3rem 0 0
 		.old_price
 			text-decoration line-through
 			display inline-block
 			color ctextlight
-			font-size fzn - 2px
-			margin-left 10px
+			font-size fzn - 2rem
+			margin-left 10rem
 	.status
 		color ctextsuccess
 		font-weight fwm
 		overflow hidden
 .tarif_serv_row
-	padding-top 15px
-	padding-bottom 15px
-	border-top 1px solid cbdlight
+	padding-top 15rem
+	padding-bottom 15rem
+	border-top 1rem solid cbdlight
 	overflow hidden
 	.name
 		// float left
@@ -2133,9 +2776,9 @@ article.page
 
 		.title
 			font-weight normal
-			margin-bottom 5px
+			margin-bottom 5rem
 		.desc
-			font-size fzn - 2px
+			font-size fzn - 2rem
 			color ctextlight
 			line-height 1.5
 	.value
@@ -2143,31 +2786,31 @@ article.page
 		width 50%
 		text-align right
 		.title
-			font-size fzn - 4px
+			font-size fzn - 4rem
 			color ctextlight
-			margin-bottom 5px
+			margin-bottom 5rem
 		.price
 			color cl2
 			font-weight normal
 
 .tarif_balance
-	border-top 2px solid cl3
-	margin-top 10px
-	padding 20px 0
+	border-top 2rem solid cl3
+	margin-top 10rem
+	padding 20rem 0
 	.title
 		font-weight normal
-		margin 0 0 20px
+		margin 0 0 20rem
 	.balance_list
 		display flex
 
 		.list
 			flex 0 1 80%
-			padding-right 15px
+			padding-right 15rem
 			box-sizing border-box
 			.item
-				margin-bottom 10px
+				margin-bottom 10rem
 				.name
-					font-size fzn - 4px
+					font-size fzn - 4rem
 					color ctextlight
 				.price
 					float right
@@ -2178,83 +2821,83 @@ article.page
 			font-weight normal
 			float right
 			text-align right
-			padding 20px 0 0 20px
+			padding 20rem 0 0 20rem
 			background url(../images/summ.svg) no-repeat 0 center
 			box-sizing border-box
-			min-height 42px
+			min-height 42rem
 
 .tarif_dop_serv
-	font-size fzn - 4px
-	margin-left 20px
+	font-size fzn - 4rem
+	margin-left 20rem
 	overflow hidden
 	&.dop_serv_connect
 		background cbgsuccess
 		border-color cl3
 	.title
-		font-size fzn + 2px
+		font-size fzn + 2rem
 		font-weight normal
-		margin 0 0 8px
+		margin 0 0 8rem
 	.more
 		display block
-		margin 0 0 8px
+		margin 0 0 8rem
 	.desc
 		color ctextlight
-		margin-bottom 12px
+		margin-bottom 12rem
 	.add
-		padding-top 5px
+		padding-top 5rem
 		.connect
 			color ctextsuccess
 			font-weight fwm
 		.button
-			margin-top -5px
+			margin-top -5rem
 	.price
 		font-weight fwm
-		font-size fzn - 3px
+		font-size fzn - 3rem
 		color ctextlight
-		padding-top 7px
+		padding-top 7rem
 		overflow hidden
 .banner_other_tarif
 	background-image url(../images/banner_other_tarif.png)
 	background-repeat no-repeat
 	background-position right 0
 	background-size auto 100%
-	margin-bottom 30px
+	margin-bottom 30rem
 	.title
 		font-weight normal
-		margin 0 0 12px
+		margin 0 0 12rem
 	.desc
-		font-size fzn - 4px
-		margin 0 0 15px
+		font-size fzn - 4rem
+		margin 0 0 15rem
 
 .tarif_noactiv
 	overflow hidden
 	.price
 		float right
-		font-size 27px
+		font-size 27rem
 		font-weight normal
 		text-align right
-		line-height 18px
+		line-height 18rem
 		div
-			margin-top -5px
+			margin-top -5rem
 		.price_free
-			font-size 20px
+			font-size 20rem
 			margin 0
 		a
-			font-size fzn - 4px
+			font-size fzn - 4rem
 	.tarif_noactiv_info
 		clear both
 		background #fff
-		margin 20px -20px -20px
-		padding 20px
-		border-top 1px solid cseparator
+		margin 20rem -20rem -20rem
+		padding 20rem
+		border-top 1rem solid cseparator
 		overflow hidden
 		.item
-			margin 0 0 15px
+			margin 0 0 15rem
 			.title
 				font-weight normal
-				margin-bottom 5px
+				margin-bottom 5rem
 			p
-				font-size fzn - 3px
+				font-size fzn - 3rem
 				color ctextlight
 				line-height 1.5
 
@@ -2262,16 +2905,16 @@ article.page
 // курсы валют
 .currencies_table
 	.item_currency
-		margin 0 0 10px
-		padding 15px 20px
+		margin 0 0 10rem
+		padding 15rem 20rem
 		background #FFF
 		.currency_name
 			font-weight fwm
-			margin 0 0 12px
-			padding 0 0 0 30px
-			line-height 24px
+			margin 0 0 12rem
+			padding 0 0 0 30rem
+			line-height 24rem
 			background-position 0 0
-			background-size 24px
+			background-size 24rem
 			background-repeat no-repeat
 			&.dollar, &.usd
 				background-image url(../images/dollar_color.svg)
@@ -2280,19 +2923,19 @@ article.page
 			&.yuan, &.cny
 				background-image url(../images/yuan_color.svg)
 		.item_cost
-			margin 0 0 6px
+			margin 0 0 6rem
 		.cost_name
 			display inline-block
-			width 100px
+			width 100rem
 			color ctextlight
 		.cost_value
 			display inline-block
 			font-weight normal
 			&:after
-				font-size 7px
+				font-size 7rem
 				display inline-block
-				margin-left 3px
-				vertical-align 3px
+				margin-left 3rem
+				vertical-align 3rem
 			&.up
 				color ctextsuccess
 				&:after
@@ -2311,35 +2954,35 @@ article.page
 		display inline-block
 		vertical-align top
 		color ctextlight
-		width 60px
+		width 60rem
 	.value
 		display inline-block
 		vertical-align top
-		max-width calc(100% - 65px)
+		max-width calc(100% - 65rem)
 
 // цена предложения другого тарифа
 .popup_other_tarif_price
-	margin-top 20px
+	margin-top 20rem
 	float right
 	background cbginfo
-	border-radius 10px
-	border 1px solid cbginfo - 20%
-	padding 10px 20px
-	font-size 24px
+	border-radius 10rem
+	border 1rem solid cbginfo - 20%
+	padding 10rem 20rem
+	font-size 24rem
 	.small
-		font-size 13px
+		font-size 13rem
 
 // анимация загрузки
 .header_load
 	position absolute
-	height 2px
+	height 2rem
 	position absolute
-	top 40px
+	top 40rem
 	z-index 1000
-	left 110px
+	left 110rem
 	right 0
 	div
-		height 2px
+		height 2rem
 		width 100%
 		background linear-gradient(left, rgba(cl2,0.3), cl2)
 		animation headerLoad 2s both
@@ -2356,3 +2999,958 @@ article.page
 		opacity 0
 	}
 }
+
+
+
+// заявление открытия УСН 6%
+.apply_form, .apply_form_usn
+	box-shadow 10rem 10rem 15rem -5rem rgba(#000,0.1)
+	padding 30rem 30rem 30rem 50rem
+	background #FBFAF6
+	font-size fzn - 2rem
+	&:before
+		content ''
+		position absolute
+		left 0
+		top 0
+		background transparent
+		border 25rem solid transparent
+		border-left-color #fff
+		border-top-color #fff
+	&:after
+		content ''
+		position absolute
+		left 0
+		top 0
+		background transparent
+		border 25rem solid transparent
+		border-right-color #F1EFE9
+		border-bottom-color #F1EFE9
+	h1
+		font-size fzn
+		text-align center
+		font-weight fwm
+		margin 5rem 0 40rem
+	p
+		margin 0 0 10rem
+
+.apply_form_table, .apply_form_usn_table
+	width 100%
+	border 1rem solid cbd - 10%
+	border-collapse collapse
+	margin 0 0 20rem
+	td, th
+		padding 5rem 8rem
+		border 1rem solid cbd - 10%
+	th
+		font-weight fwm
+		text-transform uppercase
+		font-size fzn - 4rem
+		padding 8rem
+.apply_form_desc, .apply_form_usn_desc
+	margin 0 0 20rem
+	overflow hidden
+	.more
+		float right
+		font-size fzn - 2rem
+		margin 5rem 0 2rem
+	p
+		text-indent 30rem
+		font-size fzn - 2rem
+	ul.abc
+		list-style lower-alpha
+		margin-left 70rem
+		li
+			margin-bottom 8rem
+
+.apply_form_stamp.status_stamp,
+.apply_form_usn_stamp.status_stamp
+	bottom 30rem
+	right 40rem
+	left auto
+	top auto
+
+// ожидание выписки
+.bank_statement_loading
+	color ctextlight
+	text-align center
+	margin 0 120rem
+	padding  0 0 300rem
+	background url(../images/bank_statement_loading.jpg) no-repeat center bottom
+	background-size 351rem 271rem
+	font-size fzn - 2rem
+
+// список пользователей с выбором одного
+.user_list
+
+	.item
+		padding 15rem 20rem
+		margin-bottom 10rem
+		&:hover
+			.item_button, .item_button_sign
+				display block
+		&.user_deleted
+			color ctextlight
+			.item_button
+				display block
+
+		.item_button
+			position absolute
+			top 20rem
+			right 15rem
+			display none
+		.item_button_sign
+			position absolute
+			bottom 15rem
+			right 15rem
+			display none
+
+		.form_group_list
+			width 100%
+			margin 0 0 5rem
+			font-size fzn - 2rem
+		.name
+			font-weight fwm
+			margin 0 0 10rem
+			font-size fzn
+
+
+	label.light_block
+		width 100%
+		padding 15rem 15rem 10rem 50rem
+		font-size fzn - 2rem
+		margin 0
+
+		.icon
+			position absolute!important
+			top 20rem
+			left 20rem
+		.form_group_list
+			width 100%
+			margin 0 0 5rem
+			display block
+			color ctext
+		span.name
+			font-weight fwm
+			font-size fzn
+			margin 0 0 10rem!important
+	.user_deleted
+
+		.light_block
+			background #f9f9f9
+			border-color #ddd
+			cursor default
+			.icon
+				display none
+			.form_group_list
+				color ctextlight
+
+
+// закрытие счета
+.tabs_menu_footer_link
+.close_account_link
+	position absolute
+	bottom 30rem
+	left 25rem
+	display block
+	width 100%
+	font-size fzn - 2rem
+	color ctext
+	text-decoration none
+
+
+// проверка статуса/рейтинга клиентов
+.payment_field_user_rating
+	position absolute
+	right 50rem
+	top 7rem
+.input_group_title
+	.payment_field_user_rating
+		top 27rem
+
+input.field_contragent
+	padding-right 40rem
+
+.icon_user_rating
+	display inline-block
+	vertical-align middle
+	width 26rem
+	height 26rem
+	text-align center
+	color #fff
+	font-size 10rem
+	font-weight fwb
+	line-height 25rem
+	background url(../images/icon_user_rating.svg) no-repeat center
+	background-size 100% 100%
+	cursor pointer
+	color transparent
+	z-index 20
+	&.green
+		background-image url(../images/icon_user_rating_green.svg)
+		color #fff
+	&.yel
+		background-image url(../images/icon_user_rating_yel.svg)
+		color #fff
+	&.red
+		background-image url(../images/icon_user_rating_red.svg)
+		color #fff
+
+// окно добавления в избранное
+.drop.drop_add_favorites
+	.drop-content-inner
+		padding 15rem
+		width 250rem
+		.title
+			font-size fzn - 2rem
+			margin 0 0 10rem
+			color ctextlight
+		.form_buttons
+			margin-top 15rem
+			.button_clean
+				float right
+				margin-top 6rem
+
+// загрузка из 1С payment_page_new.html
+.import_1c_button
+	margin 0 0 35rem
+
+.import_1c_success
+	background url(../images/account_widget_status_success.svg) no-repeat 0 0
+	background-size 50rem auto
+	padding 10rem 0 0 70rem
+	h3
+		margin-bottom 15rem
+	ul.circ
+		min-height 100rem
+		max-height calc(100vh - 410rem)
+		overflow auto
+
+
+
+
+// зарплатный проект html/payroll/payroll_page_connect.html
+// блок заяки
+.payroll_connect
+	margin 40rem 0 0
+	padding 30rem 100rem 30rem
+	.payroll_connect_title
+		font-size 26rem
+		font-weight fwl
+		text-align center
+		margin 0 0 40rem
+	&>.form
+		width 80%
+		margin 0 auto
+	.form_buttons
+		text-align center
+.payroll_connect_success
+	background-image url(../images/account_widget_status_success.svg)
+	background-repeat no-repeat
+	background-position center 20rem
+	background-size 70rem auto
+	padding 120rem 100rem 30rem
+	margin 40rem 0 0
+	text-align center
+
+.payroll_steps
+	width 700rem
+	margin 0 auto
+	text-align center
+	padding 40rem
+
+// итог таблицы зарплатного списка в создании ведомости
+.payroll_new_staff_total
+	margin 10rem 0 25rem
+	text-align right
+	font-size fzn - 2rem
+	line-height 1.8
+	.value
+		display inline-block
+		width 15%
+		text-align center
+
+// панель фильтров
+.filter_panel
+	position fixed
+	z-index 150
+	right 265rem
+	top 60rem
+	bottom 0
+	overflow auto
+	width 300rem
+	padding 30rem 20rem 25rem 25rem
+	box-sizing border-box
+	background #fff
+	box-shadow 0rem 0 15rem rgba(0,0,0,0.1), 0rem 0rem 1rem rgba(0,0,0,0.22)
+	visibility hidden
+	opacity 0
+	transform translateX(285rem)
+	transition transform .7s .3s, opacity .3s .3s, visibility 0s .6s
+
+	&.visible
+		visibility visible
+		// animation showFilter .3s both
+		transform translateX(0rem)
+		transition transform .3s, opacity .2s
+		opacity 1
+	&:hover
+		visibility visible
+		transform translateX(0rem)
+		opacity 1
+
+// кнопка показа фильтров
+.show_filter_panel
+	position relative
+	&.float
+		border-radius 50rem
+		padding 0 16rem
+		position fixed
+		top 0rem
+		right 280rem
+		box-shadow: 0rem 6rem 20rem 0rem rgba(0,0,0,0.15), 0rem 0rem 1rem 0rem rgba(0,0,0,0.22);
+		transition transform .4s
+		transform scale(.7)
+		line-height 52rem
+
+		&:before
+			margin 0!important
+
+		.filter_count
+			top 13rem
+			left 28rem
+			border-color #fff
+	&.fixed
+		transform scale(1) translateY(82rem)
+		transition transform .5s
+
+	.filter_count
+		width 9rem
+		height 9rem
+		border-radius 10rem
+		background cerror
+		position absolute
+		top 5rem
+		left 30rem
+		border 1rem solid cbglight
+
+// панель с действиями для списка операций
+.section_action_panel
+	position fixed
+	bottom 0
+	left 0
+	right 265rem
+	z-index 40
+	padding 10rem 30rem 11rem
+	background #fff
+	box-shadow 0rem 3rem 20rem 0rem rgba(0,0,0,0.2), 0rem 0rem 1rem 0rem rgba(0,0,0,0.22)
+	visibility hidden
+	opacity 0
+	transform translateY(65rem)
+	transition transform .5s 0s, opacity .3s 0s, visibility 0s .5s
+	&.visible
+		visibility visible
+		transform translateY(0rem)
+		transition transform .3s, opacity .2s
+		opacity 1
+	.selected
+		float left
+		margin-top 12rem
+
+	.action_panel_buttons
+		float right
+		a
+			color ctext
+			text-decoration none
+			display inline-block
+			margin-left 10rem
+			font-size fzn - 2rem
+			padding 10rem 12rem
+			border-radius brbut
+			&:before
+				font-size fzn + 2rem
+				vertical-align -4rem
+				margin-right 10rem
+			&:hover
+				background cgrey05
+			&.icon-payment
+				&:before
+					font-size fzn + 6rem
+					vertical-align -6rem
+
+
+// выбор фильтра в правом меню
+
+.right_menu_filter
+	margin 0
+	padding 0 0 100rem
+	width 100%
+	border-top 1rem solid rgba(#fff,0.2)
+
+
+	.right_menu_blocked_money
+		margin 0rem 0rem 0rem
+		padding 18rem 25rem 14rem
+		cursor pointer
+		background-color: #CF5353
+		background-image: linear-gradient(50deg, #DE4646 0%, #E96243 100%);
+		color #fff
+		&:hover
+			background-image: linear-gradient(50deg, #E85151 0%, #EF6A4B 100%);
+		.value
+			font-size 26rem
+			font-weight fwl
+			color #fff
+			margin-top 2rem
+		.icon-info
+			position absolute
+			right 20rem
+			top 20rem
+			z-index 10
+			color #fff
+		.light_text
+			font-size fzn - 2rem
+			color #fff
+
+	// счет в выборе счетов
+	.filter_item
+		padding 0
+		margin 0
+		display block
+		cursor pointer
+		transition .2s
+		box-sizing border-box
+		color #fff
+		border-bottom 1rem solid rgba(#fff,0.2)
+		padding 22rem 25rem 16rem
+		&:hover
+			background rgba(#fff,0.05)
+
+		// активный счет
+		&.active
+			background #fff
+			color ctext
+			&:after, &:before
+				top 50%
+				right 100%
+				border solid transparent
+				content " "
+				height 0
+				width 0
+				position absolute
+				pointer-events none
+
+			&:after
+				border-color rgba(255, 255, 255, 0)
+				border-right-color #fff
+				border-width 10rem
+				margin-top -10rem
+			&:before
+				border-color rgba(221, 221, 221, 0)
+				border-right-color #ddd
+				border-width 11rem
+				margin-top -11rem
+
+			.desc
+			// 	background cRUR
+			// 	color #fff
+			// 	&:after
+			// 		display none
+				.num, .num:hover
+					color ctext
+			.values
+				.value_item
+					.subtitle
+						color ctextlight
+			.filter_item_dop
+				border-color cgrey09
+				.light_text
+					color ctextlight
+
+		&.item_all
+			.desc
+				&:after
+					background-color clsub2
+				.name
+					font-weight fwr
+					font-size fzn + 2rem
+				.num
+					margin-top 3rem
+
+			.value ~ .value
+				font-size fzn + 4rem
+				margin-top 5rem
+		// долларовый счет
+		&.account_dollar
+			.desc:after
+				background-color clsub5
+
+
+
+		// евровый счет
+		&.account_euro
+			.desc:after
+				background-color clsub4
+
+
+
+		// юаньский счет
+		&.account_cny
+			.desc:after
+				background-color cCNY
+
+
+		// закрытый счет
+		&.account_closed
+			.desc, .value, .num
+				color rgba(#fff,.5)
+			.desc:after
+				background rgba(#fff,.5)
+			&:hover
+				.hide_account
+					opacity 1
+			.value
+				font-size fzn + 4rem
+
+		// нам платили
+		&.they_paid
+			.desc:after
+				background cl3
+
+		// мы платили
+		&.we_paid
+			.desc:after
+				background cerror
+
+
+		.desc
+			margin 0 0 8rem
+			padding-bottom 12rem
+			overflow hidden
+			font-size fzn - 2rem
+			&:after
+				content ''
+				display block
+				width 40rem
+				height 2rem
+				background clsub3
+				position absolute
+				bottom 0
+				left 0
+				transition .3s
+				opacity 1
+
+			.name
+				float left
+				font-weight fwn
+				text-align left
+				overflow ellipsis
+				max-width calc(100% - 50rem)
+			.num
+				float right
+				color #fff
+				transition none
+				font-size fzn - 4rem
+				text-decoration none
+
+				span
+					text-decoration underline
+				&:hover
+					color rgba(#fff,0.8)
+
+		// .light_text
+		// 	font-size fzn - 2rem
+		// 	font-weight fwl
+		// 	padding 0 15rem 2rem
+
+		.values
+			padding 10rem 0 0
+			.value_item
+				margin 0 0 10rem
+				&:last-child
+					margin-bottom 0
+				.subtitle
+					font-size fzn - 5rem
+					color rgba(#fff, 0.6)
+					line-height 0.7
+				.value
+					font-size 24rem
+		.value
+			font-size 26rem
+			text-align left
+			padding 0
+			white-space nowrap
+			overflow hidden
+			font-weight fwl
+			.cur
+				font-weight fwl
+		.hide_account
+			position absolute
+			right 25rem
+			bottom 20rem
+			opacity 0
+			font-size fzn - 3rem
+			transition opacity .3s
+			color #fff
+		.filter_item_dop
+			border-top 1rem solid rgba(#fff,0.1)
+			margin-top 10rem
+			padding-top 10rem
+			.light_text
+				font-size fzn - 5rem
+				font-weight fwr
+				color rgba(#fff,0.6)
+			.value
+				font-size fzn + 4rem
+
+	.add_account
+		color rgba(#fff,0.2)
+
+		.desc
+			&:after
+				background-color #fff
+				opacity .2
+			.num
+				color rgba(#fff,0.2)
+
+		.link
+			font-size 20rem
+			font-weight fwl
+			position absolute
+			top 0
+			bottom 0
+			left 0
+			right 0
+			text-align center
+			line-height 114rem
+			color #fff
+			text-decoration none
+
+// код токена API
+.api_token_code
+	margin 20rem 0 10rem
+	background cbgsuccess
+	border 1rem solid cl3
+	padding 15rem 15rem 16rem
+	border-radius brbut
+	overflow hidden
+	line-height 1
+	&:before
+		color ctextsuccess
+		line-height 0
+	&.icon-stop
+		background cbgerror
+		border 1rem solid ctexterror
+		&:before
+			color ctexterror
+	.token_code
+		width 75%
+		display inline-block
+		word-break break-all
+		line-height 1.3
+		vertical-align top
+	.icon-clipboard
+		margin-left 5rem
+		font-size fzn + 2rem
+		height 16rem
+		vertical-align -1rem
+		&:before
+			line-height 0
+	.token_revoke
+		float right
+		margin-top -8rem
+		margin-bottom -20rem
+
+// информация по овердрафту
+.overdraft_info
+	overflow hidden
+	.overdraft_info_date
+		padding 15rem 0
+		float left
+		width 60%
+		box-sizing border-box
+	.overdraft_info_order
+		padding 15rem 0
+		float right
+		width 40%
+		box-sizing border-box
+		text-align right
+
+
+// Показ чата справа на больших экранах
+// @media screen and (min-width:1700px)
+// 	section.main
+// 		right 400rem
+// 	.filter_panel
+// 		right 665rem
+// 	.show_filter_panel.float
+// 		right 680rem
+// 	.messenger
+// 		display block!important
+// 		animation none
+// 		pointer-events all
+// 		border-left 3rem solid cbgdark
+// 		box-shadow none!important
+
+
+// акция Подари Другу Банк
+article.page.page_pdb
+	.page_header
+		background-image url(../images/promo/girl1.png), linear-gradient(135deg, #E1FFD5 0%, #E9F3A7 100%)
+		background-position 94% bottom, 0 0
+		background-repeat no-repeat
+		background-size auto 94%, auto
+
+
+	.page_pdb_steps
+		display flex
+		justify-content space-around
+		font-size fzn - 2rem
+		text-align center
+		margin 0 0 50rem
+		li
+			padding-top 80rem
+			flex 0 0 33%
+		.item1
+			background url(../images/promo/pdb_step1.svg) no-repeat 75% 0
+		.item2
+			background url(../images/promo/pdb_step2.svg) no-repeat 75% 0
+		.item3
+			background url(../images/promo/pdb_step3.svg) no-repeat 50% 0
+	.page_pdb_share
+		background cbglight
+		border-radius 10rem
+		margin 0 -20rem 50rem
+		padding 30rem 30rem 5rem
+		text-align center
+		.form_group
+			margin-bottom 25rem
+		.button
+			padding-left 16rem
+			padding-right 16rem
+			margin-left 3px
+			margin-right 3px
+			&:before
+				font-size  fzn + 2rem
+				vertical-align -4rem
+			&.icon-mail
+				&:before
+					color #E08F12
+			&.icon-chat
+				&:before
+					color ctextsuccess
+			&.icon-fb
+				&:before
+					color #3A579A
+			&.icon-vk
+				&:before
+					color #4F719B
+			&.icon-tw
+				&:before
+					color #159FF5
+	.page_pdb_share_url
+		border none
+		box-shadow none
+		width 390rem
+		margin-left 15rem
+		cursor pointer
+
+
+	.page_pdb_stat
+		margin 0 0 50rem
+	.page_pdb_stat_chart
+		background cbglight
+		height 44rem
+		line-height 43rem
+		&:after
+			content ''
+			position absolute
+			left 100%
+			top 0
+			height 0
+			width 0
+			border 22rem solid transparent
+			border-left 10rem solid cbglight
+
+		li
+			float left
+			width 20%
+			box-sizing border-box
+			padding 0 10rem
+			text-align right
+			color rgba(0,0,0,0.3)
+	.page_pdb_stat_progress
+		position absolute
+		top 0
+		left 0
+		height 44rem
+		box-sizing border-box
+		padding 0 10rem
+		line-height 43rem
+		font-weight fwm
+		text-align right
+		background-image linear-gradient(left, #C3F1AE 0%, #E2F372 100%)
+		transition width .5s, color .3s
+		color transparent
+		white-space nowrap
+		&:after
+			content ''
+			position absolute
+			left 100%
+			top 0
+			height 0
+			width 0
+			border 22rem solid transparent
+			border-left 10rem solid #E2F372
+		&.fr1
+			width 20%!important
+			color ctext
+		&.fr2
+			width 40%!important
+			color ctext
+		&.fr3
+			width 60%!important
+			color ctext
+		&.fr4
+			width 80%!important
+			color ctext
+		&.fr5
+			width 98%!important
+			color ctext
+
+	.page_pdb_stat_chart_axis
+		margin-top 8rem
+		overflow hidden
+		li
+			float left
+			width 20%
+			box-sizing border-box
+			padding 14rem 10rem 0
+			text-align right
+			font-size fzn - 2rem
+			color ctextlight
+			position relative
+			&:after
+				content ''
+				height 12rem
+				width 1rem
+				background cbd
+				position absolute
+				right 0
+				top 0
+
+// страница частых вопросов
+article.page.page_faq
+
+	.page_content
+		// background cbgsky
+	.page_faq_title
+		font-size 18rem
+		font-weight fwm
+		text-transform uppercase
+		color ctext
+		margin 30rem 0 15rem
+		letter-spacing .5px
+
+	.page_faq_list
+
+		border 1rem solid cbd
+		border-radius brbut
+		margin 0 0 40rem
+
+
+		.item
+			border-bottom 1rem solid cbd
+			overflow hidden
+			border-radius brbut
+			background cbgsky
+			&:last-child
+				border-bottom none
+			&:hover
+				background #fff
+			&.active
+				background #fff
+				.ques
+					background cbgsky
+					// &:after
+					// 	content ''
+					// 	position absolute
+					// 	top 100%
+					// 	left 15rem
+					// 	height 2rem
+					// 	width 70rem
+					// 	background clsub2
+				.ans
+					display block
+			.ques
+				padding 12rem 15rem
+				color ctext
+				text-decoration none
+				display block
+				position relative
+			.ans
+				font-size fzn
+				padding 20rem 15rem 10rem
+				overflow hidden
+				display none
+				p
+					margin 0 0 15rem
+					line-height 1.4
+				img
+					max-width 100%
+					height auto
+				h4
+					color cl2
+					margin-bottom 15rem
+				.ans_img
+					text-align center
+					margin 30px 0
+					img
+						width 90%
+						margin-bottom 15px
+						&[src*="gif"]
+							width 80%
+							box-shadow 0 5px 15px rgba(0,0,0,0.1)
+
+
+// баннер банкоматов
+.banner_map
+	padding 20rem 40rem
+	background url(../images/banner_map.jpg) no-repeat right 0
+	background-size cover
+	h1
+		font-size 30rem
+		font-weight fwl
+		margin 0 0 8px
+	.desc
+		font-size fzn - 4rem
+	.form_buttons
+		margin-top 15rem
+
+// карта банкоматов
+.page_map_iframe
+	position absolute
+	top 0
+	bottom 0
+	right 0
+	left 0
+	overflow hidden
+.iframe_map
+	width 100%
+	height 100%
+	margin 0
+	padding 0
+
+// маленький заголовок
+.title_small
+	font-size fzn - 4rem
+	color ctextlight
+	text-transform uppercase
+	letter-spacing .5px
+	margin-bottom 15px
+.title_middle
+	font-size fzn - 2rem
+	color ctext
+	text-transform uppercase
+	letter-spacing .5px
+	margin-bottom 15px

@@ -63,7 +63,7 @@ function initRadSelect2() {
 				return _options;
 			},
 			renderOptionItem: function renderOptionItem(o) {
-				return o.html().text();
+				return o.html();
 			}
 		}));
 

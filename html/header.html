@@ -1,21 +1,12 @@
-<header ng-controller="DropdownCtrl">
+
+<header>
+	<div class="header_logo">
+		<a href="#">Модульбанк</a>
+	</div>
+
 	<div class="header_search">
 
-		<input type="search" value="" placeholder="Найти платеж, контакт, задачу" class="drop-target" required>
-
-		<!-- крутилка -->
-		<!-- <div class="drop-content">
-			<div class="drop-content-inner drop-search">
-				<div class="loading"><div></div></div>
-			</div>
-		</div> -->
-
-		<!-- ничего не найдено -->
-		<!-- <div class="drop-content">
-			<div class="drop-content-inner drop-search">
-				<div class="no_found icon-smile-bubble-angry">К сожалению ничего не найдено</div>
-			</div>
-		</div> -->
+		<input type="search" value="" placeholder="" class="drop-target" data-position="top left" required>
 
 		<!-- результаты поиска -->
 		<div class="drop-content">
@@ -84,14 +75,24 @@
 		<div class="name">Поиск</div>
 	</div>
 
+	<div class="header_menu">
+		<div class="header_menu_inner">
+			<ul>
+				<li class="active"><a><span>Деньги</span></a></li>
+				<li><a><span>Контакты</span></a></li>
+				<li><a><span>PayRoll</span></a></li>
+			</ul>
+		</div>
+	</div>
+
 
 
 	<div class="header_add">
-		<a class="add drop-target" data-position="bottom center"></a>
-		<div class="drop-content">
+		<a class="add drop-target" data-position="bottom center" data-theme="header_add_submenu"></a>
+		<div class="drop-content ">
 			<div class="header_add_drop drop-content-inner inner_pad">
 
-				<div class="col ">
+				<div class="col hidden">
 					<h3>Платежи</h3>
 					<ul class="drop-menu">
 						<li><a>Перевод между счетами</a></li>
@@ -103,18 +104,19 @@
 						<li><a>Валютный перевод</a></li>
 				    </ul>
 			    </div>
-			    <div class="col ">
+			    <div class="col hidden">
 					<h3>Услуги</h3>
 					<ul class="drop-menu">
-						<li><a>Овердрафт</a></li>
+						<!-- <li><a>Овердрафт</a></li> -->
 						<li><a>Депозиты</a></li>
 						<li><a>Эквайринг</a></li>
+						<li><a>Выплатить зарплату</a></li>
 						<li><a>Доп. расчетный счет</a></li>
 						<li><a>Подключить бухгалтера</a></li>
 						<li><a>Подключить юриста</a></li>
 				    </ul>
 			     </div>
-			     <div class="col ">
+			     <div class="col hidden">
 					<h3>Прочее</h3>
 					<ul class="drop-menu">
 						<li><a>Реквизиты компании</a></li>
@@ -125,7 +127,7 @@
 				    </ul>
 			     </div>
 
-			     <div class="col quick_add hidden">
+			     <div class="col quick_add ">
 					<ul class="drop-menu">
 						<li><a>Новый платеж</a></li>
 						<li><a>Перевод между счетами</a></li>
@@ -135,21 +137,20 @@
 				    </ul>
 			    </div>
 
-			    <div class="more"><a class="icon-more-small">Показать еще</a></div>
-			    <div class="more hidden"><a class="icon-more-small">Свернуть</a></div>
+			    <div class="more"><a class="icon-more">Показать еще</a></div>
+			    <div class="more hidden"><a class="icon-more">Свернуть</a></div>
 
 		     </div>
 		</div>
 
 	</div>
-	<div class="header_chat">
-		<label>4</label>
-		<a href="#"></a>
-	</div>
+
 
 	<div class="header_profile">
+
+		<!-- название компании -->
 		<div class="header_profile_name">
-			<a href="#" class="icon-profile drop-target">ООО «Черный рынок»</a>
+			<a href="#" class="icon-profile drop-target" data-theme="drop_profile">ООО «Хлебзавод №5»</a>
 			<div class="drop-content">
 				<div class="drop-content-inner">
 					<ul class="drop-menu">
@@ -160,14 +161,153 @@
 				</div>
             </div>
 		</div>
+
+		<!-- новости -->
+		<div class="header_profile_news">
+			<a href="#" class="icon-bell drop-target" data-position="top center" data-theme="drop_timeline"><span class="count">3</span></a>
+			<div class="drop-content">
+				<div class="drop-content-inner">
+					<div class="timeline_widget">
+
+
+						<div class="timeline">
+							<div class="timeline_important">
+								<div class="timeline_line_block">
+
+									<div class="line_block_item line_block_title">
+										<i class="icon"></i>Важные события
+									</div>
+
+									<div class="line_block_item">
+										<i class="item_icon icon-round-action c_primary"></i>
+										Подпишите <a>Заявление о закрытии паспорта сделки</a> от 03.11.2015
+									</div>
+
+									<div class="line_block_item">
+										<i class="item_icon icon-info c_warning"></i>
+										<a>Истек срок</a> оплаты по счету №235: 5000 <span class="cur ruble"><span>р.</span></span> в Мегафон
+									</div>
+
+									<div class="line_block_item">
+										<i class="item_icon icon-round-action c_primary"></i>
+										<a>Подтвердить платеж</a> 7000 <span class="cur ruble"><span>р.</span></span> в Билайн
+									</div>
+
+									<div class="line_block_item last_child">
+										<i class="item_icon icon-info c_warning"></i>
+										Время <a>платить</a> зарплату
+									</div>
+
+								</div>
+							</div>
+
+							<div class="timeline_block">
+								<div class="line_block_item line_block_title">
+									<i class="icon"></i>
+									Сегодня, 19 июня 2015
+								</div>
+
+								<div class="line_block_item">
+									<i class="item_icon icon-round-minus c_danger"></i>
+									<a class="c_danger">Списано</a>: 7000 <span class="cur dollar"><span>$</span></span> в Билайн
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+
+								<div class="line_block_item">
+									<i class="item_icon icon-round-minus c_danger"></i>
+									<a class="c_danger">Списано</a>: 20000 <span class="cur ruble"><span>р.</span></span> в МТС
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+
+								<div class="line_block_item last_child">
+									<i class="item_icon icon-help c_linklight"></i>
+									Какой нибудь вопрос?
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+							</div>
+
+							<div class="timeline_block">
+								<div class="line_block_item line_block_title">
+									<i class="icon"></i>
+									Вчера, 18 июня 2015
+								</div>
+
+								<div class="line_block_item">
+									<i class="item_icon icon-info c_warning"></i>
+									Пригласите бухгалтера
+									<div class="item_message">
+										У вас нет своего бухгалтера? <a>Подключите нашего</a>.
+									</div>
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+
+								<div class="line_block_item">
+									<i class="item_icon icon-round-plus c_success_hue"></i>
+									<a class="c_success">Поступило</a>: 7000 <span class="cur ruble"><span>р.</span></span> от Билайн
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+
+								<div class="line_block_item">
+									<i class="item_icon icon-round-check c_success_hue"></i>
+									<a class="c_success">Реквизиты</a> вашего нового счета
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+
+								<div class="line_block_item last_child">
+									<i class="item_icon icon-round-check c_success_hue"></i>
+									Вы отправили заявку на регистрацию
+									<a class="item_delete icon-delete-circle"></a>
+								</div>
+							</div>
+							<div class="timeline_more show_more">
+								<a class="button xsmall light icon-more-small">Показать еще</a>
+							</div>
+
+
+						</div>
+
+					</div>
+				</div>
+            </div>
+		</div>
+
+		<!-- реферральная акция -->
+		<div class="header_profile_referral">
+			<a href="#" class="red icon-like drop-target" data-theme="drop_referral" ></a>
+			<div class="drop-content">
+				<div class="drop-content-inner">
+					<div class="drop_referral_quote">
+						<div class="img"><img src="../../images/manager_photo1.jpg" alt="" width="45"></div>
+						<div class="text">Привет, Алексей!<br>Спасибо, что работаете с нами. Надеюсь, вам нравится!</div>
+					</div>
+					<div class="drop_referral_banner">
+						<div class="big">+1</div>
+						<div class="light">Месяц бесплатно</div>
+						<div class="mid">для себя и для друга</div>
+					</div>
+					<div class="drop_referral_text">Приглашайте друзей, и мы подарим месяц без абонентской платы и комиссий за платежки вам и друзьям</div>
+					<div class="form_buttons">
+						<button class="button second full">Пригласить друга</button>
+					</div>
+				</div>
+            </div>
+		</div>
+
+
+		<!-- кнопка настроек -->
 		<div class="header_profile_settigs">
 			<a href="#" class="icon-settings"></a>
 		</div>
-		<div class="header_profile_help">
-			<a href="#" class="icon-help"></a>
-		</div>
+
+		<!-- кнопка выйти -->
 		<div class="header_profile_logout">
 			<a href="#" class="icon-logout"></a>
 		</div>
 	</div>
 </header>
+
+<!-- кнопка открытия чата -->
+<div class="button_chat">
+	<label>4</label>
+	<a href="#"></a>
+</div>

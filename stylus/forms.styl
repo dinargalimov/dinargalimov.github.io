@@ -19,17 +19,17 @@ input[type="time"],
 input[type="date"],
 input[type="number"],
 textarea
-	height 40px
+	height 44rem
 	border 1px solid cbd
 	border-radius brform
 	display inline-block
 	background-color #fff
 	font-family ffn
-	font-size fzn - 1px
+	font-size fzn
 	font-weight fwn
-	padding 0 15px
+	padding 0 15rem
 	color ctext
-	box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
+	box-shadow inset 0rem 2rem 2rem -2rem rgba(0,0,0,0.18)
 	box-sizing border-box
 	vertical-align middle
 	-webkit-appearance textfield
@@ -37,7 +37,7 @@ textarea
 
 	&:focus
 		border-color cl2
-		box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0)
+		box-shadow inset 0rem 2rem 2rem -2rem rgba(0,0,0,0)
 
 
 	&[disabled], &.disabled
@@ -67,60 +67,63 @@ textarea
 
 	&.valid, &.success
 		border-color csucces
-		background csucces + 96%
+		// background-color csucces + 96%
 
 	// размеры
 	&.xsmall
-		height 26px
-		padding 0 6px
-		font-size fzn - 2px
+		height 26rem
+		padding 0 6rem
+		font-size fzn - 2rem
 	&.small
-		height 34px
-		padding 0 10px
-		font-size fzn - 2px
+		height 38rem
+		padding 0 10rem
+		font-size fzn - 2rem
 	&.big
-		height 46px
-		padding 0 10px
-		font-size fzn + 2px
+		height 50rem
+		padding 0 15rem
+		font-size fzn + 2rem
 
 	// стиль 2
 	&.second
 		border-color transparent
-		box-shadow 0 1px 1px rgba(0,0,0,0.12)
+		box-shadow 0 1rem 1rem rgba(0,0,0,0.12)
 		&:focus
-			box-shadow 0 1px 1px rgba(cl1,0.3)
+			box-shadow 0 1rem 1rem rgba(cl1,0.3)
 
 	&:-webkit-autofill
 		transition none
-		box-shadow 0 0 0 1000px white inset
+		box-shadow 0 0 0 1000rem white inset
 		&:disabled
-			box-shadow 0 0 0 1000px #f5f5f5 inset
+			box-shadow 0 0 0 1000rem #f5f5f5 inset
 
 input[type="search"]::-webkit-search-decoration
+	-webkit-appearance none
+input[type="search"]::-webkit-search-cancel-button
 	-webkit-appearance none
 
 
 textarea
-	padding 9px 15px 8px
+	padding 9rem 15rem 8rem
 	resize none
-	min-height 40px
+	min-height 40rem
 	&.small
-		padding 6px 10px
-		min-height  34px
+		padding 6rem 10rem
+		min-height  34rem
 	&.js_autosize
 		transition none
 		overflow-x hidden
 		overflow-y auto!important
-		max-height 126px
+		max-height 126rem
 	&.textarea_middle
-		min-height 65px
-		max-height 146px
+		min-height 65rem
+		max-height 146rem
 	&.textarea_big
-		min-height 125px
-		max-height 209px
+		min-height 125rem
+		max-height 209rem
 
 .textarea_block
 	clearfix()
+
 	textarea
 		box-shadow none
 		border none
@@ -141,66 +144,69 @@ textarea
 		bottom 0
 		right 0
 		left 0
-		border 1px solid cbd
+		border 1rem solid cbd
+		background #fff
 		border-radius brform
-		box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
+		box-shadow inset 0rem 2rem 2rem -2rem rgba(0,0,0,0.18)
 	.textarea_text
-		padding 0 15px 10px
-		font-size fzn - 1px
+		padding 0 15rem 10rem
+		font-size fzn - 1rem
 		z-index 10
 		&.characters_left
 			float right
 			color ctextlight
-			font-size fzn - 4px
-			margin 4px 0 0
+			font-size fzn - 4rem
+			margin 4rem 0 0
 
 .editor-disable
 	color ctextdis
-	padding 9px 15px 8px
+	padding 9rem 15rem 8rem
 	background #f5f5f5
 	font-family ffn
-	font-size fzn - 1px
+	font-size fzn - 1rem
 	font-weight fwn
-	height 200px
+	height 200rem
 	overflow auto
-	border 1px solid cbd
+	border 1rem solid cbd
 	border-radius brform
 
 
 input[type='search'].input_search
-	border-radius 30px
+	border-radius 30rem
 	background-image url(../images/icon_search_input.svg)
 	background-repeat no-repeat
-	background-position 10px center
-	background-size 16px auto
-	padding-left 30px
+	background-position 10rem center
+	background-size 16rem auto
+	padding-left 30rem
 	transition .2s
 	&:focus
-		background-position -15px center
-		padding-left 10px
+		background-position -15rem center
+		padding-left 10rem
 
 input.input_search_focus
 	background-image url(../images/icon_search_input.svg)
 	background-repeat no-repeat
 	background-position 100% center
-	background-size 0px
+	background-size 0rem
 	&:focus
-		background-position calc(100% - 10px) center
-		background-size 16px auto
-		padding-right 40px
+		background-position calc(100% - 10rem) center
+		background-size 16rem auto
+		padding-right 40rem
 
 input.input_loading
 	background-image url(../images/loading_ring.gif)!important
-	background-position calc(100% - 10px) center
+	background-position calc(100% - 10rem) center
 	background-repeat no-repeat
-	padding-right 40px!important
-	background-size 18px!important
+	padding-right 40rem!important
+	background-size 18rem!important
+
+
 
 // -------  оформление чекбоксов --------
 
 label.label_check
 	display inline-block
-	min-width 14px
+	min-width 18rem
 
 input[type='radio'], input[type='checkbox']
 	display none!important
@@ -210,41 +216,34 @@ input[type='radio'], input[type='checkbox']
 	& + label.label_check
 		cursor pointer
 
-		&:hover
-			color clink
-
 		.icon
-			width 14px
-			height 14px
-			box-shadow inset 0 0 0 1px cbd - 10%, inset 0 1px 1px 0 rgba(#000,0.1)
+			width 16rem
+			height 16rem
+			// box-shadow 0 0 0 2rem #D1D1D1
+			border 2px solid #D1D1D1
 			background #fff
 			border-radius 50%
 			display inline-block
 			appearance none
-			vertical-align -1px
+			vertical-align top
 			position relative
 			cursor pointer
-			transition box-shadow .1s
-			margin-right -14px
-			&.big
-				width 18px
-				height 18px
-				margin-right -18px
-				& + span
-					margin-left 25px
+			margin-right -16rem
 
 			&:active
-				background #fafafa
-				box-shadow inset 0 0 0 1px cbd - 10%, inset 0 0 2px 0 rgba(#000,0.4)
+				background rgba(0,0,0,0.03)
 			& + span
-				margin-left 21px
+				margin-left 30rem
 				display inline-block
-				vertical-align top
+				vertical-align 0rem
 	&:checked
 		+ label.label_check
-			color clink
 			.icon
-				box-shadow inset 0 0 0 5px cl2
+				// box-shadow inset 0 0 0 5rem cl3, inset 0 0 0 9rem #fff
+				border-color cl3
+				border-width 7rem
+				width 6rem
+				height 6rem
 	&:disabled
 		+ label.label_check
 			cursor no-drop
@@ -259,7 +258,8 @@ input[type='radio'], input[type='checkbox']
 		&:checked
 			+ label.label_check
 				.icon
-					box-shadow inset 0 0 0 5px ctextdis
+					// box-shadow inset 0 0 0 5rem ctextdis, inset 0 0 0 9rem #fff
+					border-color ctextdis
 					&:after
 						color #fff
 
@@ -267,40 +267,91 @@ input[type='radio'], input[type='checkbox']
 input[type='checkbox']
 	& + label.label_check
 		.icon
-			border-radius 2px
-			transition box-shadow .2s
+			width 14rem
+			height 14rem
+			border-radius 2rem
+			margin-right -16rem
 			&:after
-				font-family "mb-icon-font"
+				font-family "mb-icon-font-3"
 				text-transform none!important
 				font-style normal
-				content '&'
+				content 's'
 				position absolute
 				display inline-block
-				top 1px
-				left 1px
+				top 1rem
+				left 1rem
 				color #fff
-				font-size 12px
+				font-size 12rem
 				text-align center
 				line-height 1
-				text-shadow 0 1px 0 rgba(#000,0)
 				transition .1s
-			&.big
-				vertical-align -2px
-				&:after
-					font-size 14px
-					top 2px
-					left 2px
+			// &.big
+			// 	width 22rem
+			// 	height 22rem
+			// 	&:after
+			// 		font-size 14rem
+			// 		top 4rem
+			// 		left 4rem
 	&:checked
 		& + label.label_check
 			.icon
-				box-shadow inset 0 0 10px 10px cl2
-				&:after
-					text-shadow 0 1px 0 rgba(#000,0.1)
+				background cl3
+				border-width 2rem
+				width 14rem
+				height 14rem
+				// box-shadow inset 0 0 0 1.5rem cl3
+
 	&:disabled
 		&:checked
 			+ label.label_check
 				.icon
-					box-shadow inset 0 0 0 15px ctextdis
+					box-shadow inset 0 0 0 15rem ctextdis
+
+	// круглый чекбокс
+	& + label.label_check.circle
+		min-width 20rem
+		.icon
+			width 16rem
+			height 16rem
+			border-radius 20rem
+			&:after
+				top 2rem
+				left 2rem
+
+	// чекбокс switcher
+	& + label.label_check.switcher
+		.icon
+			width 24rem
+			height 12rem
+			background cgrey05
+			border-radius 2rem
+			transition background-color .2s, box-shadow .2s
+			margin-right -26rem
+			vertical-align -2rem
+			&:after
+				content ''
+				width 12rem
+				height 12rem
+				background #fff
+				// box-shadow inset 0 0 0 1.5rem cgrey18
+				border 2px solid cgrey18
+				border-radius 2rem
+				position absolute
+				top -2px
+				left -2px
+				transition left .2s, box-shadow .2s
+			& + span
+				margin-left 36rem
+				vertical-align top
+	&:checked
+		+ label.label_check.switcher
+			.icon
+				background cl3
+
+				&:after
+					left 10rem
+					border-color cl3
+
 
 
 // --------------------
@@ -320,7 +371,7 @@ input[type='radio'], input[type='checkbox']
 label.check
 	color ctextlight
 	transition .2s
-	font-size fzn - 2px
+	font-size fzn - 2rem
 
 	&:hover
 		color ctext
@@ -328,33 +379,33 @@ label.check
 
 
 input.search_right
-	background url(../images/search.svg) no-repeat calc(100% - 15px) center
-	padding-right 40px
+	background url(../images/search.svg) no-repeat calc(100% - 15rem) center
+	padding-right 40rem
 input.search_left
-	background url(../images/search.svg) no-repeat 15px center
-	padding-left 40px
+	background url(../images/search.svg) no-repeat 15rem center
+	padding-left 40rem
 
 // -------------- стилизация select --------------
 .form_select
-	height 40px
+	height 40rem
 	border-radius brform
-	background url(../images/select_arrow.svg) no-repeat calc(100% - 15px) center
+	background url(../images/select_arrow.svg) no-repeat calc(100% - 15rem) center
 	width auto
 	display inline-block
 	overflow hidden
-	border 1px solid cbd
+	border 1rem solid cbd
 	select
 		background transparent
 		appearance none
-		height 40px
+		height 40rem
 		width 120%
-		width calc(100% + 20px)
+		width calc(100% + 20rem)
 		border none
 		border-radius 0
 		font-family ffn
 		font-size fzn
 		font-weight 300
-		padding 0 40px 0 15px
+		padding 0 40rem 0 15rem
 		cursor pointer
 		margin 0
 		&:focus
@@ -365,95 +416,105 @@ input.search_left
 // строка формы
 .form_group, .form_group_list
 	clearfix()
-	margin-bottom 15px
+	margin-bottom 15rem
 	.property_label
 		color ctextlight
-		padding-bottom 3px
+		padding-bottom 3rem
+
 		&.col, &.column, &.columns
 			// text-align right
 			padding-bottom 0
 	.small_text
-		padding-top 5px
+		padding-top 5rem
 .form_group_list
-	margin-bottom 10px
+	margin-bottom 10rem
 
 .form_page_important_area
 	background cbgsky
-	border-top 1px solid cbdlightsky
-	border-bottom 1px solid cbdlightsky
-	padding 15px 30px 0
-	margin-left -30px
-	margin-right -30px
-	margin-bottom 15px
+	border-top 1rem solid cbdlightsky
+	border-bottom 1rem solid cbdlightsky
+	padding 15rem 30rem 0
+	margin-left -30rem
+	margin-right -30rem
+	margin-bottom 15rem
 
 
 
 .form_horizontal
 	.property_label
-		padding-top 10px
+		padding-top 10rem
 .form_horizontal_small
 	.property_label
-		padding-top 5px
+		padding-top 5rem
 
 .form_vertical
 	.property_label
-		padding-bottom 8px
+		padding-bottom 8rem
 
 
 // заголовки
 .legend
-	border-bottom 2px solid cbdlight
+	border-bottom 2rem solid cbdlight
 	text-transform uppercase
 	font-weight fwm
-	margin-bottom 25px
+	margin-bottom 25rem
 	span
 		display inline-block
-		padding 0 0 6px
-		border-bottom 2px solid cl2
-		margin-bottom -2px
+		padding 0 0 6rem
+		border-bottom 2rem solid cl2
+		margin-bottom -2rem
 
 .legend_small
-	border-bottom 1px solid cbdlight
+	border-bottom 1rem solid cbdlight
 	font-weight normal
-	margin-bottom 30px
-	font-size fzn - 2px
+	margin-bottom 30rem
+	font-size fzn - 2rem
 	color ctextlight
-	height 10px
+	height 10rem
 	span
 		display inline-block
-		padding 0 10px 0 0
+		padding 0 10rem 0 0
 		background #fff
-		height 20px
+		height 20rem
 
 
 // блок кнопок в конце формы
 .form_buttons
-	margin 30px 0 0
+	margin 30rem 0 0
 	.links
 		display inline-block
-		margin 0 0 0 12px
-		font-size fzn - 1px
+		margin 0 0 0 12rem
+		font-size fzn - 1rem
 		a
 			display inline-block
-			margin 0 0 0 15px
+			margin 0 0 0 15rem
 			color ctextlight
 			text-decoration none
 			&:hover
 				color ctext
 
 	&+[class*="info_"], &+[class*="captcha"]
-		margin-top 15px
+		margin-top 15rem
 
 	.form_button_right
 		float right
 		&.button_clean
-			margin-top 13px
+			margin-top 13rem
 
 	.ms-parent.select_inline
 		vertical-align baseline
 	.button, .button_clean
 		& ~ .ms-parent
-			margin-left 20px
+			margin-left 20rem
+
+	&.form_buttons_collums
+		display flex
+		justify-content space-between
+		align-items center
+	.form_buttons_left
+		text-align left
+	.form_buttons_right
+		text-align right
 
 
 // -------------- поле с добавление иконки/текста перед полем --------------
@@ -464,42 +525,44 @@ input.search_left
 	input[type="tel"],
 	input[type="email"],
 	input[type="password"],
-	input[type="number"]
+	input[type="number"],
+	input[type="search"]
 		width 100%
 		min-width 0
 		flex 0 1 auto
+		z-index 10
 		& ~ .input_group_addon
-			border 1px solid cbd
+			border 1rem solid cbd
 			border-left none
 
 	.ms-parent, .drop-input
-	// 	display table
-		width 100%
-		flex 1 0
-	// 	table-layout fixed
+		width 1%!important
+		flex 1 0 auto
 
 rad-select2
 	display none
 .input_group_button
-	margin-left -1px
+	margin-left -1rem
 	flex 0 0 auto
 	order 3
 	&:first-of-type
 		border-radius 0 brbut brbut 0
 .input_group_addon
 	flex 0 0 auto
-	min-width 45px
-	height 40px
-	line-height 38px
-	border 1px solid cbd
+	min-width 45rem
+	height 44rem
+	line-height 44rem
+	border 1rem solid cbd
 	border-right none
 	border-radius brform
-	background #fafafa
+	border-top-right-radius 0
+	border-bottom-right-radius 0
+	background cbgsky
 	font-family ffn
-	font-size fzn - 4px
+	font-size fzn - 4rem
 	font-weight fwn
 	text-align center
-	padding 0 7px
+	padding 0 7rem
 	color ctextholder
 	box-sizing border-box
 	vertical-align middle
@@ -511,8 +574,15 @@ rad-select2
 			min-width 0!important
 			margin 0
 			width auto
+	&.big
+		height 50rem
+		line-height 50rem
+		&[class*='icon-']
+			font-size fzn + 2rem
+		&.addon_code
+			font-size fzn + 2rem
 	&.addon_code
-		font-size fzn - 1px
+		font-size fzn - 1rem
 
 	.cur
 		font-size fzn
@@ -523,12 +593,12 @@ rad-select2
 .input_group_title
 	display inline-block
 	vertical-align bottom
-	padding-top 18px
+	padding-top 18rem
 	.input_title
 		position absolute
-		top 0px
+		top 0rem
 		left 0
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		display inline-block
 		color ctextlight
 		transition .2s
@@ -543,11 +613,53 @@ rad-select2
 	.input_group_title_button_right
 		position absolute
 		&.small
-			right 2px
-			top 21px
+			right 2rem
+			top 21rem
 		&.middle
-			right 0px
-			top 18px
+			right 0rem
+			top 18rem
+
+// поле с заголовком новое
+.field_title
+	.field_label
+		font-size fzn - 2rem
+		font-weight fwl
+		margin 0 0 10rem
+	.field_text
+		input[type="text"],
+		input[type="password"],
+		input[type="search"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="time"],
+		input[type="date"],
+		input[type="number"],
+		textarea
+			&.error
+				border-color #F89494
+				background-color inherit
+			&.success
+				border-color cbd
+				padding-right 36rem
+				& ~ .valid_mark
+					background-image url(../images/icon_valid_success.svg)
+					opacity 1
+					right 10rem
+				&:focus
+					border-color cl2
+
+		.valid_mark
+			position absolute
+			right -5rem
+			top 13rem
+			width 18rem
+			height 18rem
+			opacity 0
+			background-position center
+			background-repeat no-repeat
+			transition right .2s, opacity .2s
+
+
 
 
 // переключатели
@@ -573,10 +685,10 @@ rad-select2
 		&:checked ~ label
 			background saturate(cbglight - 2%, 30%)
 			background #fff
-			// box-shadow inset 0 1px 0 rgba(0,0,50,0.15)
+			// box-shadow inset 0 1rem 0 rgba(0,0,50,0.15)
 			border-color cbglight - 25%
 			border-color cl2
-			box-shadow inset 0 0 0 1px cl2
+			box-shadow inset 0 0 0 1rem cl2
 			font-weight 400
 			cursor default
 			color cl2
@@ -585,18 +697,20 @@ rad-select2
 	label
 		float left
 		display block
-		height 40px
-		line-height 38px
+		height 40rem
+		line-height 41rem
 		background cbgsky
 		// background linear-gradient(cbgsky, cbgsky - 3%)
-		border 1px solid cbglight - 15%
-		margin-left -1px
+		border 1rem solid cbd
+		margin-left -1rem
 		color ctextlight
-		padding 0 13px
-		font-size fzn - 2px
+		padding 0 15rem
+		font-size fzn
 		cursor pointer
 		z-index 1
 		position relative
+		&:hover
+			background #fff
 
 
 
@@ -614,22 +728,22 @@ rad-select2
 						width 0
 						position absolute
 						pointer-events none
-						margin-top -1px
+						margin-top -1rem
 					&:after
 						border-color rgba(255, 255, 0, 0)
 						border-top-color #fff
-						border-width 4px
-						margin-left -4px
+						border-width 4rem
+						margin-left -4rem
 					&:before
 						border-color rgba(0, 255, 0, 0)
 						border-top-color cl2
-						border-width 7px
-						margin-left -7px
+						border-width 7rem
+						margin-left -7rem
 	&.small
 		label
-			height 32px
-			line-height 32px
-			padding 0 10px
+			height 32rem
+			line-height 32rem
+			padding 0 10rem
 
 
 
@@ -639,7 +753,7 @@ rad-select2
 	position relative
 	display inline-block
 	overflow hidden
-	font-size fzn - 4px
+	font-size fzn - 4rem
 	color clink
 
 	&.button
@@ -648,7 +762,7 @@ rad-select2
 	&[class*="icon-"]:before
 		font-size fzn
 		color clinklight
-		vertical-align -2px
+		vertical-align -2rem
 	&:not(.button):hover
 		color cl2
 		&:before
@@ -662,12 +776,12 @@ rad-select2
 		opacity 0
 		// filter: alpha(opacity=0);
 		// -ms-filter "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
-		// -moz-transform translate(-300px, 0) scale(4)
+		// -moz-transform translate(-300rem, 0) scale(4)
 		direction ltr
 		cursor pointer
-		font-size 150px
-		line-height 150px
-		height 150px
+		font-size 150rem
+		line-height 150rem
+		height 150rem
 	&:active
 		transform none
 
@@ -675,19 +789,23 @@ rad-select2
 
 // -------------- каптча ------------------
 .captcha
+	text-align center
 	.captcha_left
-		float left
-		width 110px
-		margin 0 20px 0 0
-		input
+		width 110rem
+		display inline-block
+		margin 0 20rem 0 0
+		input[type="text"]
 			width 100%
+			height 34rem
+			font-size fzn - 2rem
 		a
-			font-size fzn - 3px
+			font-size fzn - 3rem
 			color ctextlight
+			font-weight fwl
 			display block
-			margin 5px 0 0
+			margin 3rem 0 0
 	img
-		width 100px!important
+		width 100rem!important
 
 
 
@@ -698,16 +816,61 @@ rad-select2
 .file_upload_list
 	clearfix()
 
+	&.vertical
+		.file_upload_block
+			width 100%
+			height auto
+			float none
+			text-align left
+			padding 10rem
+
+			.file_title
+				display inline-block
+				width calc(100% - 112rem)
+				font-size fzn - 2rem
+				vertical-align middle
+
+			.file_button
+				position relative
+				display inline-block
+				vertical-align middle
+				bottom auto
+				top auto
+				right auto
+				left auto
+			.file_icon
+				display inline-block
+				margin 0 10rem 0 0
+				height 34rem
+				width 26rem
+				background-size 100%
+			.uploaded
+				padding 10rem
+				.file_title
+					max-height 200rem
+					margin 0
+					width calc(100% - 45rem)
+			.total-progress-box
+				position relative
+				width 44rem
+				height 44rem
+				margin -5rem auto
+				top 0
+			.total-progress
+				&:before
+					background #f6fafc
+
+
 .file_upload_block
-	width 170px
-	height 135px
-	margin-bottom 14px
-	border-radius 6px
-	border 1px dashed #ADBAC5
+	width 170rem
+	height 135rem
+	margin-bottom 14rem
+	border-radius 6rem
+	border 1rem dashed #ADBAC5
 	display inline-block
 	float left
 	vertical-align middle
-	padding 10px 10px 0
+	padding 10rem 10rem 0
 	box-sizing border-box
 	text-align center
 	&:nth-child(4n-3)
@@ -724,14 +887,14 @@ rad-select2
 		table-layout fixed
 		width 100%
 		height 100%
-		width calc(100% + 23px)
-		height calc(100% + 13px)
-		margin -11px
-		border-radius 6px
-		border 1px solid #fff
+		width calc(100% + 23rem)
+		height calc(100% + 13rem)
+		margin -11rem
+		border-radius 6rem
+		border 1rem solid #fff
 		background #fff
-		box-shadow 0px 1px 1px 0px rgba(0,0,0,0.12)
-		padding 10px 10px 0
+		box-shadow 0rem 1rem 1rem 0rem rgba(0,0,0,0.12)
+		padding 10rem 10rem 0
 		box-sizing border-box
 		.file_center
 			display table-cell
@@ -740,23 +903,23 @@ rad-select2
 
 		.file_title
 			color ctext
-			margin-top 5px
+			margin-top 5rem
 			word-wrap break-word
-
+			max-height 44rem
 
 	.icon-info
 		position absolute
-		right 8px
-		top 8px
+		right 8rem
+		top 8rem
 		z-index 10
 	.file_icon
-		margin-bottom 7px
+		margin-bottom 7rem
 	.file_delete
-		width 20px
-		height 20px
+		width 20rem
+		height 20rem
 		position absolute
-		right -8px
-		top -8px
+		right -8rem
+		top -8rem
 		border-radius 50%
 		z-index 10
 		background #fff url(../images/icon_delete.svg) no-repeat center
@@ -766,49 +929,70 @@ rad-select2
 			transform rotate(90deg)
 	.file_name
 		color ctextlight
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		overflow ellipsis
 		max-width 100%
 	.file_title
 		color ctextlight
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		line-height 120%
-		max-height 44px
+		max-height 56rem
 		overflow hidden
 	.file_button
 		position absolute
-		bottom 15px
+		bottom 15rem
 		left 0
 		right 0
-
+	.file_button_add_page
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		label.button_file_upload
+			position absolute
+			top 0
+			bottom 0
+			left 0
+			right 0
+			color ctextlight
+			font-size fzn - 2rem
+			padding-top 27rem
+			&:hover
+				background rgba(#fff,0.15)
+			&:before
+				font-size fzn + 10rem
+				display block
+				margin 0 0 15rem
+				color ctextlight
 	.total-progress-box
 		position absolute
-		top 10px
+		top calc(50% - 25rem)
 		left 0
 		right 0
 
 	.total-progress
 		display inline-block
-		border-radius 50px
-		width 44px
-		height 44px
+		border-radius 50rem
+		width 44rem
+		height 44rem
 		&:before
 			content ''
-			width 34px
-			height 34px
+			width 34rem
+			height 34rem
 			position absolute
-			top 5px
-			left 5px
+			top 5rem
+			left 5rem
 			border-radius 50%
 			background cbglight
 	.total-progress-value
 		position absolute
-		font-size fzn - 3px
-		left 6px
-		top 6px
-		height 30px
-		right 6px
-		line-height 30px
+		font-size fzn - 3rem
+		left 6rem
+		top 6rem
+		height 30rem
+		right 6rem
+		line-height 30rem
 		text-align center
 
 	step = 1
@@ -828,9 +1012,10 @@ rad-select2
 
 
 .file_upload_list
+
 	.file_upload_item
-		padding 0 0 12px
-		font-size fzn - 2px
+		padding 0 0 12rem
+		font-size fzn - 2rem
 		overflow hidden
 		// &:last-child
 		// 	border-bottom none
@@ -838,29 +1023,29 @@ rad-select2
 		// .file_upload_item_info
 		// 	position relative
 		// 	display block
-		// 	margin -6px 0
-		// 	padding 6px 0
+		// 	margin -6rem 0
+		// 	padding 6rem 0
 
 		.file_icon
 			display inline-block
-			width 14px
-			height 18px
-			background-size 14px auto
-			margin 0 4px 0 0
+			width 14rem
+			height 18rem
+			background-size 14rem auto
+			margin 0 4rem 0 0
 			vertical-align middle
 		.file_error_text
 			position absolute
-			right 25px
-			top 1px
+			right 25rem
+			top 1rem
 
 		&.error
 			.file_name
-				max-width calc(100% - 16px - 20px - 130px)
+				max-width calc(100% - 16rem - 20rem - 130rem)
 				color ctexterror
 		.file_name
 			text-decoration none
 			color clink
-			max-width calc(100% - 16px - 20px)
+			max-width calc(100% - 16rem - 20rem)
 			overflow ellipsis
 			display inline-block
 			vertical-align middle
@@ -873,7 +1058,7 @@ rad-select2
 			top 0
 			opacity 0
 			transition opacity .2s
-			font-size 14px
+			font-size 14rem
 			color ctexterror
 			&.show
 				opacity 1
@@ -882,94 +1067,103 @@ rad-select2
 				opacity 1
 
 		.total-progress-box
-			height 19px
-			margin-right 25px
+			height 19rem
+			margin-right 25rem
 		.total-progress-value
 			color ctextlight
-			font-size fzn - 4px
+			font-size fzn - 4rem
 			text-align center
 		.total-progress
 			position absolute
 			bottom 0
 			left 0
-			height 3px
+			height 3rem
 			background cl3
-			border-radius 2px
+			border-radius 2rem
 
 	// файлы в строку
 	&.inline
 		.file_upload_item
 			display inline-block
-			margin 0 4px 4px 0
+			margin 0 4rem 4rem 0
 			background cbglight
-			border-radius 2px
-			padding 6px 30px 6px 10px
-			min-width 100px
+			border-radius 2rem
+			padding 6rem 30rem 6rem 10rem
+			min-width 100rem
 
 			.file_upload_item_info
-				padding 6px 30px 6px 10px
-				margin -6px -30px -6px -10px
+				padding 6rem 30rem 6rem 10rem
+				margin -6rem -30rem -6rem -10rem
 			.file_name
-				max-width 200px
+				max-width 200rem
 			.file_delete
-				right 6px
+				right 6rem
 			.file_error_text
 				position relative
 				top auto
 				right auto
 				float right
-				font-size fzn - 2px
-				margin-left 10px
+				font-size fzn - 2rem
+				margin-left 10rem
 
 
 // разделитель в форме
 .form_sep
 	display block
-	height 1px
-	width 20%
-	margin 20px auto
-	background cbd
+	height 1rem
+	width 100%
+	margin 20rem auto
+	background cbdlight
+	&.noborder
+		background none
+		margin 15rem auto
+		width 100%
 .form_sep_full
 	display block
-	height 1px
+	height 1rem
 	width 100%
-	margin 20px 0
+	margin 20rem 0
 	background cbdlight
 
 
 // фильтр по дате
 input.datetimepicker
-	padding-left 28px!important
-	background url(../images/icon_date.svg) no-repeat 6px center
+	padding-left 28rem!important
+	background-image url(../images/icon_date.svg)
+	background-repeat no-repeat
+	background-position 6rem center
 
 .filter_date_value
-	padding 15px 0 0
-	max-width 250px
+	padding 15rem 0 0
+	max-width 250rem
 	overflow hidden
 	input.date_from, input.date_to
-		font-size fzn - 4px
+		font-size fzn - 4rem
 
 input.date_from, input.date_to
 	width 48%
 	float left
+
 input.date_from
-	background url(../images/icon_date_from.svg) no-repeat 6px center
+	background url(../images/icon_date_from.svg) no-repeat 6rem center
+	background-size 20rem
 input.date_to
-	background url(../images/icon_date_to.svg) no-repeat 6px center
+	background url(../images/icon_date_to.svg) no-repeat 6rem center
 	float right
+	background-size 20rem
 
 // textarea с загрузкой
 .textarea_with_attach
-	border 1px solid cbd
+	border 1rem solid cbd
 	border-radius brform
 	display inline-block
 	background-color #fff
 	font-family ffn
-	font-size fzn - 1px
+	font-size fzn - 1rem
 	font-weight 300
 	padding 0
 	color ctext
-	box-shadow inset 0px 2px 2px -2px rgba(0,0,0,0.18)
+	box-shadow inset 0rem 2rem 2rem -2rem rgba(0,0,0,0.18)
 	box-sizing border-box
 	vertical-align middle
 	transition .2s
@@ -979,7 +1173,7 @@ input.date_to
 		background none
 
 	.button_file_upload
-		margin 5px 0 7px 12px
+		margin 5rem 0 7rem 12rem
 
 .form_disabled_overlay
 	position absolute
@@ -993,7 +1187,48 @@ input.date_to
 .mce-tinymce
 	&.error
 		.mce-edit-area
-			border 1px solid cerror
+			border 1rem solid cerror
 	&.success
 		.mce-edit-area
-			border 1px solid csucces
+			border 1rem solid csucces
+
+
+// валидация полей
+.form_error
+	color ctexterror
+	font-size fzn - 2rem
+	margin 15rem 0 0
+
+// иконки инфо для поля
+.field_info
+	width 17rem
+	height 16rem
+	position absolute
+	top 14rem
+	right 8rem
+	color clinklight
+	font-size fzn
+	line-height 1
+	cursor pointer
+	&:before
+		margin 0
+	&:hover
+		color cl2
+	& ~ input
+		padding-right 70rem!important
+	& ~ .valid_mark
+		right 35rem!important
+
+
+.value_info
+	width 17rem
+	height 16rem
+	margin-left 10rem
+	color clinklight
+	font-size fzn
+	line-height 1
+	cursor pointer
+	&:before
+		margin 0
+	&:hover
+		color cl2

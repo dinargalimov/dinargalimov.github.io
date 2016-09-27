@@ -36,22 +36,39 @@
 		<div class="page_content_area_light page_content_area_bot">
 			<div class="row equalize_height">
 
-				<div class="col half widget_block">
+				<div class="col half  widget_block">
+					<a class="button xsmall light show_crm">CRM</a>
 					<div class="form_group_list">
-						<div class="column two property_label a_left">ИНН:</div>
-						<div class="column ten property_value">020504154524</div>
+						<div class="column three property_label a_left">ИНН:</div>
+						<div class="column nine property_value">020504154524</div>
 					</div>
 					<div class="form_group_list">
-						<div class="column two property_label a_left">КПП:</div>
-						<div class="column ten property_value">0205041524</div>
+						<div class="column three property_label a_left">КПП:</div>
+						<div class="column nine property_value">0205041524</div>
 					</div>
 					<div class="form_group_list">
-						<div class="column two property_label a_left">ОГРН:</div>
-						<div class="column ten property_value">02050415234524</div>
+						<div class="column three property_label a_left">ОГРН:</div>
+						<div class="column nine property_value">02050415234524</div>
+					</div>
+					<div class="form_group_list">
+						<div class="column three property_label a_left">PortalID:</div>
+						<div class="column nine property_value f_small">bd7dec2b-b862-4dc9-8cac-a5df02dec611</div>
+					</div>
+					<div class="form_group_list">
+						<div class="column three property_label a_left">CRMID:</div>
+						<div class="column nine property_value f_small">< ID компании в CRM></div>
+					</div>
+					<div class="form_group_list">
+						<div class="column three property_label a_left">ABSID:</div>
+						<div class="column nine property_value f_small">< ID компании в АБС></div>
+					</div>
+					<div class="form_group_list">
+						<div class="column four property_label a_left">Статус в CRM:</div>
+						<div class="column eight property_value"><a>Счет открыт</a></div>
 					</div>
 					<div class="form_group_list m_top_20">
-						<span class="light_text">В системе: </span>
-						<span>с 12.10.2015</span>
+						<div class="column three property_label a_left">В системе:</div>
+						<div class="column nine property_value">с 12.10.2015</div>
 					</div>
 
 
@@ -66,11 +83,17 @@
 						<span class="light_text">Тариф: </span>
 						<span>Старт Новогодний</span>
 					</div>
-					<div class="form_group m_bot_0">
+					<div class="form_group ">
 						<div class="light_text m_bot_5">Подключенные услуги: </div>
 						<ul class="point m_bot_0">
 							<li>Бизнес-ассистент</li>
 							<li>Бухгалтер</li>
+						</ul>
+					</div>
+					<div class="form_group">
+						<div class="light_text m_bot_5">Промоакции: </div>
+						<ul class="point m_bot_0">
+							<li>Подари другу банк (до 31.08.2016)</li>
 						</ul>
 					</div>
 				</div>
@@ -95,11 +118,15 @@
 
 		</div>
 
+		<!-- вкладка РЕКВИЗИТЫ -->
+
 		<div class="tabs tabs_horizontal">
 			<div class="tabs_menu">
 				<ul>
 					<li class="active"><a href="">Реквизиты</a></li>
+					<li><a href="">Счета</a></li>
 					<li><a href="">Представители</a></li>
+					<li><a href="">Задачи</a></li>
 					<li><a href="">Заметки</a></li>
 				</ul>
 			</div>
@@ -148,11 +175,92 @@
 			</div>
 		</div>
 
+
+		<!-- вкладка СЧЕТА -->
+
 		<div class="tabs tabs_horizontal">
 			<div class="tabs_menu">
 				<ul>
 					<li><a href="">Реквизиты</a></li>
+					<li class="active"><a href="">Счета</a></li>
+					<li><a href="">Представители</a></li>
+					<li><a href="">Задачи</a></li>
+					<li><a href="">Заметки</a></li>
+				</ul>
+			</div>
+			<div class="tabs_content">
+
+				<!-- ТАБЛИЦА -->
+				<div class="table_list accounts_list">
+
+					<!-- шапка таблицы -->
+					<div class="table_list_header">
+						<div class="table_list_cell balance">Баланс</div>
+						<div class="table_list_cell status">Статус</div>
+						<div class="table_list_cell type">Тип счета</div>
+						<div class="table_list_cell number">№ счета</div>
+
+					</div>
+					<div class="table_list_body">
+
+						<!-- строка -->
+						<div class="table_list_row">
+							<div class="table_list_cell balance">150,00 <span class="cur rur"><span>р.</span></span></div>
+							<div class="table_list_cell status">Открыт</div>
+							<div class="table_list_cell type">Расчетный счет - RUR</div>
+							<div class="table_list_cell number">40702810270010003121</div>
+						</div>
+
+						<!-- строка -->
+						<div class="table_list_row">
+							<div class="table_list_cell balance">
+								<p class="c_error">150,00 <span class="cur rur"><span>р.</span></span><span class="c_light m_left_10">(Портал)</span></p>
+								<p class="c_error">140,00 <span class="cur rur"><span>р.</span></span><span class="c_light m_left_10">(ДБО)</span></p>
+								<p class="c_error">150,00 <span class="cur rur"><span>р.</span></span><span class="c_light m_left_10">(АБС)</span></p>
+							</div>
+							<div class="table_list_cell status">Открыт</div>
+							<div class="table_list_cell type">Расчетный счет - RUR</div>
+							<div class="table_list_cell number">40702810270010003122</div>
+						</div>
+
+						<!-- строка -->
+						<div class="table_list_row">
+							<div class="table_list_cell balance">
+								<p class="c_error">Отсутствует <span class="c_light m_left_10">(Портал)</span></p>
+								<p class="c_error">140,00 <span class="cur rur"><span>р.</span></span><span class="c_light m_left_10">(ДБО)</span></p>
+								<p class="c_error">150,00 <span class="cur rur"><span>р.</span></span><span class="c_light m_left_10">(АБС)</span></p>
+							</div>
+							<div class="table_list_cell status">Открыт</div>
+							<div class="table_list_cell type">Расчетный счет - RUR</div>
+							<div class="table_list_cell number">40702810270010003123</div>
+						</div>
+
+						<!-- строка -->
+						<div class="table_list_row account_close">
+							<div class="table_list_cell balance"></div>
+							<div class="table_list_cell status">Закрыт</div>
+							<div class="table_list_cell type">Расчетный счет - RUR</div>
+							<div class="table_list_cell number">40702810270010003123</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- /  ТАБЛИЦА -->
+
+			</div>
+		</div>
+
+
+		<!-- вкладка ПРЕДСТАВИТЕЛИ -->
+
+		<div class="tabs tabs_horizontal">
+			<div class="tabs_menu">
+				<ul>
+					<li><a href="">Реквизиты</a></li>
+					<li><a href="">Счета</a></li>
 					<li class="active"><a href="">Представители</a></li>
+					<li><a href="">Задачи</a></li>
 					<li><a href="">Заметки</a></li>
 				</ul>
 			</div>
@@ -230,11 +338,89 @@
 			</div>
 		</div>
 
+		<!-- вкладка ЗАДАЧИ -->
+
 		<div class="tabs tabs_horizontal">
 			<div class="tabs_menu">
 				<ul>
 					<li><a href="">Реквизиты</a></li>
+					<li><a href="">Счета</a></li>
 					<li><a href="">Представители</a></li>
+					<li class="active"><a href="">Задачи</a></li>
+					<li><a href="">Заметки</a></li>
+				</ul>
+			</div>
+			<div class="tabs_content">
+				<div class="w30">
+					<ul class="stat_list">
+						<li>
+							<span class="name">Всего:</span>
+							<span class="value">
+								<span class="total">15</span>
+							</span>
+						</li>
+						<li>
+							<ul class="stat_list sub_list">
+								<li>
+									<span class="name">От клиента</span>
+									<span class="value">
+										<span class="total">14</span>
+									</span>
+								</li>
+								<li>
+									<span class="name">От банка</span>
+									<span class="value">
+										<span class="total">1</span>
+									</span>
+								</li>
+
+							</ul>
+						</li>
+						<li>
+							<span class="name">Закрыто:</span>
+							<span class="value">
+								<span class="total">12</span>
+							</span>
+						</li>
+						<li>
+							<ul class="stat_list sub_list">
+								<li class="c_success">
+									<span class="name">Положительно</span>
+									<span class="value">
+										<span class="total">12</span>
+									</span>
+								</li>
+								<li class="c_error">
+									<span class="name">Отрицательно</span>
+									<span class="value">
+										<span class="total">1</span>
+									</span>
+								</li>
+
+							</ul>
+						</li>
+						<li>
+							<span class="name">Открыто:</span>
+							<span class="value">
+								<span class="total">3</span>
+							</span>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- вкладка ЗАМЕТКИ -->
+
+		<div class="tabs tabs_horizontal">
+			<div class="tabs_menu">
+				<ul>
+					<li><a href="">Реквизиты</a></li>
+					<li><a href="">Счета</a></li>
+					<li><a href="">Представители</a></li>
+					<li><a href="">Задачи</a></li>
 					<li class="active"><a href="">Заметки</a></li>
 				</ul>
 			</div>

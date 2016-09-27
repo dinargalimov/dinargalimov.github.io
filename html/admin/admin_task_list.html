@@ -13,10 +13,11 @@
 <body>
 
 <header>
+
 	<div class="header_profile">
 		<div class="header_profile_name">
 			<figure class="avatar" style="background-color: rgb(225,90,75)">C</figure>
-				Иванова Саша
+			Константин Константинопольский
 		</div>
 		<div class="header_profile_settigs">
 			<a href="#" class="icon-settings"></a>
@@ -28,9 +29,9 @@
 	</div>
 
 	<div class="profile_progress">
-		Мои закрытые:
-		<strong>250</strong>
-		(<span class="success_text">200</span>/<span class="error_text">50</span>)
+		<span class="hide_1200a">Мои закрытые:</span>
+		<strong class="m_left_10">250</strong>
+		<span class="icon-thumbs-up success_text m_left_5">200</span><span class="icon-thumbs-down error_text m_left_5">50</span>
 	</div>
 
 	<div class="header_admin_menu">
@@ -42,7 +43,8 @@
 					<div class="drop-content-inner">
 						<ul class="drop-menu">
 							<li><a>Статистика по задачам</a></li>
-							<li><a>Общая статистика</a></li>
+							<li><a>Статистика по агентам</a></li>
+							<li><a>Статистика по клиентам</a></li>
 						</ul>
 					</div>
 				</div>
@@ -54,6 +56,26 @@
 						<ul class="drop-menu">
 							<li><a>На e-mail клиентам</a></li>
 							<li><a>На главную страницу клиентам</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a class="icon-submenu drop-target" data-theme="drop_tall drop_wide">Действия</a>
+				<div class="drop-content">
+					<div class="drop-content-inner">
+						<ul class="drop-menu">
+							<li><a>Смена телефона и e-mail</a></li>
+							<li><a>Смена генерального директора</a></li>
+							<li><a>Удаление пользователя</a></li>
+							<li><a>Управление правами подписи в компании</a></li>
+							<li><a>Синхронизация инфо клиента с АБС</a></li>
+
+							<li><a>Смена телефона и e-mail</a></li>
+							<li><a>Смена генерального директора</a></li>
+							<li><a>Удаление пользователя</a></li>
+							<li><a>Управление правами подписи в компании</a></li>
+							<li><a>Синхронизация инфо клиента с АБС</a></li>
 						</ul>
 					</div>
 				</div>
@@ -88,12 +110,15 @@
 			<h1>Задачи</h1>
 
 			<!-- таблица -->
-				<div class="table_list table_list_white">
+				<div class="table_list table_list_white tasks_list">
 
 					<!-- шапка таблицы -->
 					<div class="table_list_header">
 						<div class="table_list_cell deadline">
-							Срок
+							<a class="icon-sort-down">Last</a>
+						</div>
+						<div class="table_list_cell deadline">
+							SLA
 						</div>
 
 						<div class="table_list_cell performer">
@@ -116,8 +141,12 @@
 						<!-- строка таблицы -->
 						<div class="table_list_row new row_link">
 							<div class="table_list_cell deadline ">
+								11:45
+							</div>
+							<div class="table_list_cell deadline ">
 								<span class="icon-clock">03:45</span>
 							</div>
+
 							<div class="table_list_cell performer">
 								<a class="button xsmall">Взять в работу</a>
 							</div>
@@ -134,7 +163,21 @@
 							</div>
 
 							<div class="table_list_cell number">
-								2722
+								1427231
+
+								<ul class="table_cell_tags_list">
+									<li>
+										<div class="tag_item" style="background-color: #E54D4D;">
+											<span>Блокировка</span>
+										</div>
+									</li>
+									<li>
+										<div class="tag_item" style="background-color: #464DD7;">
+											<span>Бухгалтерия</span>
+										</div>
+									</li>
+								</ul>
+
 							</div>
 
 							<div class="table_list_cell name name_link">
@@ -145,9 +188,13 @@
 						</div>
 						<!-- строка таблицы -->
 						<div class="table_list_row new row_link">
+							<div class="table_list_cell deadline f_xsmall">
+								<span class="light_text">вчера</span> 15:04
+							</div>
 							<div class="table_list_cell deadline ">
 								<span class="icon-clock">03:45</span>
 							</div>
+
 							<div class="table_list_cell performer">
 								<a class="button xsmall">Взять в работу</a>
 							</div>
@@ -164,11 +211,19 @@
 							</div>
 
 							<div class="table_list_cell number">
-								2722
+								142722
+
+								<ul class="table_cell_tags_list">
+									<li>
+										<div class="tag_item" style="background-color: #2883F8;">
+											<span>Депозиты</span>
+										</div>
+									</li>
+								</ul>
 							</div>
 
 							<div class="table_list_cell name name_link">
-								<div class="name_title">ООО «Ромашка»</div>
+								<div class="name_title"><span class="online">ООО «Ромашка»</span></div>
 								<div class="name_desc">Мне срочно необходимо снять помещение внутри Садового срочно необходимо снять помещение внутри Садового</div>
 							</div>
 
@@ -176,9 +231,13 @@
 
 						<!-- строка таблицы -->
 						<div class="table_list_row new row_link">
+							<div class="table_list_cell deadline f_xsmall">
+								<span class="light_text">27.04</span> 20:21
+							</div>
 							<div class="table_list_cell deadline ">
 								<span class="icon-clock error_text">-02:37</span>
 							</div>
+
 
 							<div class="table_list_cell performer">
 								<div multiple="multiple" class="jsRadSelect2 select_inline" data-placeholder="Не задан" data-filter="true">
@@ -205,11 +264,18 @@
 							</div>
 
 							<div class="table_list_cell number">
-								2721
+								142721
+								<ul class="table_cell_tags_list">
+									<li>
+										<div class="tag_item" style="background-color: #6690B0;">
+											<span>Эквайринг</span>
+										</div>
+									</li>
+								</ul>
 							</div>
 
 							<div class="table_list_cell name name_link">
-								<div class="name_title">ИП “Сидоров А.Н” <span class="info_label_error small">Блокировка ПОД/ФТ</span></div>
+								<div class="name_title"><span class="online">ИП “Сидоров А.Н”</span> <span class="info_label_error small">Блокировка ПОД/ФТ</span></div>
 								<div class="name_desc"><strong>Иванов Саша:</strong> Найдите мне нормального бухгалтера<div class="write_now">
 									<span class="icon-pencil"></span>
 								</div></div>
@@ -219,9 +285,13 @@
 
 						<!-- строка таблицы -->
 						<div class="table_list_row new row_link">
+							<div class="table_list_cell deadline f_xsmall">
+								23.02.2015
+							</div>
 							<div class="table_list_cell deadline ">
 								<span class="icon-clock error_text">-02:37</span>
 							</div>
+
 
 							<div class="table_list_cell performer">
 								<div multiple="multiple" class="jsRadSelect2 select_inline" data-placeholder="Не задан" data-filter="true">
@@ -247,7 +317,7 @@
 								Завершена <span class="thumbs_down icon-thumbs-down"></span>
 							</div>
 							<div class="table_list_cell number">
-								2720
+								142720
 							</div>
 							<div class="table_list_cell name name_link">
 								<div class="name_title">ИП “Сидоров А.Н”</div>
@@ -261,8 +331,12 @@
 						<!-- строка таблицы -->
 						<div class="table_list_row row_link">
 							<div class="table_list_cell deadline ">
+								07:50
+							</div>
+							<div class="table_list_cell deadline ">
 								<span class="icon-clock error_text">-03:15</span>
 							</div>
+
 
 							<div class="table_list_cell performer">
 								<div multiple="multiple" class="jsRadSelect2 select_inline" data-placeholder="Не задан" data-filter="true">
@@ -288,7 +362,7 @@
 								В работе
 							</div>
 							<div class="table_list_cell number">
-								2719
+								142719
 							</div>
 							<div class="table_list_cell name name_link">
 								<div class="name_title">СП “Лига”</div>
@@ -299,8 +373,12 @@
 						<!-- строка таблицы -->
 						<div class="table_list_row row_link">
 							<div class="table_list_cell deadline ">
+								19:20
+							</div>
+							<div class="table_list_cell deadline ">
 								28 марта
 							</div>
+
 
 							<div class="table_list_cell performer">
 								<div multiple="multiple" class="jsRadSelect2 select_inline" data-placeholder="Не задан" data-filter="true">
@@ -326,7 +404,7 @@
 								Ждем клиента
 							</div>
 							<div class="table_list_cell number">
-								2718
+								142718
 							</div>
 							<div class="table_list_cell name name_link">
 								<div class="name_title">СП “Лига”</div>
@@ -347,7 +425,10 @@
 				<!-- end таблица -->
 		</div>
 
-		<div class="side side_small">
+
+
+		<!-- сайдбар -->
+		<div class="side  ">
 			<div class="widget_block">
 				<div class="widget_filters">
 
@@ -372,11 +453,19 @@
 						</div>
 					</div>
 
+					<div class="side_filter">
+						<ul>
+							<li><input type="checkbox" name="1"  id="11" class="input_check"><label for="11" class="label_check"><i class="icon"></i><span>Только мои задачи</span></label></li>
+							<li><input type="checkbox" name="1"  id="12" class="input_check"><label for="12" class="label_check"><i class="icon"></i><span>Только клиенты онлайн </span></label></li>
+						</ul>
+					</div>
+
 					<div class="side_sep"></div>
 
 					<div class="side_filter">
 						<ul>
-							<li><input type="checkbox" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Нераспределенные </span><span class="count">55</span></label></li>
+							<li><input type="radio" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Нераспределенные </span><span class="count">55</span></label></li>
+							<li><input type="radio" name="1"  id="1" class="input_check"><label for="1" class="label_check"><i class="icon"></i><span>Наблюдаю </span><span class="count">55</span></label></li>
 						</ul>
 					</div>
 
@@ -404,6 +493,87 @@
 
 
 				</div>
+			</div>
+
+			<div class="widget_block">
+				<a class="link_dashed f_right f_xsmall"><span>Снять все метки</span></a>
+				<span class="c_light m_bot_15 d_ib">Метки</span>
+
+				<ul class="tags_inline_list">
+					<li>
+						<div class="tag_item" style="background-color: #E54D4D;">
+							<input type="checkbox" name="1" id="t1" class="input_check">
+							<label for="t1" class="label_check"><span>Блокировка</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #41C75E;">
+							<input type="checkbox" name="1" id="t2" class="input_check">
+							<label for="t2" class="label_check"><span>Деньги</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #464DD7;">
+							<input type="checkbox" name="1" id="t3" class="input_check" >
+							<label for="t3" class="label_check"><span>Карты</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #7ED2F6;">
+							<input type="checkbox" name="1" id="t4" class="input_check">
+							<label for="t4" class="label_check"><span>Эквайринг</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #9C1BC9;">
+							<input type="checkbox" name="1" id="t5" class="input_check">
+							<label for="t5" class="label_check"><span>Реквизиты</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #6690B0;">
+							<input type="checkbox" name="1" id="t6" class="input_check">
+							<label for="t6" class="label_check"><span>Бухгалтерия</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #E54D4D;">
+							<input type="checkbox" name="1" id="t7" class="input_check" >
+							<label for="t7" class="label_check"><span>Блокировка</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #41C75E;">
+							<input type="checkbox" name="1" id="t8" class="input_check" >
+							<label for="t8" class="label_check"><span>Деньги</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #464DD7;">
+							<input type="checkbox" name="1" id="t9" class="input_check" >
+							<label for="t9" class="label_check"><span>Депозиты</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #7ED2F6;">
+							<input type="checkbox" name="1" id="t10" class="input_check">
+							<label for="t10" class="label_check"><span>Карты</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #9C1BC9;">
+							<input type="checkbox" name="1" id="t11" class="input_check">
+							<label for="t11" class="label_check"><span>Реквизиты</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="tag_item" style="background-color: #6690B0;">
+							<input type="checkbox" name="1" id="t12" class="input_check">
+							<label for="t12" class="label_check"><span>Бухгалтерия</span></label>
+						</div>
+					</li>
+
+				</ul>
 			</div>
 		</div>
 

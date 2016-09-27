@@ -1,14 +1,14 @@
 @import 'variables.styl'
 
-.contragents_widgets
+.contragents_widgets, .top_area_widgets
 	display flex
 	&.choosed
-		.contragents_widget_money
+		.top_area_widget_item, .contragents_widget_money
 			transform scale(.9)
 			&:hover
 				transform scale(1)
 	clearfix()
-	.contragents_widget_money
+	.top_area_widget_item, .contragents_widget_money
 		padding 0
 		margin 0
 		display flex
@@ -27,29 +27,29 @@
 			cursor default
 			&:hover
 				transform none
-		// @media (min-width:600px) and (max-width:1170px)
+		// @media (min-width:600rem) and (max-width:1170rem)
 		// 	width 32.33%
 		// 	&:nth-child(3n)
 		// 		margin-right 0
 		// 	&.soon2
 		// 		display none
 
-		// @media (min-width:1170px) and (max-width:1400px)
+		// @media (min-width:1170rem) and (max-width:1400rem)
 		// 	width 23.875%
 		// 	&:nth-child(4n)
 		// 		margin-right 0
-		// @media (min-width:1400px) and (max-width:1700px)
+		// @media (min-width:1400rem) and (max-width:1700rem)
 		// 	width 18.8%
 		// 	&:nth-child(5n)
 		// 		margin-right 0
-		// @media (min-width:1700px)
+		// @media (min-width:1700rem)
 		// 	width 15.46%
 		// 	&:nth-child(6n)
 		// 		margin-right 0
 
 		&:hover
-			transform translateY(-3px)
-			box-shadow 0px 2px 3px 0px rgba(0,0,0,0.12)
+			transform translateY(-3rem)
+			box-shadow 0rem 2rem 3rem 0rem rgba(0,0,0,0.12)
 			.desc
 				.name:after
 					opacity .8
@@ -75,8 +75,8 @@
 					pointer-events none
 					border-color rgba(255, 255, 255, 0)
 					border-top-color cl3
-					border-width 8px
-					margin-left -8px
+					border-width 8rem
+					margin-left -8rem
 					margin-top 0
 
 				.num, .num:hover
@@ -85,7 +85,7 @@
 					&:after
 						background-color #fff!important
 
-		&.paid
+		&.paid, &.month
 			.desc
 				.name:after
 					background-color cl3
@@ -93,7 +93,7 @@
 				.desc
 					background cl3
 
-		&.payable
+		&.payable, &.year
 
 			.desc
 				.name:after
@@ -105,12 +105,12 @@
 						border-top-color ctextwarning - 3%
 
 		.desc
-			padding 15px 35px
-			font-size fzn - 2px
+			padding 15rem 35rem
+			font-size fzn - 2rem
 			display flex
 			flex-direction column
 			justify-content center
-			border-right 1px solid cbdlight
+			border-right 1rem solid cbdlight
 
 
 			&:after, &:before
@@ -126,19 +126,19 @@
 			&:after
 				border-color rgba(255, 255, 255, 0)
 				border-left-color #fff
-				border-width 6px
-				margin-top -6px
+				border-width 6rem
+				margin-top -6rem
 			&:before
 				border-color rgba(cbdlight, 0)
 				border-left-color cbdlight
-				border-width 7px
-				margin-top -7px
+				border-width 7rem
+				margin-top -7rem
 
 
 			.name
 				text-transform uppercase
-				padding-bottom 7px
-				margin-bottom 7px
+				padding-bottom 7rem
+				margin-bottom 7rem
 				font-weight normal
 				&:after
 					content ''
@@ -146,24 +146,35 @@
 					position absolute
 					left 0
 					bottom 0
-					height 3px
+					height 3rem
 					width 100%
 					background cl3
 					opacity .5
 					transition .2s
 			.num
 				color ctextlight
-				font-size fzn - 4px
+				font-size fzn - 4rem
 
 		.values
 			display flex
 			flex-direction column
 			justify-content center
-			padding 10px 35px
-
+			align-items center
+			padding 10rem 35rem
+		.value_item
+			padding 0 40rem 0 0
+			&:last-child
+				padding-right 0
+		.subtitle
+			font-size fzn - 2rem
+			color ctextlight
 		.value
-			font-size fzn + 2px
-			padding 2px 0 4px
+			font-size fzn + 2rem
+			padding 2rem 0 4rem
 			&:last-child
 				border-right none
 
+.payroll_widgets
+	.payroll_widget_money
+		.values
+			flex-direction row

@@ -13,15 +13,30 @@
 
 </head>
 <body>
+<div class="blur">
+
+<include data-file="aside.html"></include>
+<include data-file="header.html"></include>
+<section class="main">
+	<include data-file="aside.html"></include>
+	<include data-file="transaction/transaction.html section>*"></include>
+</section>
+</div>
 
 <div class="popup_overlay" >
 	<div class="popup_table">
 		<div class="popup_cell">
 			<div class="popup_layer security_lock">
-				<h1>Мы заботимся о <br/>безопасности ваших данных</h1>
-				<div class="small_text">Ваш сеанс работы в системе был завершен ввиду вашей неактивности. Вам необходимо вновь войти в систему.</div>
+				<div class="security_lock_header">
+					<div class="icon icon-password"></div>
+					Мы заботимся<br/> о безопасности<br/> ваших данных
+				</div>
+				<div class="security_lock_text">
+					<div class="security_lock_text_inner">Ваш сеанс работы в системе был завершен ввиду вашей неактивности. Вам необходимо вновь войти в систему.</div>
+				</div>
+
 				<div class="form_buttons">
-					<a class="button">Войти в систему</a>
+					<a class="button light full">Войти в систему</a>
 
 				</div>
 			</div>

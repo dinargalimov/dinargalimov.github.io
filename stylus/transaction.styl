@@ -14,23 +14,23 @@
 
 .transaction_accounts
 	background cbglight
-	padding 25px 25px 40px
-	border-bottom 3px solid cseparator
+	padding 25rem 25rem 40rem
+	border-bottom 3rem solid cseparator
 
 // вабор валюты наверху
 .transaction_currency_filter
-	padding 18px
-	margin 0 0 15px
+	padding 18rem
+	margin 0 0 15rem
 	.label_filter
-		margin 0 15px
+		margin 0 15rem
 	.currency_filter
 		text-decoration none
 		display inline-block
-		font-size fzn + 2px
+		font-size fzn + 2rem
 		color clink
 		.count
 			display inline-block
-			border-bottom 1px dashed @color
+			border-bottom 1rem dashed @color
 		&:hover
 			color cl2
 			.count
@@ -48,14 +48,14 @@
 				color ctextsuccess
 				font-weight normal
 				.count
-					border-bottom 2px solid ctextsuccess + 5%
+					border-bottom 2rem solid ctextsuccess + 5%
 
 	// овердрафт ссылка наверху
 	.overdraft_count
 		float right
 		color ctextlight
-		font-size fzn - 2px
-		margin 3px 0 0
+		font-size fzn - 2rem
+		margin 3rem 0 0
 		a
 			color ctextlight
 			text-decoration none
@@ -68,246 +68,45 @@
 
 	.currency_filter_right
 		float right
-		margin -4px 0 0
-
-// выбор счета
-
-.transaction_choose_account
-	margin 0 -25px -12px
-	padding 0 25px
-	width auto!important
-
-	&.choosed
-		.account_item
-			transform scale(.9)
-			&:hover
-				transform scale(1)
-
-	// счет в выборе счетов
-	.account_item
-		padding 0
-		margin 0
-		display block
-		min-width 220px
-		cursor pointer
-		transition .2s
-		box-sizing border-box
-		transform scale(1)
-		&:hover
-			transform translateY(-3px)
-			box-shadow 0px 2px 2px 0px rgba(0,0,0,0.2)
-			.desc:after
-				opacity 1
-
-		// активный счет
-		&.active
-			transform scale(1)
-			&:after, &:before
-				top 100%
-				left 50%
-				border solid transparent
-				content " "
-				height 0
-				width 0
-				position absolute
-				pointer-events none
-
-			&:after
-				border-color rgba(255, 255, 255, 0)
-				border-top-color #fff
-				border-width 10px
-				margin-left -10px
-			&:before
-				border-color rgba(221, 221, 221, 0)
-				border-top-color #ddd
-				border-width 11px
-				margin-left -11px
-
-			.desc
-				background cRUR
-				color #fff
-				&:after
-					display none
-				.num, .num:hover
-					color #fff
+		margin -4rem 0 0
 
 
-		// долларовый счет
-		&.account_dollar
-			.desc:after
-				background-color cl3
-			&.active
-				.desc
-					background cl3
-
-
-		// евровый счет
-		&.account_euro
-			.desc:after
-				background-color cEUR
-			&.active
-				.desc
-					background cEUR
-
-
-		// юаньский счет
-		&.account_cny
-			.desc:after
-				background-color cCNY
-			&.active
-				.desc
-					background cCNY
-
-
-		&.account_closed
-			.desc, .value
-				color ctextlight
-			.desc:after
-				background cbd!important
-			&:hover
-				.hide_account
-					opacity 1
-
-			.value
-				font-size 22px
-				padding-bottom 15px
-				padding-top 2px
-
-		.desc
-			padding 15px
-			margin 0 0 8px
-			overflow hidden
-			font-size fzn - 2px
-			&:after
-				content ''
-				display block
-				width 90px
-				height 4px
-				background cRUR
-				position absolute
-				bottom 0
-				left 15px
-				transition .3s
-				opacity .5
-			.name
-				float left
-				font-weight normal
-				text-align left
-				overflow ellipsis
-				max-width calc(100% - 75px)
-			.num
-				float right
-				color ctextlight
-				transition none
-				&:hover
-					color cl2
-
-		.light_text
-			font-size fzn - 2px
-			font-weight fwl
-			padding 0 15px 2px
-
-
-		.value
-			font-size 26px
-			text-align left
-			padding 0 15px 12px
-			max-width calc(100% - 40px)
-			white-space nowrap
-			overflow hidden
-			font-weight 300
-			.cur
-				font-weight 300
-		.hide_account
-			position absolute
-			right 15px
-			bottom 18px
-			opacity 0
-			font-size fzn - 3px
-			transition opacity .3s
-
-	.add_account
-		background cbglight - 4%
-		.desc:after
-			background-color #fff
-			opacity .8
-		&:after
-			content 'a'
-			position absolute
-			left 0
-			top 0
-			width 100%
-			height 100%
-			background rgba(cbglight - 4%,.8)
-			font-family "mb-icon-font"
-			font-size 70px
-			color #fff
-			text-align center
-			line-height 100px
-			transition line-height .2s, font-size .2s
-		&:before
-			content 'Создать счет'
-			display block
-			width 100%
-			position absolute
-			text-align center
-			bottom 20px
-			color #fff
-			font-weight fwb
-			z-index 10
-			opacity 0
-			transform translateY(20px)
-			transition opacity .2s, transform .2s
-		&:hover
-			&:after
-				background-color rgba(cl3 + 40%,0.8)
-				line-height 70px
-				font-size 50px
-			&:before
-				opacity 1
-				transform translateY(0px)
-	.owl-item
-		padding 3px 0 12px
-		box-sizing border-box
-		text-align left!important
-	.owl-prev, .owl-next
-		top 47px
 
 
 // контент в транзакциях
 .transaction_content
 	background #fff
-	padding 40px 25px
+	padding 40rem 25rem
 	clearfix()
 
 // блок итого в транзакциях
 .transaction_total
 	background cl5 + 85%
-	padding-bottom 10px
+	padding-bottom 10rem
 
 	.title
-		font-size fzn + 2px
-		padding 0 0 10px
+		font-size fzn + 2rem
+		padding 0 0 10rem
 		border-bottom none
 	.transaction_total_filter
 		float right
-		font-size fzn - 2px
+		font-size fzn - 2rem
 		@media (max-width:1090px)
 			float none
-			margin-top 10px
+			margin-top 10rem
 	.col
 		width auto
-		max-width 350px
+		max-width 350rem
 		margin 0
 	.total_poperty, .total_value
 		display inline-block
 		box-sizing border-box
 		white-space nowrap
 	.total_poperty
-		width 200px
+		width 200rem
 		text-align right
-		padding-right 10px
-		font-size fzn - 2px
+		padding-right 10rem
+		font-size fzn - 2rem
 		color ctextlight
 	.money_expense
 		color ctexterror
@@ -316,17 +115,17 @@
 
 // просмотр счета
 .account_card
-	padding 25px
-	margin-bottom 30px
+	padding 25rem
+	margin-bottom 30rem
 	clearfix()
 
 .account_card_money
 	float left
-	font-size 42px
-	margin 0 0 20px
+	font-size 42rem
+	margin 0 0 20rem
 	font-weight fwl
 	.light_text
-		font-size fzn - 2px
+		font-size fzn - 2rem
 		display block
 		font-weight normal
 	.account_card_actions
@@ -337,20 +136,19 @@
 
 
 .account_card_money_detail_anim
-	height 0
-	transition height .3s, padding .3s
-	overflow hidden
+	// height 0
+	// transition height .3s, padding .3s
+	// overflow hidden
 	clear both
-	margin 0 -25px
-	&.ng-hide
-		display block!important
-	&.show
-		height 69px
-		padding 10px 0 0
+	margin 0 -25rem
+	// &.ng-hide
+	// 	display block!important
+	// &.show
+	// 	height 69rem
+	// 	padding 10rem 0 0
 
 .account_card_money_detail
-	padding 15px 25px
-
+	padding 15rem 25rem
 	background cbgsky - 5%
 	clear both
 	box-sizing border-box
@@ -359,17 +157,17 @@
 		content ''
 		position absolute
 		bottom 100%
-		left 50px
-		border 10px solid transparent
+		left 50rem
+		border 10rem solid transparent
 		border-bottom-color cbgsky - 5%
 	.item
 		display inline-block
-		margin-right 30px
+		margin-right 30rem
 		&[class*="icon-round"]
-			padding-left 45px
+			padding-left 45rem
 			&:before
 				position absolute
-				top 10px
+				top 10rem
 				left 0
 		&.icon-round-minus
 			&:before
@@ -378,10 +176,10 @@
 			&:before
 				color ctextsuccess
 	.title
-		font-size fzn - 4px
+		font-size fzn - 4rem
 		color ctextlight
 	.value
-		font-size fzn + 2px
+		font-size fzn + 2rem
 .account_card_info
 	overflow hidden
 	float right
@@ -389,17 +187,17 @@
 
 .account_card_money_dop_serv
 	background #fff
-	padding 25px
-	margin 0 -25px
-	border-top 1px solid cbdlightsky
-	border-bottom 1px solid cbdlightsky
+	padding 25rem
+	margin 0 -25rem
+	border-top 1rem solid cbdlightsky
+	border-bottom 1rem solid cbdlightsky
 	clear both
 	.title
-		margin 0 0 20px
-		font-size fzn + 2px
+		margin 0 0 20rem
+		font-size fzn + 2rem
 	.col.seven:nth-child(2)
-		border-left 1px solid cbdlight
-		padding-left 40px
+		border-left 1rem solid cbdlight
+		padding-left 40rem
 		margin-left 0
 	.form_group_list:last-child
 		margin-bottom 0
@@ -407,9 +205,9 @@
 .account_card_actions
 	clear both
 	overflow hidden
-	margin 20px 0 0
+	margin 20rem 0 0
 	a
-		margin-right 20px
+		margin-right 20rem
 
 .account_details_actions
 	float right
@@ -418,9 +216,9 @@
 		color clinklight
 		display inline-block
 		vertical-align middle
-		margin-right 10px
+		margin-right 10rem
 		&:before
-			font-size fzn + 2px
+			font-size fzn + 2rem
 			vertical-align middle
 		&:hover
 			&:before
@@ -430,52 +228,51 @@
 		// 		font-size fzn
 		// &.icon-mail-sent
 		// 	&:before
-		// 		font-size fzn + 6px
+		// 		font-size fzn + 6rem
 	&.share_big
 		a
 			&:before
-				font-size fzn + 8px
+				font-size fzn + 8rem
 			// &.icon-save
 			// 	&:before
-			// 		font-size fzn + 6px
+			// 		font-size fzn + 6rem
 			// &.icon-mail-sent
 			// 	height auto
 			// 	&:before
-			// 		font-size fzn + 12px
+			// 		font-size fzn + 12rem
 
 
 // описание транзакции
 .transaction_view_info
 	overflow hidden
-	margin-bottom 30px
+	margin-bottom 30rem
 	.transaction_view_info_money
 		float left
 .transaction_view_info_money
-	font-size 40px
-	margin-right 30px
+	font-size 40rem
+	margin-right 30rem
 	font-weight fwl
 	.light_text
 		font-size fzn
 .transaction_view_info_account
-	font-size fzn + 2px
-	padding 2px 0 0
+	font-size fzn + 2rem
 	font-weight fwl
+	padding 2rem 0 0
 
 
 
 .transaction_view_exchange
 	.col
-		width auto
+		// width auto
 		width 45%
 		float left
 		&:first-child
-			margin-right 5%
-			padding-right 5%
+			padding-right 7%
 	.transaction_view_info_account
-		margin-bottom 10px
-		font-size fzn - 2px
+		margin-bottom 10rem
+		font-size fzn
 	.transaction_view_info_money
-		font-size 32px
+		font-size 32rem
 		margin-right 0
 
 	.from_account, .to_account
@@ -483,9 +280,9 @@
 		&:after
 			content '→'
 			position absolute
-			right -15px
-			top 0px
-			font-size 30px
+			right 5%
+			top 0rem
+			font-size 30rem
 			color ctextlight + 30%
 	.to_account
 		&:after
@@ -495,39 +292,50 @@
 
 
 .transaction_view_contragent
-	padding 25px 30px
-	min-height 45px
-	.name
+	padding 25rem 30rem
+	min-height 45rem
+	&>.name
 		font-weight normal
-		font-size fzn + 3px
-		margin-bottom 20px
+		font-size fzn + 3rem
+		margin-bottom 20rem
 		.transaction_status_stamp
 			top 100%
 			// top 0
 			right 0
 	.transaction_view_contragent_appointment
-		margin 30px -30px -25px
-		padding 20px 30px
-		border-top 1px solid cbdlightsky
+		margin 30rem -30rem -25rem
+		padding 20rem 30rem
+		border-top 1rem solid cbdlightsky
 		background #fff
 		color ctextlight
 		font-style italic
 		word-break break-word
+	.transaction_view_name
+		margin -25rem -30rem 30rem
+		padding 20rem 30rem
+		border-bottom 1rem solid cbdlightsky
+		background #fff
+		font-size fzn + 2rem
+		font-weight fwm
+		&~.transaction_status_stamp
+			top 120rem
+
+
 .stamp_padding
-	margin-right 150px
+	margin-right 150rem
 
 // печать статуса
-.transaction_status_stamp
+.transaction_status_stamp, .status_stamp
 	position absolute
-	right 20px
-	top 20px
+	right 20rem
+	top 20rem
 	display inline-block
-	padding 6px 15px
-	border 4px solid cl2
+	padding 6rem 15rem
+	border 4rem solid cl2
 	color cl2
 	font-weight bold
 	text-transform uppercase
-	font-size fzn - 2px
+	font-size fzn - 2rem
 	transform rotateZ(-8deg)
 	text-align center
 	opacity .66
@@ -542,5 +350,80 @@
 		color ctextwarning
 	.date
 		display block
-		font-size fzn - 5px
+		font-size fzn - 5rem
 		font-weight fwm
+
+.transaction_view_contragent_table
+	margin 30rem -30rem -25rem
+
+// текущие требования - transaction/transaction_current_requirements.html
+
+.current_requirements
+	overflow hidden
+	.title
+		color ctextlight
+		margin 0 0 2rem
+		font-size fzn - 4rem
+		border-bottom 2rem solid cseparator
+		padding-bottom 5rem
+		display inline-block
+	.current_requirement_to_pay
+		float left
+		.title
+			font-size fzn - 2rem
+		.summ
+			font-size 40rem
+			font-weight fwl
+			white-space nowrap
+	.current_requirement_summ,
+	.current_requirement_paid
+		float right
+		margin 12rem 25rem 0 25rem
+		.summ
+			font-size fzn
+			white-space nowrap
+			margin-top 5rem
+			font-size fzn + 2rem
+
+
+// список выписок по расписанию
+.statement_schedule_list
+	background cbgsky
+	border 1rem solid cbd
+	border-radius brbut
+	.item
+		border-bottom 1rem solid cbd
+		overflow hidden
+		display flex
+		justify-content space-between
+		border-radius brbut
+		&:last-child
+			border-bottom none
+		&:hover
+			background #fff
+	.item_link
+		padding 12rem 0 12rem 15rem
+		flex 1 1 100%
+		color ctext
+		text-decoration none
+	.item_delete
+		flex 0 0 40rem
+		text-align center
+		display flex
+		align-items center
+		justify-content center
+		color ctextlight
+		&:before
+			margin 0
+		&:hover
+			color cerror
+
+.statement_schedule_empty
+	font-size fzn - 2rem
+	color ctextlight
+	padding 0
+	// background cbgsky
+	.icon-date
+		font-size 18rem
+		margin-right 2rem
+		vertical-align middle

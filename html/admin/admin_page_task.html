@@ -26,7 +26,14 @@
 			<a href="" class="button small icon-clock">Ждем ответа</a>
 			<!-- <a href="" class="button small">Вернуть в работу</a> -->
 		</div>
-		<div class="page_number">#2722</div>
+		<div class="page_number">#152722</div>
+		<div class="task_favorite_but">
+			<a class="icon-favorites"></a>
+			<!-- если активна -->
+			<!-- <a class="icon-favorites-solid"></a> -->
+		</div>
+
+
 	</div>
 
 
@@ -37,12 +44,27 @@
 
 			<div class="messenger_chat">
 
+				<div class="item right">
+					<div class="desc">
+						<figure class="photo avatar" style="background-image: url(images_out/photo1.jpg)"></figure>
+						<div class="name">Кристина Филатова, ассистент</div>
+						<div class="date_top">Вчера, 17:54 </div>
+						<div class="message">
+							<div class="submessage">
+								<div class="submessage_date">12.05 18:31</div>
+								Расскажите, как пользоваться юристом, и помогите составить договор аренды стадиона для проведения товарищеского матча.
+							</div>
+							<p>Мы выделили этот вопрос в отдельную ветку для вашего удобства. Мы уже начали его решать и скоро вы получите ответ.</p>
+						</div>
+					</div>
+				</div>
+
 				<div class="item">
 					<!-- <div class="date">Вчера, 17:54</div> -->
 					<div class="desc">
 						<figure class="avatar photo" style="background-color: #AB38D3">И</figure>
 						<div class="name">Сидоров Иван</div>
-						<div class="date_top">Вчера, 17:54 <span class="message_info icon-info" b365-tooltip title="<b>Версия:</b> веб<br><b>ОС:</b> Windows 7<br><b>Браузер:</b> Chrome 46.0.2490.71 m<br><b>Разрешение:</b> 1200x800<br><b>IP:</b> 195.208.179.25" data-placement="bottom"></span></div>
+						<div class="date_top">Вчера, 17:54 <span class="message_info icon-info" b365-tooltip title="<b>Версия:</b> веб<br><b>ОС:</b> Windows 7<br><b>Браузер:</b> Chrome 46.0.2490.71 masdfasdfasdfasdf<br><b>Разрешение:</b> 1200x800<br><b>IP:</b> 195.208.179.25" data-placement="bottom"></span></div>
 						<div class="message">
 							<p>Мне СРОЧНО необходимо снять офисное помещение внутри Садового кольца. Общая площадь - не менее 200 кв.м. Наличие парковочных мест для 5 машин обязательно.</p>
 							<ul class="message_file_attachments">
@@ -80,7 +102,7 @@
 
 				<div class="item right to_agents">
 					<div class="desc">
-						<figure class="avatar photo" style="background-color: rgb(174,225,75)">К</figure>
+						<figure class="avatar photo" style="background-color: #2D4668">J</figure>
 						<div class="name">Василькова Ксения, бухгалтер</div>
 						<div class="date_top">Вчера, 17:54</div>
 						<div class="message">
@@ -246,11 +268,161 @@
 		</div>
 	</div>
 
+
+
+
+
+
+
 	<!-- сайдабар слоя -->
 	<div class="page_side">
 
-		<div class="task_side_time error_text"><span class="icon-clock">03:52</span></div>
 
+
+		<div class="task_side_time ">
+			<a class="task_side_time_but icon-pause drop-target" data-position="top center" data-theme="tast_timer_drop"></a>
+			<div class="drop-content">
+				<div class="drop-content-inner">
+					<ul class="drop-menu">
+						<li><a>10 минут</a></li>
+						<li class="active"><a>30 минут</a></li>
+						<li><a>1 час</a></li>
+						<li><a>24 часа</a></li>
+						<li>
+							<div class="timer_slider">
+								<div class="slider-range-value"><span id="slider-range-value"></span> ч</div>
+								<div id="slider-range"></div>
+							</div>
+
+						</li>
+					</ul>
+					<div class="form">
+						<input type="text" class="small" name="" id="" placeholder="Комментарий">
+						<button class="button small" disabled>Запустить таймер</button>
+					</div>
+				</div>
+			</div>
+			<span class="task_side_time_text">03:52</span>
+		</div>
+
+
+
+		<div class="task_side_time ">
+			<a class="task_side_time_but icon-play"></a>
+			<span class="task_side_time_text paused">03:52</span>
+
+			<div class="task_side_timer_text">
+				<span class="title">Таймер</span>
+				<span>4:12:59</span>
+			</div>
+
+		</div>
+
+
+		<div class="page_edit_tag">
+			<a class="drop-target" data-position="top right">&nbsp;</a>
+			<div class="drop-content">
+				<div class="drop-content-inner">
+					<ul class="tags_drop_list">
+						<li>
+							<div class="tag_item" style="background-color: #E54D4D;">
+								<input type="checkbox" name="1" id="1" class="input_check" checked>
+								<label for="1" class="label_check"><span>Блокировка</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #41C75E;">
+								<input type="checkbox" name="1" id="1" class="input_check" checked>
+								<label for="1" class="label_check"><span>Деньги</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #464DD7;">
+								<input type="checkbox" name="1" id="1" class="input_check" >
+								<label for="1" class="label_check"><span>Депозиты</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #7ED2F6;">
+								<input type="checkbox" name="1" id="1" class="input_check">
+								<label for="1" class="label_check"><span>Эквайринг</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #9C1BC9;">
+								<input type="checkbox" name="1" id="1" class="input_check">
+								<label for="1" class="label_check"><span>Реквизиты</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #6690B0;">
+								<input type="checkbox" name="1" id="1" class="input_check">
+								<label for="1" class="label_check"><span>Бухгалтерия</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #E54D4D;">
+								<input type="checkbox" name="1" id="1" class="input_check" >
+								<label for="1" class="label_check"><span>Блокировка</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #41C75E;">
+								<input type="checkbox" name="1" id="1" class="input_check" >
+								<label for="1" class="label_check"><span>Деньги</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #464DD7;">
+								<input type="checkbox" name="1" id="1" class="input_check" >
+								<label for="1" class="label_check"><span>Депозиты</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #7ED2F6;">
+								<input type="checkbox" name="1" id="1" class="input_check">
+								<label for="1" class="label_check"><span>Карты</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #9C1BC9;">
+								<input type="checkbox" name="1" id="1" class="input_check">
+								<label for="1" class="label_check"><span>Реквизиты</span></label>
+							</div>
+						</li>
+						<li>
+							<div class="tag_item" style="background-color: #6690B0;">
+								<input type="checkbox" name="1" id="1" class="input_check">
+								<label for="1" class="label_check"><span>Бухгалтер и юрист</span></label>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page_tags">
+			<ul class="page_tags_list">
+				<li>
+					<div class="tag_item" style="background-color: #E54D4D;">
+						<span>Блокировка</span>
+						<a class="tag_delete icon-delete-circle"></a>
+					</div>
+				</li><li>
+					<div class="tag_item" style="background-color: #41C75E;">
+						<span>Деньги</span>
+						<a class="tag_delete icon-delete-circle"></a>
+					</div>
+				</li><li>
+					<div class="tag_item" style="background-color: #9C1BC9;">
+						<span>Эквайринг</span>
+						<a class="tag_delete icon-delete-circle"></a>
+					</div>
+				</li>
+
+			</ul>
+		</div>
 
 		<div class="side_parameter">
 			<div class="side_parameter_name">Группа обслуживания:</div>
@@ -280,33 +452,43 @@
 					<option class="jsRadSelect2Options" value="7">Нур Ибрагимов</option>
 					<option class="jsRadSelect2Options" value="8">Роберт Сабирьянов</option>
 				</div>
-				<!-- <p>Азат Халилов</p>
-				<a class="m_top_5 button xsmall">Назначить мне</a> -->
+				<!-- <p>Азат Халилов</p> -->
+				<a class="m_top_10 button xsmall">Назначить мне</a>
 			</div>
 		</div>
 
 
 		<div class="task_side_client side_block">
 			<figure class="avatar"><img src="../images/avatar_man.jpg" alt="Сидоров Сидр"></figure>
-			<div class="status"><span class="info_label_success">Online</span></div>
-			<!-- <div class="status"><span class="info_label_error">Offline</span></div> -->
+			<!-- <div class="status"><span class="info_label_success">Online</span></div> -->
+			<div class="status"><span class="info_label_error">Offline</span><span class="last_enter">10.05 11:23</span></div>
 			<div class="desc">
 				<div class="name">Сидоров Михаил</div>
 				<div class="company">Общество с ограниченной ответственностью "Пермские колбасы"</div>
 				<p class="ov_ell icon-mail"><a href="mailto:info@romashka.net">info@romashka.net</a></p>
 				<p class="ov_ell icon-phone">+7 (095) 420-09-80</p>
 				<span class="info_label_error small">Блокировка ПОД/ФТ</span>
+				<span class="info_label_error small">Пользователь удален из компании</span>
+				<span class="portal_id">bd7dec2b-b862-4dc9-8cac-a5df02dec611</span>
 			</div>
 		</div>
 
 
 
 		<div class="side_block">
-			<div class="side_block_title">Компания</div>
+			<div class="side_block_title">
+				<a class="button xxsmall f_right light">CRM</a>
+				<a class="button xxsmall f_right light m_right_5">Карточка</a>
+				Компания
+			</div>
 			<p><span class="light_text">ОГРНИП:</span> 123456789012345</p>
 			<p><span class="light_text">ИНН:</span> 123456789012</p>
 			<p><span class="light_text">КПП:</span> 1234567890</p>
+			<p><span class="light_text">ABSID:</span> 3644283679</p>
 			<p><span class="light_text">В системе с:</span> 25.03.2015</p>
+			<p><span class="light_text">Статус в CRM:</span> <a>Счет открыт</a></p>
+			<!-- <p><span class="c_error">Статус в CRM: –</span></p> -->
+			<div class="side_sep"></div>
 			<p><a>Реквизиты компании</a></p>
 			<p><a>Представители</a></p>
 			<!-- <p><span class="light_text">Пользователей:</span> 3</p>
@@ -336,7 +518,10 @@
 		<div class="side_sep"></div>
 
 		<div class="side_block">
-			<div class="side_block_title">Остаток на счетах</div>
+			<div class="side_block_title">
+				<a class="button xxsmall f_right light">Все счета</a>
+				Остатки на счетах
+			</div>
 			<p><span class="light_text w35 d_ib">Рубли:</span> 10 000,22 <span class="cur rur"><span>р.</span></span></p>
 			<p><span class="light_text w35 d_ib">Доллары:</span> 0,01 <span class="cur usd"><span>$</span></span></p>
 			<p><span class="light_text w35 d_ib">Евро:</span> 42,00 <span class="cur eur"><span>€</span></span></p>
@@ -349,6 +534,17 @@
 			<div class="side_block_title">Заметки</div>
 			<p class="fs_i">Любит общаться долго,<br>На контроле у финмониторинга,<br>Частая смена номера</p>
 			<div class="m_top_10"><a class="button xsmall second">Написать</a></div>
+		</div>
+
+		<div class="side_sep"></div>
+
+		<div class="side_block">
+			<div class="side_block_title">
+				<a class="button xxsmall f_right light">Статистика</a>
+				Задачи
+			</div>
+			<p>Всего: <strong>17</strong></p>
+			<p>Открыто: <strong>3</strong></p>
 		</div>
 
 

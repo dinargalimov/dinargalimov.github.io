@@ -13,7 +13,8 @@ var arrayOfJS = [
 	'equalize',
 	'stream_layers',
 	'shepherd',
-	'hopscotch'
+	'hopscotch',
+	'nouislider'
 ];
 
 loadJs();
@@ -102,32 +103,9 @@ function init(){
 	// авторесайз textarea
 	$('textarea.js_autosize').textareaAutoSize();
 
-	// карусель счетов
-	$('.transaction_choose_account').owlCarousel({
-	    margin: 0,
-	    nav: true,
-	    dots: false,
-	    margin: 15,
-	    rewindNav:false,
-	    navText: '',
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:3
-	        },
-	        1170:{
-	            items:4
-	        },
-	        1400:{
-	            items:5
-	        },
-	        1700:{
-	            items:6
-	        }
-	    }
-	});
+
+
+
 
 	$('.datetimepicker').datetimepicker({
 		timepicker: true,
@@ -141,13 +119,15 @@ function init(){
     	new Drop({
 		  target:target,
 		  content: $(target).next('.drop-content').html(),
-		  classes: 'drop-theme-basic',
+		  classes: $(target).data('theme') + ' drop-theme-basic',
 		  position: $(target).data('position') || 'bottom left',
 		  openOnfor: 'click'
 	})});
 
 	$('[b365-tooltip]').tooltip({
-		html: true
+		html: true,
+		container: 'body'
+		// viewport: '.main'
 	});
 
 	// $('.equalize_height').equalize('innerHeight');
@@ -187,6 +167,10 @@ function init(){
 
 	$( ".message" ).click(function() {
 	  $( ".add_new_task_for_message" ).addClass('show');
+	});
+
+	$( ".header_search .drop-target" ).click(function() {
+	  $( ".header_search" ).addClass('active');
 	});
 
 
@@ -255,6 +239,77 @@ function init(){
     $('.start').click(function() {
     	hopscotch.startTour(tour);
     });
+
+
+    $('.show_all').click(function(){
+    	$(this).parents('.table_list_row').next('.table_list_subrow').toggleClass('hidden');
+    	$(this).toggleClass('active');
+    });
+
+
+    // показ графика
+    $('.graph_hide').click(function(){
+    	$(this).removeClass('visible');
+    	$('.cashflow_graph').addClass('graph_hidden')
+    	$('.graph_show').addClass('visible')
+    });
+    $('.graph_show').click(function(){
+    	$(this).removeClass('visible');
+    	$('.cashflow_graph').removeClass('graph_hidden')
+    	$('.graph_hide').addClass('visible')
+    });
+
+    // показать фильтры
+    $('.show_filter_panel').mousedown(function(){
+    	$('.filter_panel').addClass('visible');
+    });
+    $('.filter_panel').mouseleave(function(){
+    	$('.filter_panel').removeClass('visible');
+    });
+
+    $('.section_content').scroll(function() {
+	    var scroll = $('.section_content').scrollTop();
+	    if (scroll >= 150) {
+	        $(".show_filter_panel.float").addClass("fixed");
+	    }
+	    else {
+	    	$(".show_filter_panel.float").removeClass("fixed");
+	    }
+	});
+
+	// показать панель действий
+	$('label[for="a2"]').mousedown(function(){
+		$('.section_action_panel').toggleClass('visible')
+	});
+
+
+$(".task_side_time_but").on("click",function(){
+	console.log('test')
+	setTimeout(function(){
+		initRangeSlider('.drop')
+	},500);
+})
+
+	initRangeSlider('.t2');
+
+	function initRangeSlider(context){
+		var rangeSlider = $('#slider-range',context)[0];
+		noUiSlider.create(rangeSlider, {
+			start: [ 0 ],
+			step: 0.5,
+			range: {
+				'min': [  0 ],
+				'max': [ 72 ]
+			}
+		});
+
+		var rangeSliderValueElement = $('#slider-range-value',context)[0];
+		rangeSlider.noUiSlider.on('update', function( values, handle ) {
+		rangeSliderValueElement.innerHTML = values[handle];
+	});
+	}
+
+
 
 
 

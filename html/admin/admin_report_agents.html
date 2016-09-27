@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Статистика по задачам</title>
+	<title>Статистика по агентам</title>
 	<base href="../../"/>
 	<link rel="stylesheet" href="css/admin.css">
 
@@ -11,57 +11,7 @@
 </head>
 <body>
 
-<header>
-	<div class="header_profile">
-		<div class="header_profile_name">
-			<figure class="avatar" style="background-color: rgb(225,90,75)">C</figure>
-				Иванова Саша
-		</div>
-		<div class="header_profile_settigs">
-			<a href="#" class="icon-settings"></a>
-		</div>
-
-		<div class="header_profile_logout">
-			<a href="#" class="icon-logout"></a>
-		</div>
-	</div>
-
-	<div class="profile_progress">
-		Мои закрытые:
-		<strong>250</strong>
-		(<span class="success_text">200</span>/<span class="error_text">50</span>)
-	</div>
-
-	<div class="header_admin_menu">
-		<ul>
-			<li><a class="icon-check">Задачи</a></li>
-			<li><a class="icon-menu-clients">Клиенты</a></li>
-			<li class="active"><a class="icon-notes drop-target">Отчеты</a>
-				<div class="drop-content">
-					<div class="drop-content-inner">
-						<ul class="drop-menu">
-							<li><a>Статистика по задачам</a></li>
-							<li><a>Общая статистика</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-			<li>
-				<a class="icon-news drop-target">Новости</a>
-				<div class="drop-content">
-					<div class="drop-content-inner">
-						<ul class="drop-menu">
-							<li><a>На e-mail клиентам</a></li>
-							<li><a>На главную страницу клиентам</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-		</ul>
-	</div>
-
-</header>
+<include data-file="admin/admin_task_list.html header"></include>
 
 <section class="main">
 
@@ -71,7 +21,7 @@
 		<div class="content">
 
 			<div class="title_panel">
-				<h1>Статистика по задачам</h1>
+				<h1>Статистика по агентам</h1>
 
 				<div class="title_buttons">
 					<a class="drop-target icon-date drop-input second small ">с 12 апреля по 19 марта</a>
@@ -101,10 +51,58 @@
 
 				<!-- колонка -->
 				<div class="stat_column widget_block">
-					<div class="title">Все закрытые задачи</div>
-					<div class="stat_all_task">
-						<span class="total">2450</span> (<span class="c_success">1890</span>/<span class="c_error">460</span>)
-					</div>
+					<div class="title">Агенты <span class="c_light f_small">*</span></div>
+					<ul class="stat_list">
+						<li>
+							<span class="name">Всего:</span>
+							<span class="value">
+								<span class="total">124</span>
+							</span>
+						</li>
+						<li>
+							<div class="subtitle">Из них:</div>
+							<ul class="stat_list sub_list">
+								<li>
+									<span class="name">Администратор</span>
+									<span class="value">
+										<span class="total">8</span>
+									</span>
+								</li>
+								<li>
+									<span class="name">Бизнес-ассистент</span>
+									<span class="value">
+										<span class="total">30</span>
+									</span>
+								</li>
+								<li>
+									<span class="name">Бухгалтер</span>
+									<span class="value">
+										<span class="total">12</span>
+									</span>
+								</li>
+								<li>
+									<span class="name">Юрист</span>
+									<span class="value">
+										<span class="total">22</span>
+									</span>
+								</li>
+								<li>
+									<span class="name">Менеджер ВЭД</span>
+									<span class="value">
+										<span class="total">14</span>
+									</span>
+								</li>
+								<li>
+									<span class="name">Телемаркетинг</span>
+									<span class="value">
+										<span class="total">46</span>
+									</span>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+					<div class="small_text m_top_30">* указано количество на текущий момент</div>
 				</div>
 
 				<!-- колонка -->
@@ -120,31 +118,31 @@
 						<li>
 							<span class="name">Чемпионы</span>
 							<span class="value">
-								<span class="total">50</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
+								<span class="total">38</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
 							</span>
 						</li>
 						<li>
 							<span class="name">Телебратва</span>
 							<span class="value">
-								<span class="total">50</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
+								<span class="total">65</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
 							</span>
 						</li>
 						<li>
 							<span class="name">Юристы</span>
 							<span class="value">
-								<span class="total">50</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
+								<span class="total">45</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
 							</span>
 						</li>
 						<li>
 							<span class="name">Лузеры</span>
 							<span class="value">
-								<span class="total">50</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
+								<span class="total">52</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
 							</span>
 						</li>
 						<li>
 							<span class="name">Бригада</span>
 							<span class="value">
-								<span class="total">50</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
+								<span class="total">61</span> (<span class="c_success">25</span>/<span class="c_error">15</span>)
 							</span>
 						</li>
 					</ul>

@@ -16,16 +16,16 @@
 </head>
 <body ng-app="app">
 
-<include data-file="aside.html"></include>
 <include data-file="header.html"></include>
 
-<section class="main"></section>
-<article class="page open"></article>
+<section class="main">
+	<include data-file="aside.html"></include>
+	<include data-file="transaction/transaction.html section>*"></include>
+</section>
 
 <!-- ЧАТ  -->
 
 <div class="messenger">
-	<div class="">
 		<div class="messenger_header">
 			<div class="messenger_header_action">
 				<a class="icon-close"></a>
@@ -40,7 +40,7 @@
 			<div class="messenger_theme_list">
 				<div class="messenger_theme_item new">
 					<a href="#">
-						<figure class="photo avatar" style="background-image: url(images_out/photo1.jpg)"></figure>
+						<figure class="photo avatar" style="background-image: url(images/avatar_woman.jpg)"></figure>
 						<span class="desc">
 							<span class="date">22:30</span>
 							<span class="name">Кристина Филатова, ассистент</span>
@@ -83,7 +83,7 @@
 				</div>
 				<div class="messenger_theme_item new">
 					<a href="#">
-						<figure class="photo avatar" style="background-image: url(images_out/photo1.jpg)"></figure>
+						<figure class="photo avatar" style="background-image: url(images/avatar_woman.jpg)"></figure>
 						<span class="desc">
 							<span class="date">22:30</span>
 							<span class="name">Кристина, ассистент</span>
@@ -103,7 +103,7 @@
 				</div>
 				<div class="messenger_theme_item">
 					<a href="#">
-						<figure class="photo avatar" style="background-image: url(images_out/photo1.jpg)"></figure>
+						<figure class="photo avatar" style="background-image: url(images/avatar_woman.jpg)"></figure>
 						<span class="desc">
 							<span class="date">22:30</span>
 							<span class="name">Я</span>
@@ -113,7 +113,7 @@
 				</div>
 				<div class="messenger_theme_item theme_closed">
 					<a href="#">
-						<figure class="photo avatar" style="background-image: url(images_out/photo1.jpg)"></figure>
+						<figure class="photo avatar" style="background-image: url(images/avatar_woman.jpg)"></figure>
 						<span class="desc">
 							<span class="date">22:30</span>
 							<span class="name">Кристина, ассистент</span>
@@ -123,7 +123,7 @@
 				</div>
 				<div class="messenger_theme_item theme_closed">
 					<a href="#">
-						<figure class="photo avatar" style="background-image: url(images_out/photo1.jpg)"></figure>
+						<figure class="photo avatar" style="background-image: url(images/avatar_man.jpg)"></figure>
 						<span class="desc">
 							<span class="date">22:30</span>
 							<span class="name">Я</span>
@@ -135,7 +135,7 @@
 			</div>
 		</div>
 
-	</div>
+
 </div>
 
 </section>
