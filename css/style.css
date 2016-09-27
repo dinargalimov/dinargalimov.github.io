@@ -3360,27 +3360,12 @@ a.icon-info:hover {
 .drop-element.drop-open {
   display: block;
 }
-.drop-element.drop-open-transitionend {
-  display: block;
-}
-.drop-element.drop-open-transitionend .drop-content {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-}
-.drop-element.drop-after-open.drop-open-transitionend .drop-content {
-  -webkit-transition: none;
-  transition: none;
+.drop-element.drop-open .drop-content {
   -webkit-animation: dropShow 0.2s;
   -moz-animation: dropShow 0.2s;
   -o-animation: dropShow 0.2s;
   -ms-animation: dropShow 0.2s;
   animation: dropShow 0.2s;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
 }
 .drop-element.drop-target-attached-top {
   margin-top: -10rem;
@@ -3415,7 +3400,6 @@ a.icon-info:hover {
   padding: 0;
   box-shadow: 0 5rem 20rem rgba(0,0,0,0.15), 0rem 0rem 1rem rgba(0,0,0,0.22);
   padding-right: 20rem;
-  will-change: transform;
 }
 .drop-element .drop-content-inner {
   width: calc(100% + 20rem);

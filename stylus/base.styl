@@ -1940,27 +1940,31 @@ a.icon-info
 
 	&.drop-open
 		display block
+		.drop-content
+			animation dropShow .2s
+
+
 
 
 	&.drop-open-transitionend
-		display block
+		// display block
 		.drop-content
 
 			// transform perspective(600rem) rotateX(-90deg)
-			transition opacity .2s
-
-			// animation dropHide .3s .1s
-			opacity 0
+			// transition background .2s
+			// animation dropHide .2s
+			// opacity 0
 			// transform: translateY(7rem);
 			// transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
 
 	&.drop-after-open.drop-open-transitionend
+
 		.drop-content
 
 			// transform perspective(600rem) rotateX(0deg)
-			transition none
-			animation dropShow .2s
-			opacity 1
+			// transition background .2s
+
+			// opacity 1
 			// transform: translateY(0);
 
 	&.drop-target-attached-top
@@ -1993,7 +1997,8 @@ a.icon-info
 		// transform-origin top
 		padding-right 20rem
 		// margin-top 5rem
-		will-change transform
+		// will-change transform
+
 
 
 
