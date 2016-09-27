@@ -3371,8 +3371,8 @@ a.icon-info:hover {
   filter: alpha(opacity=0);
 }
 .drop-element.drop-after-open.drop-open-transitionend .drop-content {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: none;
+  transition: none;
   -webkit-animation: dropShow 0.2s;
   -moz-animation: dropShow 0.2s;
   -o-animation: dropShow 0.2s;
