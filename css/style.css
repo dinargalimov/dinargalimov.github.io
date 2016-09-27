@@ -3360,19 +3360,27 @@ a.icon-info:hover {
 .drop-element.drop-open {
   display: block;
 }
+.drop-element.drop-open-transitionend {
+  display: block;
+}
 .drop-element.drop-open-transitionend .drop-content {
-  -webkit-animation: dropHide 0.3s;
-  -moz-animation: dropHide 0.3s;
-  -o-animation: dropHide 0.3s;
-  -ms-animation: dropHide 0.3s;
-  animation: dropHide 0.3s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 .drop-element.drop-after-open.drop-open-transitionend .drop-content {
-  -webkit-animation: dropShow 0.3s;
-  -moz-animation: dropShow 0.3s;
-  -o-animation: dropShow 0.3s;
-  -ms-animation: dropShow 0.3s;
-  animation: dropShow 0.3s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-animation: dropShow 0.2s;
+  -moz-animation: dropShow 0.2s;
+  -o-animation: dropShow 0.2s;
+  -ms-animation: dropShow 0.2s;
+  animation: dropShow 0.2s;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 .drop-element.drop-target-attached-top {
   margin-top: -10rem;
@@ -16488,7 +16496,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @-moz-keyframes dropShow {
   0% {
-    visibility: visible;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -16497,7 +16504,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
     transform: translateY(10rem);
   }
   100% {
-    visibility: visible;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16508,7 +16514,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @-webkit-keyframes dropShow {
   0% {
-    visibility: visible;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -16517,7 +16522,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
     transform: translateY(10rem);
   }
   100% {
-    visibility: visible;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16528,7 +16532,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @-o-keyframes dropShow {
   0% {
-    visibility: visible;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -16537,7 +16540,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
     transform: translateY(10rem);
   }
   100% {
-    visibility: visible;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16548,7 +16550,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @keyframes dropShow {
   0% {
-    visibility: visible;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -16557,7 +16558,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
     transform: translateY(10rem);
   }
   100% {
-    visibility: visible;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16568,7 +16568,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @-moz-keyframes dropHide {
   0% {
-    visibility: hidden;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16587,7 +16586,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @-webkit-keyframes dropHide {
   0% {
-    visibility: hidden;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16606,7 +16604,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @-o-keyframes dropHide {
   0% {
-    visibility: hidden;
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -16625,7 +16622,6 @@ article.page.page_faq .page_faq_list .item .ans .ans_img img[src*="gif"] {
 }
 @keyframes dropHide {
   0% {
-    visibility: hidden;
     opacity: 1;
     -ms-filter: none;
     filter: none;
