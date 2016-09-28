@@ -282,6 +282,10 @@ function init(){
 		$('.section_action_panel').toggleClass('visible')
 	});
 
+	$('.link_show').click(function(){
+		$('article.page').removeClass('hide').addClass('open')
+	});
+
 
 $(".task_side_time_but").on("click",function(){
 	console.log('test')
@@ -308,6 +312,9 @@ $(".task_side_time_but").on("click",function(){
 		rangeSliderValueElement.innerHTML = values[handle];
 	});
 	}
+
+
+
 
 
 
