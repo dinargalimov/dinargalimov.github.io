@@ -287,12 +287,12 @@ function init(){
 	});
 
 
-$(".task_side_time_but").on("click",function(){
-	console.log('test')
-	setTimeout(function(){
-		initRangeSlider('.drop')
-	},500);
-})
+	$(".task_side_time_but").on("click",function(){
+		console.log('test')
+		setTimeout(function(){
+			initRangeSlider('.drop')
+		},500);
+	});
 
 	initRangeSlider('.t2');
 
