@@ -13917,7 +13917,7 @@ input.field_contragent {
 .filter_panel {
   position: fixed;
   z-index: 150;
-  right: 265rem;
+  right: 0rem;
   top: 60rem;
   bottom: 0;
   overflow: auto;
@@ -13932,28 +13932,21 @@ input.field_contragent {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  -webkit-transform: translateX(285rem);
-  -ms-transform: translateX(285rem);
-  transform: translateX(285rem);
-  -webkit-transition: -webkit-transform 0.7s 0.3s, opacity 0.3s 0.3s, visibility 0s 0.6s;
-  transition: transform 0.7s 0.3s, opacity 0.3s 0.3s, visibility 0s 0.6s;
+  -webkit-transition: right 0.7s 0.3s, opacity 0.3s 0.3s, visibility 0s 0.6s;
+  transition: right 0.7s 0.3s, opacity 0.3s 0.3s, visibility 0s 0.6s;
 }
 .filter_panel.visible {
   visibility: visible;
-  -webkit-transform: translateX(0rem);
-  -ms-transform: translateX(0rem);
-  transform: translateX(0rem);
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-  transition: transform 0.3s, opacity 0.2s;
+  right: 265rem;
+  -webkit-transition: right 0.3s, opacity 0.2s;
+  transition: right 0.3s, opacity 0.2s;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
 .filter_panel:hover {
   visibility: visible;
-  -webkit-transform: translateX(0rem);
-  -ms-transform: translateX(0rem);
-  transform: translateX(0rem);
+  right: 265rem;
   opacity: 1;
   -ms-filter: none;
   filter: none;
