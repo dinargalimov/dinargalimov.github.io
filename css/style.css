@@ -340,18 +340,14 @@
   padding: 0;
   vertical-align: baseline;
   outline: none;
+  -webkit-text-size-adjust: none;
 }
 html {
-  font-size: 1px;
-}
-@media screen and (min-width: 1600px) and (min-height: 750px) {
-  html {
-    font-size: 1.105px;
-  }
+  font-size: 1px !important;
 }
 @media screen and (min-width: 1900px) and (min-height: 750px) {
   html {
-    font-size: 1.2px;
+    font-size: 1.105px;
   }
 }
 html,
@@ -367,6 +363,8 @@ body {
   color: #2b2b2b;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
 }
 div,
 article,
@@ -3367,19 +3365,18 @@ a.icon-info:hover {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  -webkit-transform: translateY(7rem) translateZ(0px);
-  -ms-transform: translateY(7rem) translateZ(0px);
-  transform: translateY(7rem) translateZ(0px);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 .drop-element.drop-after-open.drop-open-transitionend .drop-content {
   opacity: 1;
   -ms-filter: none;
   filter: none;
-  -webkit-transform: translateY(0) translateZ(0px);
-  -ms-transform: translateY(0) translateZ(0px);
-  transform: translateY(0) translateZ(0px);
+  -webkit-animation: dropShow 0.2s;
+  -moz-animation: dropShow 0.2s;
+  -o-animation: dropShow 0.2s;
+  -ms-animation: dropShow 0.2s;
+  animation: dropShow 0.2s;
 }
 .drop-element.drop-target-attached-top {
   margin-top: -10rem;
@@ -4427,7 +4424,7 @@ table .row_title td {
   line-height: 1;
 }
 .table_list_header .table_list_cell a {
-  color: #6690b0 !important;
+  color: rgba(0,0,0,0.5) !important;
   text-decoration: none;
   display: inline-block;
   max-width: 100%;
@@ -4451,8 +4448,7 @@ table .row_title td {
 .table_list_header .table_list_cell [class*="icon-sort"]:before {
   float: right;
   min-width: 0;
-  margin: 0 -15rem 0 4rem;
-  font-size: 8rem;
+  margin: 0 -17rem 0 5rem;
 }
 .table_list_header .table_list_cell.name_search input.input_search {
   width: 150rem;
@@ -4972,7 +4968,7 @@ table .row_title td {
   padding-top: 18rem;
 }
 .table_list.table_list_big .summ {
-  font-size: 26rem;
+  font-size: 24rem;
   min-width: 230rem;
   font-weight: 200;
 }
@@ -5006,6 +5002,29 @@ table .row_title td {
 }
 .table_list.table_list_big .name .status {
   vertical-align: 3rem;
+}
+.table_list.table_list_big .name .input_search {
+  border: none;
+  box-shadow: none;
+  height: 20rem;
+  background-position: 0 center;
+  padding-left: 24rem;
+}
+.table_list.table_list_big .name .input_search::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
+}
+.table_list.table_list_big .name .input_search::-moz-placeholder {
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
+}
+.table_list.table_list_big .name .input_search:-ms-input-placeholder {
+  color: rgba(0,0,0,0.5) !important;
+  font-weight: 400;
+}
+.table_list.table_list_big .name .input_search::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+  cursor: pointer;
 }
 .table_list.table_list_big .action {
   width: 45rem;
@@ -6312,10 +6331,6 @@ input[type='search'].input_search {
   padding-left: 30rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-input[type='search'].input_search:focus {
-  background-position: -15rem center;
-  padding-left: 10rem;
 }
 input.input_search_focus {
   background-image: url("../images/icon_search_input.svg");

@@ -25,14 +25,15 @@
 	padding 0
 	vertical-align baseline
 	outline none
+	-webkit-text-size-adjust: none;
 html
-	font-size 1px
+	font-size 1px!important
 
-@media screen and (min-width:1600px) and (min-height:750px) {
-    html {font-size: 1.105px;}
-}
+// @media screen and (min-width:1600px) and (min-height:750px) {
+//     html {font-size: 1.105px;}
+// }
 @media screen and (min-width:1900px) and (min-height:750px) {
-    html {font-size: 1.2px;}
+    html {font-size: 1.105px;}
 }
 
 
@@ -41,6 +42,7 @@ html, body
 	min-height 100%
 	height 100%
 
+
 body
 	font-size fzn
 	font-family ffn
@@ -48,6 +50,8 @@ body
 	color ctext
 	line-height 1.3
 	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-text-size-adjust: none
 
 
 
@@ -183,7 +187,6 @@ h3
 	text-align left!important
 .a_right
 	text-align right!important
-
 .poss
 	position static!important
 .fzn
@@ -1943,9 +1946,6 @@ a.icon-info
 
 
 
-
-
-
 	&.drop-open-transitionend
 		display block
 		.drop-content
@@ -1954,9 +1954,9 @@ a.icon-info
 			// transition background .2s
 			// animation dropHide .2s
 			opacity 0
-			transform: translateY(7rem) translateZ(0px);
-			transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-			// transition none
+			// transform: translateY(7rem) translateZ(0px);
+			// transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+			transition opacity .2s
 
 	&.drop-after-open.drop-open-transitionend
 
@@ -1966,9 +1966,9 @@ a.icon-info
 			// transition background .2s
 
 			opacity 1
-			transform: translateY(0) translateZ(0px);
+			// transform: translateY(0) translateZ(0px);
 			// transition none
-			// animation dropShow .2s
+			animation dropShow .2s
 			// display block
 
 	&.drop-target-attached-top

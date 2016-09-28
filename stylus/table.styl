@@ -26,7 +26,7 @@
 		padding-bottom 13rem
 		line-height 1
 		a
-			color clinklight!important
+			color ctextlight!important
 			text-decoration none
 			display inline-block
 			max-width 100%
@@ -42,8 +42,7 @@
 			&:before
 				float right
 				min-width 0
-				margin 0 -15rem 0 4rem
-				font-size fzn - 8rem
+				margin 0 -17rem 0 5rem
 
 		&.name_search
 
@@ -443,7 +442,7 @@
 	.check
 		padding-top 18rem
 	.summ
-		font-size 26rem
+		font-size 24rem
 		min-width 230rem
 		font-weight fwl
 
@@ -471,7 +470,24 @@
 		.status
 			vertical-align 3rem
 			// margin-left 15rem
-
+		.input_search
+			border none
+			box-shadow none
+			height 20rem
+			background-position 0 center
+			padding-left 24rem
+			&::-webkit-input-placeholder
+				color ctextlight
+				font-weight fwn
+			&::-moz-placeholder
+				color ctextlight
+				font-weight fwn
+			&:-ms-input-placeholder
+				color ctextlight!important
+				font-weight fwn
+			&::-webkit-search-cancel-button
+				-webkit-appearance searchfield-cancel-button
+				cursor pointer
 
 	.action
 		width 45rem

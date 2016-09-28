@@ -709,10 +709,6 @@ input[type='search'].input_search {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-input[type='search'].input_search:focus {
-  background-position: -15rem center;
-  padding-left: 10rem;
-}
 input.input_search_focus {
   background-image: url("../images/icon_search_input.svg");
   background-repeat: no-repeat;
