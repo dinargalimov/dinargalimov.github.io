@@ -294,24 +294,24 @@ function init(){
 		},500);
 	});
 
-	initRangeSlider('.t2');
+	// initRangeSlider('.t2');
 
-	function initRangeSlider(context){
-		var rangeSlider = $('#slider-range',context)[0];
-		noUiSlider.create(rangeSlider, {
-			start: [ 0 ],
-			step: 0.5,
-			range: {
-				'min': [  0 ],
-				'max': [ 72 ]
-			}
-		});
+	// function initRangeSlider(context){
+	// 	var rangeSlider = $('#slider-range',context)[0];
+	// 	noUiSlider.create(rangeSlider, {
+	// 		start: [ 0 ],
+	// 		step: 0.5,
+	// 		range: {
+	// 			'min': [  0 ],
+	// 			'max': [ 72 ]
+	// 		}
+	// 	});
 
-		var rangeSliderValueElement = $('#slider-range-value',context)[0];
-		rangeSlider.noUiSlider.on('update', function( values, handle ) {
-		rangeSliderValueElement.innerHTML = values[handle];
-	});
-	}
+	// 	var rangeSliderValueElement = $('#slider-range-value',context)[0];
+	// 	rangeSlider.noUiSlider.on('update', function( values, handle ) {
+	// 	rangeSliderValueElement.innerHTML = values[handle];
+	// });
+	// }
 
 
 
