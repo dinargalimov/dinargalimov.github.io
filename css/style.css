@@ -8310,15 +8310,13 @@ input.date_to {
   color: #d0021b;
 }
 .ms-choice.open ~ .ms-drop {
-  -webkit-transform: translateY(0rem);
-  -ms-transform: translateY(0rem);
-  transform: translateY(0rem);
+  margin-top: 0;
   opacity: 1;
   -ms-filter: none;
   filter: none;
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0s;
-  transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0s;
+  -webkit-transition: margin-top 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0s;
+  transition: margin-top 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0s;
 }
 .ms-choice-input {
   background-image: none;
@@ -8348,11 +8346,9 @@ input.date_to {
   -webkit-transform-origin: top;
   -ms-transform-origin: top;
   transform-origin: top;
-  -webkit-transform: translateY(7rem);
-  -ms-transform: translateY(7rem);
-  transform: translateY(7rem);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0.2s;
-  transition: transform 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0.2s;
+  margin-top: 7rem;
+  -webkit-transition: margin-top 0s 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0.2s;
+  transition: margin-top 0s 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out, visibility 0s 0.2s;
 }
 .ms-drop.bottom {
   bottom: 100%;
@@ -9353,7 +9349,7 @@ section.main.section_areas {
 article.page {
   position: fixed;
   z-index: 1050;
-  right: -200rem;
+  right: -150rem;
   left: auto !important;
   bottom: 0;
   top: 60rem;
@@ -9383,7 +9379,7 @@ article.page.hide {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  right: -200rem;
+  right: -150rem;
   pointer-events: none;
 }
 article.page.open {
