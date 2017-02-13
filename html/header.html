@@ -75,12 +75,86 @@
 		<div class="name">Поиск</div>
 	</div>
 
-	<div class="header_menu">
+	<div class="header_menu free_items">
 		<div class="header_menu_inner">
 			<ul>
 				<li class="active"><a><span>Деньги</span></a></li>
 				<li><a><span>Контакты</span></a></li>
-				<li><a><span>PayRoll</span></a></li>
+				<li><a class="drop-target" data-position="bottom center" data-theme="header_service_menu"><span class="icon-down-big">Услуги</span></a>
+					<div class="drop-content">
+						<div class="drop-content-inner inner_pad">
+							<ul class="header_services_list">
+								<li>
+									<a class="buh active">
+										<span class="name">Бухгалтер</span>
+										<span class="desc">Всё делает сам, <br/>без штрафов и быстро</span>
+									</a>
+								</li>
+								<li>
+									<a class="b365">
+										<span class="name">Дела</span>
+										<span class="desc">Эффективно управляй<br/>задачами и сделками</span>
+									</a>
+								</li>
+								<li>
+									<a class="payroll active">
+										<span class="name">Зарплата</span>
+										<span class="desc">Зарплата сотрудникам <br/>без привязки к банку</span>
+									</a>
+								</li>
+								<li>
+									<a class="control">
+										<span class="name">Валютный контроль</span>
+										<span class="desc">Проводим за четыре часа,<br/>без поездок в банк</span>
+									</a>
+								</li>
+								<li>
+									<a class="deposit">
+										<span class="name">Депозит</span>
+										<span class="desc">Доходность до 9,5%<br/>годовых</span>
+									</a>
+								</li>
+								<li>
+									<a class="kassa">
+										<span class="name">Касса</span>
+										<span class="desc">Для магазинов, кафе<br/>и салонов красоты</span>
+									</a>
+								</li>
+								<li>
+									<a class="torg_acquire">
+										<span class="name">Эквайринг</span>
+										<span class="desc">Прием карт, работает<br/>в магазине, машине и на улице</span>
+									</a>
+								</li>
+								<li>
+									<a class="inet_acquire">
+										<span class="name">Интернет-эквайринг</span>
+										<span class="desc">Прием платежей на сайте<br/>и в соцсетях</span>
+									</a>
+								</li>
+								<li>
+									<a class="overdraft">
+										<span class="name">Овердрафт</span>
+										<span class="desc">Кредит на бизнес<br/>до 500 000 руб.</span>
+									</a>
+								</li>
+								<li>
+									<a class="insurance">
+										<span class="name">Страховка</span>
+										<span class="desc">На машину, квартиру и визу</span>
+									</a>
+								</li>
+								<li>
+									<a class="other">
+										<span class="name">Не нашли услугу?</span>
+										<span class="desc">Напишите нам в чат</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -92,53 +166,70 @@
 		<div class="drop-content ">
 			<div class="header_add_drop drop-content-inner inner_pad">
 
-				<div class="col hidden">
-					<h3>Платежи</h3>
-					<ul class="drop-menu">
-						<li><a>Перевод между счетами</a></li>
-						<li><a>Платеж контрагенту</a></li>
-						<li><a>Платеж физическому лицу</a></li>
-						<li><a>Оплата страховых взносов</a></li>
-						<li><a>Налоги или бюджетный платеж</a></li>
-						<li><a>Таможенный платеж</a></li>
-						<li><a>Валютный перевод</a></li>
-				    </ul>
-			    </div>
-			    <div class="col hidden">
-					<h3>Услуги</h3>
-					<ul class="drop-menu">
-						<!-- <li><a>Овердрафт</a></li> -->
-						<li><a>Депозиты</a></li>
-						<li><a>Эквайринг</a></li>
-						<li><a>Выплатить зарплату</a></li>
-						<li><a>Доп. расчетный счет</a></li>
-						<li><a>Подключить бухгалтера</a></li>
-						<li><a>Подключить юриста</a></li>
-				    </ul>
-			     </div>
-			     <div class="col hidden">
-					<h3>Прочее</h3>
-					<ul class="drop-menu">
-						<li><a>Реквизиты компании</a></li>
-						<li><a>Выписка по счету</a></li>
-						<li><a>Подключить представителя</a></li>
-						<li><a>Подключить компанию</a></li>
-						<li><a>Написать ассистенту</a></li>
-				    </ul>
-			     </div>
+				<div class="hidden">
+					<div class="col1 ">
+						<h3>Платежи</h3>
+						<ul class="drop-menu">
+							<li><a>Платеж контрагенту</a></li>
+							<li><a>Платеж государству</a></li>
+							<li><a>Перевод между счетами</a></li>
+							<li><a>Покупка-продажа валюты</a></li>
+							<li><a>Валютный перевод</a></li>
+							<li><a>Выплата зарплаты</a></li>
+							<li><a>Выплата дивидентов<span class="new">NEW</span></a></li>
+							<li><a>Выставление счета<span class="new">NEW</span></a></li>
+							<li><a>Загрузка платежей из 1С</a></li>
+					    </ul>
+				    </div>
+				    <div class="col2 ">
+						<h3>Счета</h3>
+						<ul class="drop-menu">
+							<li><a>Получить выписку</a></li>
+							<li><a>Пополнить счет</a></li>
+							<li><a>Реквизиты счета</a></li>
+							<li><a>Открыть новый счет</a></li>
+					    </ul>
+
+					    <h3>Компания
+					    </h3>
+						<ul class="drop-menu">
+							<li><a>Подключить сотрудника</a></li>
+							<li><a>Добавить новую компанию</a></li>
+							<li><a>Тарифы</a></li>
+							<li><a>Услуги</a></li>
+					    </ul>
+				     </div>
+				     <div class="col3 ">
+						<h3>Прочее</h3>
+						<ul class="drop-menu">
+							<li><a>Написать ассистенту</a></li>
+							<li><a>Настроить уведомления</a></li>
+							<li><a>Подключиться к API</a></li>
+							<li><a>Частые вопросы/ответы</a></li>
+							<li><a>Банкоматы и кассы</a></li>
+							<li><a>Подарить другу банк</a></li>
+					    </ul>
+				     </div>
+				</div>
 
 			     <div class="col quick_add ">
 					<ul class="drop-menu">
 						<li><a>Новый платеж</a></li>
 						<li><a>Перевод между счетами</a></li>
-						<li><a>Написать ассистенту</a></li>
-						<li><a>Выставить счет</a></li>
-						<li><a>Загрузить документы</a></li>
+						<li><a>Покупка-продажа валюты</a></li>
+						<li><a>Загрузка платежей из 1С</a></li>
+						<li><a>Частые вопросы/ответы</a></li>
+				    </ul>
+					<ul class="drop-menu favorites-menu">
+						<li><a class="icon-favorites">ИП Александрова Елена Владимировна</a></li>
+						<li><a class="icon-favorites">ООО «Московский мясокомбинат»</a></li>
+						<li><a class="icon-favorites">За аренду</a></li>
+						<li><a class="icon-favorites">Коммунальные услуги</a></li>
 				    </ul>
 			    </div>
 
-			    <div class="more"><a class="icon-more">Показать еще</a></div>
-			    <div class="more hidden"><a class="icon-more">Свернуть</a></div>
+			    <div class="more "><a class="icon-down-big">Полное меню</a></div>
+			    <div class="more hidden"><a class="icon-up-big">Краткое меню</a></div>
 
 		     </div>
 		</div>
@@ -154,10 +245,14 @@
 			<div class="drop-content">
 				<div class="drop-content-inner">
 					<ul class="drop-menu">
-						<li><a>ООО «Башкирский мясоконсервный комбинат»</a></li>
-						<li><a>ИП Иванов Сидр Васильевич</a></li>
-						<li><a class="icon-plus c_linklight">Подключить компанию</a></li>
+						<!-- <li><a>ООО «Башкирский мясоконсервный комбинат»</a></li>
+						<li><a>ИП Иванов Сидр Васильевич</a></li> -->
+						<li><a class="icon-plus add_company">Подключить компанию</a></li>
 					</ul>
+					<div class="pdb_info">
+						Подарим бесплатное  <br/>обслуживание для новой  <br/>и текущей компании<br/>
+						<a class="link">Подробнее</a>
+					</div>
 				</div>
             </div>
 		</div>
